@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>*</members>
+        <members>Activity</members>
+        <members>Contact</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Logo</members>
+        <members>Logo/ENCLUDE_Technologies_for_nonprofit_excellence_logo.jpg</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageComponent</name>
+    </types>
+    <types>
+        <members>eCASS Layout</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>Area_of_Residence_Old__c-Area of Residence Layout</members>
+        <members>Assessment_NF__c-Assessment %28National Framework%29 Layout</members>
+        <members>Attendance__c-Attendance Layout</members>
+        <members>CRA_Goal__c-CRA Goal Layout</members>
+        <members>CRA__c-CRA Layout</members>
+        <members>Care_Plan_Objective__c-Care Plan Objective Layout</members>
+        <members>Care_plan_step__c-Care plan step Layout</members>
+        <members>Contact-HRB Contact Layout</members>
+        <members>Drop_in_Attendance__c-Drop-in Attendance Layout</members>
+        <members>Drop_in__c-Drop-in Layout</members>
+        <members>Drug_HRB__c-Drug Layout</members>
+        <members>Enrolment__c-Participant Layout</members>
+        <members>Event-BIAN Event Layout</members>
+        <members>Event-Event Layout</members>
+        <members>HRB_Report__c-HRB Report Layout</members>
+        <members>Nations__c-Nation Layout</members>
+        <members>Needle_Exchange__c-NSP Intervention Layout</members>
+        <members>Needle_Syringe_Stock__c-Needle %26 Syringe Stock Layout</members>
+        <members>Open_Access_attendance__c-Open Access attendance Layout</members>
+        <members>Program_Service__c-Program Service Layout</members>
+        <members>Program_Session__c-Program Session Layout</members>
+        <members>Support_agency_working_with_client__c-Support agency working with client Layout</members>
+        <members>Treatment_Centre__c-Treatment Centre Layout</members>
+        <members>Treatment__c-Treatment Layout 2012</members>
+        <members>Use_Pattern_Chart__c-Use Pattern Chart Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <version>29.0</version>
+</Package>
