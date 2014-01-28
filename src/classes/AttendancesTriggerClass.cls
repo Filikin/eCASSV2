@@ -7,11 +7,12 @@
 public with sharing class AttendancesTriggerClass implements TriggerDispatcher.ITriggerEntry
 {
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
-		List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
+		list<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
 		if (trigger.isInsert)
 		{
 			CountNumberAttended (newList);
+			if (isAfter) LogToCalendar (newList);
 		}
 		else if (trigger.isUpdate)
 		{
@@ -23,6 +24,22 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		}
 	}
 
+	public void LogToCalendar (List<Attendance__c> attList)
+	{
+		list <Event>newEvents = new list <Event>();
+		for (Attendance__c oneAtt: attList)
+		{
+			if (oneAtt.Put_in_my_calendar__c && oneAtt.Date_and_time_of_attendance__c != null)
+			{
+		        Event e1 = new Event (WhoID=oneAtt.Young_Person__c, OwnerID=UserInfo.getUserId(), WhatID=oneAtt.Id, Subject=oneAtt.Reason_for_Attending__c, StartDateTime=oneAtt.Date_and_time_of_attendance__c);
+		        if (oneAtt.Duration_in_minutes__c != null) e1.DurationInMinutes = (Integer)oneAtt.Duration_in_minutes__c;
+		        else e1.DurationInMinutes = 60;
+		        newEvents.add (e1);
+			}
+		}
+		if (newEvents.size() > 0) insert newEvents;
+	}
+	
 	public void CountNumberAttended (List<Attendance__c> attList)
 	{
 		set<id>sessions = new set<id>();

@@ -25,7 +25,7 @@ public class TriggerDispatcher
 			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
 			InTrigger = false;
 		}
-		else if (TriggerObject == 'Attendance')
+		else if (TriggerObject == 'Attendance' && !InTrigger) // don't want a trigger on an event creating an attendance
 		{
 			InTrigger = true;
 			activeFunction = new AttendancesTriggerClass();

@@ -109,4 +109,18 @@ private class testCreateAttendanceTrigger
         System.assertEquals ('Did not attend', careplanstep2.Status__c);
 
     }
+    
+    static testMethod void createEventFromAttendanceTest() 
+    {
+    	Contact youngPerson = new Contact (LastName = 'Kelly');
+    	insert youngPerson;
+   	
+    	Attendance__c one2one = new Attendance__c (Young_Person__c = youngPerson.id, Duration_in_minutes__c = 30, Reason_for_Attending__c='Test', Date_and_time_of_attendance__c=system.now(), Put_in_my_calendar__c=true);
+    	insert one2one;
+    	
+    	Event eventAdded = [select Subject from Event where WhoID=:youngPerson.id limit 1];
+    	system.assertEquals ('Test', eventAdded.Subject);
+    }
+    
+    
 }
