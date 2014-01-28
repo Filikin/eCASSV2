@@ -101,17 +101,16 @@
     </fields>
     <fields>
         <fullName>Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Client</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Care Plan Objectives</relationshipLabel>
         <relationshipName>Care_Plan_Objectives1</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Comment_Reasons_achieved_or_not__c</fullName>
@@ -383,5 +382,5 @@
         <searchFilterFields>Client__c</searchFilterFields>
         <searchFilterFields>Date_completed__c</searchFilterFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

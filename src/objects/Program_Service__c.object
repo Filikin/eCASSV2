@@ -332,14 +332,16 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Total_Enrolments__c</fullName>
+        <fullName>Total_EnrolmentsV2__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Number of Students who are Active or have completed this course (excludes those that dropped out)</inlineHelpText>
         <label>Total Enrolments</label>
-        <summaryForeignKey>Enrolment__c.Program_Service__c</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
-        <type>Summary</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Value_Statement__c</fullName>
@@ -401,7 +403,6 @@
         <columns>Lead_Staff__c</columns>
         <columns>Title_id__c</columns>
         <columns>Status_of_Course__c</columns>
-        <columns>Total_Enrolments__c</columns>
         <columns>Course_Type__c</columns>
         <columns>Course_Term__c</columns>
         <columns>Start_Date__c</columns>

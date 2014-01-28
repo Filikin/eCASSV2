@@ -83,15 +83,15 @@
     </fields>
     <fields>
         <fullName>Program_Service__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Program/Service</label>
         <referenceTo>Program_Service__c</referenceTo>
+        <relationshipLabel>Enrolments</relationshipLabel>
         <relationshipName>Participants</relationshipName>
-        <relationshipOrder>1</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Status_on_Programme__c</fullName>
@@ -125,16 +125,15 @@
     </fields>
     <fields>
         <fullName>Young_Person__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Attendee</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Enrolments</relationshipLabel>
         <relationshipName>Participants</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <label>Enrolment</label>
     <nameField>
@@ -144,5 +143,5 @@
     </nameField>
     <pluralLabel>Enrolments</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

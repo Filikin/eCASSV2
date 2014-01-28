@@ -29,7 +29,7 @@
                 <field>Theme_Activity_Type__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Attendances__c</field>
             </layoutItems>
         </layoutColumns>

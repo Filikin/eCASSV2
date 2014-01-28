@@ -54,29 +54,26 @@
     <fields>
         <fullName>Attendances__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Number of attendances at this session where Attended is ticked</inlineHelpText>
         <label>Attendances</label>
-        <summaryFilterItems>
-            <field>Attendance__c.Attended__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </summaryFilterItems>
-        <summaryForeignKey>Attendance__c.Program_Session__c</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
-        <type>Summary</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Program_Service__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Program/Service</label>
         <referenceTo>Program_Service__c</referenceTo>
         <relationshipLabel>Program Sessions</relationshipLabel>
         <relationshipName>Program_Sessions</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Session_Date__c</fullName>
@@ -166,7 +163,6 @@
         <columns>Theme_Activity_Type__c</columns>
         <columns>Program_Service__c</columns>
         <columns>Session_Date__c</columns>
-        <columns>Attendances__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Program_Service__c</field>
@@ -215,7 +211,7 @@
         <customTabListAdditionalFields>Youth_Worker__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Theme_Activity_Type__c</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <webLinks>
         <fullName>Update_Attendance</fullName>
         <availability>online</availability>

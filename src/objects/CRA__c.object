@@ -57,7 +57,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Assessment/Treatment</label>
-        <referenceTo>Treatment__c</referenceTo>
+        <referenceTo>HRB_Form__c</referenceTo>
         <relationshipLabel>CRA</relationshipLabel>
         <relationshipName>CRA</relationshipName>
         <required>false</required>

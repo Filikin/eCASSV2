@@ -1,7 +1,7 @@
 /*
 	Author: Eamon Kelly, Enclude
-	Purpose: Dispatcher for triggers - currently only used for the CarePlanObjective. 
-	Called from: CarePlanObjectiveTrigger
+	Purpose: Dispatcher for triggers 
+	Called from: CarePlanObjectiveTrigger, AttendancesTriggerClass, NeedlesExchangeTriggerClass
 	Test notes: This class is tested in testCarePlanEventTrigger 
 */
 public class TriggerDispatcher 
@@ -22,6 +22,34 @@ public class TriggerDispatcher
 		{
 			InTrigger = true;
 			activeFunction = new CreateUpdateCarePlanClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
+		else if (TriggerObject == 'Attendance')
+		{
+			InTrigger = true;
+			activeFunction = new AttendancesTriggerClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
+		else if (TriggerObject == 'Enrolment')
+		{
+			InTrigger = true;
+			activeFunction = new EnrolmentsTriggerClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
+		else if (TriggerObject == 'HRB Form')
+		{
+			InTrigger = true;
+			activeFunction = new HRBFormsTriggerClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
+		else if (TriggerObject == 'Needle Exchange')
+		{
+			InTrigger = true;
+			activeFunction = new NeedlesExchangeTriggerClass();
 			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
 			InTrigger = false;
 		}

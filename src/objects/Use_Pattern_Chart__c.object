@@ -340,7 +340,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Client Treatment</label>
-        <referenceTo>Treatment__c</referenceTo>
+        <referenceTo>HRB_Form__c</referenceTo>
         <relationshipLabel>Use Pattern Chart</relationshipLabel>
         <relationshipName>Use_Pattern_Chart</relationshipName>
         <required>false</required>

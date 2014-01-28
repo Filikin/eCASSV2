@@ -48,6 +48,10 @@
                 <behavior>Edit</behavior>
                 <field>HSE_area__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Number_of_completed_Treatments__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -366,7 +370,7 @@
         <fields>X17a_Assessment_outcome__c</fields>
         <fields>X34_Outcome_for_MAIN_treatment__c</fields>
         <fields>X37_Date_of_Final_Discharge__c</fields>
-        <relatedList>Treatment__c.Contact__c</relatedList>
+        <relatedList>HRB_Form__c.Contact__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

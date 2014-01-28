@@ -53,16 +53,15 @@
     <enableReports>true</enableReports>
     <fields>
         <fullName>CRA__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>CRA</label>
         <referenceTo>CRA__c</referenceTo>
         <relationshipLabel>CRA_Goals</relationshipLabel>
         <relationshipName>CRA_Goals</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Change__c</fullName>
@@ -233,5 +232,5 @@
     </nameField>
     <pluralLabel>CRA_Goals</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

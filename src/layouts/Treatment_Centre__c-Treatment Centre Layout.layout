@@ -85,19 +85,19 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X33c26_Case_Treatment_Centre__c</relatedList>
+        <relatedList>HRB_Form__c.X33c26_Case_Treatment_Centre__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X38b_Name_of_other_site_for_treatment__c</relatedList>
+        <relatedList>HRB_Form__c.X38b_Name_of_other_site_for_treatment__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X18a3_Specify_Transferred__c</relatedList>
+        <relatedList>HRB_Form__c.X18a3_Specify_Transferred__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X33a24_Specify_site_name__c</relatedList>
+        <relatedList>HRB_Form__c.X33a24_Specify_site_name__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

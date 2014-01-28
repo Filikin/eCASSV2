@@ -242,7 +242,8 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5pLMAQ</fullName>
         <active>true</active>
-        <field>Treatment__c.X14_Main_Reason_for_Referral_Drug__c</field>
+        <errorMessage>Drug must be on the 2012 table</errorMessage>
+        <field>HRB_Form__c.X14_Main_Reason_for_Referral_Drug__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>
@@ -254,7 +255,7 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5phMAA</fullName>
         <active>true</active>
-        <field>Treatment__c.X24b_Specify_first_drug_used__c</field>
+        <field>HRB_Form__c.X24b_Specify_first_drug_used__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>
@@ -271,7 +272,7 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5piMAA</fullName>
         <active>true</active>
-        <field>Treatment__c.X25a_Main_substance__c</field>
+        <field>HRB_Form__c.X25a_Main_substance__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>
@@ -283,7 +284,7 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5pmMAA</fullName>
         <active>true</active>
-        <field>Treatment__c.X26a_Substance_2__c</field>
+        <field>HRB_Form__c.X26a_Substance_2__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>
@@ -295,7 +296,7 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5pqMAA</fullName>
         <active>true</active>
-        <field>Treatment__c.X27a_Substance_3__c</field>
+        <field>HRB_Form__c.X27a_Substance_3__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>
@@ -307,7 +308,7 @@
     <namedFilters>
         <fullName>nf_01ID0000000RJ8HMAW_00ND0000003o5puMAA</fullName>
         <active>false</active>
-        <field>Treatment__c.X28a_Substance_4__c</field>
+        <field>HRB_Form__c.X28a_Substance_4__c</field>
         <filterItems>
             <field>Drug_HRB__c.Tableyear2012__c</field>
             <operation>equals</operation>

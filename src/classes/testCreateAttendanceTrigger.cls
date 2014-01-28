@@ -1,3 +1,12 @@
+/*
+
+Author: Eamon Kelly, Enclude
+
+Purpose: Test the attendances - Program Session Attendances__c should be the count of the number of ticked attendances
+
+Called from: Test
+
+*/
 @isTest
 private class testCreateAttendanceTrigger 
 {
@@ -5,18 +14,21 @@ private class testCreateAttendanceTrigger
     {
     	Contact youngPerson = new Contact (LastName = 'Kelly');
     	insert youngPerson;
+    	Contact youngPerson2 = new Contact (LastName = 'Smith');
+    	insert youngPerson2;
     	
     	Program_Service__c program = new Program_Service__c (Name = 'Music');
     	insert program;
     	
     	Enrolment__c enrole = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
     	insert enrole;
+    	Enrolment__c enrole2 = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
+    	insert enrole2;
     	
     	Integer preAttendances = [select count() from Attendance__c];
     	
     	Program_Session__c session = new Program_Session__c (Program_Service__c=program.id);
     	insert session;
-    	
     	
     	ProgramAttendanceListView rsa = new ProgramAttendanceListView(session);
     	rsa.submit();
@@ -25,11 +37,37 @@ private class testCreateAttendanceTrigger
     	Integer postAttendances = [select count() from Attendance__c limit 5000];
     	system.assert (postAttendances > preAttendances);
 
-		// test the create sessions on New Enrolment trigger
- 	  	Contact youngPerson2 = new Contact (LastName = 'Kelly2');
-    	insert youngPerson2;
-    	Enrolment__c enrole2 = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
-    	insert enrole2;
+		// tick all the attendances
+		list<Attendance__c>attendances = [select Id, Attended__c from Attendance__c where Program_Session__c = :session.Id];
+		for (Attendance__c oneAtt: attendances) oneAtt.Attended__c = true;
+		update attendances;
+		
+		session = [select Attendances__c from Program_Session__c where Id = :session.Id];
+		system.assertEquals (2, session.Attendances__c);
+		
+		// test the create sessions on New Enrolment trigger where the service already has sessions
+     	Enrolment__c enrole3 = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
+    	insert enrole3;
+    	
+    	// test an attendance been deleted
+    	delete attendances[0];
+ 		session = [select Attendances__c from Program_Session__c where Id = :session.Id];
+		system.assertEquals (1, session.Attendances__c);
+		
+		// count the enrolments in the course
+		program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
+		system.assertEquals (3, program.Total_EnrolmentsV2__c);
+		
+		// update an enrolment
+		enrole2.Status_on_Programme__c = 'Withdrawn';
+		update enrole2;
+		program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
+		system.assertEquals (2, program.Total_EnrolmentsV2__c);
+		
+		// delete an enrolment
+		delete enrole;
+		program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
+		system.assertEquals (1, program.Total_EnrolmentsV2__c);
     }
     
     static testMethod void testCreateCarePlanStepAttendanceTrigger()

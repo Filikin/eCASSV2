@@ -154,31 +154,29 @@
     </fields>
     <fields>
         <fullName>Program_Session__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <inlineHelpText>The program session the young person attends</inlineHelpText>
+        <inlineHelpText>The program session the client attends</inlineHelpText>
         <label>Program Session</label>
         <referenceTo>Program_Session__c</referenceTo>
         <relationshipLabel>Attendances</relationshipLabel>
         <relationshipName>Attendances</relationshipName>
-        <relationshipOrder>1</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Young_Person__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <inlineHelpText>The person who attended the program session</inlineHelpText>
         <label>Student</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Attendances at sessions</relationshipLabel>
         <relationshipName>Attendances</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Young_Person_name__c</fullName>
@@ -269,5 +267,5 @@
         <customTabListAdditionalFields>Attended__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Comment__c</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

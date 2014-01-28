@@ -757,18 +757,29 @@ Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
         <externalId>false</externalId>
         <label>Number of completed Treatment</label>
         <summaryFilterItems>
-            <field>Treatment__c.Treatment_Type_Number__c</field>
+            <field>HRB_Form__c.Treatment_Type_Number__c</field>
             <operation>equals</operation>
             <value>1</value>
         </summaryFilterItems>
         <summaryFilterItems>
-            <field>Treatment__c.X37_Date_of_Final_Discharge__c</field>
+            <field>HRB_Form__c.X37_Date_of_Final_Discharge__c</field>
             <operation>greaterOrEqual</operation>
             <value>1/1/2013</value>
         </summaryFilterItems>
-        <summaryForeignKey>Treatment__c.Contact__c</summaryForeignKey>
+        <summaryForeignKey>HRB_Form__c.Contact__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
         <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_completed_Treatments__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of completed Treatments</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OTHEMPLOY__c</fullName>
@@ -1473,7 +1484,6 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
     <namedFilters>
         <fullName>nf_01Ib0000000TUlbEAG_00Nb0000000iOU9EAM</fullName>
         <active>true</active>
-        <errorMessage>You must select a client</errorMessage>
         <field>Needle_Exchange__c.Client__c</field>
         <filterItems>
             <field>Contact.RecordTypeId</field>
@@ -1481,7 +1491,7 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
             <value>Client</value>
         </filterItems>
         <infoMessage>Showing only clients</infoMessage>
-        <isOptional>false</isOptional>
+        <isOptional>true</isOptional>
         <name>Needle &amp; Syringe Exchange_Client</name>
     </namedFilters>
     <namedFilters>

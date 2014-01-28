@@ -521,17 +521,16 @@ Detail Needs</inlineHelpText>
     </fields>
     <fields>
         <fullName>Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Client</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Assessments (National Framework)</relationshipLabel>
         <relationshipName>Assessments_National_Framework</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Consequences_of_alcohol_use__c</fullName>
@@ -3677,5 +3676,5 @@ Where would you place yourself on the wheel of change?</inlineHelpText>
     </nameField>
     <pluralLabel>Assessments (National Framework)</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

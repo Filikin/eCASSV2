@@ -7,7 +7,7 @@
 */
 public with sharing class HRBReportController 
 {
-    private Treatment__c[] TreatmentsWithClientsList; // these are the HRB forms
+    private HRB_Form__c[] TreatmentsWithClientsList; // these are the HRB forms
     private HRB_Report__c reportParams; // this will be the object with the date range (last year, q1 etc)
     
     public HRBReportController (ApexPages.StandardController controller)
@@ -63,9 +63,9 @@ public with sharing class HRBReportController
               'X33c15_Date_Completed__c,X33d15_Number_of_Sessions__c,Inter16__c,X33b16_Date_Commenced__c,X33c16_Date_Completed__c,X33d16_Number_of_Sessions__c,Inter17__c,X33b17_Date_Commenced__c,X33c17_Date_Completed__c,' +
               'X33d17_Number_of_Sesions__c,Inter18__c,X33b18_Date_Commenced__c,X33c18_Date_Completed__c,X33d18_Number_of_Sessions__c,Inter19__c,X33b19_Date_Commenced__c,X33c19_Date_Completed__c,X33d19_Number_of_Sessions__c,' +
               'Inter20__c,X33b20_Date_Commenced__c,X33c20_Date_Completed__c,X33d20_Number_of_Sessions__c,Inter21__c,X33b21_Date_Commenced__c,X33c21_Date_Completed__c,X33d21_Number_of_Sessions__c,Inter23__c,X33b23_Date_Commenced__c,X33c23_Date_Completed__c,X33d23_Number_of_Sessions__c,Inter24__c,X33b25_Date_key_worker_was_appointed__c,X33b26_Date_case_manager_was_appointed__c,X33b27_Date_care_plan_was_put_in_place__c,InterOutcome__c,X34_Outcome_Other__c,NonCompliance__c,ExitCondition__c,' +
-              'X36_Clients_condition_Other__c,X37_Date_of_Final_Discharge__c,ExitAfter__c,ExitCentre__c,X38b_Other_site_for_treatment__c,X39_Number_of_others_involved__c,Vaccine1__c,Vaccine2__c,Vaccine3__c,VaccineB4__c,' +
+              'X36_Clients_condition_Other__c,X37_Date_of_Final_Discharge__c,ExitAfter__c,ExitCentre__c,X38b_Other_site_for_Treatment__c,X39_Number_of_others_involved__c,Vaccine1__c,Vaccine2__c,Vaccine3__c,VaccineB4__c,' +
               'VaccineB5__c,Titre__c,BBV1__c,BBV2__c,BBV3__c,Screen__c,ScreenBy__c,CleanDate__c,Added__c,Updated_Date__c,Name,X14_Main_Reason_for_Referral_Drug__r.DrugCode__c ' + 
-              'from Treatment__c where ';
+              'from HRB_Form__c where ';
          System.Debug (queryString);
           
          if (reportParams.Type_of_report__c == 'Clients who entered during the report period') 
@@ -80,7 +80,7 @@ public with sharing class HRBReportController
          try
          {
             TreatmentsWithClientsList = Database.query(queryString);
-            for (Treatment__c oneTreatment: TreatmentsWithClientsList)
+            for (HRB_Form__c oneTreatment: TreatmentsWithClientsList)
             {
             	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.External_ID_Number__c == null)
             	{
@@ -315,18 +315,18 @@ public with sharing class HRBReportController
 				oneTreatment.X33d20_Number_of_Sessions__c = 0;
 				oneTreatment.X33d21_Number_of_Sessions__c = 0;
 				oneTreatment.X33d23_Number_of_Sessions__c = 0;
-				oneTreatment.X34_Outcome_for_MAIN_treatment__c =  '';
+				oneTreatment.X34_Outcome_for_MAIN_Treatment__c =  '';
 				oneTreatment.X34_Outcome_Other__c =  '';
 				oneTreatment.X35_Reason_for_exit_6_above__c =  '';
 				oneTreatment.X36_Client_s_Condition_on_discharge__c =  '';
 				oneTreatment.X36_Clients_condition_Other__c =  '';
 				oneTreatment.X37_Date_of_Final_Discharge__c = null;
 				oneTreatment.X38a_Aftercare_provided_by_this_centre__c =  '';
-				oneTreatment.X38b_Other_site_for_treatment__c =  '';
+				oneTreatment.X38b_Other_site_for_Treatment__c =  '';
 				oneTreatment.X39_Number_of_others_involved__c = null;
 				oneTreatment.X40_Vaccination__c =  '';
 				oneTreatment.X41_Viral_Screening_uptake__c =  '';
-				oneTreatment.X42a_Urine_screeding_during_treatment__c =  '';
+				oneTreatment.X42a_Urine_screeding_during_Treatment__c =  '';
 				oneTreatment.X42b_If_screening_ordered_by__c =  '';
             }
  
@@ -335,17 +335,17 @@ public with sharing class HRBReportController
          catch (Exception e)
          {
             System.Debug (e);
-            TreatmentsWithClientsList = new List<Treatment__c>();
+            TreatmentsWithClientsList = new List<HRB_Form__c>();
          }
     }
-    public Boolean Clientonwaitinglist (Treatment__c treat)
+    public Boolean Clientonwaitinglist (HRB_Form__c treat)
 	{
 		if ((treat.X18a_Clients_treatment_status__c == '2. Placed on waiting list for opiate substitute' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')
 			|| (treat.X18a_Clients_treatment_status__c == '6. Placed on other drug treatment waiting list' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')) 
 			return true;
 		else return false;
 	}
-    public Treatment__c[] getTreatmentsWithClients()
+    public HRB_Form__c[] getTreatmentsWithClients()
     {
         return TreatmentsWithClientsList;
     }
@@ -364,8 +364,8 @@ public with sharing class HRBReportController
         testDrug.Tableyear2012__c = true;
         insert testDrug;
         
-        Treatment__c testTreatment = new Treatment__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
-        testTreatment.X34_outcome_for_main_treatment__c = '1. Treatment completed';
+        HRB_Form__c testTreatment = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
+        testTreatment.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-01');
         testTreatment.X33b12_Date_Commenced__c = date.valueOf('2011-01-01');
@@ -411,9 +411,9 @@ public with sharing class HRBReportController
         testTreatment.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
         insert testTreatment;
         
-        Treatment__c testTreatment2 = new Treatment__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
+        HRB_Form__c testTreatment2 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
        testTreatment2.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
-       testTreatment2.X34_outcome_for_main_treatment__c = '1. Treatment completed';
+       testTreatment2.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment2.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment2.X33b1_Date_Commenced__c = date.valueOf('2011-01-06');
         testTreatment2.X33b12_Date_Commenced__c = date.valueOf('2011-01-06');
@@ -459,8 +459,8 @@ public with sharing class HRBReportController
         testTreatment2.X13_Date_of_Referral__c = date.valueOf('2011-01-03');
         insert testTreatment2;
 
-        Treatment__c testTreatment3 = new Treatment__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
-        testTreatment3.X34_outcome_for_main_treatment__c = '1. Treatment completed';
+        HRB_Form__c testTreatment3 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
+        testTreatment3.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment3.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment3.X33b1_Date_Commenced__c = date.valueOf('2011-05-06');
         testTreatment3.X33b12_Date_Commenced__c = date.valueOf('2011-05-06');
@@ -506,9 +506,9 @@ public with sharing class HRBReportController
         testTreatment3.X13_Date_of_Referral__c = date.valueOf('2011-05-03');
         insert testTreatment3;
 
-        Treatment__c testTreatment4 = new Treatment__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
+        HRB_Form__c testTreatment4 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
          testTreatment4.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
-         testTreatment4.X34_outcome_for_main_treatment__c = '1. Treatment completed';
+         testTreatment4.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment4.X33b1_Date_Commenced__c = date.valueOf('2011-01-06');
         testTreatment4.X33b12_Date_Commenced__c = date.valueOf('2011-01-06');
         testTreatment4.X33b13_Date_Commenced__c = date.valueOf('2011-01-06');
@@ -559,7 +559,7 @@ public with sharing class HRBReportController
                 
         HRBReportController hrb = new HRBReportController(params);
 
-        Treatment__c[] treatments = hrb.getTreatmentsWithClients();
+        HRB_Form__c[] treatments = hrb.getTreatmentsWithClients();
         System.assert(treatments.size() >= 1);
         
         HRB_Report__c params2 = new HRB_Report__c (Period__c = 'Complete Year', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');

@@ -255,16 +255,15 @@
     </fields>
     <fields>
         <fullName>Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Client</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>NSP Interventions</relationshipLabel>
         <relationshipName>Needle_Syringe_Exchange</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Condoms_Dispensed__c</fullName>
@@ -1672,5 +1671,5 @@
         <customTabListAdditionalFields>Total_Syringes_Dispensed__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Total_Syringes_Returned__c</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

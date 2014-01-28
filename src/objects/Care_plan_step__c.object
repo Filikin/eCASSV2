@@ -53,16 +53,15 @@
     <enableReports>true</enableReports>
     <fields>
         <fullName>Care_Plan_Objective__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Care Plan Objective</label>
         <referenceTo>Care_Plan_Objective__c</referenceTo>
         <relationshipLabel>Care plan steps</relationshipLabel>
         <relationshipName>Care_plan_steps</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Care_plan_objective_name__c</fullName>
@@ -220,5 +219,5 @@
         <customTabListAdditionalFields>CONNECTION_RECEIVED.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>CONNECTION_SENT.NAME</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

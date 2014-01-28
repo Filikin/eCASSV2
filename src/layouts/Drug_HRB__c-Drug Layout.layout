@@ -90,27 +90,27 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X25a_Main_substance__c</relatedList>
+        <relatedList>HRB_Form__c.X25a_Main_substance__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X14_Main_Reason_for_Referral_Drug__c</relatedList>
+        <relatedList>HRB_Form__c.X14_Main_Reason_for_Referral_Drug__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X24b_Specify_first_drug_used__c</relatedList>
+        <relatedList>HRB_Form__c.X24b_Specify_first_drug_used__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X26a_Substance_2__c</relatedList>
+        <relatedList>HRB_Form__c.X26a_Substance_2__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X27a_Substance_3__c</relatedList>
+        <relatedList>HRB_Form__c.X27a_Substance_3__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Treatment__c.X28a_Substance_4__c</relatedList>
+        <relatedList>HRB_Form__c.X28a_Substance_4__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
