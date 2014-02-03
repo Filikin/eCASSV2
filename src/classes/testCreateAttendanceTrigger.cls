@@ -122,5 +122,29 @@ private class testCreateAttendanceTrigger
     	system.assertEquals ('Test', eventAdded.Subject);
     }
     
+    static testMethod void createAttendanceFromEventTest() 
+    {
+	   	Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+    	Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
+    	insert youngPerson;
+   	
+        Event e1 = new Event (WhoID=youngPerson.id, OwnerID=UserInfo.getUserId(), Subject='Test', StartDateTime=system.now(), DurationInMinutes=60);
+        insert e1;
+    	
+    	list<Attendance__c> atts = [select id, Reason_for_Attending__c from Attendance__c where Young_Person__c=:youngPerson.id limit 5000];
+    	system.assertEquals (1, atts.size()); 
+    	system.assertEquals ('Test', atts[0].Reason_for_Attending__c);
+    	
+    	Event eventchanged = [select WhatId from Event where ID=:e1.id limit 1];
+    	system.assertEquals (atts[0].Id, eventchanged.WhatId);
+    	
+    	// try an event without a contact
+    	Integer attendancesCount = [select count() from Attendance__c];
+        Event e2 = new Event (OwnerID=UserInfo.getUserId(), Subject='Test', StartDateTime=system.now(), DurationInMinutes=60);
+        insert e2;
+
+    	atts = [select id, Reason_for_Attending__c from Attendance__c limit 5000];
+    	system.assertEquals (attendancesCount, atts.size()); // shouldn't have added an attendance
+    }
     
 }

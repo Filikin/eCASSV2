@@ -6,7 +6,7 @@
 */
 trigger CreateUpdateCarePlanStepOnEvent on Event (after insert, after update) 
 {
-    // need to know what a care plan objective looks like, if none, then we can leave
+  /*  // need to know what a care plan objective looks like, if none, then we can leave
     String carePlanObjectiveIdentifier='';
     List<Care_Plan_Objective__c>cpo = new List<Care_Plan_Objective__c>();
     cpo = [select id from Care_Plan_Objective__c limit 1];
@@ -61,5 +61,5 @@ trigger CreateUpdateCarePlanStepOnEvent on Event (after insert, after update)
     if (newSteps.size() > 0) insert newSteps;
     if (currentSteps.size()> 0) update currentSteps;
     if (clientsCarePlanObjectives.size()>0) update clientsCarePlanObjectives.values();
-
+*/
 }

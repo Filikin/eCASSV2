@@ -56,4 +56,16 @@ private class testCarePlanEventTrigger
         System.assert(careplanstep.Description__c.contains ('Finished'));
     }
 
+	static testMethod void testCarePlanDomainController ()
+	{
+        Contact youngPerson = new Contact (LastName = 'Kelly');
+        insert youngPerson;
+        
+        Care_Plan_Objective__c careplan = new Care_Plan_Objective__c (Name='Improve welbeing', Client__c=youngPerson.id);
+        insert careplan;
+        
+		CarePlanDomainController cp = new CarePlanDomainController ();
+		cp.carePlanGoal = careplan;
+		cp.adminFlag = true;
+	}
 }

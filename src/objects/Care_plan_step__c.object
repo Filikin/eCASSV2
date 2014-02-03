@@ -201,8 +201,6 @@
         <columns>Care_Plan_Objective__c</columns>
         <columns>Client_name__c</columns>
         <columns>Description__c</columns>
-        <columns>CONNECTION_RECEIVED.NAME</columns>
-        <columns>CONNECTION_SENT.NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -216,8 +214,6 @@
         <customTabListAdditionalFields>Care_Plan_Objective__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CONNECTION_RECEIVED.NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields>CONNECTION_SENT.NAME</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

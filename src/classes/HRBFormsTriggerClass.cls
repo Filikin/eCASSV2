@@ -9,17 +9,17 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
     public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
         List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
     {
-        if (trigger.isInsert)
+        if (isInsert)
         {
-            CountNumber (newList);
+            if (isAfter) CountNumber (newList);
         }
-        else if (trigger.isUpdate)
+        else if (isUpdate)
         {
-            CountNumber (newList);
+            if (isAfter) CountNumber (newList);
         }
-        else if (trigger.isDelete)
+        else if (isDelete)
         {
-            CountNumber (oldList);
+            if (isAfter) CountNumber (oldList);
         }
     }
 

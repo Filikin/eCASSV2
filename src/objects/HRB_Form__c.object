@@ -709,17 +709,16 @@ X18a3_Specify_Transferred__r.CentreNo__c )</formula>
     </fields>
     <fields>
         <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Client</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>HRB Forms</relationshipLabel>
         <relationshipName>HRB_Forms</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>DOC__c</fullName>
@@ -2167,7 +2166,7 @@ IF( AND(OR(TEXT( X22_Ever_previously_treated_re_drug__c ) = &quot;1. Never treat
     <fields>
         <fullName>Number_of_completed_Treatment_CY__c</fullName>
         <externalId>false</externalId>
-        <formula>Contact__r.Number_of_completed_Treatment__c</formula>
+        <formula>Contact__r.Number_of_completed_Treatments__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Number of completed Treatment CY</label>
         <precision>18</precision>
@@ -2181,7 +2180,7 @@ IF( AND(OR(TEXT( X22_Ever_previously_treated_re_drug__c ) = &quot;1. Never treat
     <fields>
         <fullName>Number_of_completed_Treatment__c</fullName>
         <externalId>false</externalId>
-        <formula>Contact__r.Number_of_completed_Treatment__c</formula>
+        <formula>Contact__r.Number_of_completed_Treatments__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Number of completed Treatment</label>
         <precision>18</precision>
@@ -5600,7 +5599,7 @@ Hepatitis A and B vaccination</inlineHelpText>
         <customTabListAdditionalFields>X16_Date_of_Assessment__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>X18a_Clients_treatment_status__c</customTabListAdditionalFields>
     </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>IF_Q37_is_completed_Inter1</fullName>
         <active>true</active>

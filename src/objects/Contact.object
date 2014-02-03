@@ -753,24 +753,6 @@ Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Number_of_completed_Treatment__c</fullName>
-        <externalId>false</externalId>
-        <label>Number of completed Treatment</label>
-        <summaryFilterItems>
-            <field>HRB_Form__c.Treatment_Type_Number__c</field>
-            <operation>equals</operation>
-            <value>1</value>
-        </summaryFilterItems>
-        <summaryFilterItems>
-            <field>HRB_Form__c.X37_Date_of_Final_Discharge__c</field>
-            <operation>greaterOrEqual</operation>
-            <value>1/1/2013</value>
-        </summaryFilterItems>
-        <summaryForeignKey>HRB_Form__c.Contact__c</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
-        <type>Summary</type>
-    </fields>
-    <fields>
         <fullName>Number_of_completed_Treatments__c</fullName>
         <externalId>false</externalId>
         <label>Number of completed Treatments</label>
@@ -1468,18 +1450,17 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
         <active>true</active>
         <field>Contact.Social_worker__c</field>
         <filterItems>
-            <field>$Source.RecordTypeId</field>
+            <field>Contact.RecordTypeId</field>
             <operation>equals</operation>
             <value>General contact</value>
         </filterItems>
         <filterItems>
-            <field>$Source.Contact_Type__c</field>
+            <field>Contact.Contact_Type__c</field>
             <operation>equals</operation>
             <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
         </filterItems>
         <isOptional>true</isOptional>
         <name>Contact_Social worker</name>
-        <sourceObject>Contact</sourceObject>
     </namedFilters>
     <namedFilters>
         <fullName>nf_01Ib0000000TUlbEAG_00Nb0000000iOU9EAM</fullName>
@@ -1493,19 +1474,6 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
         <infoMessage>Showing only clients</infoMessage>
         <isOptional>true</isOptional>
         <name>Needle &amp; Syringe Exchange_Client</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01Ib0000000TaCsEAK_00Nb0000000iwfCEAQ</fullName>
-        <active>true</active>
-        <field>Open_Access_attendance__c.Who_did_induction__c</field>
-        <filterItems>
-            <field>Contact.Member_of_staff__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </filterItems>
-        <infoMessage>Showing only members of staff</infoMessage>
-        <isOptional>true</isOptional>
-        <name>Open Access attendance_Who did induction</name>
     </namedFilters>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
@@ -2494,6 +2462,26 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <errorMessage>If 2, please complete 10a Nationality Other</errorMessage>
     </validationRules>
     <webLinks>
+        <fullName>Add_1_2_1_Attendance</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Add 1-2-1 Attendance</masterLabel>
+        <openType>replace</openType>
+        <page>CreateOne2OneAttendanceFromButton</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Open_Access_Attendance</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Add Open Access Attendance</masterLabel>
+        <openType>replace</openType>
+        <page>CreateOpenAccessAttendanceFromButton</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>Care_Plan_Overview</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -2514,6 +2502,26 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <page>EnrolmentListPage</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>New_HRB_Form</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New HRB Form</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)} //adds the proper code for inclusion of AJAX toolkit 
+
+var openForms = sforce.connection.query(&quot;Select Id, (SELECT Id FROM HRB_Forms__r where X37_Date_of_Final_Discharge__c = null) FROM Contact where ID =&apos;{!Contact.Id}&apos; Limit 1&quot;);
+if (openForms.records.HRB_Forms__r == null) 
+{ 
+parent.location.href=&quot;/a0K/e?CF00Nb0000007lEjH={!Contact.Full_name__c}&amp;CF00Nb0000007lEjH_lkid={!Contact.Id}&amp;retURL=%2F{!Contact.Id}&quot;;
+}
+else
+{
+alert (&quot;{!$Label.HRB_Form_Open_Msg}&quot;);
+}</url>
     </webLinks>
     <webLinks>
         <fullName>View_care_plan</fullName>

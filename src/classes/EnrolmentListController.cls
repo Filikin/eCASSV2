@@ -26,7 +26,7 @@ global with sharing class EnrolmentListController
 	public void Initialise ()
 	{
 		canCreateEnrolments = Schema.sObjectType.Enrolment__c.isCreateable();
-		services = [select ID, Name from Program_Service__c limit 1000];
+		services = [select ID, Name from Program_Service__c where Status_of_Course__c != 'Completed' order by Name limit 1000];
     	studentList = [select ID, Name from Contact where id in :studentList order by Name];
     	CreateRows ();
 	}	

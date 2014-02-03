@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customButtons>Add_1_2_1_Attendance</customButtons>
+    <customButtons>Add_Open_Access_Attendance</customButtons>
     <customButtons>View_care_plan</customButtons>
     <customButtons>Care_Plan_Overview</customButtons>
+    <customButtons>New_HRB_Form</customButtons>
     <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
@@ -41,15 +44,11 @@
                 <field>Record_Valid__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Number_of_completed_Treatment__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HSE_area__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Number_of_completed_Treatments__c</field>
             </layoutItems>
         </layoutColumns>
@@ -350,6 +349,15 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
+        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>RECORDTYPE</fields>
+        <fields>Course__c</fields>
+        <fields>Attended__c</fields>
+        <fields>Comment__c</fields>
+        <relatedList>Attendance__c.Young_Person__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>X1_Health_self_care__c</fields>
         <fields>X11_Communication__c</fields>
@@ -364,6 +372,7 @@
         <relatedList>Support_agency_working_with_client__c.Client__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>X16_Date_of_Assessment__c</fields>
         <fields>X14_Main_Reason_for_Referral_Drug__c</fields>
@@ -417,7 +426,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hG000000QLEl5</masterLabel>
+        <masterLabel>00hb0000000gJU9</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

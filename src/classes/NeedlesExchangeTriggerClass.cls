@@ -8,16 +8,13 @@ public with sharing class NeedlesExchangeTriggerClass implements TriggerDispatch
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
-		if (trigger.isInsert)
+		if (isInsert)
 		{
-			UpdateStockLevels (newList, false, oldMap);
+			if (isAfter) UpdateStockLevels (newList, false, oldMap);
 		}
-		else if (trigger.isUpdate)
+		else if (isUpdate)
 		{
-			UpdateStockLevels (newList, true, oldMap);
-		}
-		else if (trigger.isDelete)
-		{
+			if (isAfter) UpdateStockLevels (newList, true, oldMap);
 		}
 	}
 

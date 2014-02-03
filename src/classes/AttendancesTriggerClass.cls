@@ -9,18 +9,21 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		list<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
-		if (trigger.isInsert)
+		if (isInsert)
 		{
-			CountNumberAttended (newList);
-			if (isAfter) LogToCalendar (newList);
+			if (isAfter)
+			{
+				CountNumberAttended (newList);
+				LogToCalendar (newList);
+			}
 		}
 		else if (trigger.isUpdate)
 		{
-			CountNumberAttended (newList);
+			if (isAfter) CountNumberAttended (newList);
 		}
 		else if (trigger.isDelete)
 		{
-			CountNumberAttended (oldList);
+			if (isAfter) CountNumberAttended (oldList);
 		}
 	}
 

@@ -66,11 +66,13 @@ public with sharing class CreateUpdateCarePlanClass implements TriggerDispatcher
         
         
         Integer preCarePlanSteps = [select count() from Care_plan_step__c where Reference__c != null];
+        system.debug ('preCarePlanSteps: ' + preCarePlanSteps);
         
         Event e1 = new Event (WhoID=newContacts[0].id, OwnerID=UserInfo.getUserId(), WhatID=careplan.id, Subject='Test', StartDateTime=DateTime.newInstance(2012,1,5,12,30,30), EndDateTime=DateTime.newInstance(2012,1,5,13,30,30));
         insert e1;
         
         Integer postCarePlanSteps = [select count() from Care_plan_step__c where Reference__c != null];
+        system.debug ('postCarePlanSteps: ' + postCarePlanSteps);
  
         System.Assert (postCarePlanSteps == preCarePlanSteps + 1);
         

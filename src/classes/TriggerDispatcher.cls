@@ -60,5 +60,12 @@ public class TriggerDispatcher
 			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
 			InTrigger = false;
 		}
+		else if (TriggerObject == 'Event' && !InTrigger) // don't want a trigger on an attendance creating an event
+		{
+			InTrigger = true;
+			activeFunction = new EventTriggerClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
 	}
 }

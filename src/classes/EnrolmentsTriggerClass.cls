@@ -9,23 +9,24 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
-		if (trigger.isInsert)
+		if (isInsert)
 		{
 			if (isBefore) CreateSessionsOnNewEnrolment (newList);
 			else CountNumberEnrolled (newList);
 		}
-		else if (trigger.isUpdate)
+		else if (isUpdate)
 		{
-			CountNumberEnrolled (newList);
+			if (isAfter) CountNumberEnrolled (newList);
 		}
 		else if (trigger.isDelete)
 		{
-			CountNumberEnrolled (oldList);
+			if (isAfter) CountNumberEnrolled (oldList);
 		}
 	}
 
 	public void CreateSessionsOnNewEnrolment (list<Enrolment__c> newList) 
 	{
+		Id courseAttendanceRecordTypeId = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName = 'Course_Attendance'].Id;
 		List<Attendance__c> attendanceList = new List<Attendance__c>{};
 		Boolean createPastAttendances = false; // turning the default from true to false EK 3/7/13 
 		if (newList.size() < 10) // not required for mass import
@@ -41,7 +42,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 				for (Program_Session__c sess: [select id, Session_Date__c from Program_Session__c where Program_Service__c = :oneEnroll.Program_Service__c])
 				{
 					if (sess.Session_Date__c < system.today() && createPastAttendances == false) continue;
-					Attendance__c oneAttendance = new Attendance__c (Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id);
+					Attendance__c oneAttendance = new Attendance__c (Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id, RecordTypeId = courseAttendanceRecordTypeId);
 					attendanceList.Add(oneAttendance);
 				}
 			}

@@ -16,7 +16,8 @@ public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITr
 	
 	public void CreateAttendancesOnNewSession (list<Program_Session__c> newSessions)
 	{
-		Attendance__c[] attendances = new Attendance__c[0];
+		list<Attendance__c> attendances = new list<Attendance__c>();
+		Id courseAttendanceRecordTypeId = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName = 'Course_Attendance'].Id;
     
 		set <Id> servicesSet = new set <Id>();
     	for (Program_Session__c sNew: newSessions)
@@ -30,7 +31,7 @@ public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITr
 		    {
 		        for (Enrolment__c onePersonEnrolment: servicesMap.get(sNew.Program_Service__c).Participants__r)
 	    	    {
-	        	    Attendance__c oneAttended = new Attendance__c (Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id);
+	        	    Attendance__c oneAttended = new Attendance__c (Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id, RecordTypeId = courseAttendanceRecordTypeId);
 	            	attendances.add (oneAttended);
 		        } 
 		    }
