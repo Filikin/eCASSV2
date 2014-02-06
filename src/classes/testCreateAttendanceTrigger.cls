@@ -20,9 +20,9 @@ private class testCreateAttendanceTrigger
     	Program_Service__c program = new Program_Service__c (Name = 'Music');
     	insert program;
     	
-    	Enrolment__c enrole = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
+    	Enrolment__c enrole = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
     	insert enrole;
-    	Enrolment__c enrole2 = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
+    	Enrolment__c enrole2 = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
     	insert enrole2;
     	
     	Integer preAttendances = [select count() from Attendance__c];
@@ -46,7 +46,7 @@ private class testCreateAttendanceTrigger
 		system.assertEquals (2, session.Attendances__c);
 		
 		// test the create sessions on New Enrolment trigger where the service already has sessions
-     	Enrolment__c enrole3 = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
+     	Enrolment__c enrole3 = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
     	insert enrole3;
     	
     	// test an attendance been deleted
@@ -81,7 +81,7 @@ private class testCreateAttendanceTrigger
         Care_Plan_Objective__c careplan = new Care_Plan_Objective__c (Name='Improve welbeing', Client__c=youngPerson.id);
         insert careplan;
         
-        Enrolment__c enrole = new Enrolment__c (Program_Service__c=program.id, Young_Person__c=youngPerson.id, Care_Plan_Objective__c=careplan.id, Status_on_Programme__c='Active');
+        Enrolment__c enrole = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson.id, Care_Plan_Objective__c=careplan.id, Status_on_Programme__c='Active');
         insert enrole;
         
         Integer preCarePlanSteps = [select count() from Care_plan_step__c where Reference__c != null];
@@ -115,7 +115,7 @@ private class testCreateAttendanceTrigger
     	Contact youngPerson = new Contact (LastName = 'Kelly');
     	insert youngPerson;
    	
-    	Attendance__c one2one = new Attendance__c (Young_Person__c = youngPerson.id, Duration_in_minutes__c = 30, Reason_for_Attending__c='Test', Date_and_time_of_attendance__c=system.now(), Put_in_my_calendar__c=true);
+    	Attendance__c one2one = new Attendance__c (Name='Test', Young_Person__c = youngPerson.id, Duration_in_minutes__c = 30, Reason_for_Attending__c='Test', Date_and_time_of_attendance__c=system.now(), Put_in_my_calendar__c=true);
     	insert one2one;
     	
     	Event eventAdded = [select Subject from Event where WhoID=:youngPerson.id limit 1];
@@ -135,7 +135,7 @@ private class testCreateAttendanceTrigger
     	system.assertEquals (1, atts.size()); 
     	system.assertEquals ('Test', atts[0].Reason_for_Attending__c);
     	
-    	Event eventchanged = [select WhatId from Event where ID=:e1.id limit 1];
+    	Event eventchanged = [select Status__c, WhatId from Event where ID=:e1.id limit 1];
     	system.assertEquals (atts[0].Id, eventchanged.WhatId);
     	
     	// try an event without a contact
@@ -145,6 +145,32 @@ private class testCreateAttendanceTrigger
 
     	atts = [select id, Reason_for_Attending__c from Attendance__c limit 5000];
     	system.assertEquals (attendancesCount, atts.size()); // shouldn't have added an attendance
+    	
+    	// change the Event Status and verify that the Attendance changes
+    	eventchanged.Status__c = 'Cancelled';
+    	update eventchanged;
+    	
+    	Attendance__c attend = [select id, Status__c from Attendance__c where id = :eventchanged.whatID limit 1];
+    	system.assertEquals(eventchanged.Status__c, attend.Status__c);
+    	
+    }
+   
+    static testMethod void createAttendanceFromEventSeriesTest() 
+    {
+	   	Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+    	Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
+    	insert youngPerson;
+   	
+       	Event e1 = new Event (WhoID=youngPerson.id, OwnerID=UserInfo.getUserId(), Subject='Test', StartDateTime=system.now(), DurationInMinutes=60);
+       	e1.IsRecurrence = true;
+       	e1.RecurrenceEndDateOnly = system.today().addDays(4);
+       	e1.RecurrenceStartDateTime = system.now();
+       	e1.RecurrenceType = 'RecursDaily';
+       	e1.RecurrenceInterval = 1;
+        insert e1;
+    	
+    	list<Attendance__c> atts = [select id, Reason_for_Attending__c from Attendance__c where Young_Person__c=:youngPerson.id limit 5000];
+    	system.assertEquals (5, atts.size()); 
     }
     
 }

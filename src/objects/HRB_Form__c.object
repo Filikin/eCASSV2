@@ -5585,10 +5585,9 @@ Hepatitis A and B vaccination</inlineHelpText>
         <language>en_US</language>
     </listViews>
     <nameField>
-        <displayFormat>HRB-{yyyy}-{000}</displayFormat>
         <label>HRB Form Ref</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>HRB Forms</pluralLabel>
     <searchLayouts>

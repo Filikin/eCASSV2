@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customButtons>Add_1_2_1_Attendance</customButtons>
-    <customButtons>Add_Open_Access_Attendance</customButtons>
     <customButtons>View_care_plan</customButtons>
     <customButtons>Care_Plan_Overview</customButtons>
     <customButtons>New_HRB_Form</customButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
     <excludeButtons>DisablePrmSuperUser</excludeButtons>
@@ -13,7 +10,6 @@
     <excludeButtons>EnablePrmSuperUser</excludeButtons>
     <excludeButtons>EnableSelfService</excludeButtons>
     <excludeButtons>RequestUpdate</excludeButtons>
-    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>ViewPartnerPortalUser</excludeButtons>
     <excludeButtons>ViewSelfService</excludeButtons>
@@ -33,19 +29,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Client_Number__c</field>
+                <field>AccountId</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>AccountId</field>
+                <field>Birthdate</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Record_Valid__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HSE_area__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -63,7 +55,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Birthdate</field>
+                <field>HSE_area__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>HRB_Client_ID__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -349,13 +345,24 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>Date_joined_program__c</fields>
+        <fields>Program_Service__c</fields>
+        <fields>Status_on_Programme__c</fields>
+        <fields>Care_Plan_Objective__c</fields>
+        <relatedList>Enrolment__c.Young_Person__c</relatedList>
+        <sortField>Date_joined_program__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>RECORDTYPE</fields>
-        <fields>Course__c</fields>
-        <fields>Attended__c</fields>
-        <fields>Comment__c</fields>
+        <fields>Attendance_Date__c</fields>
+        <fields>Status__c</fields>
+        <fields>Description__c</fields>
         <relatedList>Attendance__c.Young_Person__c</relatedList>
+        <sortField>Attendance_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

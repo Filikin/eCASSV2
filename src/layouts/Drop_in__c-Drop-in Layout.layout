@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customButtons>Add_Drop_in_Attendance</customButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -70,8 +69,12 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Name</fields>
+        <fields>Date__c</fields>
+        <fields>Speaker__c</fields>
+    </miniLayout>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>Young_Person_name__c</fields>
         <fields>Reason_for_Attending__c</fields>

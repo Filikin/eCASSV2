@@ -17,7 +17,11 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		}
 		else if (isUpdate)
 		{
-			if (isAfter) CreateOrUpdateCarePlanStep (newMap, isInsert);
+			if (isAfter)
+			{
+				UpdateAttendances (newList, oldMap);
+				CreateOrUpdateCarePlanStep (newMap, isInsert);
+			}
 		}
 	}
 	
@@ -38,12 +42,13 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName='One_to_One_Attendance'].Id;
 		for (Event oneEvent: evtList)
 		{
-			if (oneEvent.WhoId != null)
+			system.debug ('Event: ' + oneEvent);
+			if (oneEvent.IsRecurrence == false && oneEvent.WhoId != null) // looks like if IsRecurrence is true then recurring events will be generated with this as false, otherwise get an extra attendance
 			{
 				Contact thisClient = clients.get (oneEvent.WhoId);
 				if (thisClient != null)
 				{
-					Attendance__c one2one = new Attendance__c (Young_Person__c = thisClient.id, Duration_in_minutes__c = oneEvent.DurationInMinutes, Reason_for_Attending__c=oneEvent.Subject, Date_and_time_of_attendance__c=oneEvent.StartDateTime, Put_in_my_calendar__c=false, RecordTypeId=one2oneAttendanceRecordTypeID);
+					Attendance__c one2one = new Attendance__c (Name='FromEvent', Young_Person__c = thisClient.id, Duration_in_minutes__c = oneEvent.DurationInMinutes, Reason_for_Attending__c=oneEvent.Subject, Date_and_time_of_attendance__c=oneEvent.ActivityDateTime, Put_in_my_calendar__c=false, RecordTypeId=one2oneAttendanceRecordTypeID);
 					attendancesToCreate.add (one2one);					
 				}
 			}
@@ -77,6 +82,38 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		}
 	}
 	
+	// if the attendance is linked to an event and the status of the event has changed, update the status of the attendance
+	public void UpdateAttendances (List<Event> evtList, Map<Id, sObject>oldMap)
+	{
+		list<Attendance__c> attendancesToUpdate = new list <Attendance__c>();
+		
+		set <id>attendanceSet = new set <id>(); 
+		for (Event oneEvent: evtList)
+		{
+			if (oneEvent.WhatId != null && oneEvent.Status__c != ((Event)oldMap.get(oneEvent.id)).Status__c)
+			{
+				attendanceSet.add (oneEvent.WhatId);
+			}
+		}
+		
+		map <Id, Attendance__c> attendances = new map <Id, Attendance__c>([select Id, Status__c from Attendance__c where Id in :attendanceSet]);		
+		
+		// now update the attendances
+		for (Event oneEvent: evtList)
+		{
+			if (attendances.containsKey (oneEvent.WhatId))
+			{
+				Attendance__c relatedAttendance = attendances.get (oneEvent.WhatId);
+				relatedAttendance.Status__c = oneEvent.Status__c;
+				attendancesToUpdate.add (relatedAttendance);
+			}
+		}		
+		if (attendancesToUpdate.size() > 0) 
+		{
+			update attendancesToUpdate;
+		}
+	}
+	
 /*
 	Author: Eamon Kelly, Enclude
 	Purpose: When a calendar event is created or modified that is associated with a care plan objective, 
@@ -85,7 +122,6 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 */
 	public void CreateOrUpdateCarePlanStep (Map<Id, sObject>newMap, Boolean isInsert)
 	{
-		system.debug ('In CreateOrUpdateCarePlanStep 1');
 	    // need to know what a care plan objective looks like, if none, then we can leave
  	   String carePlanObjectiveIdentifier='';
     	List<Care_Plan_Objective__c>cpo = new List<Care_Plan_Objective__c>();
@@ -93,7 +129,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
     	if (cpo.size() > 0) carePlanObjectiveIdentifier=((String)(cpo[0].id)).substring(0,3);
     	else return;
     
-    	List <Event>events = [select ID, WhoID, WhatID, StartDateTime, Care_plan_step_text__c, Status__c, Status_Comment__c, Person_Responsible_for_Step__c, Related_Organisation__c from Event where ID in :newMap.keySet()];
+    	List <Event>events = [select ID, WhoID, WhatID, StartDateTime, ActivityDateTime, IsRecurrence, Care_plan_step_text__c, Status__c, Status_Comment__c, Person_Responsible_for_Step__c, Related_Organisation__c from Event where ID in :newMap.keySet()];
 
  	   	List <Care_plan_step__c>newSteps = new List<Care_plan_step__c>();
     
@@ -111,10 +147,8 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
     	Map <ID, Care_Plan_Objective__c> clientsCarePlanObjectives = new Map <ID, Care_Plan_Objective__c> ([select ID, Client__c from Care_Plan_Objective__c where Client__c in :clientsSet]);         
 	    for (Event oneEvent: events)
     	{
- 		system.debug ('In CreateOrUpdateCarePlanStep 2 WhatID: ' + oneEvent.WhatId + ' carePlanObjectiveIdentifier: ' + carePlanObjectiveIdentifier);
-       	if (oneEvent.WhatId != null && ((String)(oneEvent.WhatId)).startsWith (carePlanObjectiveIdentifier))
+       	if (oneEvent.IsRecurrence == false && oneEvent.WhatId != null && ((String)(oneEvent.WhatId)).startsWith (carePlanObjectiveIdentifier))
         	{
-    		system.debug ('In CreateOrUpdateCarePlanStep 3');
         		// the care plan objective must belong to the client
 	        	if (clientsCarePlanObjectives.get(oneEvent.whatID) == null)
     	    	{
@@ -123,7 +157,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 	        	else if (isInsert || currentStepsMap.get (oneEvent.id) == null)
   		        {
                 	Care_plan_step__c oneStep = new Care_plan_step__c (Care_Plan_Objective__c=oneEvent.whatID,
-                    	Date__c=oneEvent.StartDateTime.Date(), Description__c=oneEvent.Care_plan_step_text__c, Reference__c=oneEvent.id,
+                    	Date__c=oneEvent.ActivityDateTime.Date(), Description__c=oneEvent.Care_plan_step_text__c, Reference__c=oneEvent.id,
                     	Status__c=oneEvent.Status__c, Status_Comment__c=oneEvent.Status_Comment__c, Person_Responsible_for_Action__c=oneEvent.Person_Responsible_for_Step__c, Related_Organisation__c=oneEvent.Related_Organisation__c);
 	                newSteps.Add(oneStep);
     	        }
@@ -131,7 +165,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
             	{
                 	Care_plan_step__c oneStep = currentStepsMap.get (oneEvent.id);
 	                oneStep.Care_Plan_Objective__c = oneEvent.WhatId; // just in case it has changed
-    	            oneStep.Date__c=oneEvent.StartDateTime.Date();
+    	            oneStep.Date__c=oneEvent.ActivityDateTime.Date();
         	        oneStep.Description__c=oneEvent.Care_plan_step_text__c;
             	    oneStep.Status__c=oneEvent.Status__c;
                 	oneStep.Status_Comment__c=oneEvent.Status_Comment__c;

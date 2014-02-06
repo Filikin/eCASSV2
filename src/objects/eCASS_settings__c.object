@@ -4,6 +4,22 @@
     <customSettingsVisibility>Public</customSettingsVisibility>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Attendance_Name_Template__c</fullName>
+        <defaultValue>&quot;Att-$NAME$-$DATE$&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Format of the attendance name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the attendance
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone</inlineHelpText>
+        <label>Attendance Name Template</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Care_Plan_Overview_Print_Page__c</fullName>
         <defaultValue>&quot;CarePlanOverviewPrint&quot;</defaultValue>
         <externalId>false</externalId>
@@ -47,6 +63,47 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disable_Triggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>When ticked turns off eCASS triggers, useful for batch importing and debugging</inlineHelpText>
+        <label>Disable Triggers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enrolment_Name_Template__c</fullName>
+        <defaultValue>&quot;Enr-$NAME$-$DATE$&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Format of the enrolment name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the Enrolment date (either the Date joined program or the created date)
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone</inlineHelpText>
+        <label>Enrolment Name Template</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRB_Form_Name_Template__c</fullName>
+        <defaultValue>&quot;HRB-$NAME$-$DATE$&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Format of the form name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the assessment
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone</inlineHelpText>
+        <label>HRB Form Name Template</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>

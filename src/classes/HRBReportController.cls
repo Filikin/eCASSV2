@@ -364,7 +364,7 @@ public with sharing class HRBReportController
         testDrug.Tableyear2012__c = true;
         insert testDrug;
         
-        HRB_Form__c testTreatment = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
+        HRB_Form__c testTreatment = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
         testTreatment.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-01');
@@ -411,7 +411,7 @@ public with sharing class HRBReportController
         testTreatment.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
         insert testTreatment;
         
-        HRB_Form__c testTreatment2 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
+        HRB_Form__c testTreatment2 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
        testTreatment2.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
        testTreatment2.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment2.X36_Client_s_Condition_on_discharge__c = '1. stable';
@@ -459,7 +459,7 @@ public with sharing class HRBReportController
         testTreatment2.X13_Date_of_Referral__c = date.valueOf('2011-01-03');
         insert testTreatment2;
 
-        HRB_Form__c testTreatment3 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
+        HRB_Form__c testTreatment3 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
         testTreatment3.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment3.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment3.X33b1_Date_Commenced__c = date.valueOf('2011-05-06');
@@ -506,7 +506,7 @@ public with sharing class HRBReportController
         testTreatment3.X13_Date_of_Referral__c = date.valueOf('2011-05-03');
         insert testTreatment3;
 
-        HRB_Form__c testTreatment4 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
+        HRB_Form__c testTreatment4 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
          testTreatment4.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
          testTreatment4.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment4.X33b1_Date_Commenced__c = date.valueOf('2011-01-06');

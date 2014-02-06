@@ -196,19 +196,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Client_Number__c</fullName>
-        <description>207125{yy}{00000}</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Format: YY00000
-Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
-        <label>Client Number: 207125</label>
-        <length>30</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Consent_to_share_with_other_agencies__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -504,6 +491,17 @@ Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>HRB_Client_ID__c</fullName>
+        <description>This is the Client ID without spaces or dashes</description>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(SUBSTITUTE( Client_ID__c , &quot;-&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;)</formula>
+        <inlineHelpText>Client ID for HRB (your client ID without the spaces or dashes)</inlineHelpText>
+        <label>HRB Client ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>HSE_area__c</fullName>
         <externalId>false</externalId>
         <label>HSE area</label>
@@ -552,6 +550,16 @@ Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Initials__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT (FirstName,1) &amp; LEFT (LastName, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Initials</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Is_NOK_aware_of_issue__c</fullName>
@@ -709,7 +717,7 @@ Last number: click Custom Link (left bar) Last Client Numbers</inlineHelpText>
     <fields>
         <fullName>NUMBER__c</fullName>
         <externalId>false</externalId>
-        <formula>$Setup.eCASS_settings__c.Organisation_Name__c &amp; Client_Number__c</formula>
+        <formula>$Setup.eCASS_settings__c.Organisation_Name__c &amp; HRB_Client_ID__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>NUMBER</label>
         <required>false</required>
@@ -2461,26 +2469,6 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <errorDisplayField>X10a_Nationality_Other__c</errorDisplayField>
         <errorMessage>If 2, please complete 10a Nationality Other</errorMessage>
     </validationRules>
-    <webLinks>
-        <fullName>Add_1_2_1_Attendance</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>page</linkType>
-        <masterLabel>Add 1-2-1 Attendance</masterLabel>
-        <openType>replace</openType>
-        <page>CreateOne2OneAttendanceFromButton</page>
-        <protected>false</protected>
-    </webLinks>
-    <webLinks>
-        <fullName>Add_Open_Access_Attendance</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>page</linkType>
-        <masterLabel>Add Open Access Attendance</masterLabel>
-        <openType>replace</openType>
-        <page>CreateOpenAccessAttendanceFromButton</page>
-        <protected>false</protected>
-    </webLinks>
     <webLinks>
         <fullName>Care_Plan_Overview</fullName>
         <availability>online</availability>

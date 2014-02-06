@@ -184,14 +184,4 @@
         <lookupPhoneDialogsAdditionalFields>Video__c</lookupPhoneDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <webLinks>
-        <fullName>Add_Drop_in_Attendance</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>page</linkType>
-        <masterLabel>Add Drop-in Attendance</masterLabel>
-        <openType>replace</openType>
-        <page>CreateDropInAttendanceFromButton</page>
-        <protected>false</protected>
-    </webLinks>
 </CustomObject>

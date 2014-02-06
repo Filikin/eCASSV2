@@ -60,6 +60,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Attendance_Date__c</fullName>
+        <description>Return a date depending on the record type</description>
+        <externalId>false</externalId>
+        <formula>CASE( RecordType.DeveloperName , &quot;Course_Attendance&quot;,  Date_of_Session__c , &quot;Drop_In_Attendance&quot;,  Drop_in__r.Date__c , &quot;One_to_One_Attendance&quot;,  DATEVALUE(Date_and_time_of_attendance__c), &quot;Open_Access_Attendance&quot;,  DATEVALUE(Date_and_Time_client_entered__c),  DATEVALUE(CreatedDate) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attendance Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Attended__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -261,6 +272,17 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( RecordType.DeveloperName , &quot;Course_Attendance&quot;,  Course__c  , &quot;Drop_In_Attendance&quot;,  text(Reason_for_Attending__c)  , &quot;One_to_One_Attendance&quot;, text(Reason_for_Attending__c), &quot;Open_Access_Attendance&quot;, &quot;&quot;, null )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -703,6 +725,36 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Booked</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled with notice and reason</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled Late</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Stepping_Out_Project__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -783,8 +835,11 @@
         <fullName>All</fullName>
         <columns>NAME</columns>
         <columns>Young_Person_name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Attendance_Date__c</columns>
         <columns>Attended__c</columns>
-        <columns>Comment__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
         <columns>Care_plan_step_description__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
@@ -850,9 +905,8 @@
         <label>All Open Access Attendances</label>
     </listViews>
     <nameField>
-        <displayFormat>Attendance-{00000}</displayFormat>
         <label>Attendance Ref</label>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Attendances</pluralLabel>
     <recordTypes>
@@ -883,6 +937,29 @@
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booked</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cancelled Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled with notice and reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Drop_In_Attendance</fullName>
@@ -909,6 +986,29 @@
             </values>
             <values>
                 <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booked</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cancelled Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled with notice and reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -968,6 +1068,29 @@
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booked</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cancelled Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled with notice and reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>Open_Access_Attendance</fullName>
@@ -1009,6 +1132,29 @@
             </values>
             <values>
                 <fullName>Mullingar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booked</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cancelled Late</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled with notice and reason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

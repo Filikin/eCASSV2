@@ -12,7 +12,11 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 		if (isInsert)
 		{
 			if (isBefore) CreateSessionsOnNewEnrolment (newList);
-			else CountNumberEnrolled (newList);
+			else if (isAfter)
+			{
+				ChangeName ((map<Id, Enrolment__c>)newMap);
+				CountNumberEnrolled (newList);
+			}
 		}
 		else if (isUpdate)
 		{
@@ -22,6 +26,26 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 		{
 			if (isAfter) CountNumberEnrolled (oldList);
 		}
+	}
+
+	public void ChangeName (map<Id, Enrolment__c> enrMap)
+	{
+		String nameTemplate = TriggerDispatcher.settings.Enrolment_Name_Template__c;
+		list<Enrolment__c>enrolmentsToUpdate = new list<Enrolment__c>();
+		for (Enrolment__c oneEnr: [select ID, Name, Young_Person__c, Young_Person__r.Name, Young_Person__r.Initials__c, Enrolment_Date__c from Enrolment__c where ID in :enrMap.keySet()])
+		{
+			Date enrolmentDate = oneEnr.Enrolment_Date__c != null ? oneEnr.Enrolment_Date__c : system.today();
+			String clientName = oneEnr.Young_Person__c != null ? oneEnr.Young_Person__r.Name : '';
+			String clientInitials = oneEnr.Young_Person__c != null ? oneEnr.Young_Person__r.Initials__c : '';
+			String newName;
+			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', enrolmentDate.format()).replace('$INITIALS$', clientInitials);
+			if (newName != oneEnr.Name) 
+			{
+				oneEnr.Name = newName;
+				enrolmentsToUpdate.add (oneEnr);
+			}
+		}
+		if (enrolmentsToUpdate.size() > 0) update enrolmentsToUpdate;
 	}
 
 	public void CreateSessionsOnNewEnrolment (list<Enrolment__c> newList) 
@@ -42,7 +66,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 				for (Program_Session__c sess: [select id, Session_Date__c from Program_Session__c where Program_Service__c = :oneEnroll.Program_Service__c])
 				{
 					if (sess.Session_Date__c < system.today() && createPastAttendances == false) continue;
-					Attendance__c oneAttendance = new Attendance__c (Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id, RecordTypeId = courseAttendanceRecordTypeId);
+					Attendance__c oneAttendance = new Attendance__c (Name='FromEnrolment', Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id, RecordTypeId = courseAttendanceRecordTypeId);
 					attendanceList.Add(oneAttendance);
 				}
 			}

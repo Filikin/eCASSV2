@@ -53,7 +53,7 @@ global with sharing class EnrolmentListController
 		{
 			try
 			{
-				Enrolment__c oneEnrolment = new Enrolment__c (Young_Person__c=oneStudent.id, Date_joined_program__c=system.today(), Status_on_Programme__c='Active');
+				Enrolment__c oneEnrolment = new Enrolment__c (Name='EnrolList', Young_Person__c=oneStudent.id, Date_joined_program__c=system.today(), Status_on_Programme__c='Active');
 				enrolments.add (oneEnrolment);
 			}
 			catch (Exception e)

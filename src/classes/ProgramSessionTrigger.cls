@@ -31,7 +31,7 @@ public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITr
 		    {
 		        for (Enrolment__c onePersonEnrolment: servicesMap.get(sNew.Program_Service__c).Participants__r)
 	    	    {
-	        	    Attendance__c oneAttended = new Attendance__c (Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id, RecordTypeId = courseAttendanceRecordTypeId);
+	        	    Attendance__c oneAttended = new Attendance__c (Name='FromSession', Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id, RecordTypeId = courseAttendanceRecordTypeId);
 	            	attendances.add (oneAttended);
 		        } 
 		    }

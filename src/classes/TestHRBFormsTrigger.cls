@@ -20,7 +20,7 @@ private class TestHRBFormsTrigger
         testDrug.Tableyear2012__c = true;
         insert testDrug;
         
-        HRB_Form__c testTreatment = new HRB_Form__c (Contact__c=client.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
+        HRB_Form__c testTreatment = new HRB_Form__c (Name='Test', Contact__c=client.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
         testTreatment.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-01');

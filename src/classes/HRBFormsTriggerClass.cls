@@ -11,7 +11,15 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
     {
         if (isInsert)
         {
-            if (isAfter) CountNumber (newList);
+        	if (isBefore)
+        	{
+        		CountNumberOfFormsStartedThisYear (newList);
+        	}
+            else if (isAfter) 
+            {
+            	ChangeName ((map<Id, HRB_Form__c>)newMap);
+            	CountNumber (newList);
+            }
         }
         else if (isUpdate)
         {
@@ -23,6 +31,45 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
         }
     }
 
+	public void ChangeName (map<Id, HRB_Form__c> frmMap)
+	{
+		String nameTemplate = TriggerDispatcher.settings.HRB_Form_Name_Template__c;
+		list<HRB_Form__c>fromsToUpdate = new list<HRB_Form__c>();
+		for (HRB_Form__c oneForm: [select ID, Name, Contact__c, Contact__r.Name, Contact__r.Initials__c, X16_Date_of_Assessment__c from HRB_Form__c where ID in :frmMap.keySet()])
+		{
+			Date formDate = oneForm.X16_Date_of_Assessment__c != null ? oneForm.X16_Date_of_Assessment__c : system.today();
+			String clientName = oneForm.Contact__c != null ? oneForm.Contact__r.Name : '';
+			String clientInitials = oneForm.Contact__c != null ? oneForm.Contact__r.Initials__c : '';
+			String newName;
+			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', formDate.format()).replace('$INITIALS$', clientInitials);
+			if (newName != oneForm.Name) 
+			{
+				oneForm.Name = newName;
+				fromsToUpdate.add (oneForm);
+			}
+		}
+		if (fromsToUpdate.size() > 0) update fromsToUpdate;
+	}
+
+// this needs to go into eCASSV1
+  	public void CountNumberOfFormsStartedThisYear (List<HRB_Form__c> frmList)
+ 	{
+ 		set<ID> clientSet = new set<ID>();
+ 		for (HRB_Form__c oneForm: frmList)
+ 		{
+ 			clientSet.add (oneForm.Contact__c);
+ 		}
+ 		Integer this_year = system.today().year();
+ 		map <ID, Contact> clients = new map <ID, Contact>([SELECT ID, (SELECT Id FROM HRB_Forms__r where CALENDAR_YEAR(X16_Date_of_Assessment__c) = :this_year) FROM Contact where ID in :clientSet]);
+ 		
+ 		for (HRB_Form__c oneForm: frmList)
+ 		{
+ 			oneForm.X20_Number_times_started_this_year__c = clients.get(oneForm.Contact__c).HRB_Forms__r.size() + 1;
+ 		}
+ 		
+ 	}
+ 	
+ 	// not sure this is required any more
     public void CountNumber (List<HRB_Form__c> attList)
     {
         set<id>clients = new set<id>();
