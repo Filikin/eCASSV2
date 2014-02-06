@@ -1,2 +1,0 @@
-<apex:page standardController="Drop_in__c" extensions="CreateAttendanceFromButton" sidebar="false" showHeader="false" standardStylesheets="false" action="{!CreateDropInAttendance}">
-</apex:page>

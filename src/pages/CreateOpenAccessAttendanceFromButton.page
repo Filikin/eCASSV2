@@ -1,2 +1,0 @@
-<apex:page standardController="Contact" extensions="CreateAttendanceFromButton" sidebar="false" showHeader="false" standardStylesheets="false" action="{!CreateOpenAccessAttendance}">
-</apex:page>
