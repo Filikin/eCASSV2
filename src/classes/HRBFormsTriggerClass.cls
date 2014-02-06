@@ -13,6 +13,7 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
         {
         	if (isBefore)
         	{
+        		CalculateMaxInterventionCommencementDate (newList);
         		CountNumberOfFormsStartedThisYear (newList);
         	}
             else if (isAfter) 
@@ -23,7 +24,8 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
         }
         else if (isUpdate)
         {
-            if (isAfter) CountNumber (newList);
+        	if (isBefore) CalculateMaxInterventionCommencementDate (newList);
+        	else if (isAfter) CountNumber (newList);
         }
         else if (isDelete)
         {
@@ -33,7 +35,7 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
 
 	public void ChangeName (map<Id, HRB_Form__c> frmMap)
 	{
-		String nameTemplate = TriggerDispatcher.settings.HRB_Form_Name_Template__c;
+		String nameTemplate = AppConfigSupport.HRBFormNameTemplate;
 		list<HRB_Form__c>fromsToUpdate = new list<HRB_Form__c>();
 		for (HRB_Form__c oneForm: [select ID, Name, Contact__c, Contact__r.Name, Contact__r.Initials__c, X16_Date_of_Assessment__c from HRB_Form__c where ID in :frmMap.keySet()])
 		{
@@ -69,7 +71,27 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
  		
  	}
  	
- 	// not sure this is required any more
+	public void CalculateMaxInterventionCommencementDate (List<HRB_Form__c> newList)
+	{
+        for (HRB_Form__c oneForm: newList)
+        {
+        	oneForm.Date_latest_intervention_commenced__c = Date.valueOf('2011-1-1');
+        	if (oneForm.X33b1_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b1_Date_Commenced__c;
+         	if (oneForm.X33b12_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b12_Date_Commenced__c;
+        	if (oneForm.X33b13_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b13_Date_Commenced__c;
+        	if (oneForm.X33b14_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b14_Date_Commenced__c;
+        	if (oneForm.X33b15_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b15_Date_Commenced__c;
+        	if (oneForm.X33b16_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b16_Date_Commenced__c;
+        	if (oneForm.X33b17_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b17_Date_Commenced__c;
+        	if (oneForm.X33b18_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b18_Date_Commenced__c;
+        	if (oneForm.X33b19_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b19_Date_Commenced__c;
+        	if (oneForm.X33b20_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b20_Date_Commenced__c;
+        	if (oneForm.X33b21_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b21_Date_Commenced__c;
+        	if (oneForm.X33b23_Date_Commenced__c > oneForm.Date_latest_intervention_commenced__c) oneForm.Date_latest_intervention_commenced__c = oneForm.X33b23_Date_Commenced__c;
+        }
+	}
+	
+	// not sure this is required any more
     public void CountNumber (List<HRB_Form__c> attList)
     {
         set<id>clients = new set<id>();

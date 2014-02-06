@@ -53,10 +53,7 @@ public with sharing class ViewCarePlanExtension
     
     public PageReference printCarePlan ()
 	{
-		eCASS_settings__c settings = eCASS_settings__c.getOrgDefaults();
-		String printPage = 'CarePlanOverviewPrint';
-		if (settings.Care_Plan_Overview_Print_Page__c != null) printPage = settings.Care_Plan_Overview_Print_Page__c;
-		PageReference pdf = new PageReference ('/apex/'+printPage);
+		PageReference pdf = new PageReference ('/apex/' +  AppConfigSupport.CarePlanOverviewPrintPage);
 		return pdf;
 	}
 	

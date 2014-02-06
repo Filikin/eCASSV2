@@ -350,21 +350,33 @@ public with sharing class HRBReportController
         return TreatmentsWithClientsList;
     }
 
-    public static testMethod void testGetTreatments ()
+	public static Drug_HRB__c testDrug;
+	public static Contact driver;
+	public static void createObjects ()
+	{
+		if (driver == null)
+		{
+	        Account acct1 = new Account(name='driver account');
+	        insert acct1;
+	            
+	        driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1');
+	        driver.MailingStreet = '3 test screen \ntest area\ntest city';
+	        driver.MailingCity = 'Dublin';
+	        insert driver;
+	        
+	        testDrug = new Drug_HRB__c (Name='testDrug');
+	        testDrug.DrugCode__c = '994';
+	        testDrug.Tableyear2012__c = true;
+	        insert testDrug;
+		}
+	}
+	
+    public static testMethod void TestCreateTreatment1 ()
     {
-        Account acct1 = new Account(name='driver account');
-        insert acct1;
-            
-        Contact driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1');
-        driver.MailingStreet = '3 test screen \ntest area\ntest city';
-        driver.MailingCity = 'Dublin';
-        insert driver;
-        Drug_HRB__c testDrug = new Drug_HRB__c (Name='testDrug');
-        testDrug.DrugCode__c = '994';
-        testDrug.Tableyear2012__c = true;
-        insert testDrug;
+        createObjects ();
         
         HRB_Form__c testTreatment = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
+ 		testTreatment.X21a_Date_This_treatment_started__c = date.valueOf('2011-01-01');
         testTreatment.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-01');
@@ -410,7 +422,12 @@ public with sharing class HRBReportController
         testTreatment.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
         insert testTreatment;
-        
+    }
+    
+    public static testMethod void TestCreateTreatment2 ()
+    {
+        createObjects ();
+            
         HRB_Form__c testTreatment2 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
        testTreatment2.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
        testTreatment2.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
@@ -458,8 +475,14 @@ public with sharing class HRBReportController
         testTreatment2.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment2.X13_Date_of_Referral__c = date.valueOf('2011-01-03');
         insert testTreatment2;
+    }
+    
+    public static testMethod void TestCreateTreatment3 ()
+    {
+        createObjects ();
 
         HRB_Form__c testTreatment3 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
+  		testTreatment3.X21a_Date_This_treatment_started__c = date.valueOf('2011-05-06');
         testTreatment3.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
         testTreatment3.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment3.X33b1_Date_Commenced__c = date.valueOf('2011-05-06');
@@ -505,7 +528,12 @@ public with sharing class HRBReportController
         testTreatment3.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment3.X13_Date_of_Referral__c = date.valueOf('2011-05-03');
         insert testTreatment3;
+    }
 
+    public static testMethod void TestCreateTreatment4 ()
+    {
+        createObjects ();
+    
         HRB_Form__c testTreatment4 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
          testTreatment4.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
          testTreatment4.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
@@ -552,8 +580,16 @@ public with sharing class HRBReportController
         testTreatment4.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment4.X36_Client_s_Condition_on_discharge__c = '1. Stable';
         testTreatment4.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
-         insert testTreatment4;
-
+        insert testTreatment4;
+	}
+    
+    public static testMethod void testHRBReport ()
+    {
+    	TestCreateTreatment1 ();
+    	TestCreateTreatment2 ();
+    	TestCreateTreatment3 ();
+    	TestCreateTreatment4 ();
+    	
         HRB_Report__c params = new HRB_Report__c (Period__c = 'Quarter 1', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');
         insert params;
                 

@@ -43,10 +43,7 @@ global with sharing class ViewCarePlan
 
 	global PageReference printCarePlan ()
 	{
-		eCASS_settings__c settings = eCASS_settings__c.getOrgDefaults();
-		String printPage = 'CarePlanPrintPage';
-		if (settings.Care_Plan_Print_Page__c != null) printPage = settings.Care_Plan_Print_Page__c;
-		PageReference pdf = new PageReference ('/apex/'+printPage);
+		PageReference pdf = new PageReference ('/apex/' + AppConfigSupport.CarePlanPrintPage);
 		return pdf;
 	}
 	

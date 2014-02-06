@@ -30,7 +30,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 
 	public void ChangeName (map<Id, Enrolment__c> enrMap)
 	{
-		String nameTemplate = TriggerDispatcher.settings.Enrolment_Name_Template__c;
+		String nameTemplate = AppConfigSupport.EnrolmentNameTemplate;
 		list<Enrolment__c>enrolmentsToUpdate = new list<Enrolment__c>();
 		for (Enrolment__c oneEnr: [select ID, Name, Young_Person__c, Young_Person__r.Name, Young_Person__r.Initials__c, Enrolment_Date__c from Enrolment__c where ID in :enrMap.keySet()])
 		{
@@ -52,20 +52,15 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 	{
 		Id courseAttendanceRecordTypeId = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName = 'Course_Attendance'].Id;
 		List<Attendance__c> attendanceList = new List<Attendance__c>{};
-		Boolean createPastAttendances = false; // turning the default from true to false EK 3/7/13 
 		if (newList.size() < 10) // not required for mass import
 		{
-			eCASS_settings__c settings = eCASS_settings__c.getOrgDefaults();
-			if (settings != null && settings.Create_past_attendances__c != null)
-				createPastAttendances = settings.Create_past_attendances__c;
-			
 			for (Enrolment__c oneEnroll: newList)
 			{
 				// get list of sessions and add an attendance record for each one
 				// TODO - for services that run forever, this would create too many past attendances, we need to decide how far back to go
 				for (Program_Session__c sess: [select id, Session_Date__c from Program_Session__c where Program_Service__c = :oneEnroll.Program_Service__c])
 				{
-					if (sess.Session_Date__c < system.today() && createPastAttendances == false) continue;
+					if (sess.Session_Date__c < system.today() && AppConfigSupport.CreatePastAttendances == false) continue;
 					Attendance__c oneAttendance = new Attendance__c (Name='FromEnrolment', Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id, RecordTypeId = courseAttendanceRecordTypeId);
 					attendanceList.Add(oneAttendance);
 				}

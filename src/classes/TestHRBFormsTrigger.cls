@@ -45,8 +45,6 @@ private class TestHRBFormsTrigger
         testTreatment.X33c18_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c19_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c20_Date_Completed__c = date.valueOf('2011-01-02');
-        testTreatment.X33c21_Date_Completed__c = date.valueOf('2011-01-02');
-        testTreatment.X33c23_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33d1_Number_of_Sessions__c = 1;
         testTreatment.X33d12_Number_of_Sessions__c = 1;
         testTreatment.X33d13_Number_of_Sessions__c = 1;
@@ -57,8 +55,6 @@ private class TestHRBFormsTrigger
         testTreatment.X33d18_Number_of_Sessions__c = 1;
         testTreatment.X33d19_Number_of_Sessions__c = 1;
         testTreatment.X33d20_Number_of_Sessions__c = 1;
-        testTreatment.X33d21_Number_of_Sessions__c = 1;
-        testTreatment.X33d23_Number_of_Sessions__c = 1;
         testTreatment.X33a_Main_Intervention__c = '1. Brief intervention';
         testTreatment.X29a_Injected_in_past_month__c = '1. Yes';
         testTreatment.X29b_Ever_injected__c = '1. Yes';
@@ -67,6 +63,15 @@ private class TestHRBFormsTrigger
         testTreatment.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
         insert testTreatment;
         
+        HRB_Form__c updatedTreatment = [select ID, Date_latest_intervention_commenced__c from HRB_Form__c where ID = :testTreatment.id limit 1];
+        system.assertEquals (date.valueOf('2011-01-01'), updatedTreatment.Date_latest_intervention_commenced__c);
+        
+        testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-02');
+        update testTreatment;
+
+        updatedTreatment = [select ID, Date_latest_intervention_commenced__c from HRB_Form__c where ID = :testTreatment.id limit 1];
+        system.assertEquals (date.valueOf('2011-01-02'), updatedTreatment.Date_latest_intervention_commenced__c);
+
         client = [select Number_of_completed_Treatments__c from Contact where id = :client.id];
         system.assertEquals (1, client.Number_of_completed_Treatments__c);
         
@@ -79,6 +84,5 @@ private class TestHRBFormsTrigger
         delete testTreatment;
         client = [select Number_of_completed_Treatments__c from Contact where id = :client.id];
         system.assertEquals (0, client.Number_of_completed_Treatments__c);
-        
      }
 }

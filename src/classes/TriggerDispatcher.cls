@@ -10,7 +10,6 @@ public class TriggerDispatcher
 	public static Boolean InAttendanceTrigger = false;
 	public static Boolean InEnrolmentTrigger = false;
 	public static Boolean InHRBFormTrigger = false;
-	public static eCASS_settings__c settings = eCASS_settings__c.getOrgDefaults();
 	
 	public interface ITriggerEntry 
 	{
@@ -23,7 +22,7 @@ public class TriggerDispatcher
 	public static void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		List<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
-		if (settings != null && settings.Disable_Triggers__c == true) return;
+		if (AppConfigSupport.TriggersDisabled == true) return;
 		
 		if (TriggerObject == 'CarePlanObjective')
 		{

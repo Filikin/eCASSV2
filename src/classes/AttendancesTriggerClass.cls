@@ -38,15 +38,15 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	
 	public void ChangeName (map<Id, Attendance__c> attMap)
 	{
-		String nameTemplate = TriggerDispatcher.settings.Attendance_Name_Template__c;
+		String nameTemplate = AppConfigSupport.AttendanceNameTemplate;
 		list<Attendance__c>attendancesToUpdate = new list<Attendance__c>();
 		for (Attendance__c oneAtt: [select ID, Name, Young_Person__c, Young_Person__r.Name, Young_Person__r.Initials__c, Attendance_Date__c from Attendance__c where ID in :attMap.keySet()])
 		{
 			Date attendanceDate = oneAtt.Attendance_Date__c != null ? oneAtt.Attendance_Date__c : system.today();
 			String clientName = oneAtt.Young_Person__c != null ? oneAtt.Young_Person__r.Name : '';
 			String clientInitials = oneAtt.Young_Person__c != null ? oneAtt.Young_Person__r.Initials__c : '';
-			String newName;
-			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
+			system.debug ('Name Template: ' + nameTemplate);
+			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
 			if (newName != oneAtt.Name) 
 			{
 				oneAtt.Name = newName;
@@ -65,7 +65,7 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			{
 		        Event e1 = new Event (WhoID=oneAtt.Young_Person__c, OwnerID=UserInfo.getUserId(), WhatID=oneAtt.Id, Subject=oneAtt.Reason_for_Attending__c, StartDateTime=oneAtt.Date_and_time_of_attendance__c);
 		        if (oneAtt.Duration_in_minutes__c != null) e1.DurationInMinutes = (Integer)oneAtt.Duration_in_minutes__c;
-		        else e1.DurationInMinutes = 60;
+		        else e1.DurationInMinutes = AppConfigSupport.DefaultAttendanceDuration;
 		        e1.Status__c = oneAtt.Status__c;
 		        newEvents.add (e1);
 			}
