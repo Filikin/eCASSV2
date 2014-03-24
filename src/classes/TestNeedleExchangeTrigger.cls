@@ -13,7 +13,7 @@ private class TestNeedleExchangeTrigger
         insert testStock;
         
         ID clientRecordTypeID = [select ID from RecordType where Name='Client'].id;
-        Contact client = new Contact (LastName = 'Fred', Gender__c = 'Male', RecordTypeID=clientRecordTypeID);
+        Contact client = new Contact (LastName = 'Fred', X4_Gender__c = 'Male', RecordTypeID=clientRecordTypeID);
         insert client;
  
         Needle_Exchange__c intervention1 = new Needle_Exchange__c (Client__c=client.id, Date_Exchange__c = system.today(), Location__c='Dublin', X1ml_Filter_Dispensed__c=5);

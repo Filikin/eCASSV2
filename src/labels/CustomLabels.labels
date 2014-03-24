@@ -148,6 +148,13 @@
         <value>Objective and timescale</value>
     </labels>
     <labels>
+        <fullName>OpenHRBFormsTitle</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OpenHRBFormsTitle</shortDescription>
+        <value>Open Forms, click one to go to it</value>
+    </labels>
+    <labels>
         <fullName>Organisation_Name</fullName>
         <language>en_US</language>
         <protected>true</protected>

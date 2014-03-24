@@ -2,7 +2,6 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>View_care_plan</customButtons>
     <customButtons>Care_Plan_Overview</customButtons>
-    <customButtons>New_HRB_Form</customButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
     <excludeButtons>DisablePrmSuperUser</excludeButtons>
@@ -379,7 +378,6 @@
         <relatedList>Support_agency_working_with_client__c.Client__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>X16_Date_of_Assessment__c</fields>
         <fields>X14_Main_Reason_for_Referral_Drug__c</fields>
@@ -387,6 +385,8 @@
         <fields>X34_Outcome_for_MAIN_treatment__c</fields>
         <fields>X37_Date_of_Final_Discharge__c</fields>
         <relatedList>HRB_Form__c.Contact__c</relatedList>
+        <sortField>X16_Date_of_Assessment__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

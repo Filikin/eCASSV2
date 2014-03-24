@@ -465,32 +465,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Gender__c</fullName>
-        <externalId>false</externalId>
-        <label>Gender Obsolete</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Male</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Female</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Male child</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Female child</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
         <fullName>HRB_Client_ID__c</fullName>
         <description>This is the Client ID without spaces or dashes</description>
         <externalId>false</externalId>
@@ -1560,25 +1534,6 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Gender__c</picklist>
-            <values>
-                <fullName>Female</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Female child</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Male</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Male child</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>HSE_area__c</picklist>
             <values>
                 <fullName>03 HSE Southern Area</fullName>
@@ -2022,25 +1977,6 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
             </values>
             <values>
                 <fullName>9%2E%09Masters</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Gender__c</picklist>
-            <values>
-                <fullName>Female</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Female child</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Male</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Male child</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -2490,26 +2426,6 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <page>EnrolmentListPage</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
-    </webLinks>
-    <webLinks>
-        <fullName>New_HRB_Form</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>New HRB Form</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)} //adds the proper code for inclusion of AJAX toolkit 
-
-var openForms = sforce.connection.query(&quot;Select Id, (SELECT Id FROM HRB_Forms__r where X37_Date_of_Final_Discharge__c = null) FROM Contact where ID =&apos;{!Contact.Id}&apos; Limit 1&quot;);
-if (openForms.records.HRB_Forms__r == null) 
-{ 
-parent.location.href=&quot;/a0K/e?CF00Nb0000007lEjH={!Contact.Full_name__c}&amp;CF00Nb0000007lEjH_lkid={!Contact.Id}&amp;retURL=%2F{!Contact.Id}&quot;;
-}
-else
-{
-alert (&quot;{!$Label.HRB_Form_Open_Msg}&quot;);
-}</url>
     </webLinks>
     <webLinks>
         <fullName>View_care_plan</fullName>

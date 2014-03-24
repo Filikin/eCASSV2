@@ -112,7 +112,10 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>Young_Person__c</fields>
+        <fields>Status_on_Programme__c</fields>
         <relatedList>Enrolment__c.Program_Service__c</relatedList>
+        <sortField>NAME</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

@@ -17,7 +17,7 @@ public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITr
 	public void CreateAttendancesOnNewSession (list<Program_Session__c> newSessions)
 	{
 		list<Attendance__c> attendances = new list<Attendance__c>();
-		Id courseAttendanceRecordTypeId = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName = 'Course_Attendance'].Id;
+		Id courseAttendanceRecordTypeId = [select Id from RecordType where DeveloperName = 'Course_Attendance'].Id;
     
 		set <Id> servicesSet = new set <Id>();
     	for (Program_Session__c sNew: newSessions)

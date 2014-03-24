@@ -50,7 +50,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 
 	public void CreateSessionsOnNewEnrolment (list<Enrolment__c> newList) 
 	{
-		Id courseAttendanceRecordTypeId = [select Id from RecordType where sObjectType='Attendance__c' and DeveloperName = 'Course_Attendance'].Id;
+		Id courseAttendanceRecordTypeId = [select Id from RecordType where DeveloperName = 'Course_Attendance'].Id;
 		List<Attendance__c> attendanceList = new List<Attendance__c>{};
 		if (newList.size() < 10) // not required for mass import
 		{

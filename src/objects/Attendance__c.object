@@ -152,7 +152,7 @@
     <fields>
         <fullName>Client_gender__c</fullName>
         <externalId>false</externalId>
-        <formula>text(Young_Person__r.Gender__c )</formula>
+        <formula>text( Young_Person__r.X4_Gender__c  )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Client gender</label>
         <required>false</required>

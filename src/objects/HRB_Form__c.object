@@ -30,7 +30,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>NewHRBFormPage</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
@@ -1245,6 +1247,16 @@ Case(X22_Ever_previously_treated_re_drug__c,
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_latest_intervention_commenced__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This will be populated by a trigger and will be the max of the date commenced fields</inlineHelpText>
+        <label>Date latest intervention commenced</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>Drug_Valid_Table_2012__c</fullName>
@@ -2587,18 +2599,6 @@ CASE( X18a_Clients_treatment_status__c,
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>SUBDRUG__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(ISBLANK( X33b10_Date_Commenced__c ),&quot;FALSE&quot;,&quot;TRUE&quot;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>SUBDRUG</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -4670,24 +4670,6 @@ Some of these sessions may be as a group or couples or one on one.
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>X33b10_Date_Commenced__c</fullName>
-        <externalId>false</externalId>
-        <label>33b10 Date Commenced</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>X33b11_Date_Commenced__c</fullName>
-        <externalId>false</externalId>
-        <label>33b11 Date Commenced</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
     </fields>
     <fields>
         <fullName>X33b12_Date_Commenced__c</fullName>
