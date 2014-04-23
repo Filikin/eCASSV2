@@ -65,7 +65,7 @@ public with sharing class HRBReportController
               'Inter20__c,X33b20_Date_Commenced__c,X33c20_Date_Completed__c,X33d20_Number_of_Sessions__c,Inter21__c,X33b21_Date_Commenced__c,X33c21_Date_Completed__c,X33d21_Number_of_Sessions__c,Inter23__c,X33b23_Date_Commenced__c,X33c23_Date_Completed__c,X33d23_Number_of_Sessions__c,Inter24__c,X33b25_Date_key_worker_was_appointed__c,X33b26_Date_case_manager_was_appointed__c,X33b27_Date_care_plan_was_put_in_place__c,InterOutcome__c,X34_Outcome_Other__c,NonCompliance__c,ExitCondition__c,' +
               'X36_Clients_condition_Other__c,X37_Date_of_Final_Discharge__c,ExitAfter__c,ExitCentre__c,X38b_Other_site_for_Treatment__c,X39_Number_of_others_involved__c,Vaccine1__c,Vaccine2__c,Vaccine3__c,VaccineB4__c,' +
               'VaccineB5__c,Titre__c,BBV1__c,BBV2__c,BBV3__c,Screen__c,ScreenBy__c,CleanDate__c,Added__c,Updated_Date__c,Name,X14_Main_Reason_for_Referral_Drug__r.DrugCode__c ' + 
-              'from HRB_Form__c where ';
+              'from HRB_Form__c where Pause__c = false and ';
          System.Debug (queryString);
           
          if (reportParams.Type_of_report__c == 'Clients who entered during the report period') 

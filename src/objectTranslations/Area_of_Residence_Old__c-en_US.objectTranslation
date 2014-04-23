@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Area of Residence</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Areas of Residence</value>
+    </caseValues>
+    <fields>
+        <label><!-- OLD ID --></label>
+        <name>ANCHORID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area Code --></label>
+        <name>Area_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area --></label>
+        <name>Area_Res__c</name>
+    </fields>
+    <fields>
+        <label><!-- CCA LEN --></label>
+        <name>CCA_LEN__c</name>
+    </fields>
+    <fields>
+        <label><!-- CCA --></label>
+        <name>CCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSO_DED_No --></label>
+        <name>CSO_DED_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- City/County --></label>
+        <name>City_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID Number --></label>
+        <name>External_ID_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- IRE_DED --></label>
+        <name>IRE_DED__c</name>
+    </fields>
+    <fields>
+        <label><!-- LHO --></label>
+        <name>LHO__c</name>
+    </fields>
+    <fields>
+        <label><!-- RegCode --></label>
+        <name>RegCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regcode1 --></label>
+        <name>Regcode1__c</name>
+    </fields>
+    <fields>
+        <label><!-- TFA --></label>
+        <name>TFA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tableyear2012 --></label>
+        <name>Tableyear2012__c</name>
+    </fields>
+    <fields>
+        <label><!-- countypostcode --></label>
+        <name>countypostcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- district --></label>
+        <name>district__c</name>
+    </fields>
+    <fields>
+        <label><!-- fromto --></label>
+        <name>fromto__c</name>
+    </fields>
+    <fields>
+        <label><!-- ndtrshsearea --></label>
+        <name>ndtrshsearea__c</name>
+    </fields>
+    <fields>
+        <label><!-- oddevensplit --></label>
+        <name>oddevensplit__c</name>
+    </fields>
+    <fields>
+        <label><!-- sequence --></label>
+        <name>sequence__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

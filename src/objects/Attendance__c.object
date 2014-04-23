@@ -52,6 +52,68 @@
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
     <fields>
+        <fullName>Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Brief intervention</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Key Working</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychiatric treatment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Individual counselling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Group counselling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social and/or occupational reintegration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family therapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complimentary Therapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Genera Admin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interagency meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Advice_and_Support_given__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -464,6 +526,30 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>NDTRS_Intervention__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Text(Programme__c) = &quot;Drug Team&quot;, 
+( 
+CASE( Activity_Type__c , 
+&quot;Brief Intervention&quot;, &quot;Brief Intervention&quot;, 
+&quot;Individual Counselling&quot;,&quot;Individual Counselling&quot;,
+&quot;Not HRB Intervention&quot;)
+),
+(
+CASE( Activity_Type__c , 
+&quot;Brief Intervention&quot;, &quot;Brief Intervention&quot;, 
+&quot;Individual Counselling&quot;,&quot;Individual Counselling&quot;,
+&quot;Not HRB Intervention&quot;)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NDTRS Intervention</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>NSP__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -594,6 +680,48 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Programme__c</fullName>
+        <externalId>false</externalId>
+        <label>Programme</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Drug Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cocaine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CE Programme</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aftercare</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stabisation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Put_in_my_calendar__c</fullName>
@@ -915,6 +1043,61 @@
         <description>Used for program courses</description>
         <label>Course Attendance</label>
         <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Genera Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interagency meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychiatric treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Interaction__c</picklist>
             <values>
                 <fullName>1</fullName>
@@ -934,6 +1117,41 @@
             </values>
             <values>
                 <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Programme__c</picklist>
+            <values>
+                <fullName>Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CE Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stabisation</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -967,6 +1185,61 @@
         <description>Used to record Drop In Attendances</description>
         <label>Drop In Attendance</label>
         <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Genera Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interagency meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychiatric treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Interaction__c</picklist>
             <values>
                 <fullName>1</fullName>
@@ -986,6 +1259,41 @@
             </values>
             <values>
                 <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Programme__c</picklist>
+            <values>
+                <fullName>Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CE Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stabisation</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1019,6 +1327,61 @@
         <description>Use for a meeting with a client</description>
         <label>One to One Attendance</label>
         <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Genera Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interagency meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychiatric treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Interaction__c</picklist>
             <values>
                 <fullName>1</fullName>
@@ -1038,6 +1401,41 @@
             </values>
             <values>
                 <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Programme__c</picklist>
+            <values>
+                <fullName>Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CE Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stabisation</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1098,6 +1496,61 @@
         <description>Used to record for Open Access attendance</description>
         <label>Open Access Attendance</label>
         <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complimentary Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Genera Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interagency meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Key Working</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychiatric treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Interaction__c</picklist>
             <values>
                 <fullName>1</fullName>
@@ -1132,6 +1585,41 @@
             </values>
             <values>
                 <fullName>Mullingar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Programme__c</picklist>
+            <values>
+                <fullName>Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CE Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stabisation</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

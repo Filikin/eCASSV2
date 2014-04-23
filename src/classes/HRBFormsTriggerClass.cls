@@ -2,6 +2,10 @@
     Author: Eamon Kelly, Enclude
     Purpose: Need to act as a rollup on the treatment to the contact to count number of HRB Forms 
     Called from: TriggerDispatcher
+
+    NOTE: the year of the count of the number of treatments, needs to be in some way controlled by the user to allow for
+    submissions to the HRB of last year's form - change line:
+   	Integer this_year = system.today().year();
 */
 public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITriggerEntry
 {
@@ -13,6 +17,7 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
         {
         	if (isBefore)
         	{
+        		VerifyRules (newList);
         		CalculateMaxInterventionCommencementDate (newList);
         		CountNumberOfFormsStartedThisYear (newList);
         	}
@@ -24,7 +29,11 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
         }
         else if (isUpdate)
         {
-        	if (isBefore) CalculateMaxInterventionCommencementDate (newList);
+        	if (isBefore) 
+        	{
+        		VerifyRules (newList);
+        		CalculateMaxInterventionCommencementDate (newList);
+        	}
         	else if (isAfter) CountNumber (newList);
         }
         else if (isDelete)
@@ -105,5 +114,20 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
             oneClient.Number_of_completed_Treatments__c = oneClient.HRB_Forms__r.size();
         }       
         update contacts;
+    }
+    
+    public void VerifyRules (list<HRB_Form__c> updatedForms)
+    {
+    	return;
+    	if (AppConfigSupport.ValidationRulesOn == false) return;
+    	
+    	for (HRB_Form__c oneForm: updatedForms)
+    	{
+    		if (oneForm.Pause__c == false)
+    		{
+    			oneForm.X13_Date_of_Referral__c.addError ('This date is wrong');
+    			oneForm.X14_Main_Reason_for_referral__c.addError ('This is also wrong');
+    		}
+    	}
     }
 }

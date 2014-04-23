@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NSP Stock</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NSP Stock</value>
+    </caseValues>
+    <fields>
+        <label><!-- Baby Brown --></label>
+        <name>Baby_Brown__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bags --></label>
+        <name>Bags__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bang it and bin it stickers --></label>
+        <name>Bang_it_and_bin_it_stickers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bins --></label>
+        <name>Bins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blue --></label>
+        <name>Blue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blunt Needle --></label>
+        <name>Blunt_Needle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brown --></label>
+        <name>Brown__c</name>
+    </fields>
+    <fields>
+        <label><!-- Citric --></label>
+        <name>Citric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cleaning Works --></label>
+        <name>Cleaning_Works__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condoms --></label>
+        <name>Condoms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 20 --></label>
+        <name>Foil_x_20__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 50 --></label>
+        <name>Foil_x_50__c</name>
+    </fields>
+    <fields>
+        <label><!-- Green --></label>
+        <name>Green__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grey --></label>
+        <name>Grey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groin (FI) --></label>
+        <name>Groin_FI__c</name>
+    </fields>
+    <fields>
+        <label><!-- HEP C --></label>
+        <name>HEP_C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Orange --></label>
+        <name>Long_Orange__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orange --></label>
+        <name>Orange__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose (Card) --></label>
+        <name>Overdose_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pipes --></label>
+        <name>Pipes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting Handbook --></label>
+        <name>Safer_Injecting_Handbook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting (MQI) --></label>
+        <name>Safer_Injecting_MQI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Staying Alive --></label>
+        <name>Staying_Alive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stericups --></label>
+        <name>Stericups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Swabs --></label>
+        <name>Swabs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tooters --></label>
+        <name>Tooters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tourniquet (Rolls) --></label>
+        <name>Tourniquet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vein Care (Booklet) --></label>
+        <name>Vein_Care_booklet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vein Care (card) --></label>
+        <name>Vein_Care_card__c</name>
+    </fields>
+    <fields>
+        <label><!-- VitC --></label>
+        <name>VitC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Water --></label>
+        <name>Water__c</name>
+    </fields>
+    <fields>
+        <label><!-- When Things Go Wrong --></label>
+        <name>When_Things_Go_Wrong__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Diabetic --></label>
+        <name>X1ml_Diabetic__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Filter --></label>
+        <name>X1ml_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Low Dead Space --></label>
+        <name>X1ml_Low_Dead_Space__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Nevershare --></label>
+        <name>X1ml_Nevershare__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Omnifix --></label>
+        <name>X1ml_Omnifix__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Saline --></label>
+        <name>X1ml_Saline__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Green --></label>
+        <name>X2ml_Green__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Never Share Syringe --></label>
+        <name>X2ml_Never_Share_Syringe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Orange --></label>
+        <name>X2ml_Orange__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Syringe --></label>
+        <name>X2ml_Syringe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 5ml Syringe --></label>
+        <name>X5ml_Syringe__c</name>
+    </fields>
+    <layouts>
+        <layout>Needle &amp; Syringe Stock Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Health Promotion --></label>
+            <section>Health Promotion</section>
+        </sections>
+        <sections>
+            <label><!-- Leaflets --></label>
+            <section>Leaflets</section>
+        </sections>
+        <sections>
+            <label><!-- Needles --></label>
+            <section>Needles</section>
+        </sections>
+        <sections>
+            <label><!-- Secondary Paraphernalia --></label>
+            <section>Secondary Paraphernalia</section>
+        </sections>
+        <sections>
+            <label><!-- Sets --></label>
+            <section>Sets</section>
+        </sections>
+        <sections>
+            <label><!-- Syringes --></label>
+            <section>Syringes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

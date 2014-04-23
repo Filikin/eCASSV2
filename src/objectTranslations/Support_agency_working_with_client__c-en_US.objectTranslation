@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Support agency working with client</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Support agencies working with client</value>
+    </caseValues>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Support agencies working with client --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Clients supported --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact name --></label>
+        <name>Contact_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact type --></label>
+        <name>Contact_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support agency --></label>
+        <name>Support_agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telephone number --></label>
+        <name>Telephone_number__c</name>
+    </fields>
+    <layouts>
+        <layout>Support agency working with client Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

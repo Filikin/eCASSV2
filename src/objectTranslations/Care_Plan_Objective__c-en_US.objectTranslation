@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Care Plan Objective</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Care Plan Objectives</value>
+    </caseValues>
+    <fields>
+        <label><!-- Area --></label>
+        <name>Area__c</name>
+        <picklistValues>
+            <masterLabel>Care Plan Administration</masterLabel>
+            <translation><!-- Care Plan Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug &amp; Alcohol Use</masterLabel>
+            <translation><!-- Drug &amp; Alcohol Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Problems</masterLabel>
+            <translation><!-- Legal Problems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical &amp; Psychological Problems</masterLabel>
+            <translation><!-- Physical &amp; Psychological Problems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Assessment</masterLabel>
+            <translation><!-- Risk Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Functioning</masterLabel>
+            <translation><!-- Social Functioning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Care plan step count --></label>
+        <name>Care_plan_step_count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Care Plan Objectives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comment: Reasons achieved or not! --></label>
+        <name>Comment_Reasons_achieved_or_not__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date completed --></label>
+        <name>Date_completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date objective set --></label>
+        <name>Date_objective_set__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicators of change. reduction of use of heroine to 40ml in four months --></help>
+        <label><!-- How will progress be measured --></label>
+        <name>How_will_progress_be_measured__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Outcome --></label>
+        <name>Latest_Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Agency name --></label>
+        <name>Lead_Agency_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Key Worker name --></label>
+        <name>Lead_Key_Worker_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead agency from other agency --></label>
+        <name>Lead_agency_from_other_agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead key worker from other agency --></label>
+        <name>Lead_key_worker_from_other_agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Review Date --></label>
+        <name>Next_Review_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective Status --></label>
+        <name>Objective_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Objective and Timescale --></label>
+        <name>Objective_and_Timescale__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome --></label>
+        <name>Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall Outcome --></label>
+        <name>Overall_Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred to --></label>
+        <name>Referred_to__c</name>
+        <relationshipLabel><!-- Care Plan Objectives --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referred to from other agency --></label>
+        <name>Referred_to_from_other_agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Frame (short) --></label>
+        <name>Time_Frame_short__c</name>
+        <picklistValues>
+            <masterLabel>Long-term</masterLabel>
+            <translation><!-- Long-term --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium-term</masterLabel>
+            <translation><!-- Medium-term --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short-term</masterLabel>
+            <translation><!-- Short-term --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- e.g. Use Pattern Chart or TOPS or data from metadone clinic! --></help>
+        <label><!-- Tools: How are we going to measure this? --></label>
+        <name>Tools_used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective --></label>
+        <name>Work_to_be_done_to_achieve_objective__c</name>
+    </fields>
+    <layouts>
+        <layout>Care Plan Objective Layout</layout>
+        <sections>
+            <label><!-- Care Plan Details --></label>
+            <section>Care Plan Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Info from other agency --></label>
+            <section>Info from other agency</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

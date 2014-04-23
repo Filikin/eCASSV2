@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Drug-HRB</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Drugs HRB</value>
+    </caseValues>
+    <fields>
+        <label><!-- ANCHORID --></label>
+        <name>ANCHORID__c</name>
+    </fields>
+    <fields>
+        <label><!-- DrugCodeX --></label>
+        <name>DrugCodeX__c</name>
+    </fields>
+    <fields>
+        <label><!-- DrugCode --></label>
+        <name>DrugCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude --></label>
+        <name>Exclude__c</name>
+    </fields>
+    <fields>
+        <label><!-- HRB ID Number --></label>
+        <name>External_ID_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specify0 --></label>
+        <name>Specify0__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specify1 --></label>
+        <name>Specify1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tableyear2012 --></label>
+        <name>Tableyear2012__c</name>
+    </fields>
+    <fields>
+        <label><!-- drugtype --></label>
+        <name>drugtype__c</name>
+    </fields>
+    <fields>
+        <label><!-- euromaincode --></label>
+        <name>euromaincode__c</name>
+    </fields>
+    <fields>
+        <label><!-- eurosubcode --></label>
+        <name>eurosubcode__c</name>
+    </fields>
+    <layouts>
+        <layout>Drug Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <namedFilters>
+        <errorMessage><!-- Drug must be on the 2012 table --></errorMessage>
+        <name>nf_01ID0000000RJ8HMAW_00ND0000003o5pLMAQ</name>
+    </namedFilters>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

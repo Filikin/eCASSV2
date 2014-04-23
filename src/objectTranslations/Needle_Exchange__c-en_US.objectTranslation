@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NSP Intervention</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NSP Interventions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alternative Routes Requested N/A --></label>
+        <name>Alternative_Routes_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alternative Routes --></label>
+        <name>Alternative_Routes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Baby Brown Dispensed --></label>
+        <name>Baby_Brown_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Baby Brown Requested N/A --></label>
+        <name>Baby_Brown_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Baby Brown Returned --></label>
+        <name>Baby_Brown_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bins Dispensed --></label>
+        <name>Bins_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bins Requested N/A --></label>
+        <name>Bins_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bins Returned --></label>
+        <name>Bins_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blue Dispensed --></label>
+        <name>Blue_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blue Requested N/A --></label>
+        <name>Blue_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blue Returned --></label>
+        <name>Blue_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blunt Needle Requested N/A --></label>
+        <name>Blunt_Needle_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blunt Needle --></label>
+        <name>Blunt_Needle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brown Dispensed --></label>
+        <name>Brown_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brown Requested N/A --></label>
+        <name>Brown_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brown Returned --></label>
+        <name>Brown_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Citric Card Requested N/A --></label>
+        <name>Citric_Card_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Citric Card --></label>
+        <name>Citric_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- Citric Dispensed --></label>
+        <name>Citric_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Citric Requested N/A --></label>
+        <name>Citric_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cleaning Works Requested N/A --></label>
+        <name>Cleaning_Works_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cleaning Works --></label>
+        <name>Cleaning_Works__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- NSP Interventions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Condoms Dispensed --></label>
+        <name>Condoms_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condoms Requested N/A --></label>
+        <name>Condoms_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of intervention --></label>
+        <name>Date_Exchange__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox Handbook Requested N/A --></label>
+        <name>Detox_Handbook_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox Handbook --></label>
+        <name>Detox_Handbook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Femoral Injecting Requested N/A --></label>
+        <name>Femoral_Injecting_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Femoral Injecting --></label>
+        <name>Femoral_Injecting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 20 Requested NA --></label>
+        <name>Foil_x_20_Requested_NA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 20 --></label>
+        <name>Foil_x_20__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 50 Requested NA --></label>
+        <name>Foil_x_50_Requested_NA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foil x 50 --></label>
+        <name>Foil_x_50__c</name>
+    </fields>
+    <fields>
+        <label><!-- Green Dispensed --></label>
+        <name>Green_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Green Requested N/A --></label>
+        <name>Green_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Green Returned --></label>
+        <name>Green_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grey Dispensed --></label>
+        <name>Grey_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grey Requested N/A --></label>
+        <name>Grey_Returned_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grey Returned --></label>
+        <name>Grey_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groin - Femoral Injecting Requested N/A --></label>
+        <name>Groin_Femoral_Injecting_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Groin - Femoral Injecting --></label>
+        <name>Groin_Femoral_Injecting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hep C Requested N/A --></label>
+        <name>Hep_C_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <help><!-- this is something about hep c --></help>
+        <label><!-- Hep C --></label>
+        <name>Hep_C__c</name>
+    </fields>
+    <fields>
+        <label><!-- How Small IsThe Hep CVirus Requested N/A --></label>
+        <name>How_Small_IsThe_Hep_CVirus_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- How Small Is The Hep C Virus --></label>
+        <name>How_Small_Is_The_Hep_C_Virus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Injecting Site Care Requested N/A --></label>
+        <name>Injecting_Site_Care_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Injecting Site Care --></label>
+        <name>Injecting_Site_Care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interventions Dispensed --></label>
+        <name>Interventions_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interventions Requested N/A --></label>
+        <name>Interventions_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Cavan</masterLabel>
+            <translation><!-- Cavan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dublin</masterLabel>
+            <translation><!-- Dublin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laois</masterLabel>
+            <translation><!-- Laois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limerick</masterLabel>
+            <translation><!-- Limerick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Longford</masterLabel>
+            <translation><!-- Longford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louth</masterLabel>
+            <translation><!-- Louth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meath</masterLabel>
+            <translation><!-- Meath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monaghan</masterLabel>
+            <translation><!-- Monaghan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offaly</masterLabel>
+            <translation><!-- Offaly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Westmeath</masterLabel>
+            <translation><!-- Westmeath --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Not the short needles --></help>
+        <label><!-- Long Orange Dispensed --></label>
+        <name>Long_Orange_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Orange Requested N/A --></label>
+        <name>Long_Orange_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Orange Returned --></label>
+        <name>Long_Orange_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Methadone Handbook Requested N/A --></label>
+        <name>Methadone_Handbook_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Methadone Handbook --></label>
+        <name>Methadone_Handbook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Bins Returned --></label>
+        <name>Non_Bins_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orange Dispensed --></label>
+        <name>Orange_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orange Requested N/A --></label>
+        <name>Orange_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orange Returned --></label>
+        <name>Orange_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose - Detox Requested N/A --></label>
+        <name>Overdose_Detox_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose - Detox --></label>
+        <name>Overdose_Detox__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose - General Requested N/A --></label>
+        <name>Overdose_General_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose - General --></label>
+        <name>Overdose_General__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose Prevention Requested N/A --></label>
+        <name>Overdose_Prevention_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdose Prevention --></label>
+        <name>Overdose_Prevention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pipes Dispensed --></label>
+        <name>Pipes_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pipes Requested N/A --></label>
+        <name>Pipes_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Paraphernalia Info Requested N/A --></label>
+        <name>Primary_Paraphernalia_Info_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Paraphernalia Info --></label>
+        <name>Primary_Paraphernalia_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral --></label>
+        <name>Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rehab Handbook Requested N/A --></label>
+        <name>Rehab_Handbook_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rehab Handbook --></label>
+        <name>Rehab_Handbook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safe Disposal Requested N/A --></label>
+        <name>Safe_Disposal_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safe Disposal --></label>
+        <name>Safe_Disposal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting - General Requested N/A --></label>
+        <name>Safer_Injecting_General_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting - General --></label>
+        <name>Safer_Injecting_General__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting Guide -MQI Requested N/A --></label>
+        <name>Safer_Injecting_Guide_MQI_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting Guide - MQI --></label>
+        <name>Safer_Injecting_Guide_MQI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting Handbook Requested N/A --></label>
+        <name>Safer_Injecting_Handbook_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Safer Injecting Handbook --></label>
+        <name>Safer_Injecting_Handbook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Exchange Requested N/A --></label>
+        <name>Secondary_Exchange_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Exchange --></label>
+        <name>Secondary_Exchange__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Paraphernalia Requested N/A --></label>
+        <name>Secondary_Paraphernalia_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Paraphrnalia --></label>
+        <name>Secondary_Paraphernalia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smoking brown leaflet Requested N/A --></label>
+        <name>Smoking_brown_leaflet_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smoking brown leaflet --></label>
+        <name>Smoking_brown_leaflet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stericups Dispensed --></label>
+        <name>Stericups_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stericups Requested N/A --></label>
+        <name>Stericups_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub-location --></label>
+        <name>Sub_location__c</name>
+        <picklistValues>
+            <masterLabel>Ardee</masterLabel>
+            <translation><!-- Ardee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ashbourne</masterLabel>
+            <translation><!-- Ashbourne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Athboy</masterLabel>
+            <translation><!-- Athboy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bailieborough</masterLabel>
+            <translation><!-- Bailieborough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bailieborough (CDA)</masterLabel>
+            <translation><!-- Bailieborough (CDA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ballivor</masterLabel>
+            <translation><!-- Ballivor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ballyhaise</masterLabel>
+            <translation><!-- Ballyhaise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ballyjamesduff</masterLabel>
+            <translation><!-- Ballyjamesduff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bettystown</masterLabel>
+            <translation><!-- Bettystown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cavan</masterLabel>
+            <translation><!-- Cavan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cavan (CDA)</masterLabel>
+            <translation><!-- Cavan (CDA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clare</masterLabel>
+            <translation><!-- Clare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cootehill</masterLabel>
+            <translation><!-- Cootehill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drogheda (LCDAT)</masterLabel>
+            <translation><!-- Drogheda (LCDAT) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drogheda (North)</masterLabel>
+            <translation><!-- Drogheda (North) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drogheda (South)</masterLabel>
+            <translation><!-- Drogheda (South) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duleek</masterLabel>
+            <translation><!-- Duleek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dundalk (Bridge Street)</masterLabel>
+            <translation><!-- Dundalk (Bridge Street) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dundalk (North)</masterLabel>
+            <translation><!-- Dundalk (North) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dundalk (Simon)</masterLabel>
+            <translation><!-- Dundalk (Simon) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dundalk (South)</masterLabel>
+            <translation><!-- Dundalk (South) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dunshaughlin</masterLabel>
+            <translation><!-- Dunshaughlin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kells</masterLabel>
+            <translation><!-- Kells --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kingscourt</masterLabel>
+            <translation><!-- Kingscourt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limerick City</masterLabel>
+            <translation><!-- Limerick City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limerick Rural</masterLabel>
+            <translation><!-- Limerick Rural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Navan (Fair Green)</masterLabel>
+            <translation><!-- Navan (Fair Green) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Navan (North)</masterLabel>
+            <translation><!-- Navan (North) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Navan (South)</masterLabel>
+            <translation><!-- Navan (South) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nobber</masterLabel>
+            <translation><!-- Nobber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Tipperary</masterLabel>
+            <translation><!-- North Tipperary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oldcastle</masterLabel>
+            <translation><!-- Oldcastle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trim</masterLabel>
+            <translation><!-- Trim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Swabs Dispensed --></label>
+        <name>Swabs_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Swabs Requested N/A --></label>
+        <name>Swabs_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tooters Dispensed --></label>
+        <name>Tooters_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tooters Requested N/A --></label>
+        <name>Tooters_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Dispensed --></label>
+        <name>Total_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Needles Dispensed --></label>
+        <name>Total_Needles_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Needles Returned --></label>
+        <name>Total_Needles_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Syringes Dispensed --></label>
+        <name>Total_Syringes_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Syringes Returned --></label>
+        <name>Total_Syringes_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tourniquet Dispensed --></label>
+        <name>Tourniquet_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tourniquet Requested N/A --></label>
+        <name>Tourniquet_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Your Head Requested N/A --></label>
+        <name>Use_Your_Head_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Your Head --></label>
+        <name>Use_Your_Head__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vein care Requested N/A --></label>
+        <name>Vein_care_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vein care --></label>
+        <name>Vein_care__c</name>
+    </fields>
+    <fields>
+        <label><!-- VitC Card Requested N/A --></label>
+        <name>VitC_Card_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- VitC Card --></label>
+        <name>VitC_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vit C Dispensed --></label>
+        <name>Vit_C_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vit C Requested N/A --></label>
+        <name>Vit_C_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Water Dispensed --></label>
+        <name>Water_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Water Requested N/A --></label>
+        <name>Water_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- What&apos;s The Story? Requested N/A --></label>
+        <name>What_s_The_Story_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- What&apos;s The Story? --></label>
+        <name>What_s_The_Story__c</name>
+    </fields>
+    <fields>
+        <label><!-- When Things Go Wrong Requested N/A --></label>
+        <name>When_Things_Go_Wrong_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- When Things Go Wrong --></label>
+        <name>When_Things_Go_Wrong__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Low Dead Space Dispensed --></label>
+        <name>X1Ml_Low_Dead_Space__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Diabetic Dispensed --></label>
+        <name>X1ml_Diabetic_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Diabetic Requested N/A --></label>
+        <name>X1ml_Diabetic_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Diabetic Returned --></label>
+        <name>X1ml_Diabetic_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Filter Dispensed --></label>
+        <name>X1ml_Filter_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Filter Requested N/A --></label>
+        <name>X1ml_Filter_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Filter Returned --></label>
+        <name>X1ml_Filter_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Low Dead Space Requested N/A --></label>
+        <name>X1ml_Low_Dead_Space_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Low Dead Space Returned --></label>
+        <name>X1ml_Low_Dead_Space_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Nevershare Dispensed --></label>
+        <name>X1ml_Nevershare_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Nevershare Requested N/A --></label>
+        <name>X1ml_Nevershare_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Nevershare Returned --></label>
+        <name>X1ml_Nevershare_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Omnifix Dispensed --></label>
+        <name>X1ml_Omnifix_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Omnifix Requested N/A --></label>
+        <name>X1ml_Omnifix_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Omnifix Returned --></label>
+        <name>X1ml_Omnifix_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Saline Requested N/A --></label>
+        <name>X1ml_Saline_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1ml Saline --></label>
+        <name>X1ml_Saline__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Green Dispensed --></label>
+        <name>X2ml_Green_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Green Requested N/A --></label>
+        <name>X2ml_Green_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Green Returned --></label>
+        <name>X2ml_Green_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Never Share Syringe Dispensed --></label>
+        <name>X2ml_Never_Share_Syringe_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Never Share Syringe Requested N/A --></label>
+        <name>X2ml_Never_Share_Syringe_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Never Share Syringe Returned --></label>
+        <name>X2ml_Never_Share_Syringe_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Orange Dispensed --></label>
+        <name>X2ml_Orange_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Orange Requested N/A --></label>
+        <name>X2ml_Orange_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Orange Returned --></label>
+        <name>X2ml_Orange_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Syringe Dispensed --></label>
+        <name>X2ml_Syringe_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Syringe Requested N/A --></label>
+        <name>X2ml_Syringe_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2ml Syringe Returned --></label>
+        <name>X2ml_Syringe_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- 5ml Syringe Dispensed --></label>
+        <name>X5ml_Syringe_Dispensed__c</name>
+    </fields>
+    <fields>
+        <label><!-- 5ml Syringe Requested N/A --></label>
+        <name>X5ml_Syringe_Requested_N_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- 5ml Syringe Returned --></label>
+        <name>X5ml_Syringe_Returned__c</name>
+    </fields>
+    <layouts>
+        <layout>NSP Intervention Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Health Promotion --></label>
+            <section>Health Promotion</section>
+        </sections>
+        <sections>
+            <label><!-- Interventions --></label>
+            <section>Interventions</section>
+        </sections>
+        <sections>
+            <label><!-- Leaflets --></label>
+            <section>Leaflets</section>
+        </sections>
+        <sections>
+            <label><!-- Needles --></label>
+            <section>Needles</section>
+        </sections>
+        <sections>
+            <label><!-- Secondary Paraphernalia --></label>
+            <section>Secondary Paraphernalia</section>
+        </sections>
+        <sections>
+            <label><!-- Sets --></label>
+            <section>Sets</section>
+        </sections>
+        <sections>
+            <label><!-- Syringes --></label>
+            <section>Syringes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

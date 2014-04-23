@@ -28,7 +28,12 @@
         <members>*</members>
         <members>Activity</members>
         <members>Contact</members>
+        <members>Event</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObjectTranslation</name>
     </types>
     <types>
         <members>*</members>
@@ -50,12 +55,11 @@
     <types>
         <members>Area_of_Residence_Old__c-Area of Residence Layout</members>
         <members>Assessment_NF__c-Assessment %28National Framework%29 Layout</members>
-        <members>Attendance__c-Attendance Layout</members>
+        <members>Assessment_NF__c-Initial Assessment</members>
         <members>Attendance__c-Course Attendance Layout</members>
         <members>Attendance__c-Drop In Attendance Layout</members>
-        <members>Attendance__c-Drop-in Attendance Layout</members>
         <members>Attendance__c-One to One Attendance</members>
-        <members>Attendance__c-Open Access attendance Layout</members>
+        <members>Attendance__c-Open Access Attendance Layout</members>
         <members>CRA_Goal__c-CRA Goal Layout</members>
         <members>CRA__c-CRA Layout</members>
         <members>Care_Plan_Objective__c-Care Plan Objective Layout</members>
@@ -66,6 +70,7 @@
         <members>Enrolment__c-Participant Layout</members>
         <members>Event-BIAN Event Layout</members>
         <members>Event-Event Layout</members>
+        <members>Global-Global Layout</members>
         <members>HRB_Form__c-Treatment Layout 2012</members>
         <members>HRB_Report__c-HRB Report Layout</members>
         <members>Nations__c-Nation Layout</members>
@@ -73,6 +78,7 @@
         <members>Needle_Syringe_Stock__c-Needle %26 Syringe Stock Layout</members>
         <members>Program_Service__c-Program Service Layout</members>
         <members>Program_Session__c-Program Session Layout</members>
+        <members>Referral__c-Referral Layout</members>
         <members>Support_agency_working_with_client__c-Support agency working with client Layout</members>
         <members>Treatment_Centre__c-Treatment Centre Layout</members>
         <members>Use_Pattern_Chart__c-Use Pattern Chart Layout</members>

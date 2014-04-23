@@ -37,12 +37,14 @@
             <name>Remove_Pause</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>true</active>
+        <active>false</active>
         <criteriaItems>
             <field>HRB_Form__c.Pause__c</field>
             <operation>equals</operation>
             <value>True</value>
         </criteriaItems>
+        <description>Deactivated so that the user has to remove the pause manually.
+Paused records will not be sent to the HRB</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

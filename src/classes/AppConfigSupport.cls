@@ -97,4 +97,12 @@ public with sharing class AppConfigSupport {
 			return GeteCASSSettings().Disable_Triggers__c;
 		}
 	}
+
+	public static Boolean ValidationRulesOn
+	{
+		get
+		{
+			return GeteCASSSettings().Rules_on__c;
+		}
+	}
 }

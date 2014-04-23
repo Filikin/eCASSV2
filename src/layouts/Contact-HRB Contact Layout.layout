@@ -2,6 +2,7 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>View_care_plan</customButtons>
     <customButtons>Care_Plan_Overview</customButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
     <excludeButtons>DisablePrmSuperUser</excludeButtons>
@@ -9,6 +10,7 @@
     <excludeButtons>EnablePrmSuperUser</excludeButtons>
     <excludeButtons>EnableSelfService</excludeButtons>
     <excludeButtons>RequestUpdate</excludeButtons>
+    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>ViewPartnerPortalUser</excludeButtons>
     <excludeButtons>ViewSelfService</excludeButtons>
@@ -345,6 +347,58 @@
     </relatedContent>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Date_of_Referral__c</fields>
+        <fields>Source_of_Referral__c</fields>
+        <fields>Referred_from_Organisation_external__c</fields>
+        <fields>Referral_Status__c</fields>
+        <fields>Referred_to_Programme__c</fields>
+        <fields>Date_Started_on_Programme__c</fields>
+        <fields>Client_Status__c</fields>
+        <relatedList>Referral__c.Client__c</relatedList>
+        <sortField>Date_of_Referral__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <relatedList>RelatedActivityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>TASK.LAST_UPDATE</fields>
+        <relatedList>RelatedHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>X16_Date_of_Assessment__c</fields>
+        <fields>X14_Main_Reason_for_Referral_Drug__c</fields>
+        <fields>X17a_Assessment_outcome__c</fields>
+        <fields>X34_Outcome_for_MAIN_treatment__c</fields>
+        <fields>X37_Date_of_Final_Discharge__c</fields>
+        <relatedList>HRB_Form__c.Contact__c</relatedList>
+        <sortField>X16_Date_of_Assessment__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>RECORDTYPE</fields>
+        <fields>Date_of_Initial_Assessment__c</fields>
+        <fields>Date_of_Assessment__c</fields>
+        <fields>Date_Comprehensive_Assessment_Completed__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <relatedList>Assessment_NF__c.Client__c</relatedList>
+        <sortField>Date_of_Initial_Assessment__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
         <fields>Date_joined_program__c</fields>
         <fields>Program_Service__c</fields>
         <fields>Status_on_Programme__c</fields>
@@ -371,48 +425,18 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Support_agency__c</fields>
-        <fields>Contact_name__c</fields>
-        <fields>Telephone_number__c</fields>
-        <fields>Email__c</fields>
-        <relatedList>Support_agency_working_with_client__c.Client__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>X16_Date_of_Assessment__c</fields>
-        <fields>X14_Main_Reason_for_Referral_Drug__c</fields>
-        <fields>X17a_Assessment_outcome__c</fields>
-        <fields>X34_Outcome_for_MAIN_treatment__c</fields>
-        <fields>X37_Date_of_Final_Discharge__c</fields>
-        <relatedList>HRB_Form__c.Contact__c</relatedList>
-        <sortField>X16_Date_of_Assessment__c</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
         <fields>Date_objective_set__c</fields>
         <fields>Next_Review_Date__c</fields>
         <fields>Date_completed__c</fields>
         <relatedList>Care_Plan_Objective__c.Client__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>TASK.SUBJECT</fields>
-        <fields>TASK.WHAT_NAME</fields>
-        <fields>ACTIVITY.TASK</fields>
-        <fields>TASK.DUE_DATE</fields>
-        <fields>CORE.USERS.FULL_NAME</fields>
-        <fields>TASK.LAST_UPDATE</fields>
-        <relatedList>RelatedHistoryList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>TASK.SUBJECT</fields>
-        <fields>TASK.WHAT_NAME</fields>
-        <fields>ACTIVITY.TASK</fields>
-        <fields>TASK.DUE_DATE</fields>
-        <fields>TASK.STATUS</fields>
-        <fields>TASK.PRIORITY</fields>
-        <fields>CORE.USERS.FULL_NAME</fields>
-        <relatedList>RelatedActivityList</relatedList>
+        <fields>NAME</fields>
+        <fields>Support_agency__c</fields>
+        <fields>Contact_name__c</fields>
+        <fields>Telephone_number__c</fields>
+        <fields>Email__c</fields>
+        <relatedList>Support_agency_working_with_client__c.Client__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>CAMPAIGN.NAME</fields>

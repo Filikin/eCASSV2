@@ -1,0 +1,2238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Assessment (National Framework)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Assessments (National Framework)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accomodation Case live? --></label>
+        <name>Accomodation_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomodation Intervention/support --></label>
+        <name>Accomodation_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomodation Service Name --></label>
+        <name>Accomodation_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomodation Service OrganisationAccount --></label>
+        <name>Accomodation_Service_OrganisationAccount__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Accomodation Service OrganisationAccount) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accomodation Service Organisation Phone --></label>
+        <name>Accomodation_Service_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional notes on alcohol use: --></label>
+        <name>Additional_notes_on_alcohol_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address: --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age left primary/secondary school --></label>
+        <name>Age_left_primary_secondary_school__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alcohol services involved in care plan --></label>
+        <name>Alcohol_services_involved_in_care_plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any barriers to work? e.g. literacy --></label>
+        <name>Any_barriers_to_work_e_g_literacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any dentistry needs? --></label>
+        <name>Any_dentistry_needs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you any difficulty in taking your prescribed medication? --></help>
+        <label><!-- Any difficulty taking your medication? --></label>
+        <name>Any_difficulty_taking_your_medication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any future goals (longer term) Alcohol? --></label>
+        <name>Any_future_goals_longer_term_Alcohol__c</name>
+    </fields>
+    <fields>
+        <help><!-- Any operations / illnesses / disease that requires support / attention? --></help>
+        <label><!-- Any illnesses requires attention --></label>
+        <name>Any_illnesses_requires_attention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any lessons learned? --></label>
+        <name>Any_lessons_learned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any lessons learned? thign not achieved --></label>
+        <name>Any_lessons_learned_thign_not_achieved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any mental health diagnosis? --></label>
+        <name>Any_mental_health_diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any needs/concerns realted to family? --></label>
+        <name>Any_needs_concerns_realted_to_family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any needs in relation to disability? --></label>
+        <name>Any_needs_in_relation_to_disability__c</name>
+    </fields>
+    <fields>
+        <help><!-- Literacy or learning difficulties / and related support needs? --></help>
+        <label><!-- Any problems in school? --></label>
+        <name>Any_problems_in_school__c</name>
+    </fields>
+    <fields>
+        <help><!-- Once clarified these should be entered into the care plan. --></help>
+        <label><!-- Are there any new needs or priorities?CP --></label>
+        <name>Are_there_any_new_needs_or_priorities_CP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area of origin --></label>
+        <name>Area_of_origin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment outcome: --></label>
+        <name>Assessment_outcome__c</name>
+        <picklistValues>
+            <masterLabel>Suitable</masterLabel>
+            <translation><!-- Suitable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsuitable</masterLabel>
+            <translation><!-- Unsuitable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Aware of risks of indirect sharing:
+(sharing filters, spoons, water, front/backloading) --></help>
+        <label><!-- Aware of risks of indirect sharing: --></label>
+        <name>Aware_of_risks_of_indirect_sharing__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Would there be benefit in more or different social supports / social outlets / companionship etc
+Detail Needs --></help>
+        <label><!-- Benefit in more/different social support --></label>
+        <name>Benefit_in_more_different_social_support__c</name>
+    </fields>
+    <fields>
+        <help><!-- Since your last care plan review or assessment, what has been achieved what has gone well. --></help>
+        <label><!-- Care Plan review what has been achieved? --></label>
+        <name>Care_Plan_review_what_has_been_achieved__c</name>
+    </fields>
+    <fields>
+        <help><!-- Since your last care plan review assessment, what has not been achieved or has not progressed? --></help>
+        <label><!-- Care Plan review what was not achived? --></label>
+        <name>Care_Plan_review_what_was_not_achived__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 1 Age: --></label>
+        <name>Child_1_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 1 Living with: --></label>
+        <name>Child_1_Living_with__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 1 Name: --></label>
+        <name>Child_1_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 2 Age: --></label>
+        <name>Child_2_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 2 Living with: --></label>
+        <name>Child_2_Living_with__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 2 Name: --></label>
+        <name>Child_2_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 3 Age: --></label>
+        <name>Child_3_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 3 Living with: --></label>
+        <name>Child_3_Living_with__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 3 Name: --></label>
+        <name>Child_3_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 4 Age: --></label>
+        <name>Child_4_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 4 Living with: --></label>
+        <name>Child_4_Living_with__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child 4 Name: --></label>
+        <name>Child_4_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Consequences of alcohol use – health social, economic, legal.  How is alcohol use funded ? --></help>
+        <label><!-- Consequences of alcohol use --></label>
+        <name>Consequences_of_alcohol_use__c</name>
+    </fields>
+    <fields>
+        <help><!-- Consequences of alcohol/drug use: health, social, economic, legal.
+Financial costs  and means of financing use. --></help>
+        <label><!-- Consequences of drug use --></label>
+        <name>Consequences_of_drug_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criminal record, time in prison --></label>
+        <name>Criminal_record_time_in_prison__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current bank account? --></label>
+        <name>Current_bank_account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Comprehensive Assessment Completed --></label>
+        <name>Date_Comprehensive_Assessment_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Objective 1 set: --></label>
+        <name>Date_Objective_1_set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Objective 2 set: --></label>
+        <name>Date_Objective_2_set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Objective 3 set: --></label>
+        <name>Date_Objective_3_set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Objective 4 set: --></label>
+        <name>Date_Objective_4_set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Objective 5 set: --></label>
+        <name>Date_Objective_5_set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date assessment criteria fulfilled --></label>
+        <name>Date_assessment_criteria_fulfilled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Comprehensive Assessment --></label>
+        <name>Date_of_Assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Birth --></label>
+        <name>Date_of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Initial Assessment --></label>
+        <name>Date_of_Initial_Assessment__c</name>
+    </fields>
+    <fields>
+        <help><!-- Detail treatment episodes with specific detail of any in the last year.
+If previously received methadone/opiate substitute, please specify age first received --></help>
+        <label><!-- Detail treatment episodes --></label>
+        <name>Detail_treatment_episodes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 1 Age at first use --></label>
+        <name>Drug_1_Age_at_frist_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 1 Amount used --></label>
+        <name>Drug_1_Amount_used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 1 Discuss harm reduction issues --></label>
+        <name>Drug_1_Discuss_harm_reduction_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 1 Harm reduction awareness --></label>
+        <name>Drug_1_Harm_reduction_awareness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 2 Age at first use --></label>
+        <name>Drug_2_Age_at_first_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 2 Amount used --></label>
+        <name>Drug_2_Amount_used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 2 Discuss harm reduction issues --></label>
+        <name>Drug_2_Discuss_harm_reduction_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 2 Harm reduction awareness --></label>
+        <name>Drug_2_Harm_reduction_awareness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 3 Age at first use --></label>
+        <name>Drug_3_Age_at_first_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 3 Amount used --></label>
+        <name>Drug_3_Amount_used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 3 Discuss harm reduction issues --></label>
+        <name>Drug_3_Discuss_harm_reduction_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 3 Harm reduction awareness --></label>
+        <name>Drug_3_Harm_reduction_awareness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 4 Age at first use --></label>
+        <name>Drug_4_Age_at_first_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 4 Amount used --></label>
+        <name>Drug_4_Amount_used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 4 Discuss harm reduction issues --></label>
+        <name>Drug_4_Discuss_harm_reduction_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug 4 Harm reduction awarness --></label>
+        <name>Drug_4_Harm_reduction_awarness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug type 1 --></label>
+        <name>Drug_type_1__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Drug type 2 --></label>
+        <name>Drug_type_2__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Drug 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Drug type 3 --></label>
+        <name>Drug_type_3__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Drug 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Drug type 4 --></label>
+        <name>Drug_type_4__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Drug 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Drug use risk factors and plan to avoid risks:
+
+What factors lead to greater risks in relation to drug use?
+- Non compliance with medication?
+- Alcohol drugs?
+- Certain people?
+- anniversaries?
+- times of the year? --></help>
+        <label><!-- Drug use risk factors/plan to avoid risk --></label>
+        <name>Drug_use_risk_factors_plan_to_avoid_risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education Service Organisation Name --></label>
+        <name>Education_Service_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Education Service Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Education Service Organisation Phone --></label>
+        <name>Education_Service_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education/Training Case live? --></label>
+        <name>Education_Training_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education/Training Interests --></label>
+        <name>Education_Training_Interests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education/Training Intervention/support --></label>
+        <name>Education_Training_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education/Training Service Name --></label>
+        <name>Education_Training_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education and training Completed --></label>
+        <name>Education_and_training_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Case live? --></label>
+        <name>Employment_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Interest? --></label>
+        <name>Employment_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Intervention/support --></label>
+        <name>Employment_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Service Name --></label>
+        <name>Employment_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Service Organisation Name --></label>
+        <name>Employment_Service_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Employment Service Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Employment Service Organisation Phone --></label>
+        <name>Employment_Service_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Status --></label>
+        <name>Employment_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employment Status other --></label>
+        <name>Employment_Status_other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement in FAS CE programme? --></label>
+        <name>Engagement_in_FAS_CE_programme__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ever injected: --></label>
+        <name>Ever_injected__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ever overdosed: --></label>
+        <name>Ever_overdosed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ever previously treated for alcohol use --></label>
+        <name>Ever_previously_treated_for_alcohol_use__c</name>
+        <picklistValues>
+            <masterLabel>Never treated</masterLabel>
+            <translation><!-- Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not known</masterLabel>
+            <translation><!-- Not known --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previously treated</masterLabel>
+            <translation><!-- Previously treated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ever previously treated for problem drug --></label>
+        <name>Ever_previously_treated_for_problem_drug__c</name>
+        <picklistValues>
+            <masterLabel>Never treated</masterLabel>
+            <translation><!-- Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not known</masterLabel>
+            <translation><!-- Not known --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previously treated</masterLabel>
+            <translation><!-- Previously treated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ever shared injecting equipment: --></label>
+        <name>Ever_shared_injecting_equipment__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Family &amp; Relationship Case live? --></label>
+        <name>Family_Relationship_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family/Relationship Intervention/support --></label>
+        <name>Family_Relationship_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family &amp; Relationship Service Name --></label>
+        <name>Family_Relationship_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Service Organisation Name --></label>
+        <name>Family_Service_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Family Service Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Family Service Organisation Phone --></label>
+        <name>Family_Service_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency of use Drug 1 --></label>
+        <name>Frequency_of_use_Drug_1__c</name>
+        <picklistValues>
+            <masterLabel>1. daily or almost daily</masterLabel>
+            <translation><!-- 1. daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. several times a week</masterLabel>
+            <translation><!-- 2. several times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. at least once a week</masterLabel>
+            <translation><!-- 3. at least once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. less than once a week</masterLabel>
+            <translation><!-- 4. less than once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. not known</masterLabel>
+            <translation><!-- 5. not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Frequency of use Drug 2 --></label>
+        <name>Frequency_of_use_Drug_2__c</name>
+        <picklistValues>
+            <masterLabel>1. daily or almost daily</masterLabel>
+            <translation><!-- 1. daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. several times a week</masterLabel>
+            <translation><!-- 2. several times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. at least once a week</masterLabel>
+            <translation><!-- 3. at least once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. less than once a week</masterLabel>
+            <translation><!-- 4. less than once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. not known</masterLabel>
+            <translation><!-- 5. not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Frequency of use Drug 3 --></label>
+        <name>Frequency_of_use_Drug_3__c</name>
+        <picklistValues>
+            <masterLabel>1. daily or almost daily</masterLabel>
+            <translation><!-- 1. daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. several times a week</masterLabel>
+            <translation><!-- 2. several times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. at least once a week</masterLabel>
+            <translation><!-- 3. at least once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. less than once a week</masterLabel>
+            <translation><!-- 4. less than once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. not known</masterLabel>
+            <translation><!-- 5. not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Frequency of use Drug 4 --></label>
+        <name>Frequency_of_use_Drug_4__c</name>
+        <picklistValues>
+            <masterLabel>1. daily or almost daily</masterLabel>
+            <translation><!-- 1. daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. several times a week</masterLabel>
+            <translation><!-- 2. several times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. at least once a week</masterLabel>
+            <translation><!-- 3. at least once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. less than once a week</masterLabel>
+            <translation><!-- 4. less than once a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. not known</masterLabel>
+            <translation><!-- 5. not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Accomodation --></label>
+        <name>Goals_longer_term_Accomodation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Education/Training --></label>
+        <name>Goals_longer_term_Education_Training__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Employment --></label>
+        <name>Goals_longer_term_Employment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Family/Relationship --></label>
+        <name>Goals_longer_term_Family_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Income/Financial --></label>
+        <name>Goals_longer_term_Income_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Justice/Legal --></label>
+        <name>Goals_longer_term_Justice_Legal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Physical Health --></label>
+        <name>Goals_longer_term_Physical_Health__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals: longer term - Social/Support --></label>
+        <name>Goals_longer_term_Social_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you been screened for HIV? --></label>
+        <name>Have_you_been_screened_for_HIV__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Have you been screened for Hep C? --></label>
+        <name>Have_you_been_screened_for_Hep_C__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Highest level completed --></label>
+        <name>Highest_level_completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- History of evictions --></label>
+        <name>History_of_evictions__c</name>
+    </fields>
+    <fields>
+        <help><!-- history of service involvement with reasons for leaving accommodation --></help>
+        <label><!-- History of service involvement leaving A --></label>
+        <name>History_of_service_involvement_leaving_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hobbies – old or new --></label>
+        <name>Hobbies_old_or_new__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many drinks were consumed over a typical drinking session over the past month? ……………..  (if none, put 0) --></help>
+        <label><!-- How many drinks per occasion --></label>
+        <name>How_many_drinks_per_occasion__c</name>
+    </fields>
+    <fields>
+        <label><!-- How will progress be measured - O1 --></label>
+        <name>How_will_progress_be_measured_O1__c</name>
+    </fields>
+    <fields>
+        <label><!-- How will progress be measured - O2 --></label>
+        <name>How_will_progress_be_measured_O2__c</name>
+    </fields>
+    <fields>
+        <label><!-- How will progress be measured - O3 --></label>
+        <name>How_will_progress_be_measured_O3__c</name>
+    </fields>
+    <fields>
+        <label><!-- How will progress be measured - O4 --></label>
+        <name>How_will_progress_be_measured_O4__c</name>
+    </fields>
+    <fields>
+        <label><!-- How will progress be measured - O5 --></label>
+        <name>How_will_progress_be_measured_O5__c</name>
+    </fields>
+    <fields>
+        <help><!-- If homeless is enrolled on the housing list or with the local assessment and placement service? --></help>
+        <label><!-- If homeless is enrolled on housing list? --></label>
+        <name>If_homeless_is_enrolled_on_housing_list__c</name>
+    </fields>
+    <fields>
+        <label><!-- If unsuitable – referred to: --></label>
+        <name>If_unsuitable_referred_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income/Financial Case live? --></label>
+        <name>Income_Financial_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income/Financial Intervention/support --></label>
+        <name>Income_Financial_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <help><!-- CWO?
+St Vincent De Paul?
+MABS? --></help>
+        <label><!-- Income/Financial Service Name --></label>
+        <name>Income_Financial_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income/Financial Service Org. Name --></label>
+        <name>Income_Financial_Service_Org_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Income/Financial Service Org. Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Income/Financial Service Org. Phone --></label>
+        <name>Income_Financial_Service_Org_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Injected in past month: --></label>
+        <name>Injected_in_past_month__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest in accessing counselling? --></label>
+        <name>Interest_in_accessing_counselling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice/Legal Case live? --></label>
+        <name>Justice_Legal_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice/Legal Intervention/support --></label>
+        <name>Justice_Legal_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <help><!-- Services currently involved or which have been involved
+Probation officer?
+Solicitor? --></help>
+        <label><!-- Justice/Legal Service Name --></label>
+        <name>Justice_Legal_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice/Legal Service Organisation Name --></label>
+        <name>Justice_Legal_Service_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Justice/Legal Service Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Justice/Legal Service Organisation Phone --></label>
+        <name>Justice_Legal_Service_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long term goals re-Drugs --></label>
+        <name>Long_term_goals_re_Drugs__c</name>
+    </fields>
+    <fields>
+        <label><!-- MH Organisation Phone --></label>
+        <name>MH_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mental Health Case live? --></label>
+        <name>Mental_Health_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mental Health Intervention / supports --></label>
+        <name>Mental_Health_Intervention_supports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mental Health Service Name --></label>
+        <name>Mental_Health_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mental Health Service Organisation Name --></label>
+        <name>Mental_Health_Service_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Mental Health Service Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mental Health Service Organisation (Old) --></label>
+        <name>Mental_Health_Service_Organisation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Needs, Concerns and relevant case history? Income and Financial Situation --></help>
+        <label><!-- Needs/Concerns in relation to Income --></label>
+        <name>Needs_Concerns_in_relation_to_Income__c</name>
+    </fields>
+    <fields>
+        <help><!-- Detail needs and concerns and relevant case history? --></help>
+        <label><!-- Needs/Concerns in relation to employment --></label>
+        <name>Needs_Concerns_in_relation_to_employment__c</name>
+    </fields>
+    <fields>
+        <help><!-- Needs around depression, anxiety, general esteem etc? --></help>
+        <label><!-- Needs around depression, anxiety, esteem --></label>
+        <name>Needs_around_depression_anxiety_esteem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs/concerns related to legal issues --></label>
+        <name>Needs_concerns_related_to_legal_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs in relation to further education --></label>
+        <name>Needs_in_relation_to_further_education__c</name>
+    </fields>
+    <fields>
+        <help><!-- Needs in relation to mental health / wellbeing? --></help>
+        <label><!-- Needs related to mental health/wellbeing --></label>
+        <name>Needs_related_to_mental_health_wellbeing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days alcohol was consumed over the past month?   …….......… (if none, put 0) --></help>
+        <label><!-- Number of days alcohol was consumed --></label>
+        <name>Number_of_days_alcohol_was_consumed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective 1: --></label>
+        <name>Objective_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective 2: --></label>
+        <name>Objective_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective 3: --></label>
+        <name>Objective_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective 4: --></label>
+        <name>Objective_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective 5: --></label>
+        <name>Objective_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other alcohol specify --></label>
+        <name>Other_alcohol_specify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other housing needs --></label>
+        <name>Other_housing_needs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome - O1 --></label>
+        <name>Outcome_O1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome - O2 --></label>
+        <name>Outcome_O2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome - O3 --></label>
+        <name>Outcome_O3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome - O4 --></label>
+        <name>Outcome_O4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome - O5 --></label>
+        <name>Outcome_O5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Outstanding debts (what is this related to; i.e. general expenses, drugs, gambling etc)? --></help>
+        <label><!-- Outstanding debts (is this related to?) --></label>
+        <name>Outstanding_debts_is_this_related_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outstanding warrants or charges? --></label>
+        <name>Outstanding_warrants_or_charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone number: --></label>
+        <name>Phone_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo ID? --></label>
+        <name>Photo_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Case live? --></label>
+        <name>Physical_Health_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Intervention / supports --></label>
+        <name>Physical_Health_Intervention_supports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Organisation Phone --></label>
+        <name>Physical_Health_Organisation_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Serv. Organisation Name --></label>
+        <name>Physical_Health_Serv_Organisation_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Physical Health Serv. Organisation Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Service Name --></label>
+        <name>Physical_Health_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Service Organisation --></label>
+        <name>Physical_Health_Service_Organisation__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Received information on sexual health? --></label>
+        <name>Received_information_on_sexual_health__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referred to (name &amp; agency of worker)-O1 --></label>
+        <name>Referred_to_name_agency_of_worker_O1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred to (name &amp; agency of worker)-O2 --></label>
+        <name>Referred_to_name_agency_of_worker_O2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred to (name &amp; agency of worker)-O3 --></label>
+        <name>Referred_to_name_agency_of_worker_O3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred to (name &amp; agency of worker)-O4 --></label>
+        <name>Referred_to_name_agency_of_worker_O4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referred to (name &amp; agency of worker)-O5 --></label>
+        <name>Referred_to_name_agency_of_worker_O5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check:
+- Any history of violence towards others?
+- Any recent history or risk of violence from others to self?
+- Any experience of domestic violence? --></help>
+        <label><!-- Risk of harm through violence and plan --></label>
+        <name>Risk_of_harm_through_violence_and_plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk of harm to self, please detail: --></label>
+        <name>Risk_of_harm_to_self_please_detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rough sleeping --></label>
+        <name>Rough_sleeping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Route of Trans - Drug 1 --></label>
+        <name>Route_of_Trans_Drug_1__c</name>
+        <picklistValues>
+            <masterLabel>1. inject</masterLabel>
+            <translation><!-- 1. inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. smoke</masterLabel>
+            <translation><!-- 2. smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. eat/drink</masterLabel>
+            <translation><!-- 3. eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. sniff/snort</masterLabel>
+            <translation><!-- 4. sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. sublingual</masterLabel>
+            <translation><!-- 5. sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. rectal topical</masterLabel>
+            <translation><!-- 6. rectal topical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Route of Trans - Drug 2 --></label>
+        <name>Route_of_Trans_Drug_2__c</name>
+        <picklistValues>
+            <masterLabel>1. inject</masterLabel>
+            <translation><!-- 1. inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. smoke</masterLabel>
+            <translation><!-- 2. smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. eat/drink</masterLabel>
+            <translation><!-- 3. eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. sniff/snort</masterLabel>
+            <translation><!-- 4. sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. sublingual</masterLabel>
+            <translation><!-- 5. sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. rectal topical</masterLabel>
+            <translation><!-- 6. rectal topical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Route of Trans - Drug 3 --></label>
+        <name>Route_of_Trans_Drug_3__c</name>
+        <picklistValues>
+            <masterLabel>1. inject</masterLabel>
+            <translation><!-- 1. inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. smoke</masterLabel>
+            <translation><!-- 2. smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. eat/drink</masterLabel>
+            <translation><!-- 3. eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. sniff/snort</masterLabel>
+            <translation><!-- 4. sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. sublingual</masterLabel>
+            <translation><!-- 5. sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. rectal topical</masterLabel>
+            <translation><!-- 6. rectal topical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Route of Trans - Drug 4 --></label>
+        <name>Route_of_Trans_Drug_4__c</name>
+        <picklistValues>
+            <masterLabel>1. inject</masterLabel>
+            <translation><!-- 1. inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. smoke</masterLabel>
+            <translation><!-- 2. smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. eat/drink</masterLabel>
+            <translation><!-- 3. eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. sniff/snort</masterLabel>
+            <translation><!-- 4. sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. sublingual</masterLabel>
+            <translation><!-- 5. sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. rectal topical</masterLabel>
+            <translation><!-- 6. rectal topical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Social Supports Case live? --></label>
+        <name>Social_Supports_Case_live__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Supports Intervention/support --></label>
+        <name>Social_Supports_Intervention_support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Supports Service Name --></label>
+        <name>Social_Supports_Service_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Supports Service Org. Name --></label>
+        <name>Social_Supports_Service_Org_Name__c</name>
+        <relationshipLabel><!-- Assessments (National Framework) (Social Supports Service Org. Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Social Supports Service Org. Phone --></label>
+        <name>Social_Supports_Service_Org_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social outlets/activities - old or new? --></label>
+        <name>Social_outlets_activities_old_or_new__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social supports – old or new? --></label>
+        <name>Social_supports_old_or_new__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sources of income and weekly income --></label>
+        <name>Sources_of_income_and_weekly_income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specify main type of alcohol consumed: --></label>
+        <name>Specify_main_type_of_alcohol_consumed__c</name>
+        <picklistValues>
+            <masterLabel>Beer</masterLabel>
+            <translation><!-- Beer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>alcopops</masterLabel>
+            <translation><!-- alcopops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>cider</masterLabel>
+            <translation><!-- cider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>fortified wine</masterLabel>
+            <translation><!-- fortified wine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>spirits</masterLabel>
+            <translation><!-- spirits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>wine</masterLabel>
+            <translation><!-- wine --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Support is required in this area - Accom --></label>
+        <name>Support_is_required_in_this_area_Accom__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress is required in Education/Training (short term)? --></help>
+        <label><!-- Support is required in this area - E/T --></label>
+        <name>Support_is_required_in_this_area_E_T__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress is required in Employment (short term) --></help>
+        <label><!-- Support is required in this area - Emp --></label>
+        <name>Support_is_required_in_this_area_Emp__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are supports needed to assist in strengthening relationships (partner, spouse family?) --></help>
+        <label><!-- Support is required in this area - F&amp;R --></label>
+        <name>Support_is_required_in_this_area_F_R__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress are required in Income/Financial (short term)? --></help>
+        <label><!-- Support is required in this area - In/Fi --></label>
+        <name>Support_is_required_in_this_area_In_Fi__c</name>
+    </fields>
+    <fields>
+        <help><!-- What support / progress is required in Justice and Legal (short term)? --></help>
+        <label><!-- Support is required in this area-Jus/Leg --></label>
+        <name>Support_is_required_in_this_area_Jus_Leg__c</name>
+    </fields>
+    <fields>
+        <help><!-- What progress / support is required in this area (short term goals)?
+NOTE: If no medical card, then this is a priority. --></help>
+        <label><!-- Support is required in this area - PH --></label>
+        <name>Support_is_required_in_this_area_PH__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress are required in this area?
+Taking your prescribed medication --></help>
+        <label><!-- Support is required in this area - PM --></label>
+        <name>Support_is_required_in_this_area_PM__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress is required in Social Supports (short term)? --></help>
+        <label><!-- Support is required in this area - So/Su --></label>
+        <name>Support_is_required_in_this_area_So_Su__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supports/progress are required - MHW --></label>
+        <name>Supports_progress_are_required_MHW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supports/progress required -Alcohol --></label>
+        <name>Supports_progress_required_Alcohol__c</name>
+    </fields>
+    <fields>
+        <help><!-- What supports / progress are required in this area (shorter term)? --></help>
+        <label><!-- Supports/progress required - Drug --></label>
+        <name>Supports_progress_required_Drug__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timescale - O1 --></label>
+        <name>Timescale_O1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timescale - O2 --></label>
+        <name>Timescale_O2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timescale - O3 --></label>
+        <name>Timescale_O3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timescale - O4 --></label>
+        <name>Timescale_O4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timescale - O5 --></label>
+        <name>Timescale_O5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upcoming court dates. --></label>
+        <name>Upcoming_court_dates__c</name>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area Drugs --></label>
+        <name>User_describe_themselves_in_area_Drug__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area Health --></label>
+        <name>User_describe_themselves_in_area_Drugs__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area - E/T --></label>
+        <name>User_describe_themselves_in_area_E_T__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area - Emplo --></label>
+        <name>User_describe_themselves_in_area_Emplo__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area - F&amp;R --></label>
+        <name>User_describe_themselves_in_area_F_R__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area - In/Fi --></label>
+        <name>User_describe_themselves_in_area_In_Fi__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Justice and Legal
+How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area-Just/Le --></label>
+        <name>User_describe_themselves_in_area_Just_Le__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Social Supports
+How does the service user describe themselves in relation to this area on a scale of one to ten where:
+1-3 = Unhappy with current situation
+4-6 = Currently working on changing the situation
+7-10 = Happy with changes and situation --></help>
+        <label><!-- User describe themselves in area - So/Su --></label>
+        <name>User_describe_themselves_in_area_So_Su__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What are the primary reasons for your referral / accessing of this service? --></help>
+        <label><!-- What are the reasons for referral --></label>
+        <name>What_are_the_reasons_for_referral__c</name>
+    </fields>
+    <fields>
+        <help><!-- What are your main priorities over the next three months, until your next care plan review? --></help>
+        <label><!-- What are your main priorities? --></label>
+        <name>What_are_your_main_priorities__c</name>
+    </fields>
+    <fields>
+        <help><!-- What contributed to things not getting done? --></help>
+        <label><!-- What contributed thing not getting done? --></label>
+        <name>What_contributed_thing_not_getting_done__c</name>
+    </fields>
+    <fields>
+        <label><!-- What contributed to things going well? --></label>
+        <name>What_contributed_to_things_going_well__c</name>
+    </fields>
+    <fields>
+        <help><!-- What needs to happen for actions and goals to be achieved? --></help>
+        <label><!-- What needs to happen for goals achieved? --></label>
+        <name>What_needs_to_happen_for_goals_achieved__c</name>
+    </fields>
+    <fields>
+        <help><!-- (women only) When have you last had a breast check? --></help>
+        <label><!-- When have you last had a breast check? --></label>
+        <name>When_have_you_last_had_a_breast_check__c</name>
+    </fields>
+    <fields>
+        <help><!-- (women only) When have you last had a smear test? --></help>
+        <label><!-- When have you last had a smear test? --></label>
+        <name>When_have_you_last_had_a_smear_test__c</name>
+    </fields>
+    <fields>
+        <label><!-- When was your last sexual health checkup --></label>
+        <name>When_was_your_last_sexual_health_checkup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Which children are living with you? --></label>
+        <name>Which_children_are_living_with_you__c</name>
+    </fields>
+    <fields>
+        <help><!-- Who will be contacted in regard to this information? --></help>
+        <label><!-- Who will be contacted --></label>
+        <name>Who_will_be_contacted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work History --></label>
+        <name>Work_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective -O1 --></label>
+        <name>Work_to_be_done_to_achieve_objective_O1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective -O2 --></label>
+        <name>Work_to_be_done_to_achieve_objective_O2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective -O3 --></label>
+        <name>Work_to_be_done_to_achieve_objective_O3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective -O4 --></label>
+        <name>Work_to_be_done_to_achieve_objective_O4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work to be done to achieve objective -O5 --></label>
+        <name>Work_to_be_done_to_achieve_objective_O5__c</name>
+    </fields>
+    <fields>
+        <help><!-- 1. Do you think your use of ……….. (preference alcohol) is out of control? --></help>
+        <label><!-- 1. Use of alcohol is out of control? --></label>
+        <name>X1_Use_of_alcohol_is_out_of_control__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 1. Use of drug is out of control? --></label>
+        <name>X1_Use_of_drug_is_out_of_control__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 2. Does the prospect of not taking …..make you anxious or worried? --></help>
+        <label><!-- 2. Prospect of not taking alcohol --></label>
+        <name>X2_Prospect_of_not_taking_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 2. Does the prospect of not taking …..make you anxious or worried? --></help>
+        <label><!-- 2. Prospect of not taking drug --></label>
+        <name>X2_Prospect_of_not_taking_drug__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 3. Do you worry about your use of ……..? --></help>
+        <label><!-- 3. Worried about your use of alcohol --></label>
+        <name>X3_Worried_about_your_use_of_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 3. Do you worry about your use of ……..? --></help>
+        <label><!-- 3. Worried about your use of drug --></label>
+        <name>X3_Worried_about_your_use_of_drug__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 4. Did you wish you could stop alcohol --></label>
+        <name>X4_Did_you_wish_you_could_stop_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 4. Did you wish you could stop drug --></label>
+        <name>X4_Did_you_wish_you_could_stop_drug__c</name>
+        <picklistValues>
+            <masterLabel>Always / nearly always</masterLabel>
+            <translation><!-- Always / nearly always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never / almost never</masterLabel>
+            <translation><!-- Never / almost never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Often</masterLabel>
+            <translation><!-- Often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 5. How difficult is to stop alcohol --></label>
+        <name>X5_How_difficult_is_to_stop_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>Impossible</masterLabel>
+            <translation><!-- Impossible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not difficult</masterLabel>
+            <translation><!-- Not difficult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quite Difficult</masterLabel>
+            <translation><!-- Quite Difficult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very difficult</masterLabel>
+            <translation><!-- Very difficult --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 5. How difficult is to stop drugs --></label>
+        <name>X5_How_difficult_is_to_stop_drugs__c</name>
+        <picklistValues>
+            <masterLabel>Impossible</masterLabel>
+            <translation><!-- Impossible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not difficult</masterLabel>
+            <translation><!-- Not difficult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quite Difficult</masterLabel>
+            <translation><!-- Quite Difficult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very difficult</masterLabel>
+            <translation><!-- Very difficult --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Worker is to explain the wheel of change diagram.
+Where would you place yourself on the wheel of change? --></help>
+        <label><!-- You place yourself on wheel of change? --></label>
+        <name>You_place_yourself_on_wheel_of_change__c</name>
+        <picklistValues>
+            <masterLabel>Action</masterLabel>
+            <translation><!-- Action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comtemplation</masterLabel>
+            <translation><!-- Comtemplation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Determination</masterLabel>
+            <translation><!-- Determination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance</masterLabel>
+            <translation><!-- Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Comtemplation</masterLabel>
+            <translation><!-- Pre-Comtemplation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relapse</masterLabel>
+            <translation><!-- Relapse --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Assessment (National Framework) Layout</layout>
+        <sections>
+            <label><!-- ACCOMODATION --></label>
+            <section>ACCOMODATION</section>
+        </sections>
+        <sections>
+            <label><!-- ASSESSMENT DETAILS – for office use only --></label>
+            <section>ASSESSMENT DETAILS – for office use only</section>
+        </sections>
+        <sections>
+            <label><!-- ASSESSMENT OF MOTIVATION &amp; READINESS TO CHANGE --></label>
+            <section>ASSESSMENT OF MOTIVATION &amp; READINESS TO CHANGE</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Alcohol use information --></label>
+            <section>Alcohol use information</section>
+        </sections>
+        <sections>
+            <label><!-- Any history of violence --></label>
+            <section>Any history of violence</section>
+        </sections>
+        <sections>
+            <label><!-- CURRENT ALCOHOL USE --></label>
+            <section>CURRENT ALCOHOL USE</section>
+        </sections>
+        <sections>
+            <label><!-- Consequences and Support required --></label>
+            <section>Consequences and Support required</section>
+        </sections>
+        <sections>
+            <label><!-- Consequences and support required --></label>
+            <section>Consequences and support required</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DRUG USE --></label>
+            <section>DRUG USE</section>
+        </sections>
+        <sections>
+            <label><!-- Detail children and ages and where they are living. --></label>
+            <section>Detail children and ages and where they are living.</section>
+        </sections>
+        <sections>
+            <label><!-- Drug Treatment Details --></label>
+            <section>Drug Treatment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Drug use details --></label>
+            <section>Drug use details</section>
+        </sections>
+        <sections>
+            <label><!-- EDUCATION/TRAINING --></label>
+            <section>EDUCATION/TRAINING</section>
+        </sections>
+        <sections>
+            <label><!-- EMPLOYMENT --></label>
+            <section>EMPLOYMENT</section>
+        </sections>
+        <sections>
+            <label><!-- FAMILY &amp; RELATIONSHIPS --></label>
+            <section>FAMILY &amp; RELATIONSHIPS</section>
+        </sections>
+        <sections>
+            <label><!-- GENERAL PHYSICAL HEALTH --></label>
+            <section>GENERAL PHYSICAL HEALTH</section>
+        </sections>
+        <sections>
+            <label><!-- Have you any difficulty in taking your prescribed medication? --></label>
+            <section>Have you any difficulty in taking your prescribed medication?</section>
+        </sections>
+        <sections>
+            <label><!-- INCOME AND FINANCIAL SITUATION --></label>
+            <section>INCOME AND FINANCIAL SITUATION</section>
+        </sections>
+        <sections>
+            <label><!-- JUSTICE AND LEGAL ISSUES --></label>
+            <section>JUSTICE AND LEGAL ISSUES</section>
+        </sections>
+        <sections>
+            <label><!-- MENTAL HEALTH/WELLBEING --></label>
+            <section>MENTAL HEALTH/WELLBEING</section>
+        </sections>
+        <sections>
+            <label><!-- Needs, concerns and  case history. Detail the following: --></label>
+            <section>Needs, concerns and  case history. Detail the following:</section>
+        </sections>
+        <sections>
+            <label><!-- PART 1 - INITIAL ASSESSMENT (NATIONAL FRAMEWORK) --></label>
+            <section>PART 1 - INITIAL ASSESSMENT (NATIONAL FRAMEWORK)</section>
+        </sections>
+        <sections>
+            <label><!-- PART 2 - COMPREHENSIVE ASSESSMENTS (NAT FRAMEWORK) --></label>
+            <section>PART 2 - COMPREHENSIVE ASSESSMENTS (NAT FRAMEWORK)</section>
+        </sections>
+        <sections>
+            <label><!-- PERSONAL DETAILS --></label>
+            <section>PERSONAL DETAILS</section>
+        </sections>
+        <sections>
+            <label><!-- REASON FOR REFERRAL --></label>
+            <section>REASON FOR REFERRAL</section>
+        </sections>
+        <sections>
+            <label><!-- RISK ASSESSMENT --></label>
+            <section>RISK ASSESSMENT</section>
+        </sections>
+        <sections>
+            <label><!-- Risk of harm through Drug Use: --></label>
+            <section>Risk of harm through Drug Use:</section>
+        </sections>
+        <sections>
+            <label><!-- SOCIAL SUPPORTS --></label>
+            <section>SOCIAL SUPPORTS</section>
+        </sections>
+        <sections>
+            <label><!-- Services  currently involved or which have been involved - Accomodation --></label>
+            <section>Services  currently involved or which have been involved - Accomodation</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved --></label>
+            <section>Services currently involved</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Education/Training --></label>
+            <section>Services currently involved or which have been involved - Education/Training</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Employment --></label>
+            <section>Services currently involved or which have been involved - Employment</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Family Support --></label>
+            <section>Services currently involved or which have been involved - Family Support</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Income/Financial? --></label>
+            <section>Services currently involved or which have been involved - Income/Financial?</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Justice/Legal --></label>
+            <section>Services currently involved or which have been involved - Justice/Legal</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Mental Health --></label>
+            <section>Services currently involved or which have been involved - Mental Health</section>
+        </sections>
+        <sections>
+            <label><!-- Services currently involved or which have been involved - Social Supports --></label>
+            <section>Services currently involved or which have been involved - Social Supports</section>
+        </sections>
+        <sections>
+            <label><!-- Severity of Dependence Scale --></label>
+            <section>Severity of Dependence Scale</section>
+        </sections>
+        <sections>
+            <label><!-- Sexual Health / Viral Check --></label>
+            <section>Sexual Health / Viral Check</section>
+        </sections>
+        <sections>
+            <label><!-- What factors lead to greater risks --></label>
+            <section>What factors lead to greater risks</section>
+        </sections>
+        <sections>
+            <label><!-- What progress / support is required in this area (short term goals)? --></label>
+            <section>What progress / support is required in this area (short term goals)?</section>
+        </sections>
+        <sections>
+            <label><!-- What support / progress is required in Justice and Legal (short term)? --></label>
+            <section>What support / progress is required in Justice and Legal (short term)?</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress are required in Income/Financial (short term)? --></label>
+            <section>What supports / progress are required in Income/Financial (short term)?</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress are required in this area (shorter term)? --></label>
+            <section>What supports / progress are required in this area (shorter term)?</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress is required in Accomodation (short term) --></label>
+            <section>What supports / progress is required in Accomodation (short term)</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress is required in Education/training (short term)? --></label>
+            <section>What supports / progress is required in Education/training (short term)?</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress is required in Employment (short term) --></label>
+            <section>What supports / progress is required in Employment (short term)</section>
+        </sections>
+        <sections>
+            <label><!-- What supports / progress is required in Social Supports (short term)? --></label>
+            <section>What supports / progress is required in Social Supports (short term)?</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Initial Assessment</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Alcohol use information --></label>
+            <section>Alcohol use information</section>
+        </sections>
+        <sections>
+            <label><!-- Any history of violence --></label>
+            <section>Any history of violence</section>
+        </sections>
+        <sections>
+            <label><!-- CURRENT ALCOHOL USE --></label>
+            <section>CURRENT ALCOHOL USE</section>
+        </sections>
+        <sections>
+            <label><!-- Consequences and Support required --></label>
+            <section>Consequences and Support required</section>
+        </sections>
+        <sections>
+            <label><!-- Consequences and support required --></label>
+            <section>Consequences and support required</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DRUG USE --></label>
+            <section>DRUG USE</section>
+        </sections>
+        <sections>
+            <label><!-- Drug Treatment Details --></label>
+            <section>Drug Treatment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Drug use details --></label>
+            <section>Drug use details</section>
+        </sections>
+        <sections>
+            <label><!-- PART 1 - INITIAL ASSESSMENT (NATIONAL FRAMEWORK) --></label>
+            <section>PART 1 - INITIAL ASSESSMENT (NATIONAL FRAMEWORK)</section>
+        </sections>
+        <sections>
+            <label><!-- PERSONAL DETAILS --></label>
+            <section>PERSONAL DETAILS</section>
+        </sections>
+        <sections>
+            <label><!-- REASON FOR REFERRAL --></label>
+            <section>REASON FOR REFERRAL</section>
+        </sections>
+        <sections>
+            <label><!-- RISK ASSESSMENT --></label>
+            <section>RISK ASSESSMENT</section>
+        </sections>
+        <sections>
+            <label><!-- Risk of harm through Drug Use: --></label>
+            <section>Risk of harm through Drug Use:</section>
+        </sections>
+        <sections>
+            <label><!-- Severity of Dependence Scale --></label>
+            <section>Severity of Dependence Scale</section>
+        </sections>
+        <sections>
+            <label><!-- What factors lead to greater risks --></label>
+            <section>What factors lead to greater risks</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Comprehensive Assessment --></label>
+        <name>Comprehensive_Assessment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Initial Assessment --></label>
+        <name>Initial_Assessment</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

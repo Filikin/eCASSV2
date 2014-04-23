@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>eCASS settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>eCASS settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- Format of the attendance name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the attendance
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone --></help>
+        <label><!-- Attendance Name Template --></label>
+        <name>Attendance_Name_Template__c</name>
+    </fields>
+    <fields>
+        <help><!-- Change this if you want a different page printed for the care plan overview --></help>
+        <label><!-- Care Plan Overview Print Page --></label>
+        <name>Care_Plan_Overview_Print_Page__c</name>
+    </fields>
+    <fields>
+        <help><!-- Page referenced from the print button on the care plan page --></help>
+        <label><!-- Care Plan Print Page --></label>
+        <name>Care_Plan_Print_Page__c</name>
+    </fields>
+    <fields>
+        <help><!-- On enrolment in a course, create past attendance records --></help>
+        <label><!-- Create past attendances --></label>
+        <name>Create_past_attendances__c</name>
+    </fields>
+    <fields>
+        <help><!-- Duration of a one to one attendance --></help>
+        <label><!-- Default attendance duration --></label>
+        <name>Default_attendance_duration__c</name>
+    </fields>
+    <fields>
+        <help><!-- When ticked turns off eCASS triggers, useful for batch importing and debugging --></help>
+        <label><!-- Disable Triggers --></label>
+        <name>Disable_Triggers__c</name>
+    </fields>
+    <fields>
+        <help><!-- Format of the enrolment name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the Enrolment date (either the Date joined program or the created date)
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone --></help>
+        <label><!-- Enrolment Name Template --></label>
+        <name>Enrolment_Name_Template__c</name>
+    </fields>
+    <fields>
+        <help><!-- Format of the form name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the assessment
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone --></help>
+        <label><!-- HRB Form Name Template --></label>
+        <name>HRB_Form_Name_Template__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation Name --></label>
+        <name>Organisation_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Turn off for data import --></help>
+        <label><!-- Rules on --></label>
+        <name>Rules_on__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

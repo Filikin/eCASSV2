@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRA Goal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRA_Goals</value>
+    </caseValues>
+    <fields>
+        <label><!-- CRA --></label>
+        <name>CRA__c</name>
+        <relationshipLabel><!-- CRA_Goals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Change --></label>
+        <name>Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Score --></label>
+        <name>First_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Score --></label>
+        <name>New_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Problem Areas/goals --></label>
+        <name>Problem_Areas_goals__c</name>
+        <picklistValues>
+            <masterLabel>Alcohol use/non use</masterLabel>
+            <translation><!-- Alcohol use/non use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cannabis use/non use</masterLabel>
+            <translation><!-- Cannabis use/non use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication</masterLabel>
+            <translation><!-- Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emotional life (feelings)</masterLabel>
+            <translation><!-- Emotional life (feelings) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General happiness</masterLabel>
+            <translation><!-- General happiness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health &amp; self care</masterLabel>
+            <translation><!-- Health &amp; self care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job or education progress</masterLabel>
+            <translation><!-- Job or education progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal issues</masterLabel>
+            <translation><!-- Legal issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money management</masterLabel>
+            <translation><!-- Money management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motivation</masterLabel>
+            <translation><!-- Motivation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other drug use/non use</masterLabel>
+            <translation><!-- Other drug use/non use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal habits (e.g. getting up in the morning, being on time)</masterLabel>
+            <translation><!-- Personal habits (e.g. getting up in the morning, being on time) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreational activities</masterLabel>
+            <translation><!-- Recreational activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationships with Parents/caregiver</masterLabel>
+            <translation><!-- Relationships with Parents/caregiver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationships with Partner</masterLabel>
+            <translation><!-- Relationships with Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationships with friends</masterLabel>
+            <translation><!-- Relationships with friends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Activities</masterLabel>
+            <translation><!-- Social Activities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Step by Step Plan --></label>
+        <name>Step_by_Step_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Frame --></label>
+        <name>Time_Frame__c</name>
+    </fields>
+    <layouts>
+        <layout>CRA Goal Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
