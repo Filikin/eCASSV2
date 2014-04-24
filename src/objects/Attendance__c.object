@@ -173,10 +173,31 @@
         <label>CRA Link</label>
         <referenceTo>CRA__c</referenceTo>
         <relationshipLabel>Drop-in Attendance</relationshipLabel>
-        <relationshipName>Drop_in_Attendance</relationshipName>
+        <relationshipName>Drop_in_Attendance1</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Calendar_Event_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Calendar Event ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calendar_Event_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The subject of the event</inlineHelpText>
+        <label>Calendar Event Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Care_plan_step_date__c</fullName>
@@ -777,6 +798,17 @@ CASE( Activity_Type__c ,
         <label>Relapse prevention</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Related_Calendar_Event__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank( Calendar_Event_ID__c ), &quot;&quot;, HYPERLINK(&quot;/&quot; &amp;  Calendar_Event_ID__c  ,  Calendar_Event_Name__c  ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Related Calendar Event</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Requests_from_client__c</fullName>

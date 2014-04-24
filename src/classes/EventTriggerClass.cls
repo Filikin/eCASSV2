@@ -2,7 +2,8 @@
 	Author: Eamon Kelly, Enclude
 	Purpose: When an event is created that is related to a client, create a corresponding one to one attendance
 	Note: if the event is already linked to another object, don't break that link by changing WhatID
-	In Summer 2014 we might get the ability to add lookup fields to activities, then we can have one dedicated to a ttendances
+	In Summer 2014 we might get the ability to add lookup fields to activities, then we can have one dedicated to attendances
+	In the meantime use a hyperlink - 23/4/2014 - Related_Attendance__c
 	Called from: TriggerDispatcher
 */
 public with sharing class EventTriggerClass implements TriggerDispatcher.ITriggerEntry
@@ -36,7 +37,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		{
 			contactsSet.add (oneEvent.WhoId);
 		}
-		map <Id, Contact> clients = new map <Id, Contact>([select Id from Contact where RecordTypeId = :clientRecordTypeId and Id in :contactsSet]);
+		map <Id, Contact> clients = new map <Id, Contact>([select Id, Name, Initials__c from Contact where RecordTypeId = :clientRecordTypeId and Id in :contactsSet]);
 		
 		// now create the attendances
 		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance'].Id;
@@ -48,7 +49,11 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 				Contact thisClient = clients.get (oneEvent.WhoId);
 				if (thisClient != null)
 				{
-					Attendance__c one2one = new Attendance__c (Name='FromEvent', Young_Person__c = thisClient.id, Duration_in_minutes__c = oneEvent.DurationInMinutes, Reason_for_Attending__c=oneEvent.Subject, Date_and_time_of_attendance__c=oneEvent.ActivityDateTime, Put_in_my_calendar__c=false, RecordTypeId=one2oneAttendanceRecordTypeID);
+					String attendanceName = AttendancesTriggerClass.newAttendanceName (oneEvent.ActivityDateTime.Date(), thisClient.Name, thisClient.Initials__c);
+					
+					Attendance__c one2one = new Attendance__c (Name=attendanceName, Young_Person__c = thisClient.id, Duration_in_minutes__c = oneEvent.DurationInMinutes, Reason_for_Attending__c=oneEvent.Subject, Date_and_time_of_attendance__c=oneEvent.ActivityDateTime, Put_in_my_calendar__c=false, RecordTypeId=one2oneAttendanceRecordTypeID);
+					one2one.Programme__c = oneEvent.Programme__c;
+					one2one.Activity_Type__c = oneEvent.Activity_Type__c;
 					attendancesToCreate.add (one2one);					
 				}
 			}
@@ -65,15 +70,14 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 					Contact thisClient = clients.get (oneEvent.WhoId);
 					if (thisClient != null)
 					{
-						if (oneEvent.WhatId == null) // don't break previous links
+						try
 						{
-							try{
-								oneEvent.WhatId = attendancesToCreate[attendanceNumber].Id;
-							}
-							catch (Exception e)
-							{
-								// ignore failures
-							}
+							oneEvent.Related_Attendance_ID__c = attendancesToCreate[attendanceNumber].Id;
+							oneEvent.Related_Attendance_Name__c = attendancesToCreate[attendanceNumber].Name;
+						}
+						catch (Exception e)
+						{
+							// ignore failures
 						}
 						attendanceNumber++;
 					}
@@ -90,9 +94,9 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		set <id>attendanceSet = new set <id>(); 
 		for (Event oneEvent: evtList)
 		{
-			if (oneEvent.WhatId != null && oneEvent.Status__c != ((Event)oldMap.get(oneEvent.id)).Status__c)
+			if (oneEvent.Related_Attendance_ID__c != null && oneEvent.Status__c != ((Event)oldMap.get(oneEvent.id)).Status__c)
 			{
-				attendanceSet.add (oneEvent.WhatId);
+				attendanceSet.add (oneEvent.Related_Attendance_ID__c);
 			}
 		}
 		
@@ -101,9 +105,9 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
 		// now update the attendances
 		for (Event oneEvent: evtList)
 		{
-			if (attendances.containsKey (oneEvent.WhatId))
+			if (attendances.containsKey (oneEvent.Related_Attendance_ID__c))
 			{
-				Attendance__c relatedAttendance = attendances.get (oneEvent.WhatId);
+				Attendance__c relatedAttendance = attendances.get (oneEvent.Related_Attendance_ID__c);
 				relatedAttendance.Status__c = oneEvent.Status__c;
 				attendancesToUpdate.add (relatedAttendance);
 			}

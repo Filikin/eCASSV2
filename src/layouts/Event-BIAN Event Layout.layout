@@ -38,6 +38,10 @@
                 <behavior>Edit</behavior>
                 <field>Activity_Type__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Related_Attendance__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

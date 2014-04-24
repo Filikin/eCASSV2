@@ -79,5 +79,12 @@ public class TriggerDispatcher
 			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
 			InTrigger = false;
 		}
+		else if (TriggerObject == 'Referral')
+		{
+			InTrigger = true;
+			activeFunction = new ReferralsTriggerClass();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
 	}
 }

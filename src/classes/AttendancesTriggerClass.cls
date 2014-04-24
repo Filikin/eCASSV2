@@ -19,7 +19,7 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 				ChangeName ((map<Id, Attendance__c>)newMap);
 				CreateUpdateCarePlanStepOnAttendance ((Map <ID, Attendance__c>)newMap, isInsert);
 				CountNumberAttended (newList);
-				LogToCalendar (newList);
+				LogToCalendar ((map<Id, Attendance__c>)newMap);
 			}
 		}
 		else if (isUpdate)
@@ -38,16 +38,11 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	
 	public void ChangeName (map<Id, Attendance__c> attMap)
 	{
-		String nameTemplate = AppConfigSupport.AttendanceNameTemplate;
 		list<Attendance__c>attendancesToUpdate = new list<Attendance__c>();
 		for (Attendance__c oneAtt: [select ID, Name, Young_Person__c, Young_Person__r.Name, Young_Person__r.Initials__c, Attendance_Date__c from Attendance__c where ID in :attMap.keySet()])
 		{
-			Date attendanceDate = oneAtt.Attendance_Date__c != null ? oneAtt.Attendance_Date__c : system.today();
-			String clientName = oneAtt.Young_Person__c != null ? oneAtt.Young_Person__r.Name : '';
-			String clientInitials = oneAtt.Young_Person__c != null ? oneAtt.Young_Person__r.Initials__c : '';
-			system.debug ('Name Template: ' + nameTemplate);
-			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
-			if (newName != oneAtt.Name) 
+			String newName = newAttendanceName (oneAtt.Attendance_Date__c, oneAtt.Young_Person__r.Name, oneAtt.Young_Person__r.Initials__c);
+			if (newName != null && newName != oneAtt.Name) 
 			{
 				oneAtt.Name = newName;
 				attendancesToUpdate.add (oneAtt);
@@ -56,21 +51,45 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		if (attendancesToUpdate.size() > 0) update attendancesToUpdate;
 	}
 	
-	public void LogToCalendar (List<Attendance__c> attList)
+	public static String newAttendanceName (Date attDate, String clientName, String clientInitials)
+	{
+		String nameTemplate = AppConfigSupport.AttendanceNameTemplate;
+		if (nameTemplate != null)
+		{
+			Date attendanceDate = attDate != null ? attDate : system.today();
+			return nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
+		}
+		else return null;
+	}
+	
+	public void LogToCalendar (map<Id, Attendance__c> attMap)
 	{
 		list <Event>newEvents = new list <Event>();
-		for (Attendance__c oneAtt: attList)
+		list<Attendance__c>attendancesToUpdate = new list<Attendance__c>();
+		for (Attendance__c oneAtt: [select ID, Name, Put_in_my_calendar__c, Date_and_time_of_attendance__c, Young_Person__c, Reason_for_Attending__c, Duration_in_minutes__c, Status__c, Programme__c, Activity_Type__c, Calendar_Event_Name__c, Calendar_Event_ID__c from Attendance__c where ID in :attMap.keySet()])
 		{
 			if (oneAtt.Put_in_my_calendar__c && oneAtt.Date_and_time_of_attendance__c != null)
 			{
-		        Event e1 = new Event (WhoID=oneAtt.Young_Person__c, OwnerID=UserInfo.getUserId(), WhatID=oneAtt.Id, Subject=oneAtt.Reason_for_Attending__c, StartDateTime=oneAtt.Date_and_time_of_attendance__c);
+		        Event e1 = new Event (WhoID=oneAtt.Young_Person__c, OwnerID=UserInfo.getUserId(), Related_Attendance_ID__c=oneAtt.Id, Related_Attendance_Name__c=oneAtt.Name, Subject=oneAtt.Reason_for_Attending__c, StartDateTime=oneAtt.Date_and_time_of_attendance__c);
 		        if (oneAtt.Duration_in_minutes__c != null) e1.DurationInMinutes = (Integer)oneAtt.Duration_in_minutes__c;
 		        else e1.DurationInMinutes = AppConfigSupport.DefaultAttendanceDuration;
 		        e1.Status__c = oneAtt.Status__c;
+		        e1.Programme__c = oneAtt.Programme__c;
+		        e1.Activity_Type__c = oneAtt.Activity_Type__c;
 		        newEvents.add (e1);
+				attendancesToUpdate.add (oneAtt); // so that the reference to the event may be added
 			}
 		}
-		if (newEvents.size() > 0) insert newEvents;
+		if (newEvents.size() > 0) 
+		{
+			insert newEvents;
+			for (Integer i=0; i<newEvents.size(); i++)
+			{
+		        attendancesToUpdate[i].Calendar_Event_Name__c = newEvents[i].Subject;
+				attendancesToUpdate[i].Calendar_Event_ID__c = newEvents[i].id;
+			}
+			update attendancesToUpdate;
+		}
 	}
 	
 	public void CountNumberAttended (List<Attendance__c> attList)

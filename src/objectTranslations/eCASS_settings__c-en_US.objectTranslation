@@ -65,6 +65,15 @@ Everything else is left alone --></help>
         <name>Organisation_Name__c</name>
     </fields>
     <fields>
+        <help><!-- Format of the referral name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the referral
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone --></help>
+        <label><!-- Referral Name Template --></label>
+        <name>Referral_Name_Template__c</name>
+    </fields>
+    <fields>
         <help><!-- Turn off for data import --></help>
         <label><!-- Rules on --></label>
         <name>Rules_on__c</name>

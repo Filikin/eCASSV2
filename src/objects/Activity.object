@@ -165,6 +165,37 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Related_Attendance_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The ID of the related attendance</inlineHelpText>
+        <label>Related Attendance ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Attendance_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the name of the attendance</inlineHelpText>
+        <label>Related Attendance Name</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Attendance__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (isblank(Related_Attendance_ID__c), &quot;&quot;, HYPERLINK(&quot;/&quot; &amp; Related_Attendance_ID__c ,  Related_Attendance_Name__c ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is the attendance related to this event</inlineHelpText>
+        <label>Related Attendance</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Related_Organisation__c</fullName>
         <externalId>false</externalId>
         <label>Related Organisation</label>

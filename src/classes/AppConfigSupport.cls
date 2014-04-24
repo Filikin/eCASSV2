@@ -11,11 +11,16 @@ public with sharing class AppConfigSupport {
 		if(Test.isRunningTest() && testconfig!=null) return testconfig;
 		
 		eCASS_settings__c theobject = eCASS_settings__c.getOrgDefaults();
-		if(theobject==null || Test.isRunningTest()) 
+		eCASS_settings__c emptyObject = new eCASS_settings__c ();
+		if(theobject==null || theobject == emptyObject || Test.isRunningTest()) 
 		{
 			theobject = new eCASS_settings__c();
 			theobject.name = 'default';
-			if(!Test.isRunningTest()) Database.Insert(theobject);
+			if(!Test.isRunningTest()) 
+			{
+				Database.Insert(theobject);
+				theobject = eCASS_settings__c.getOrgDefaults();
+			}
 			else // set default test values (can be different from default values) 
 			{
 				theobject.Attendance_Name_Template__c = 'Att-$NAME$-$DATE$';
@@ -28,6 +33,7 @@ public with sharing class AppConfigSupport {
 				theobject.HRB_Form_Name_Template__c = 'HRB-$NAME$-$DATE$';
 				theobject.Organisation_Name__c = 'Test';
 				theobject.Rules_on__c = true;
+				theobject.Referral_Name_Template__c = 'REF-$NAME$-$DATE$';
 				testconfig = theobject;
 			}
 		}
@@ -103,6 +109,14 @@ public with sharing class AppConfigSupport {
 		get
 		{
 			return GeteCASSSettings().Rules_on__c;
+		}
+	}
+	
+	public static String ReferralNameTemplate
+	{
+		get
+		{
+			return GeteCASSSettings().Referral_Name_Template__c;
 		}
 	}
 }

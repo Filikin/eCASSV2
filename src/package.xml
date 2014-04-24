@@ -54,6 +54,7 @@
     </types>
     <types>
         <members>Area_of_Residence_Old__c-Area of Residence Layout</members>
+        <members>Area_of_Residence__c-Area of Residence Layout</members>
         <members>Assessment_NF__c-Assessment %28National Framework%29 Layout</members>
         <members>Assessment_NF__c-Initial Assessment</members>
         <members>Attendance__c-Course Attendance Layout</members>

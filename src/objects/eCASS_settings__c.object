@@ -118,6 +118,22 @@ Everything else is left alone</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Referral_Name_Template__c</fullName>
+        <defaultValue>&quot;Ref-$NAME$-$DATE$&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Format of the referral name.
+$NAME$ is replaced with the client&apos;s name
+$DATE$ is replaced with the date of the referral
+$INITIALS$ is replaced with the client&apos;s initials
+Everything else is left alone</inlineHelpText>
+        <label>Referral Name Template</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Rules_on__c</fullName>
         <defaultValue>true</defaultValue>
         <externalId>false</externalId>

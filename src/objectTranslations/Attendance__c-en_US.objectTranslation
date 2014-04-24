@@ -96,6 +96,15 @@
         <relationshipLabel><!-- Drop-in Attendance --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Calendar Event ID --></label>
+        <name>Calendar_Event_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- The subject of the event --></help>
+        <label><!-- Calendar Event Name --></label>
+        <name>Calendar_Event_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Care plan step date --></label>
         <name>Care_plan_step_date__c</name>
     </fields>
@@ -410,6 +419,10 @@
     <fields>
         <label><!-- Relapse prevention --></label>
         <name>Relapse_prevention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Calendar Event --></label>
+        <name>Related_Calendar_Event__c</name>
     </fields>
     <fields>
         <label><!-- Requests from client --></label>
