@@ -5,6 +5,7 @@
 */
 public with sharing class AppConfigSupport {
 	private static eCASS_settings__c testconfig = null;
+	public static final Integer MAX_NAME_SIZE = 30;
 	
 	public static eCASS_settings__c GeteCASSSettings()
 	{

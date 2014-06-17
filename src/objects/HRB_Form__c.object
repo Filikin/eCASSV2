@@ -2073,121 +2073,6 @@ Case(X35_Reason_for_exit_6_above__c,
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Number_of_Treatment__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF( OR( X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;, 
-
-TEXT(X17a_Assessment_outcome__c) = &quot;2. Unsuitable for treatment&quot;, 
-
-TEXT( X17b_Assessment_criterion_fulfilled__c ) = &quot;2. No&quot;, 
-
-TEXT( X18a_Clients_treatment_status__c ) = &quot;3. Transferred to another site&quot;, 
-
-TEXT( X18a_Clients_treatment_status__c ) = &quot;4. Psychiatric assessment only&quot;, 
-
-TEXT( X19_Accepted_place_at_this_centre__c ) = &quot;2. No&quot;), 
-
-&quot;&quot;, 
-
-IF(X20_Number_times_started_this_year__c = 0, &quot;Invalid Q20&quot;, 
-
-IF(AND(X20_Number_times_started_this_year__c = Number_of_completed_Treatment_CY__c , ISBLANK(X37_Date_of_Final_Discharge__c ) ),&quot;Q20 can&apos;t be equal to number of completed treatment CY&quot;, 
-
-IF(AND( Treatment_Type__c = &quot;New Treatment&quot;, X20_Number_times_started_this_year__c &lt;= Number_of_completed_Treatment_CY__c ), &quot;Invalid Q20&quot;, 
-
-IF(AND( Treatment_Type__c = &quot;Completed Treatment&quot;, X20_Number_times_started_this_year__c &lt;&gt; Number_of_completed_Treatment_CY__c ), &quot;Invalid Q20&quot;, 
-
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c ) = &quot;1. Alcohol&quot;, X20_Number_times_started_this_year__c = 1, TEXT(X22_Ever_previously_treated_alc_drug__c ) &lt;&gt; &quot;1. Never treated&quot;), &quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;2. Illicit drug&quot;, X20_Number_times_started_this_year__c = 1, TEXT( X22_Ever_previously_treated_re_drug__c ) &lt;&gt; &quot;1. Never treated&quot;), &quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;3. Licit drug&quot;, X20_Number_times_started_this_year__c = 1, TEXT( X22_Ever_previously_treated_re_drug__c ) &lt;&gt; &quot;1. Never treated&quot;), &quot;Invalid Q22&quot;, 
-
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c ) = &quot;1. Alcohol&quot;, X20_Number_times_started_this_year__c &gt; 1, TEXT(X22_Ever_previously_treated_alc_drug__c ) &lt;&gt; &quot;2. Previously treated&quot;),&quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;2. Illicit drug&quot;, X20_Number_times_started_this_year__c &gt; 1, TEXT( X22_Ever_previously_treated_re_drug__c ) &lt;&gt; &quot;2. Previously treated&quot;),&quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;3. Licit drug&quot;, X20_Number_times_started_this_year__c &gt; 1, TEXT( X22_Ever_previously_treated_re_drug__c ) &lt;&gt; &quot;2. Previously treated&quot;),&quot;Invalid Q22&quot;, 
-
-
-IF(AND(X20_Number_times_started_this_year__c = 1, TEXT( X22_Ever_previously_treated_alc_drug__c ) = &quot;2. Previously treated&quot;), &quot;Invalid Q22&quot;, 
-
-IF(AND(X20_Number_times_started_this_year__c = 1, TEXT( X22_Ever_previously_treated_re_drug__c ) = &quot;2. Previously treated&quot;), &quot;Invalid Q22&quot;, 
-
-IF(AND(NOT(ISBLANK( X20_Number_times_started_this_year__c )), ISBLANK( TEXT(X22_Ever_previously_treated_alc_drug__c ) ) ), &quot;Invalid Q22&quot;, 
-
-IF(AND(NOT(ISBLANK( X20_Number_times_started_this_year__c )), ISBLANK( TEXT(X22_Ever_previously_treated_re_drug__c ) ) ), &quot;Invalid Q22&quot;, 
-
-
-IF(AND( X20_Number_times_started_this_year__c = 1, TEXT( X23_Type_of_contact_with_this_centre__c ) = &quot;2. One or more treatment periods&quot;), &quot;Invalid Q23&quot;, 
-
-IF(ISBLANK(X21a_Date_This_treatment_started__c ), &quot;Q21a Invalid date this treatment started&quot;, 
-
-IF( X21a_Date_This_treatment_started__c &lt; X16_Date_of_Assessment__c , &quot;Q21a Invalid can&apos;t be before Q16 Date of Assessment&quot;, 
-
-IF( AND(OR(TEXT( X22_Ever_previously_treated_re_drug__c ) = &quot;1. Never treated&quot;, TEXT(X22_Ever_previously_treated_alc_drug__c ) = &quot;1. Never treated&quot;), TEXT(X23_Type_of_contact_with_this_centre__c) &lt;&gt; &quot;1. First treatment&quot;), &quot;Q23 Invalid&quot;, 
-
-&quot;HRB OK&quot;) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Number of Treatment</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Number_of_Treatments__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF( OR( X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;, 
-
-TEXT(X17a_Assessment_outcome__c) = &quot;2. Unsuitable for treatment&quot;, 
-
-TEXT( X17b_Assessment_criterion_fulfilled__c ) = &quot;2. No&quot;, 
-
-TEXT( X18a_Clients_treatment_status__c ) = &quot;3. Transferred to another site&quot;, 
-
-TEXT( X18a_Clients_treatment_status__c ) = &quot;4. Psychiatric assessment only&quot;, 
-
-TEXT( X19_Accepted_place_at_this_centre__c ) = &quot;2. No&quot;), 
-
-&quot;HRB OK&quot;, 
-
-IF(X20_Number_times_started_this_year__c = 0, &quot;Invalid Q20&quot;, 
-
-IF(AND(X20_Number_times_started_this_year__c = Number_of_completed_Treatment_CY__c , ISBLANK(X37_Date_of_Final_Discharge__c ) ),&quot;Q20 can&apos;t be equal to number of completed treatment CY&quot;, 
-
-IF(AND( Treatment_Type__c = &quot;New Treatment&quot;, X20_Number_times_started_this_year__c &lt;= Number_of_completed_Treatment_CY__c ), &quot;Invalid Q20&quot;, 
-
-IF(AND( Treatment_Type__c = &quot;Completed Treatment&quot;, X20_Number_times_started_this_year__c &lt;&gt; Number_of_completed_Treatment_CY__c ), &quot;Invalid Q20&quot;, 
-
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c ) = &quot;1. Alcohol&quot;, X20_Number_times_started_this_year__c  &gt;  0, ISBLANK(TEXT(X22_Ever_previously_treated_alc_drug__c))), &quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;2. Illicit drug&quot;, X20_Number_times_started_this_year__c = 1, ISBLANK(TEXT(X22_Ever_previously_treated_re_drug__c))), &quot;Invalid Q22&quot;, 
-
-IF(AND(TEXT(X14_Main_Reason_for_referral__c) = &quot;3. Licit drug&quot;, X20_Number_times_started_this_year__c = 1, ISBLANK(TEXT(X22_Ever_previously_treated_re_drug__c ))), &quot;Invalid Q22&quot;, 
-
-IF(AND( X20_Number_times_started_this_year__c  &gt;  0, ISBLANK(TEXT(X23_Type_of_contact_with_this_centre__c ))), &quot;Invalid Q23&quot;, 
-
-IF(ISBLANK(X21a_Date_This_treatment_started__c ), &quot;Q21a Invalid date this treatment started&quot;, 
-
-IF( X21a_Date_This_treatment_started__c &lt; X16_Date_of_Assessment__c , &quot;Q21a Invalid can&apos;t be before Q16 Date of Assessment&quot;, 
-
-IF( AND(OR(TEXT( X22_Ever_previously_treated_re_drug__c ) = &quot;1. Never treated&quot;, TEXT(X22_Ever_previously_treated_alc_drug__c ) = &quot;1. Never treated&quot;), TEXT(X23_Type_of_contact_with_this_centre__c) &lt;&gt; &quot;1. First treatment&quot;), &quot;Q23 Invalid&quot;, 
-
-&quot;HRB OK&quot;) ) ) ) ) ) ) ) ) ) ) )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Number of Treatments</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Number_of_completed_Treatment_CY__c</fullName>
         <externalId>false</externalId>
         <formula>Contact__r.Number_of_completed_Treatments__c</formula>
@@ -2952,22 +2837,6 @@ CASE(  X15b_If_client_referred__c  ,
         <inlineHelpText>Type 0 = Open Treatment
 Type 1 = Completed Treatment</inlineHelpText>
         <label>Treatment Type Number</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Treatment_Type__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(AND( YEAR(  X16_Date_of_Assessment__c  ) =  YEAR( TODAY() ), ISBLANK( X37_Date_of_Final_Discharge__c ) ),&quot;New Treatment&quot;,
-
-IF(AND( YEAR(  X16_Date_of_Assessment__c  ) =  YEAR( TODAY() ),   YEAR( X37_Date_of_Final_Discharge__c )  =  YEAR( TODAY() ) ), &quot;Completed Treatment&quot;,
-
-&quot;Incomplete Treatment started last year&quot;) )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Treatment Type</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -5546,17 +5415,11 @@ Hepatitis A and B vaccination</inlineHelpText>
         <booleanFilter>NOT(1 AND 2 AND 3 AND 4 AND 5)</booleanFilter>
         <columns>NAME</columns>
         <columns>Test_Referral_Assessment_details__c</columns>
-        <columns>Number_of_Treatments__c</columns>
         <columns>Drug_Validation__c</columns>
         <columns>Main_Intervention_Valid__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Test_Referral_Assessment_details__c</field>
-            <operation>equals</operation>
-            <value>HRB OK</value>
-        </filters>
-        <filters>
-            <field>Number_of_Treatments__c</field>
             <operation>equals</operation>
             <value>HRB OK</value>
         </filters>

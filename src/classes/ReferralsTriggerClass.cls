@@ -26,7 +26,7 @@ public with sharing class ReferralsTriggerClass implements TriggerDispatcher.ITr
 			Date refDate = oneRef.Date_of_Referral__c != null ? oneRef.Date_of_Referral__c : system.today();
 			String clientName = oneRef.Client__c != null ? oneRef.Client__r.Name : '';
 			String clientInitials = oneRef.Client__c != null ? oneRef.Client__r.Initials__c : '';
-			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', refDate.format()).replace('$INITIALS$', clientInitials);
+			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', refDate.format()).replace('$INITIALS$', clientInitials).subString (0, AppConfigSupport.MAX_NAME_SIZE);
 			if (newName != oneRef.Name) 
 			{
 				oneRef.Name = newName;

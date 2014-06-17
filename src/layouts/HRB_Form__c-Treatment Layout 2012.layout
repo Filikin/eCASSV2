@@ -50,10 +50,6 @@
                 <behavior>Readonly</behavior>
                 <field>Test_Referral_Assessment_details__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Number_of_Treatments__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

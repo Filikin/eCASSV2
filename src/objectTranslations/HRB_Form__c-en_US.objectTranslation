@@ -109,6 +109,10 @@
         <name>CentreSpecify__c</name>
     </fields>
     <fields>
+        <label><!-- CentreType --></label>
+        <name>CentreType__c</name>
+    </fields>
+    <fields>
         <help><!-- The first four digits are used as the centre number in the HRB report --></help>
         <label><!-- Treatment Centre --></label>
         <name>Centre__c</name>
@@ -361,14 +365,6 @@
         <name>NonCompliance__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Treatment --></label>
-        <name>Number_of_Treatment__c</name>
-    </fields>
-    <fields>
-        <label><!-- Number of Treatments --></label>
-        <name>Number_of_Treatments__c</name>
-    </fields>
-    <fields>
         <label><!-- Number of completed Treatment CY --></label>
         <name>Number_of_completed_Treatment_CY__c</name>
     </fields>
@@ -497,10 +493,6 @@
 Type 1 = Completed Treatment --></help>
         <label><!-- Treatment Type Number --></label>
         <name>Treatment_Type_Number__c</name>
-    </fields>
-    <fields>
-        <label><!-- Treatment Type --></label>
-        <name>Treatment_Type__c</name>
     </fields>
     <fields>
         <label><!-- UniqID --></label>

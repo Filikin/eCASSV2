@@ -51,7 +51,7 @@ public with sharing class HRBFormsTriggerClass implements TriggerDispatcher.ITri
 			Date formDate = oneForm.X16_Date_of_Assessment__c != null ? oneForm.X16_Date_of_Assessment__c : system.today();
 			String clientName = oneForm.Contact__c != null ? oneForm.Contact__r.Name : '';
 			String clientInitials = oneForm.Contact__c != null ? oneForm.Contact__r.Initials__c : '';
-			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', formDate.format()).replace('$INITIALS$', clientInitials);
+			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', formDate.format()).replace('$INITIALS$', clientInitials).subString (0, AppConfigSupport.MAX_NAME_SIZE);
 			if (newName != oneForm.Name) 
 			{
 				oneForm.Name = newName;

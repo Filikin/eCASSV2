@@ -57,7 +57,7 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		if (nameTemplate != null)
 		{
 			Date attendanceDate = attDate != null ? attDate : system.today();
-			return nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
+			return nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials).subString (0, AppConfigSupport.MAX_NAME_SIZE);
 		}
 		else return null;
 	}
