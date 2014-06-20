@@ -127,6 +127,14 @@
         <value>Legal Problems</value>
     </labels>
     <labels>
+        <fullName>Mark_as_attended</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Mark as attended</shortDescription>
+        <value>Click to mark as Attended</value>
+    </labels>
+    <labels>
         <fullName>Next_review_date</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -209,6 +217,22 @@
         <protected>false</protected>
         <shortDescription>RulesOn</shortDescription>
         <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Session_Date</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Session Date</shortDescription>
+        <value>Session Date</value>
+    </labels>
+    <labels>
+        <fullName>Session_Details</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Session Details</shortDescription>
+        <value>Session Details</value>
     </labels>
     <labels>
         <fullName>Social_Functioning_title</fullName>
