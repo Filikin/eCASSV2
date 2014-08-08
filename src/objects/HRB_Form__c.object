@@ -50,10 +50,13 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Record of Treatment - Section D, E, F, G and H of HRB Form</description>
     <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>ALCOHOL__c</fullName>
         <externalId>false</externalId>
@@ -3134,6 +3137,16 @@ CASE(  X18b_Reason_removed_from_waiting_list__c  ,
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>14 Main Reason for Referral - Drug</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Drug must be on the 2012 table</errorMessage>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments5</relationshipName>
         <required>false</required>
@@ -3735,6 +3748,20 @@ If not applicable code 88</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Excluding Alcohol and Tobacco</inlineHelpText>
         <label>24b Specify first drug used</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>Drug_HRB__c.drugtype__c</field>
+                <operation>notEqual</operation>
+                <value>1</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments1</relationshipName>
         <required>false</required>
@@ -3747,6 +3774,15 @@ If not applicable code 88</inlineHelpText>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>25a Main substance</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments</relationshipName>
         <required>false</required>
@@ -3847,6 +3883,15 @@ If not applicable code 88</inlineHelpText>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>26a Substance 2</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments2</relationshipName>
         <required>false</required>
@@ -3948,6 +3993,15 @@ If not applicable code 88</inlineHelpText>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>27a Substance 3</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments3</relationshipName>
         <required>false</required>
@@ -4049,6 +4103,15 @@ If not applicable code 88</inlineHelpText>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>28a Substance 4</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Drug_HRB__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Drug_HRB__c</referenceTo>
         <relationshipName>Treatments4</relationshipName>
         <required>false</required>

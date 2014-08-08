@@ -59,9 +59,5 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <namedFilters>
-        <errorMessage><!-- Drug must be on the 2012 table --></errorMessage>
-        <name>nf_01ID0000000RJ8HMAW_00ND0000003o5pLMAQ</name>
-    </namedFilters>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

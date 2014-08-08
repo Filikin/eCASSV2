@@ -548,6 +548,9 @@ Type 1 = Completed Treatment --></help>
     </fields>
     <fields>
         <label><!-- 14 Main Reason for Referral - Drug --></label>
+        <lookupFilter>
+            <errorMessage><!-- Drug must be on the 2012 table --></errorMessage>
+        </lookupFilter>
         <name>X14_Main_Reason_for_Referral_Drug__c</name>
         <relationshipLabel><!-- HRB Forms (14 Main Reason for Referral - Drug) --></relationshipLabel>
     </fields>

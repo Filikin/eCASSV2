@@ -48,10 +48,13 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Used to select the range and type of HRB Report</description>
     <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Period__c</fullName>
         <externalId>false</externalId>

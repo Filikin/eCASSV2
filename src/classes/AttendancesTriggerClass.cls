@@ -4,6 +4,7 @@
 		Only for sessions that Attended__c to true
 		When an attendence is created or modified that is associated with an enrolment that is linked to a care plan objective, 
 		create or modify the care plan step on that care plan objective
+		Restrict attendance name to 30 characters
 	Tested in testCreateAttendanceTrigger 
 	Called from: TriggerDispatcher
 */
@@ -57,7 +58,9 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		if (nameTemplate != null)
 		{
 			Date attendanceDate = attDate != null ? attDate : system.today();
-			return nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials).subString (0, AppConfigSupport.MAX_NAME_SIZE);
+			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', attendanceDate.format()).replace('$INITIALS$', clientInitials);
+			if (newName.length() > AppConfigSupport.MAX_NAME_SIZE) return newName.subString (0, AppConfigSupport.MAX_NAME_SIZE);
+			else return newName;
 		}
 		else return null;
 	}

@@ -461,6 +461,10 @@
         <name>Stabilisation_Detox_Mullingar__c</name>
     </fields>
     <fields>
+        <label><!-- Status Comment --></label>
+        <name>Status_Comment__c</name>
+    </fields>
+    <fields>
         <label><!-- Status --></label>
         <name>Status__c</name>
         <picklistValues>
