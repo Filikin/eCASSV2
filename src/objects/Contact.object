@@ -154,18 +154,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>AssistantName</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>AssistantPhone</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>Birthdate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>CCA__c</fullName>
         <externalId>false</externalId>
         <formula>Area_of_Residence_and_Reg_Code__r.CCA__c</formula>
@@ -288,18 +276,6 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>Department</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>Description</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>DoNotCall</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>EDLEVEL__c</fullName>
         <externalId>false</externalId>
         <formula>Case(X12b_Education_highest_level__c,
@@ -417,10 +393,6 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Email</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>EmployCode__c</fullName>
         <externalId>false</externalId>
         <formula>Case( X11_Employement_Status__c,
@@ -455,10 +427,6 @@
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Fax</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Full_name__c</fullName>
@@ -586,18 +554,6 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>HasOptedOutOfEmail</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>HasOptedOutOfFax</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>HomePhone</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>Initials__c</fullName>
         <externalId>false</externalId>
         <formula>LEFT (FirstName,1) &amp; LEFT (LastName, 1)</formula>
@@ -615,10 +571,6 @@
         <label>Is NOK aware of issue</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Jigsaw</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Key_Worker_Phone__c</fullName>
@@ -707,10 +659,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>LastCURequestDate</fullName>
-    </fields>
-    <fields>
-        <fullName>LastCUUpdateDate</fullName>
+        <fullName>Last_face_to_face_contact__c</fullName>
+        <description>Date of most recent attendance (where attended = true).  Set by trigger on attendance record insert and update.</description>
+        <externalId>false</externalId>
+        <label>Last face to face contact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>LeadSource</fullName>
@@ -763,20 +718,12 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>MailingAddress</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>Member_of_staff__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Member of staff</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>MobilePhone</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>NOK_from_other_agency__c</fullName>
@@ -797,10 +744,6 @@
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Name</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Nationality__c</fullName>
@@ -860,14 +803,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>OtherAddress</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>OtherPhone</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Lookup</type>
@@ -882,10 +817,6 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Phone</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Presenting_Issues__c</fullName>
@@ -1123,10 +1054,6 @@ if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;12b invalid&qu
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Title</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>X10a_Nationality_Other__c</fullName>
