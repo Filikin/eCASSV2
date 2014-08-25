@@ -713,6 +713,15 @@
         <fullName>LastCUUpdateDate</fullName>
     </fields>
     <fields>
+        <fullName>Last_face_to_face_contact__c</fullName>
+        <description>Date of most recent attendance (where attended = true).  Set by trigger on attendance record insert and update.</description>
+        <externalId>false</externalId>
+        <label>Last face to face contact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>

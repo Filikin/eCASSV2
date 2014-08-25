@@ -48,6 +48,11 @@
             <operation>equals</operation>
             <value>Attended</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>Attendance__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>One to One Attendance,Course Attendance</value>
+        </criteriaItems>
         <description>When the status changes to Attended, tick the attended checkbox</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
@@ -62,6 +67,11 @@
             <field>Attendance__c.Status__c</field>
             <operation>notEqual</operation>
             <value>Attended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Attendance__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Course Attendance,One to One Attendance</value>
         </criteriaItems>
         <description>When the status changes to not Attended, untick the attended checkbox</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
@@ -78,6 +88,11 @@
             <operation>equals</operation>
             <value>True</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>Attendance__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Course Attendance,One to One Attendance</value>
+        </criteriaItems>
         <description>When the attended checkbox is ticked update status to Attended</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
@@ -92,6 +107,11 @@
             <field>Attendance__c.Attended__c</field>
             <operation>equals</operation>
             <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Attendance__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Course Attendance,One to One Attendance</value>
         </criteriaItems>
         <description>When the attended checkbox is unticked update status to Booked (because can&apos;t decide which no show option)</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>

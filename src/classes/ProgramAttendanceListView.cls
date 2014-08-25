@@ -29,7 +29,7 @@ global with sharing class ProgramAttendanceListView
     private void Initialise ()
     {
     	userCanUpdate = Schema.sObjectType.Attendance__c.isUpdateable();
-		attendances = [select Name, id, Young_Person_Name__c, young_person__c, attended__c, Interaction__c,comment__c from Attendance__c where Program_Session__c = :session.id];
+		attendances = [select Name, id, Young_Person_Name__c, young_person__c, attended__c, Interaction__c,comment__c, Duration_in_minutes__c from Attendance__c where Program_Session__c = :session.id];
     }
     
     global Attendance__c [] getAttendanceList ()

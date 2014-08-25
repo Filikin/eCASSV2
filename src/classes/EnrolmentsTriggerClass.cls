@@ -38,7 +38,8 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 			String clientName = oneEnr.Young_Person__c != null ? oneEnr.Young_Person__r.Name : '';
 			String clientInitials = oneEnr.Young_Person__c != null ? oneEnr.Young_Person__r.Initials__c : '';
 			String newName;
-			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', enrolmentDate.format()).replace('$INITIALS$', clientInitials).subString (0, AppConfigSupport.MAX_NAME_SIZE);
+			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', enrolmentDate.format()).replace('$INITIALS$', clientInitials);
+			if (newName.length() >= AppConfigSupport.MAX_NAME_SIZE) newName = newName.subString (0, AppConfigSupport.MAX_NAME_SIZE);
 			if (newName != oneEnr.Name) 
 			{
 				oneEnr.Name = newName;

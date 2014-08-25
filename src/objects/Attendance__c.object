@@ -394,7 +394,7 @@
         <label>Drop-in</label>
         <referenceTo>Drop_in__c</referenceTo>
         <relationshipLabel>Drop-in Attendance</relationshipLabel>
-        <relationshipName>Drop_in_Attendance</relationshipName>
+        <relationshipName>Drop_in_Attendance2</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

@@ -44,6 +44,10 @@
                 <behavior>Readonly</behavior>
                 <field>Number_of_completed_Treatments__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_face_to_face_contact__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

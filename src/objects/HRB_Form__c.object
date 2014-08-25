@@ -5475,7 +5475,7 @@ Hepatitis A and B vaccination</inlineHelpText>
     </listViews>
     <listViews>
         <fullName>Treatment_check_for_HRB</fullName>
-        <booleanFilter>NOT(1 AND 2 AND 3 AND 4 AND 5)</booleanFilter>
+        <booleanFilter>NOT(1 AND 2 AND 3 AND 4)</booleanFilter>
         <columns>NAME</columns>
         <columns>Test_Referral_Assessment_details__c</columns>
         <columns>Drug_Validation__c</columns>
