@@ -10,7 +10,7 @@
 	Purpose: Add code to update related contact record with date of last contact
 			 Also add code to set Attended__c value to true for Drop-in and Open Access attendances
 		
-	Tested in testCreateAttendanceTrigger 
+	Tested in testCreateAttendanceTrigger and testUpdateLastAttendedDate
 	Called from: TriggerDispatcher
 */
 public with sharing class AttendancesTriggerClass implements TriggerDispatcher.ITriggerEntry
@@ -18,6 +18,10 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		list<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
 	{
+		
+		system.debug('Coming in to attendance trigger');
+		system.debug('newlist: '+newList);
+		system.debug('oldlist: '+oldList);
 		if (isInsert)
 		{
 			if (isAfter)
@@ -47,6 +51,8 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			if (isAfter) CountNumberAttended (oldList);
 			updateLastContactDateOnDelete((map<Id, Attendance__c>)oldMap);
 		}
+		system.debug('Coming out of attendance trigger.');
+		system.debug('newlist: '+newlist);
 	}
 	
 	public void ChangeName (map<Id, Attendance__c> attMap)
@@ -307,16 +313,23 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	}
 	
 	public void DefaultAttendanceFlagForDropInAndOpenAccess(List <Attendance__c> newList)
-	{
+	{  
 		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance'].Id; 
 		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance'].Id;  
+		system.debug('In DefaultAttendanceFlagForDropInAndOpenAccess. newList is: '+newlist);
+		system.debug('openAccessAttendanceRecordTypeID is '+openAccessAttendanceRecordTypeID);
+		system.debug('dropInAttendanceRecordTypeID is '+dropInAttendanceRecordTypeID);
+		
 		for (Attendance__c att: newList)
 		{
 			if (att.RecordTypeID == openAccessAttendanceRecordTypeID || att.RecordTypeID == dropInAttendanceRecordTypeID) 	
 			{
 				att.Attended__c = true; 
+				att.Status__c = 'Attended';
+				system.debug('Setting attended to true');
 			}	
-		}		
+		}
+				
 	}
 	
 		

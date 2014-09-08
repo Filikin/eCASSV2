@@ -95,7 +95,7 @@
     <fields>
         <fullName>Client_gender__c</fullName>
         <externalId>false</externalId>
-        <formula>text(Client__r.Gender__c )</formula>
+        <formula>text(Client__r.X4_Gender__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Client gender</label>
         <required>false</required>
@@ -537,7 +537,7 @@
         <label>Who did induction</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Open Access attendances (Who did induction)</relationshipLabel>
-        <relationshipName>Open_Access_attendances</relationshipName>
+        <relationshipName>Open_Access_attendances_2</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -700,8 +700,8 @@
         <customTabListAdditionalFields>Client__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Date_and_Time_client_entered__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Reason_for_Attending__c</customTabListAdditionalFields>
-        <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
         <lookupDialogsAdditionalFields>Client__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Date_and_Time_client_entered__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Reason_for_Attending__c</lookupDialogsAdditionalFields>
