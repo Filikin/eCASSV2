@@ -11,17 +11,14 @@
 			 Also add code to set Attended__c value to true for Drop-in and Open Access attendances
 		
 	Tested in testCreateAttendanceTrigger and testUpdateLastAttendedDate
+	
 	Called from: TriggerDispatcher
 */
 public with sharing class AttendancesTriggerClass implements TriggerDispatcher.ITriggerEntry
 {
 	public void MainEntry (String TriggerObject, Boolean isBefore, Boolean isDelete, Boolean isAfter, Boolean isInsert, Boolean isUpdate, Boolean isExecuting,
 		list<SObject> newList, Map<Id, SObject> newMap, List<SObject> oldList, Map<Id, SObject> oldMap)
-	{
-		
-		system.debug('Coming in to attendance trigger');
-		system.debug('newlist: '+newList);
-		system.debug('oldlist: '+oldList);
+	{	
 		if (isInsert)
 		{
 			if (isAfter)
@@ -316,9 +313,6 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	{  
 		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance'].Id; 
 		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance'].Id;  
-		system.debug('In DefaultAttendanceFlagForDropInAndOpenAccess. newList is: '+newlist);
-		system.debug('openAccessAttendanceRecordTypeID is '+openAccessAttendanceRecordTypeID);
-		system.debug('dropInAttendanceRecordTypeID is '+dropInAttendanceRecordTypeID);
 		
 		for (Attendance__c att: newList)
 		{
@@ -330,7 +324,6 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			}	
 		}
 				
-	}
-	
+	}	
 		
 }

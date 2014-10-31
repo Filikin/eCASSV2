@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultLandingTab>standard-home</defaultLandingTab>
-    <description>electronic Collaborative Addiction Services Solution</description>
+    <description>Electronic Collaborative Addiction Services Solution</description>
     <label>eCASS V2</label>
     <logo>Logo/ENCLUDE_Technologies_for_nonprofit_excellence_logo.jpg</logo>
     <tab>standard-Contact</tab>
