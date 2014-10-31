@@ -23,6 +23,14 @@
                 <behavior>Readonly</behavior>
                 <field>Centre_number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRB_Report__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Treatment_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -54,7 +62,11 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Drug_Valid_Table_2012__c</field>
+                <field>Main_Intervention_Valid__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Treatment_Type_Check__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -62,11 +74,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Substance_use_Valid__c</field>
+                <field>Drug_Valid_Table_2012__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Main_Intervention_Valid__c</field>
+                <field>Substance_use_Valid__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -765,10 +777,19 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>X33a28_Facilitated_detox__c</field>
+                <field>X33b28_Date_Commenced__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X33d28_Number_of_Sessions__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X33c28_Date_Completed__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>

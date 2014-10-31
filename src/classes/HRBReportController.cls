@@ -1,9 +1,9 @@
 /*
-    Author: Eamon Kelly, Enclude
-    Author: Pedro Gonzalez, Enclude
-    Purpose: Extract the fields for the HRB report. 
-    Security note: In practice only the administrator will have access to the HRB_Treatment_Report page
-    Called from: HRB_Treatment_Report
+	Author: Eamon Kelly, Enclude
+	Author: Pedro Gonzalez, Enclude
+	Purpose: Extract the fields for the HRB report. 
+	Security note: In practice only the administrator will have access to the HRB_Treatment_Report page
+	Called from: HRB_Treatment_Report
 */
 public with sharing class HRBReportController 
 {
@@ -62,10 +62,12 @@ public with sharing class HRBReportController
               'X33d1_Number_of_Sessions__c,Inter12__c,X33b12_Date_Commenced__c,X33c12_Date_Completed__c,X33d12_Number_of_Sessions__c,Inter13__c,X33b13_Date_Commenced__c,X33c13_Date_Completed__c,X33d13_Number_of_Sessions__c,Inter14__c,X33b14_Date_Commenced__c,X33c14_Date_Completed__c,X33d14_Number_of_Sessions__c,Inter15__c,X33b15_Date_Commenced__c,' +
               'X33c15_Date_Completed__c,X33d15_Number_of_Sessions__c,Inter16__c,X33b16_Date_Commenced__c,X33c16_Date_Completed__c,X33d16_Number_of_Sessions__c,Inter17__c,X33b17_Date_Commenced__c,X33c17_Date_Completed__c,' +
               'X33d17_Number_of_Sesions__c,Inter18__c,X33b18_Date_Commenced__c,X33c18_Date_Completed__c,X33d18_Number_of_Sessions__c,Inter19__c,X33b19_Date_Commenced__c,X33c19_Date_Completed__c,X33d19_Number_of_Sessions__c,' +
-              'Inter20__c,X33b20_Date_Commenced__c,X33c20_Date_Completed__c,X33d20_Number_of_Sessions__c,Inter21__c,X33b21_Date_Commenced__c,X33c21_Date_Completed__c,X33d21_Number_of_Sessions__c,Inter23__c,X33b23_Date_Commenced__c,X33c23_Date_Completed__c,X33d23_Number_of_Sessions__c,Inter24__c,X33b25_Date_key_worker_was_appointed__c,X33b26_Date_case_manager_was_appointed__c,X33b27_Date_care_plan_was_put_in_place__c,InterOutcome__c,X34_Outcome_Other__c,NonCompliance__c,ExitCondition__c,' +
-              'X36_Clients_condition_Other__c,X37_Date_of_Final_Discharge__c,ExitAfter__c,ExitCentre__c,X38b_Other_site_for_Treatment__c,X39_Number_of_others_involved__c,Vaccine1__c,Vaccine2__c,Vaccine3__c,VaccineB4__c,' +
+              'Inter20__c,X33b20_Date_Commenced__c,X33c20_Date_Completed__c,X33d20_Number_of_Sessions__c,Inter21__c,X33b21_Date_Commenced__c,X33c21_Date_Completed__c,X33d21_Number_of_Sessions__c,Inter23__c,X33b23_Date_Commenced__c,X33c23_Date_Completed__c,X33d23_Number_of_Sessions__c,Inter24__c,X33b25_Date_key_worker_was_appointed__c,X33b26_Date_case_manager_was_appointed__c,X33b27_Date_care_plan_was_put_in_place__c,'+ 
+              'Inter28__c,X33b28_Date_Commenced__c,X33c28_Date_Completed__c,X33d28_Number_of_Sessions__c,'+
+              'InterOutcome__c,X34_Outcome_Other__c,NonCompliance__c,ExitCondition__c,' +
+              'X36_Clients_condition_Other__c,X37_Date_of_Final_Discharge__c,ExitAfter__c,ExitCentre__c,X38b_Other_site_for_treatment__c,X39_Number_of_others_involved__c,Vaccine1__c,Vaccine2__c,Vaccine3__c,VaccineB4__c,' +
               'VaccineB5__c,Titre__c,BBV1__c,BBV2__c,BBV3__c,Screen__c,ScreenBy__c,CleanDate__c,Added__c,Updated_Date__c,Name,X14_Main_Reason_for_Referral_Drug__r.DrugCode__c ' + 
-              'from HRB_Form__c where Pause__c = false and ';
+              'from HRB_Form__c where HRB_Report__c = \'' + reportParams.Id + '\' and ';
          System.Debug (queryString);
           
          if (reportParams.Type_of_report__c == 'Clients who entered during the report period') 
@@ -82,250 +84,255 @@ public with sharing class HRBReportController
             TreatmentsWithClientsList = Database.query(queryString);
             for (HRB_Form__c oneTreatment: TreatmentsWithClientsList)
             {
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.External_ID_Number__c == null)
-                {
-                    oneTreatment.SpecifyID__c = null;
-                }
-                else
-                {
-                    oneTreatment.SpecifyID__c = oneTreatment.X14_Main_Reason_for_Referral_Drug__r.External_ID_Number__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCodeX__c == null)
-                {
-                    oneTreatment.SpecifyX__c = null;
-                }
-                else
-                {
-                    oneTreatment.SpecifyX__c = oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X24b_Specify_first_drug_used__r.External_ID_Number__c == null || oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.FirstdruID__c = null;
-                }
-                else
-                {
-                    oneTreatment.FirstdruID__c = oneTreatment.X24b_Specify_first_drug_used__r.External_ID_Number__c;
-                }   
-                if (oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.FirstdruX__c = null;
-                    System.debug ('Setting FirstdruX to 0');
-                }
-                else
-                {
-                    System.debug ('X24b is '+oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c);
-                    System.debug ('X14 is ' + oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c);
-                    System.debug ('X17a is ' + oneTreatment.X17a_Assessment_outcome__c);
-                    oneTreatment.FirstdruX__c = oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X25a_Main_substance__r.External_ID_Number__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.PrimdrugID__c = null;
-                }
-                else
-                {
-                    oneTreatment.PrimdrugID__c = oneTreatment.X25a_Main_substance__r.External_ID_Number__c;
-                }
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.PrimdrugX__c = null;
-                }
-                else
-                {
-                    oneTreatment.PrimdrugX__c = oneTreatment.X25a_Main_substance__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug2CodeID__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X26a_Substance_2__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug2CodeID__c = '1';
-                }
-                else
-                {
-                    oneTreatment.Drug2CodeID__c = oneTreatment.X26a_Substance_2__r.External_ID_Number__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug2CodeX__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X26a_Substance_2__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug2CodeX__c = '0';
-                }
-                else
-                {
-                    oneTreatment.Drug2CodeX__c = oneTreatment.X26a_Substance_2__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug3CodeID__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X27a_Substance_3__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug3CodeID__c = '1';
-                }
-                else
-                {
-                    oneTreatment.Drug3CodeID__c = oneTreatment.X27a_Substance_3__r.External_ID_Number__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug3CodeX__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X27a_Substance_3__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug3CodeX__c = '0';
-                }
-                else
-                {
-                    oneTreatment.Drug3CodeX__c = oneTreatment.X27a_Substance_3__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug4CodeID__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X28a_Substance_4__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug4CodeID__c = '1';
-                }
-                else
-                {
-                    oneTreatment.Drug4CodeID__c = oneTreatment.X28a_Substance_4__r.External_ID_Number__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
-                || oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
-                {
-                    oneTreatment.Drug4CodeX__c = null;
-                }
-                else
-                if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X28a_Substance_4__r.DrugCode__c == null)
-                {
-                    oneTreatment.Drug4CodeX__c = '0';
-                }
-                else
-                {
-                    oneTreatment.Drug4CodeX__c = oneTreatment.X28a_Substance_4__r.DrugCodeX__c;
-                }
-                if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
-                 || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'
-                 || oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No'
-                 || Clientonwaitinglist(oneTreatment))
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.External_ID_Number__c == null)
+            	{
+            		oneTreatment.SpecifyID__c = null;
+            	}
+            	else
+            	{
+            		oneTreatment.SpecifyID__c = oneTreatment.X14_Main_Reason_for_Referral_Drug__r.External_ID_Number__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCodeX__c == null)
+            	{
+            		oneTreatment.SpecifyX__c = null;
+            	}
+            	else
+            	{
+            		oneTreatment.SpecifyX__c = oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X24b_Specify_first_drug_used__r.External_ID_Number__c == null || oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.FirstdruID__c = null;
+            	}
+            	else
+            	{
+            		oneTreatment.FirstdruID__c = oneTreatment.X24b_Specify_first_drug_used__r.External_ID_Number__c;
+            	}	
+            	if (oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.FirstdruX__c = null;
+            		System.debug ('Setting FirstdruX to 0');
+            	}
+            	else
+            	{
+            		System.debug ('X24b is '+oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c);
+            		System.debug ('X14 is ' + oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c);
+            		System.debug ('X17a is ' + oneTreatment.X17a_Assessment_outcome__c);
+            		oneTreatment.FirstdruX__c = oneTreatment.X24b_Specify_first_drug_used__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X25a_Main_substance__r.External_ID_Number__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.PrimdrugID__c = null;
+            	}
+            	else
+            	{
+            		oneTreatment.PrimdrugID__c = oneTreatment.X25a_Main_substance__r.External_ID_Number__c;
+            	}
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c == null|| oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.PrimdrugX__c = null;
+            	}
+            	else
+            	{
+            		oneTreatment.PrimdrugX__c = oneTreatment.X25a_Main_substance__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug2CodeID__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X26a_Substance_2__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug2CodeID__c = '1';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug2CodeID__c = oneTreatment.X26a_Substance_2__r.External_ID_Number__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug2CodeX__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X26a_Substance_2__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug2CodeX__c = '0';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug2CodeX__c = oneTreatment.X26a_Substance_2__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug3CodeID__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X27a_Substance_3__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug3CodeID__c = '1';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug3CodeID__c = oneTreatment.X27a_Substance_3__r.External_ID_Number__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug3CodeX__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X27a_Substance_3__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug3CodeX__c = '0';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug3CodeX__c = oneTreatment.X27a_Substance_3__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug4CodeID__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X28a_Substance_4__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug4CodeID__c = '1';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug4CodeID__c = oneTreatment.X28a_Substance_4__r.External_ID_Number__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	|| oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'|| oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'
+            	|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No')
+            	{
+            		oneTreatment.Drug4CodeX__c = null;
+            	}
+            	else
+            	if (oneTreatment.X25a_Main_substance__r.DrugCodeX__c != null && oneTreatment.X28a_Substance_4__r.DrugCode__c == null)
+            	{
+            		oneTreatment.Drug4CodeX__c = '0';
+            	}
+            	else
+            	{
+            		oneTreatment.Drug4CodeX__c = oneTreatment.X28a_Substance_4__r.DrugCodeX__c;
+            	}
+            	if (oneTreatment.X14_Main_Reason_for_Referral_Drug__r.DrugCode__c == '994'|| oneTreatment.X17a_Assessment_outcome__c == '2. Unsuitable for treatment'
+            	 || oneTreatment.X17b_Assessment_criterion_fulfilled__c == '2. No'|| oneTreatment.X18a_Clients_treatment_status__c == '3. Transferred to another site'
+            	 || oneTreatment.X18a_Clients_treatment_status__c == '4. Psychiatric assessment only'|| oneTreatment.X19_Accepted_place_at_this_centre__c == '2. No'
+            	 || Clientonwaitinglist(oneTreatment))
             {
-                
-                oneTreatment.X20_Number_times_started_this_year__c = null;
-                oneTreatment.X21a_Date_This_treatment_started__c = null;
-                oneTreatment.X21b_Date_substitution_started__c = null;
-                oneTreatment.X22_Ever_previously_treated_alc_drug__c = '';
-                oneTreatment.X22_Ever_previously_treated_re_drug__c = '';
-                oneTreatment.X23_Type_of_contact_with_this_centre__c = '';
-                oneTreatment.X24a_Age_first_use_any_drug__c = null;
-                oneTreatment.X25b_Route_of_Admin_Main_sub__c = '';
-                oneTreatment.X25c_Frequency_of_use_in_last_mth__c =  '';
-                oneTreatment.X25d_Age_at_1st_use__c = null;
-                oneTreatment.X26b_Route_of_Admin_Sub2__c =  '';
-                oneTreatment.X26c_Frequency_of_use_in_last_mth__c =  '';
-                oneTreatment.X26d_Age_of_1st_use__c = null;
-                oneTreatment.X27b_Route_of_Admin_Sub3__c =  '';
-                oneTreatment.X27c_Frequency_of_use_in_last_mth__c =  '';
-                oneTreatment.X27d_Age_of_1st_use__c = null;
-                oneTreatment.X28b_Route_of_Admin_Sub4__c =  '';
-                oneTreatment.X28c_Frequency_of_use_in_last_mth__c =  '';
-                oneTreatment.X28d_Age_of_1st_use__c = null;
-                oneTreatment.X28e_Preferred_types_of_alcohol_consumed__c =  '';
-                oneTreatment.X28e8_Specify_Other__c =  '';
-                oneTreatment.X28f_How_many_drinks_per_occasion__c = null;
-                oneTreatment.X28g_Number_of_days_alcohol_consumed__c = null;
-                oneTreatment.X28h_Extent_of_drinking_problem__c =  '';
-                oneTreatment.X29a_Injected_in_past_month__c =  '';
-                oneTreatment.X29b_Ever_injected__c =  '';
-                oneTreatment.X29c_Age_first_injected__c = null;
-                oneTreatment.X30_Ever_shared_any_injecting_equipment__c =  '';
-                oneTreatment.X33a_Main_Intervention__c =  '';
-                oneTreatment.X33a24_Sent_to_another_site__c =  'FALSE';
-                oneTreatment.X33a24_Specify_treatment_site_number__c = null;
-                oneTreatment.X33a25_Key_Worder_appointed__c =  'FALSE';
-                oneTreatment.X33a26_Case_Manager_appointed__c =  'FALSE';
-                oneTreatment.X33a27_Care_Plan__c =  'FALSE';
-                oneTreatment.X33a28_Facilitated_detox__c =  'FALSE';
-                oneTreatment.X33b1_Date_Commenced__c = null;
-                oneTreatment.X33b12_Date_Commenced__c = null;
-                oneTreatment.X33b13_Date_Commenced__c = null;
-                oneTreatment.X33b14_Date_Commenced__c = null;
-                oneTreatment.X33b15_Date_Commenced__c = null;
-                oneTreatment.X33b16_Date_Commenced__c = null;
-                oneTreatment.X33b17_Date_Commenced__c = null;
-                oneTreatment.X33b18_Date_Commenced__c = null;
-                oneTreatment.X33b19_Date_Commenced__c = null;
-                oneTreatment.X33b20_Date_Commenced__c = null;
-                oneTreatment.X33b21_Date_Commenced__c = null;
-                oneTreatment.X33b23_Date_Commenced__c = null;
-                oneTreatment.X33b25_Date_key_worker_was_appointed__c = null;
-                oneTreatment.X33b26_Date_case_manager_was_appointed__c = null;
-                oneTreatment.X33b26_Specify_centre__c =  '';
-                oneTreatment.X33b27_Date_care_plan_was_put_in_place__c = null;
-                oneTreatment.X33c1_Date_Completed__c = null;
-                oneTreatment.X33c12_Date_Completed__c = null;
-                oneTreatment.X33c13_Date_Completed__c = null;
-                oneTreatment.X33c14_Date_Completed__c = null;
-                oneTreatment.X33c15_Date_Completed__c = null;
-                oneTreatment.X33c16_Date_Completed__c = null;
-                oneTreatment.X33c17_Date_Completed__c = null;
-                oneTreatment.X33c18_Date_Completed__c = null;
-                oneTreatment.X33c19_Date_Completed__c = null;
-                oneTreatment.X33c20_Date_Completed__c = null;
-                oneTreatment.X33c21_Date_Completed__c = null;
-                oneTreatment.X33c23_Date_Completed__c = null;
-                oneTreatment.X33d1_Number_of_Sessions__c = 0;
-                oneTreatment.X33d12_Number_of_Sessions__c = 0;
-                oneTreatment.X33d13_Number_of_Sessions__c = 0;
-                oneTreatment.X33d14_Number_of_Sessions__c = 0;
-                oneTreatment.X33d15_Number_of_Sessions__c = 0;
-                oneTreatment.X33d16_Number_of_Sessions__c = 0;
-                oneTreatment.X33d17_Number_of_Sesions__c = 0;
-                oneTreatment.X33d18_Number_of_Sessions__c = 0;
-                oneTreatment.X33d19_Number_of_Sessions__c = 0;
-                oneTreatment.X33d20_Number_of_Sessions__c = 0;
-                oneTreatment.X33d21_Number_of_Sessions__c = 0;
-                oneTreatment.X33d23_Number_of_Sessions__c = 0;
-                oneTreatment.X34_Outcome_for_MAIN_Treatment__c =  '';
-                oneTreatment.X34_Outcome_Other__c =  '';
-                oneTreatment.X35_Reason_for_exit_6_above__c =  '';
-                oneTreatment.X36_Client_s_Condition_on_discharge__c =  '';
-                oneTreatment.X36_Clients_condition_Other__c =  '';
-                oneTreatment.X37_Date_of_Final_Discharge__c = null;
-                oneTreatment.X38a_Aftercare_provided_by_this_centre__c =  '';
-                oneTreatment.X38b_Other_site_for_Treatment__c =  '';
-                oneTreatment.X39_Number_of_others_involved__c = null;
-                oneTreatment.X40_Vaccination__c =  '';
-                oneTreatment.X41_Viral_Screening_uptake__c =  '';
-                oneTreatment.X42a_Urine_screeding_during_Treatment__c =  '';
-                oneTreatment.X42b_If_screening_ordered_by__c =  '';
+            	
+            	oneTreatment.X20_Number_times_started_this_year__c = null;
+            	oneTreatment.X21a_Date_This_treatment_started__c = null;
+            	oneTreatment.X21b_Date_substitution_started__c = null;
+            	oneTreatment.X22_Ever_previously_treated_alc_drug__c = '';
+            	oneTreatment.X22_Ever_previously_treated_re_drug__c = '';
+            	oneTreatment.X23_Type_of_contact_with_this_centre__c = '';
+            	oneTreatment.X24a_Age_first_use_any_drug__c = null;
+            	oneTreatment.X25b_Route_of_Admin_Main_sub__c = '';
+            	oneTreatment.X25c_Frequency_of_use_in_last_mth__c =  '';
+            	oneTreatment.X25d_Age_at_1st_use__c = null;
+            	oneTreatment.X26b_Route_of_Admin_Sub2__c =  '';
+            	oneTreatment.X26c_Frequency_of_use_in_last_mth__c =  '';
+            	oneTreatment.X26d_Age_of_1st_use__c = null;
+            	oneTreatment.X27b_Route_of_Admin_Sub3__c =  '';
+            	oneTreatment.X27c_Frequency_of_use_in_last_mth__c =  '';
+            	oneTreatment.X27d_Age_of_1st_use__c = null;
+            	oneTreatment.X28b_Route_of_Admin_Sub4__c =  '';
+            	oneTreatment.X28c_Frequency_of_use_in_last_mth__c =  '';
+            	oneTreatment.X28d_Age_of_1st_use__c = null;
+            	oneTreatment.X28e_Preferred_types_of_alcohol_consumed__c =  '';
+            	oneTreatment.X28e8_Specify_Other__c =  '';
+            	oneTreatment.X28f_How_many_drinks_per_occasion__c = null;
+				oneTreatment.X28g_Number_of_days_alcohol_consumed__c = null;
+				oneTreatment.X28h_Extent_of_drinking_problem__c =  '';
+				oneTreatment.X29a_Injected_in_past_month__c =  '';
+				oneTreatment.X29b_Ever_injected__c =  '';
+				oneTreatment.X29c_Age_first_injected__c = null;
+				oneTreatment.X30_Ever_shared_any_injecting_equipment__c =  '';
+				oneTreatment.X33a_Main_Intervention__c =  '';
+				oneTreatment.X33a24_Sent_to_another_site__c =  'FALSE';
+				oneTreatment.X33a24_Specify_treatment_site_number__c = null;
+				oneTreatment.X33a25_Key_Worder_appointed__c =  'FALSE';
+				oneTreatment.X33a26_Case_Manager_appointed__c =  'FALSE';
+				oneTreatment.X33a27_Care_Plan__c =  'FALSE';
+				oneTreatment.X33a28_Facilitated_detox__c =  'FALSE';
+				oneTreatment.X33b1_Date_Commenced__c = null;
+				oneTreatment.X33b10_Date_Commenced__c = null;
+//				oneTreatment.X33b11_Date_Commenced__c = null;
+				oneTreatment.X33b12_Date_Commenced__c = null;
+				oneTreatment.X33b13_Date_Commenced__c = null;
+				oneTreatment.X33b14_Date_Commenced__c = null;
+				oneTreatment.X33b15_Date_Commenced__c = null;
+				oneTreatment.X33b16_Date_Commenced__c = null;
+				oneTreatment.X33b17_Date_Commenced__c = null;
+				oneTreatment.X33b18_Date_Commenced__c = null;
+				oneTreatment.X33b19_Date_Commenced__c = null;
+				oneTreatment.X33b20_Date_Commenced__c = null;
+				oneTreatment.X33b21_Date_Commenced__c = null;
+				oneTreatment.X33b23_Date_Commenced__c = null;
+				oneTreatment.X33b28_Date_Commenced__c = null;
+				oneTreatment.X33b25_Date_key_worker_was_appointed__c = null;
+				oneTreatment.X33b26_Date_case_manager_was_appointed__c = null;
+				oneTreatment.X33b26_Specify_centre__c =  '';
+				oneTreatment.X33b27_Date_care_plan_was_put_in_place__c = null;
+				oneTreatment.X33c1_Date_Completed__c = null;
+				oneTreatment.X33c12_Date_Completed__c = null;
+				oneTreatment.X33c13_Date_Completed__c = null;
+				oneTreatment.X33c14_Date_Completed__c = null;
+				oneTreatment.X33c15_Date_Completed__c = null;
+				oneTreatment.X33c16_Date_Completed__c = null;
+				oneTreatment.X33c17_Date_Completed__c = null;
+				oneTreatment.X33c18_Date_Completed__c = null;
+				oneTreatment.X33c19_Date_Completed__c = null;
+				oneTreatment.X33c20_Date_Completed__c = null;
+				oneTreatment.X33c21_Date_Completed__c = null;
+				oneTreatment.X33c23_Date_Completed__c = null;
+				oneTreatment.X33c28_Date_Completed__c = null;
+				oneTreatment.X33d1_Number_of_Sessions__c = 0;
+				oneTreatment.X33d12_Number_of_Sessions__c = 0;
+				oneTreatment.X33d13_Number_of_Sessions__c = 0;
+				oneTreatment.X33d14_Number_of_Sessions__c = 0;
+				oneTreatment.X33d15_Number_of_Sessions__c = 0;
+				oneTreatment.X33d16_Number_of_Sessions__c = 0;
+				oneTreatment.X33d17_Number_of_Sesions__c = 0;
+				oneTreatment.X33d18_Number_of_Sessions__c = 0;
+				oneTreatment.X33d19_Number_of_Sessions__c = 0;
+				oneTreatment.X33d20_Number_of_Sessions__c = 0;
+				oneTreatment.X33d21_Number_of_Sessions__c = 0;
+				oneTreatment.X33d23_Number_of_Sessions__c = 0;
+				oneTreatment.X33d28_Number_of_Sessions__c = 0;
+				oneTreatment.X34_Outcome_for_MAIN_treatment__c =  '';
+				oneTreatment.X34_Outcome_Other__c =  '';
+				oneTreatment.X35_Reason_for_exit_6_above__c =  '';
+				oneTreatment.X36_Client_s_Condition_on_discharge__c =  '';
+				oneTreatment.X36_Clients_condition_Other__c =  '';
+				oneTreatment.X37_Date_of_Final_Discharge__c = null;
+				oneTreatment.X38a_Aftercare_provided_by_this_centre__c =  '';
+				oneTreatment.X38b_Other_site_for_treatment__c =  '';
+				oneTreatment.X39_Number_of_others_involved__c = null;
+				oneTreatment.X40_Vaccination__c =  '';
+				oneTreatment.X41_Viral_Screening_uptake__c =  '';
+				oneTreatment.X42a_Urine_screeding_during_treatment__c =  '';
+				oneTreatment.X42b_If_screening_ordered_by__c =  '';
             }
  
             }
@@ -337,45 +344,49 @@ public with sharing class HRBReportController
          }
     }
     public Boolean Clientonwaitinglist (HRB_Form__c treat)
-    {
-        if ((treat.X18a_Clients_treatment_status__c == '2. Placed on waiting list for opiate substitute' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')
-            || (treat.X18a_Clients_treatment_status__c == '6. Placed on other drug treatment waiting list' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')) 
-            return true;
-        else return false;
-    }
+	{
+		if ((treat.X18a_Clients_treatment_status__c == '2. Placed on waiting list for opiate substitute' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')
+			|| (treat.X18a_Clients_treatment_status__c == '6. Placed on other drug treatment waiting list' && treat.X18b_Reason_removed_from_waiting_list__c != '1. Treatment offered with this centre')) 
+			return true;
+		else return false;
+	}
     public HRB_Form__c[] getTreatmentsWithClients()
     {
         return TreatmentsWithClientsList;
     }
 
-    public static Drug_HRB__c testDrug;
-    public static Contact driver;
-    public static void createObjects ()
+    public static testMethod void testGetTreatments ()
     {
-        if (driver == null)
-        {
-            Account acct1 = new Account(name='driver account');
-            insert acct1;
-                
-            driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1');
-            driver.MailingStreet = '3 test screen \ntest area\ntest city';
-            driver.MailingCity = 'Dublin';
-            insert driver;
+        Account acct1 = new Account(name='driver account');
+        insert acct1;
             
-            testDrug = new Drug_HRB__c (Name='testDrug');
-            testDrug.DrugCode__c = '994';
-            testDrug.Tableyear2012__c = true;
-            insert testDrug;
-        }
-    }
-    
-    public static testMethod void TestCreateTreatment1 ()
-    {
-        createObjects ();
+        Area_of_Residence__c res = new Area_of_Residence__c (Name='Shankill', Area_Code__c='339', CCA__c='1204', City_County__c='D', Tableyear2012__c=true);
+        insert res;
         
-        HRB_Form__c testTreatment = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-01-04'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-03'));
-        testTreatment.X21a_Date_This_treatment_started__c = date.valueOf('2011-01-01');
-        testTreatment.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
+        Contact driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1');
+        driver.MailingStreet = '3 test screen \ntest area\ntest city';
+        driver.MailingCity = 'Dublin';
+        driver.X4_Gender__c = 'Male';
+        driver.BirthDate = date.valueOf ('1990-01-01');
+        driver.X7a_Living_with_whom__c = '1. Alone';
+        driver.X7b_Livin_Where__c = '1. sss';
+        driver.Area_of_Residence_and_Reg_Code__c = res.id;
+        driver.X10a_Nationality__c = '1. dd';
+        driver.X10b_Ethnic_Background__c = '1. Irish';
+        driver.X11_Employement_Status__c = '1. ddd';
+        driver.X12a_Age_left_primary_school__c = 17;
+        driver.X12b_Education_highest_level__c = '3. sss';
+        insert driver;
+        
+        Drug_HRB__c testDrug = new Drug_HRB__c (Name='testDrug');
+        testDrug.DrugCode__c = '994';
+        testDrug.Tableyear2012__c = true;
+        insert testDrug;
+        
+        HRB_Form__c testTreatment = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-01'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
+ 		
+ 		testTreatment.X21a_Date_This_treatment_started__c = date.valueOf('2011-01-01');
+        testTreatment.X34_outcome_for_main_treatment__c = '1. Treatment completed';
         testTreatment.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment.X33b1_Date_Commenced__c = date.valueOf('2011-01-01');
         testTreatment.X33b12_Date_Commenced__c = date.valueOf('2011-01-01');
@@ -389,6 +400,7 @@ public with sharing class HRBReportController
         testTreatment.X33b20_Date_Commenced__c = date.valueOf('2011-01-01');
         testTreatment.X33b21_Date_Commenced__c = date.valueOf('2011-01-01');
         testTreatment.X33b23_Date_Commenced__c = date.valueOf('2011-01-01');
+        testTreatment.X33b28_Date_Commenced__c = date.valueOf('2011-01-02');
         testTreatment.X33c1_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c12_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c13_Date_Completed__c = date.valueOf('2011-01-02');
@@ -401,6 +413,7 @@ public with sharing class HRBReportController
         testTreatment.X33c20_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c21_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33c23_Date_Completed__c = date.valueOf('2011-01-02');
+        testTreatment.X33c28_Date_Completed__c = date.valueOf('2011-01-02');
         testTreatment.X33d1_Number_of_Sessions__c = 1;
         testTreatment.X33d12_Number_of_Sessions__c = 1;
         testTreatment.X33d13_Number_of_Sessions__c = 1;
@@ -413,47 +426,65 @@ public with sharing class HRBReportController
         testTreatment.X33d20_Number_of_Sessions__c = 1;
         testTreatment.X33d21_Number_of_Sessions__c = 1;
         testTreatment.X33d23_Number_of_Sessions__c = 1;
+        testTreatment.X33d28_Number_of_Sessions__c = 1;
         testTreatment.X33a_Main_Intervention__c = '1. Brief intervention';
         testTreatment.X29a_Injected_in_past_month__c = '1. Yes';
         testTreatment.X29b_Ever_injected__c = '1. Yes';
         testTreatment.X29c_Age_first_injected__c = 10;
         testTreatment.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
-        testTreatment.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
+        testTreatment.X13_Date_of_Referral__c = date.valueOf('2011-01-01');
+        testTreatment.X14_Main_Reason_for_referral__c = '4. something';
+        testTreatment.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
+        testTreatment.X15_Source_of_referral__c = '1.something';
+        testTreatment.X17a_Assessment_outcome__c = '1. something';
+        testTreatment.X17b_Assessment_criterion_fulfilled__c = '1. something';
+        testTreatment.X17c_Date_assessment_criteria_fulfilled__c = date.valueOf('2011-01-03');
+        testTreatment.X18a_Clients_treatment_status__c = '1. something';
+        testTreatment.X19_Accepted_place_at_this_centre__c = '1. something';
+        testTreatment.X22_Ever_previously_treated_alc_drug__c = '8. something';
+        testTreatment.X22_Ever_previously_treated_re_drug__c = '8. something';
+        testTreatment.X23_Type_of_contact_with_this_centre__c = '1. something';
+        testTreatment.X24a_Age_first_use_any_drug__c = 10;
+        testTreatment.X24b_Specify_first_drug_used__c = testDrug.id;
+        testTreatment.X25a_Main_substance__c = testDrug.id;
+        testTreatment.X25b_Route_of_Admin_Main_sub__c = '2. something';
+        testTreatment.X25c_Frequency_of_use_in_last_mth__c = '2. something';
+        testTreatment.X25d_Age_at_1st_use__c = 10;
         insert testTreatment;
-    }
-    
-    public static testMethod void TestCreateTreatment2 ()
-    {
-        createObjects ();
-            
-        HRB_Form__c testTreatment2 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-01-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
-       testTreatment2.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
-       testTreatment2.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
+
+        testTreatment = [select Treatment_Type_Check__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c from HRB_Form__c where ID=:testTreatment.id];
+        system.debug ('Treatment 1: Contact Record Valid ' + testTreatment.Contact_Record_Valid__c + ' Main Intervention Valid ' + testTreatment.Main_Intervention_Valid__c + ' Drug Validation ' + testTreatment.Drug_Validation__c + ' Number of treatments ' + testTreatment.Treatment_Type_Check__c);
+       
+        HRB_Form__c testTreatment2 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-04-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2011-07-04'));
+ 		testTreatment2.X21a_Date_This_treatment_started__c = date.valueOf('2011-04-06');
+        testTreatment2.X34_outcome_for_main_treatment__c = '1. Treatment completed';
         testTreatment2.X36_Client_s_Condition_on_discharge__c = '1. stable';
-        testTreatment2.X33b1_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b12_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b13_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b14_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b15_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b16_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b17_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b18_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b19_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b20_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b21_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33b23_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment2.X33c1_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c12_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c13_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c14_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c15_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c16_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c17_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c18_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c19_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c20_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c21_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment2.X33c23_Date_Completed__c = date.valueOf('2011-01-07');
+        testTreatment2.X33b1_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b12_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b13_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b14_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b15_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b16_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b17_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b18_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b19_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b20_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b21_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b23_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33b28_Date_Commenced__c = date.valueOf('2011-04-06');
+        testTreatment2.X33c1_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c12_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c13_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c14_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c15_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c16_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c17_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c18_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c19_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c20_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c21_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c23_Date_Completed__c = date.valueOf('2011-07-04');
+        testTreatment2.X33c28_Date_Completed__c = date.valueOf('2011-07-04');
         testTreatment2.X33d1_Number_of_Sessions__c = 1;
         testTreatment2.X33d12_Number_of_Sessions__c = 1;
         testTreatment2.X33d13_Number_of_Sessions__c = 1;
@@ -466,22 +497,38 @@ public with sharing class HRBReportController
         testTreatment2.X33d20_Number_of_Sessions__c = 1;
         testTreatment2.X33d21_Number_of_Sessions__c = 1;
         testTreatment2.X33d23_Number_of_Sessions__c = 1;
+        testTreatment2.X33d28_Number_of_Sessions__c = 1;
         testTreatment2.X33a_Main_Intervention__c = '1. Brief intervention';
         testTreatment2.X29a_Injected_in_past_month__c = '1. Yes';
         testTreatment2.X29b_Ever_injected__c = '1. Yes';
         testTreatment2.X29c_Age_first_injected__c = 10;
         testTreatment2.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
-        testTreatment2.X13_Date_of_Referral__c = date.valueOf('2011-01-03');
+        testTreatment2.X13_Date_of_Referral__c = date.valueOf('2011-04-05');
+        testTreatment2.X14_Main_Reason_for_referral__c = '4. something';
+        testTreatment2.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
+        testTreatment2.X15_Source_of_referral__c = '1.something';
+        testTreatment2.X17a_Assessment_outcome__c = '1. something';
+        testTreatment2.X17b_Assessment_criterion_fulfilled__c = '1. something';
+        testTreatment2.X17c_Date_assessment_criteria_fulfilled__c = date.valueOf('2011-04-05');
+        testTreatment2.X18a_Clients_treatment_status__c = '1. something';
+        testTreatment2.X19_Accepted_place_at_this_centre__c = '1. something';
+        testTreatment2.X22_Ever_previously_treated_alc_drug__c = '8. something';
+        testTreatment2.X22_Ever_previously_treated_re_drug__c = '8. something';
+        testTreatment2.X23_Type_of_contact_with_this_centre__c = '1. something';
+        testTreatment2.X24a_Age_first_use_any_drug__c = 10;
+        testTreatment2.X24b_Specify_first_drug_used__c = testDrug.id;
+        testTreatment2.X25a_Main_substance__c = testDrug.id;
+        testTreatment2.X25b_Route_of_Admin_Main_sub__c = '2. something';
+        testTreatment2.X25c_Frequency_of_use_in_last_mth__c = '2. something';
+        testTreatment2.X25d_Age_at_1st_use__c = 10;
         insert testTreatment2;
-    }
-    
-    public static testMethod void TestCreateTreatment3 ()
-    {
-        createObjects ();
 
-        HRB_Form__c testTreatment3 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
-        testTreatment3.X21a_Date_This_treatment_started__c = date.valueOf('2011-05-06');
-        testTreatment3.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
+        testTreatment2 = [select Treatment_Type_Check__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c from HRB_Form__c where ID=:testTreatment2.id];
+        system.debug ('Treatment 2: Contact Record Valid ' + testTreatment2.Contact_Record_Valid__c + ' Main Intervention Valid ' + testTreatment2.Main_Intervention_Valid__c + ' Drug Validation ' + testTreatment2.Drug_Validation__c + ' Number of treatments ' + testTreatment.Treatment_Type_Check__c);
+ 		
+        HRB_Form__c testTreatment3 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-5-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-12-04'));
+ 		testTreatment3.X21a_Date_This_treatment_started__c = date.valueOf('2011-05-06');
+        testTreatment3.X34_outcome_for_main_treatment__c = '1. Treatment completed';
         testTreatment3.X36_Client_s_Condition_on_discharge__c = '1. stable';
         testTreatment3.X33b1_Date_Commenced__c = date.valueOf('2011-05-06');
         testTreatment3.X33b12_Date_Commenced__c = date.valueOf('2011-05-06');
@@ -495,6 +542,7 @@ public with sharing class HRBReportController
         testTreatment3.X33b20_Date_Commenced__c = date.valueOf('2011-05-06');
         testTreatment3.X33b21_Date_Commenced__c = date.valueOf('2011-05-06');
         testTreatment3.X33b23_Date_Commenced__c = date.valueOf('2011-05-06');
+        testTreatment3.X33b28_Date_Commenced__c = date.valueOf('2011-05-06');
         testTreatment3.X33c1_Date_Completed__c = date.valueOf('2011-05-07');
         testTreatment3.X33c12_Date_Completed__c = date.valueOf('2011-05-07');
         testTreatment3.X33c13_Date_Completed__c = date.valueOf('2011-05-07');
@@ -507,6 +555,7 @@ public with sharing class HRBReportController
         testTreatment3.X33c20_Date_Completed__c = date.valueOf('2011-05-07');
         testTreatment3.X33c21_Date_Completed__c = date.valueOf('2011-05-07');
         testTreatment3.X33c23_Date_Completed__c = date.valueOf('2011-05-07');
+        testTreatment3.X33c28_Date_Completed__c = date.valueOf('2011-05-07');
         testTreatment3.X33d1_Number_of_Sessions__c = 1;
         testTreatment3.X33d12_Number_of_Sessions__c = 1;
         testTreatment3.X33d13_Number_of_Sessions__c = 1;
@@ -519,46 +568,64 @@ public with sharing class HRBReportController
         testTreatment3.X33d20_Number_of_Sessions__c = 1;
         testTreatment3.X33d21_Number_of_Sessions__c = 1;
         testTreatment3.X33d23_Number_of_Sessions__c = 1;
+        testTreatment3.X33d28_Number_of_Sessions__c = 1;
         testTreatment3.X33a_Main_Intervention__c = '1. Brief intervention';
         testTreatment3.X29a_Injected_in_past_month__c = '1. Yes';
         testTreatment3.X29b_Ever_injected__c = '1. Yes';
         testTreatment3.X29c_Age_first_injected__c = 10;
         testTreatment3.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment3.X13_Date_of_Referral__c = date.valueOf('2011-05-03');
+        testTreatment3.X14_Main_Reason_for_referral__c = '4. something';
+        testTreatment3.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
+        testTreatment3.X15_Source_of_referral__c = '1.something';
+        testTreatment3.X17a_Assessment_outcome__c = '1. something';
+        testTreatment3.X17b_Assessment_criterion_fulfilled__c = '1. something';
+        testTreatment3.X17c_Date_assessment_criteria_fulfilled__c = date.valueOf('2011-05-06');
+        testTreatment3.X18a_Clients_treatment_status__c = '1. something';
+        testTreatment3.X19_Accepted_place_at_this_centre__c = '1. something';
+        testTreatment3.X22_Ever_previously_treated_alc_drug__c = '8. something';
+        testTreatment3.X22_Ever_previously_treated_re_drug__c = '8. something';
+        testTreatment3.X23_Type_of_contact_with_this_centre__c = '1. something';
+        testTreatment3.X24a_Age_first_use_any_drug__c = 10;
+        testTreatment3.X24b_Specify_first_drug_used__c = testDrug.id;
+        testTreatment3.X25a_Main_substance__c = testDrug.id;
+        testTreatment3.X25b_Route_of_Admin_Main_sub__c = '2. something';
+        testTreatment3.X25c_Frequency_of_use_in_last_mth__c = '2. something';
+        testTreatment3.X25d_Age_at_1st_use__c = 10;
         insert testTreatment3;
-    }
+		
+        testTreatment3 = [select Treatment_Type_Check__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c from HRB_Form__c where ID=:testTreatment3.id];
+        system.debug ('Treatment 3: Contact Record Valid ' + testTreatment3.Contact_Record_Valid__c + ' Main Intervention Valid ' + testTreatment3.Main_Intervention_Valid__c + ' Drug Validation ' + testTreatment3.Drug_Validation__c + ' Number of treatments ' + testTreatment.Treatment_Type_Check__c);
 
-    public static testMethod void TestCreateTreatment4 ()
-    {
-        createObjects ();
-    
-        HRB_Form__c testTreatment4 = new HRB_Form__c (Name='Test', Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2010-1-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-09-04'));
-         testTreatment4.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
-         testTreatment4.X34_outcome_for_main_Treatment__c = '1. Treatment completed';
-        testTreatment4.X33b1_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b12_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b13_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b14_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b15_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b16_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b17_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b18_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b19_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b20_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b21_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33b23_Date_Commenced__c = date.valueOf('2011-01-06');
-        testTreatment4.X33c1_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c12_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c13_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c14_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c15_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c16_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c17_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c18_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c19_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c20_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c21_Date_Completed__c = date.valueOf('2011-01-07');
-        testTreatment4.X33c23_Date_Completed__c = date.valueOf('2011-01-07');
+        HRB_Form__c testTreatment4 = new HRB_Form__c (Contact__c=driver.id, X16_Date_of_Assessment__c=date.valueOf('2011-10-05'), X37_Date_of_Final_Discharge__c =date.valueOf('2012-01-09'));
+ 		testTreatment4.X21a_Date_This_treatment_started__c = date.valueOf('2011-10-06');
+        testTreatment4.X34_outcome_for_main_treatment__c = '1. Treatment completed';
+        testTreatment4.X33b1_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b12_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b13_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b14_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b15_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b16_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b17_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b18_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b19_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b20_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b21_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b23_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33b28_Date_Commenced__c = date.valueOf('2011-10-06');
+        testTreatment4.X33c1_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c12_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c13_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c14_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c15_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c16_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c17_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c18_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c19_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c20_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c21_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c23_Date_Completed__c = date.valueOf('2011-12-06');
+        testTreatment4.X33c28_Date_Completed__c = date.valueOf('2011-12-06');
         testTreatment4.X33d1_Number_of_Sessions__c = 1;
         testTreatment4.X33d12_Number_of_Sessions__c = 1;
         testTreatment4.X33d13_Number_of_Sessions__c = 1;
@@ -571,27 +638,46 @@ public with sharing class HRBReportController
         testTreatment4.X33d20_Number_of_Sessions__c = 1;
         testTreatment4.X33d21_Number_of_Sessions__c = 1;
         testTreatment4.X33d23_Number_of_Sessions__c = 1;
+        testTreatment4.X33d28_Number_of_Sessions__c = 1;
         testTreatment4.X33a_Main_Intervention__c = '1. Brief intervention';
         testTreatment4.X29a_Injected_in_past_month__c = '1. Yes';
         testTreatment4.X29b_Ever_injected__c = '1. Yes';
         testTreatment4.X29c_Age_first_injected__c = 10;
         testTreatment4.X30_Ever_shared_any_injecting_equipment__c = '1. Yes';
         testTreatment4.X36_Client_s_Condition_on_discharge__c = '1. Stable';
-        testTreatment4.X13_Date_of_Referral__c = date.valueOf('2010-01-03');
+        testTreatment4.X13_Date_of_Referral__c = date.valueOf('2011-10-05');
+        testTreatment4.X14_Main_Reason_for_referral__c = '4. something';
+        testTreatment4.X14_Main_Reason_for_Referral_Drug__c = testDrug.id;
+        testTreatment4.X15_Source_of_referral__c = '1.something';
+        testTreatment4.X17a_Assessment_outcome__c = '1. something';
+        testTreatment4.X17b_Assessment_criterion_fulfilled__c = '1. something';
+        testTreatment4.X17c_Date_assessment_criteria_fulfilled__c = date.valueOf('2011-10-05');
+        testTreatment4.X18a_Clients_treatment_status__c = '1. something';
+        testTreatment4.X19_Accepted_place_at_this_centre__c = '1. something';
+        testTreatment4.X22_Ever_previously_treated_alc_drug__c = '8. something';
+        testTreatment4.X22_Ever_previously_treated_re_drug__c = '8. something';
+        testTreatment4.X23_Type_of_contact_with_this_centre__c = '1. something';
+        testTreatment4.X24a_Age_first_use_any_drug__c = 10;
+        testTreatment4.X24b_Specify_first_drug_used__c = testDrug.id;
+        testTreatment4.X25a_Main_substance__c = testDrug.id;
+        testTreatment4.X25b_Route_of_Admin_Main_sub__c = '2. something';
+        testTreatment4.X25c_Frequency_of_use_in_last_mth__c = '2. something';
+        testTreatment4.X25d_Age_at_1st_use__c = 10;
         insert testTreatment4;
-    }
-    
-    public static testMethod void testHRBReport ()
-    {
-        TestCreateTreatment1 ();
-        TestCreateTreatment2 ();
-        TestCreateTreatment3 ();
-        TestCreateTreatment4 ();
+        
+        testTreatment4 = [select Treatment_Type_Check__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c from HRB_Form__c where ID=:testTreatment4.id];
+        system.debug ('Treatment 4: Contact Record Valid ' + testTreatment4.Contact_Record_Valid__c + ' Main Intervention Valid ' + testTreatment4.Main_Intervention_Valid__c + ' Drug Validation ' + testTreatment4.Drug_Validation__c + ' Number of treatments ' + testTreatment.Treatment_Type_Check__c);
         
         HRB_Report__c params = new HRB_Report__c (Period__c = 'Quarter 1', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');
         insert params;
                 
+
+	    ApexPages.StandardController treatmentController1 = new ApexPages.StandardController(params);        
+        AddTreatmentToReport hrbReport = new AddTreatmentToReport(treatmentController1);
+        hrbReport.Initialise ();
+
         HRBReportController hrb = new HRBReportController(params);
+		system.assertEquals(1, hrb.TreatmentsWithClientsList.size());
 
         HRB_Form__c[] treatments = hrb.getTreatmentsWithClients();
         System.assert(treatments.size() >= 1);
@@ -599,6 +685,10 @@ public with sharing class HRBReportController
         HRB_Report__c params2 = new HRB_Report__c (Period__c = 'Complete Year', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');
         insert params2;
                 
+        ApexPages.StandardController treatmentController2 = new ApexPages.StandardController(params2);        
+        AddTreatmentToReport hrbReport2 = new AddTreatmentToReport(treatmentController2);
+        hrbReport2.Initialise ();
+
         hrb = new HRBReportController(params2);
 
         treatments = hrb.getTreatmentsWithClients();
@@ -607,6 +697,10 @@ public with sharing class HRBReportController
         HRB_Report__c params3 = new HRB_Report__c (Period__c = 'Quarter 2', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');
         insert params3;
                 
+	    ApexPages.StandardController treatmentController3 = new ApexPages.StandardController(params3);        
+        AddTreatmentToReport hrbReport3 = new AddTreatmentToReport(treatmentController3);
+        hrbReport3.Initialise ();
+
         hrb = new HRBReportController(params3);
 
         treatments = hrb.getTreatmentsWithClients();
@@ -615,17 +709,13 @@ public with sharing class HRBReportController
         HRB_Report__c params4 = new HRB_Report__c (Period__c = 'Quarter 4', Year__c = 2011, Type_of_report__c = 'Clients who entered during the report period');
         insert params4;
                 
+	    ApexPages.StandardController treatmentController4 = new ApexPages.StandardController(params4);        
+        AddTreatmentToReport hrbReport4 = new AddTreatmentToReport(treatmentController4);
+        hrbReport4.Initialise ();
+
         hrb = new HRBReportController(params4);
 
         treatments = hrb.getTreatmentsWithClients();
         System.assert(treatments.size() >= 0);
-
-        HRB_Report__c params5 = new HRB_Report__c (Period__c = 'Quarter 3', Year__c = 2011, Type_of_report__c = 'Only clients who entered before the reporting period and exited during the report period');
-        insert params5;
-                
-        hrb = new HRBReportController(params5);
-
-        treatments = hrb.getTreatmentsWithClients();
-        System.assert(treatments.size() > 0);
     } 
 }

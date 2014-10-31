@@ -62,6 +62,16 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Contact__c</fields>
+        <fields>X13_Date_of_Referral__c</fields>
+        <fields>X14_Main_Reason_for_referral__c</fields>
+        <fields>X14_Main_Reason_for_Referral_Drug__c</fields>
+        <fields>X16_Date_of_Assessment__c</fields>
+        <fields>X18a_Clients_treatment_status__c</fields>
+        <relatedList>HRB_Form__c.HRB_Report__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>

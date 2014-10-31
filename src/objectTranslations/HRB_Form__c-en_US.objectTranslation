@@ -249,6 +249,10 @@
         <name>Date_latest_intervention_commenced__c</name>
     </fields>
     <fields>
+        <label><!-- Drug Type --></label>
+        <name>Drug_Type__c</name>
+    </fields>
+    <fields>
         <label><!-- Drug Valid Table 2012 --></label>
         <name>Drug_Valid_Table_2012__c</name>
     </fields>
@@ -283,6 +287,12 @@
     <fields>
         <label><!-- FIRSTDRUX --></label>
         <name>FIRSTDRUX__c</name>
+    </fields>
+    <fields>
+        <help><!-- This will be populated automatically when you click the button in the HRB Report --></help>
+        <label><!-- HRB Report --></label>
+        <name>HRB_Report__c</name>
+        <relationshipLabel><!-- HRB Forms --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- INJECTED --></label>
@@ -489,10 +499,19 @@
         <name>TransReason__c</name>
     </fields>
     <fields>
+        <help><!-- Validation on type of contact with this centre --></help>
+        <label><!-- Treatment Type Check --></label>
+        <name>Treatment_Type_Check__c</name>
+    </fields>
+    <fields>
         <help><!-- Type 0 = Open Treatment
 Type 1 = Completed Treatment --></help>
         <label><!-- Treatment Type Number --></label>
         <name>Treatment_Type_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treatment Type --></label>
+        <name>Treatment_Type__c</name>
     </fields>
     <fields>
         <label><!-- UniqID --></label>
@@ -545,6 +564,10 @@ Type 1 = Completed Treatment --></help>
     <fields>
         <label><!-- 13 Date of Referral --></label>
         <name>X13_Date_of_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- 14 Main Drug Problem Name --></label>
+        <name>X14_Main_Drug_Problem_Name__c</name>
     </fields>
     <fields>
         <label><!-- 14 Main Reason for Referral - Drug --></label>
@@ -910,6 +933,10 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB --></help>
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- 24 Main Drug Problem Name --></label>
+        <name>X24_Main_Drug_Problem_Name__c</name>
+    </fields>
+    <fields>
         <help><!-- Excluding alcohol and tobacco
 If not applicable code 88 --></help>
         <label><!-- 24a Age first use any drug --></label>
@@ -920,6 +947,14 @@ If not applicable code 88 --></help>
         <label><!-- 24b Specify first drug used --></label>
         <name>X24b_Specify_first_drug_used__c</name>
         <relationshipLabel><!-- HRB Forms (24b Specify first drug used) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 25 Drug Type --></label>
+        <name>X25_Drug_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- 25 Main Drug Problem Name --></label>
+        <name>X25_Main_Drug_Problem_Name__c</name>
     </fields>
     <fields>
         <label><!-- 25a Main substance --></label>
@@ -990,6 +1025,14 @@ If not applicable code 88 --></help>
         <help><!-- If unknown enter 99 --></help>
         <label><!-- 25d Age at 1st use --></label>
         <name>X25d_Age_at_1st_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- 26 Drug Type --></label>
+        <name>X26_Drug_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- 26 Main Drug Problem Name --></label>
+        <name>X26_Main_Drug_Problem_Name__c</name>
     </fields>
     <fields>
         <label><!-- 26a Substance 2 --></label>
@@ -1063,6 +1106,14 @@ If not applicable code 88 --></help>
         <name>X26d_Age_of_1st_use__c</name>
     </fields>
     <fields>
+        <label><!-- 27 Drug Type --></label>
+        <name>X27_Drug_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- 27 Main Drug Problem Name --></label>
+        <name>X27_Main_Drug_Problem_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- 27a Substance 3 --></label>
         <name>X27a_Substance_3__c</name>
         <relationshipLabel><!-- HRB Forms (27a Substance 3) --></relationshipLabel>
@@ -1132,6 +1183,14 @@ If not applicable code 88 --></help>
         <help><!-- Enter 99 if not known --></help>
         <label><!-- 27d Age of 1st use --></label>
         <name>X27d_Age_of_1st_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- 28 Drug Type --></label>
+        <name>X28_Drug_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- 28 Main Drug Problem Name --></label>
+        <name>X28_Main_Drug_Problem_Name__c</name>
     </fields>
     <fields>
         <label><!-- 28a Substance 4 --></label>
@@ -1468,6 +1527,10 @@ If not known, code 99. --></help>
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- 33b10 Date Commenced --></label>
+        <name>X33b10_Date_Commenced__c</name>
+    </fields>
+    <fields>
         <help><!-- Date commenced
 each type of treatment intervention --></help>
         <label><!-- 33b12 Date Commenced --></label>
@@ -1545,6 +1608,11 @@ each type of treatment intervention --></help>
         <name>X33b27_Date_care_plan_was_put_in_place__c</name>
     </fields>
     <fields>
+        <help><!-- Facilitated detox - Date Commenced --></help>
+        <label><!-- 33b28 Date Commenced --></label>
+        <name>X33b28_Date_Commenced__c</name>
+    </fields>
+    <fields>
         <help><!-- Medication-free therapy - Date Completed --></help>
         <label><!-- 33c12 Date Completed --></label>
         <name>X33c12_Date_Completed__c</name>
@@ -1607,6 +1675,11 @@ each type of treatment intervention --></help>
         <relationshipLabel><!-- HRB Forms (33c26 Case Treatment Centre) --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Facilitated detox - Date Completed --></help>
+        <label><!-- 33c28 Date Completed --></label>
+        <name>X33c28_Date_Completed__c</name>
+    </fields>
+    <fields>
         <help><!-- Medication-free therapy - Number of Sessions --></help>
         <label><!-- 33d12 Number of Sessions --></label>
         <name>X33d12_Number_of_Sessions__c</name>
@@ -1664,6 +1737,11 @@ each type of treatment intervention --></help>
         <help><!-- Strengthening family programme - Number of Sessions --></help>
         <label><!-- 33d23 Number of Sessions --></label>
         <name>X33d23_Number_of_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Facilitated detox - Number of sessions provided --></help>
+        <label><!-- 33d28 Number of Sessions --></label>
+        <name>X33d28_Number_of_Sessions__c</name>
     </fields>
     <fields>
         <label><!-- 34 Outcome - Other --></label>
@@ -2072,96 +2150,8 @@ Hepatitis A and B vaccination --></help>
         <name>IF_Q37_is_completed_Inter23</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- If alcohol is listed as a problem substance at Q25, please complete from Q28e to Q28h --></errorMessage>
-        <name>If_alcohol_used_in_Q25</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If alcohol is listed as a problem substance at Q26, please complete from Q28e to Q28h --></errorMessage>
-        <name>If_alcohol_used_in_Q26</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If alcohol is listed as a problem substance at Q27, please complete from Q28e to Q28h --></errorMessage>
-        <name>If_alcohol_used_in_Q27</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If alcohol is listed as a problem substance at Q28, please complete from Q28e to Q28h --></errorMessage>
-        <name>If_alcohol_used_in_Q28</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check dates in sequential order, Q13 &lt;=Q16 --></errorMessage>
-        <name>Q13_Q16_Dates_in_sequential_order</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Q15b must be completed when Q15a = 4, 5, 6, 13, 15, 17. --></errorMessage>
-        <name>Q15b_must_be_completed</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If 8, please complete Q15b Other specify --></errorMessage>
-        <name>Q15b_other_specify</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check dates in sequential order, Q16 &lt;=Q17 --></errorMessage>
-        <name>Q16_Q17_Dates_in_sequential_order</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Q17 must be completed for all clients who reach this question. --></errorMessage>
-        <name>Q17_Assessment_Outcome_required</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q17a = 1, please complete Q17b --></errorMessage>
-        <name>Q17b_Assessment_criterion_fulfilled</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q17a = 1 and Q17b = 1, please complete Q17c --></errorMessage>
-        <name>Q17c_Date_assessment_criterion_fulfilled</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check dates in sequential order, Q16 &lt;=Q21a --></errorMessage>
-        <name>Q17c_Q21a_Dates_in_sequential_order</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check dates in sequential order, Q16 &lt;=Q21b --></errorMessage>
-        <name>Q17c_Q21b_Dates_in_sequential_order</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q18a = 3, please complete Q18a3 Specify site --></errorMessage>
-        <name>Q18a_3_Transferred_to_another_site</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q17 = 1, please complete Q18a --></errorMessage>
-        <name>Q18a_Clients_treatment_status_fullfilled</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q18b = 4, please complete Q18b4 --></errorMessage>
-        <name>Q18b4_Specify_client_transferred</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q18b = 9, please complete Q18b9 --></errorMessage>
-        <name>Q18b9_Other_specify</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q18a = 2 or 6, please complete Q18b --></errorMessage>
-        <name>Q18b_Reason_removed_from_waiting_list</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q17a = 1 and Q18a = 1, please complete Q19 --></errorMessage>
-        <name>Q19_Accepted_place</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- IF Q19 = 1, please complete Q20 --></errorMessage>
-        <name>Q20_No_times_started_this_year</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q20 &gt; 1, Q22 must be &quot;2. Previously treated&quot; --></errorMessage>
-        <name>Q20_Q22_times_started_this_year</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q20 &gt; 1, Q23 must be &quot;2. One or more treatment periods&quot; --></errorMessage>
-        <name>Q20_Q23_times_started_this_year</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If treatment has started, please complete Q21a --></errorMessage>
-        <name>Q21a_Date_treatment_started</name>
+        <errorMessage><!-- All interventions details must be either complete or blank when date of final discharge is set --></errorMessage>
+        <name>IF_Q37_is_completed_Inter28</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please check dates sequential order, Q21a &lt; = Q33b12 --></errorMessage>
@@ -2212,12 +2202,12 @@ Hepatitis A and B vaccination --></help>
         <name>Q21a_Q33b23_Sequential_order</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Please check dates in sequential order, Q21a &lt;=Q37 --></errorMessage>
-        <name>Q21a_Q37_Sequential_order</name>
+        <errorMessage><!-- Please check dates sequential order, Q21a &lt; = Q33b28 --></errorMessage>
+        <name>Q21a_Q33b28_Sequential_order</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- If Treatment has started, please complete Q24a and Q24b --></errorMessage>
-        <name>Q24a_Age_first_use_any_drug</name>
+        <errorMessage><!-- Please check dates in sequential order, Q21a &lt;=Q37 --></errorMessage>
+        <name>Q21a_Q37_Sequential_order</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please check the Age of first use, Q24a &lt; = Age,
@@ -2229,60 +2219,8 @@ if not applicable code 88 --></errorMessage>
         <name>Q24b_Specify_first_drug_used</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- If Q25a Main substance has been specified, please complete Q25b, Q25c and Q25d --></errorMessage>
-        <name>Q25a_Main_substance</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please complete Q25a --></errorMessage>
-        <name>Q25a_Main_substance_specified</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q25a has been specified, please complete Q25b, Q25c and Q25d --></errorMessage>
-        <name>Q25b_Route_of_Admin_Main_sub</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q25a has been specified, please complete Q25b, Q25c and Q25d --></errorMessage>
-        <name>Q25c_Frequency_of_use_in_last_mth</name>
-    </validationRules>
-    <validationRules>
         <errorMessage><!-- If Q25a has been specified, please complete Q25b, Q25c and Q25d --></errorMessage>
         <name>Q25d_Age_at_1st_use</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check the Age of first use, Q25d &lt; = Age,
-If unknown 99 --></errorMessage>
-        <name>Q25d_Age_first_use_less_than_Client_Age</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q26a Substance 2 has been specified, please complete Q26b, Q26c, Q26d --></errorMessage>
-        <name>Q26_Substance_2</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check the Age of first use, Q26d  &lt; = Age,
-If unknown 99 --></errorMessage>
-        <name>Q26d_Age_first_use_less_than_Client_Age</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q27a Substance 3 has been specified, please complete Q27b, Q27c, Q27d --></errorMessage>
-        <name>Q27_Substance_3</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check the Age of first use, Q27d &lt; = Age,
-If unknown 99 --></errorMessage>
-        <name>Q27d_Age_first_use_less_than_Client_Age</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If Q28a Substance 4 has been specified, please complete Q28b, Q28c, Q28d --></errorMessage>
-        <name>Q28_Substance_8</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please check the Age of first use, Q28d &lt; = Age, 
-If unknown 99 --></errorMessage>
-        <name>Q28d_Age_first_use_less_than_Client_Age</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- If alcohol has been consumed, please specify Q28f and Q 28g --></errorMessage>
-        <name>Q28f_Q28g_Alcohol_consumed</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please complete Q29a, Q29b, Q29c and Q30 for all treated clients --></errorMessage>
@@ -2346,6 +2284,10 @@ if not applicable code 88 --></errorMessage>
         <name>Q33b23_Q33c23_Sequential_order</name>
     </validationRules>
     <validationRules>
+        <errorMessage><!-- Please check dates sequential order, Q33b28 &lt; = Q33c28 --></errorMessage>
+        <name>Q33b28_Q33c28_Sequential_order</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- Please check dates sequential order, Q33b1 &lt; = Q33c1 --></errorMessage>
         <name>Q33b_Q33c_Sequential_order</name>
     </validationRules>
@@ -2396,6 +2338,10 @@ if not applicable code 88 --></errorMessage>
     <validationRules>
         <errorMessage><!-- If intervention is completed, please specify: Date Commenced and Number of Sessions --></errorMessage>
         <name>Q33d23_Number_of_session</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If intervention is completed, please specify: Date Commenced and Number of Sessions --></errorMessage>
+        <name>Q33d28_Number_of_sessions</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- IF Q34 = 10, please specify --></errorMessage>
