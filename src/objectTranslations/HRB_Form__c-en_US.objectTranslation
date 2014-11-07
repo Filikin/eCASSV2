@@ -142,6 +142,10 @@
         <name>Centre_number__c</name>
     </fields>
     <fields>
+        <label><!-- Check Age Injected --></label>
+        <name>Check_Age_Injected__c</name>
+    </fields>
+    <fields>
         <label><!-- CleanDate --></label>
         <name>CleanDate__c</name>
     </fields>
@@ -349,6 +353,10 @@
     <fields>
         <label><!-- Inter24 --></label>
         <name>Inter24__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inter28 --></label>
+        <name>Inter28__c</name>
     </fields>
     <fields>
         <label><!-- InterMain --></label>
@@ -1525,10 +1533,22 @@ If not known, code 99. --></help>
             <masterLabel>24. Sent to another site</masterLabel>
             <translation><!-- 24. Sent to another site --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- 33b10 Date Commenced --></label>
-        <name>X33b10_Date_Commenced__c</name>
+        <picklistValues>
+            <masterLabel>25. Key Worker appointed</masterLabel>
+            <translation><!-- 25. Key Worker appointed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26. Case Manager appointed</masterLabel>
+            <translation><!-- 26. Case Manager appointed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>27. Care Plan</masterLabel>
+            <translation><!-- 27. Care Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>28. Facilitated detox</masterLabel>
+            <translation><!-- 28. Facilitated detox --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- Date commenced
@@ -2154,6 +2174,22 @@ Hepatitis A and B vaccination --></help>
         <name>IF_Q37_is_completed_Inter28</name>
     </validationRules>
     <validationRules>
+        <errorMessage><!-- Q25, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <name>If_alcohol_used_in_Q25_Frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q26, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <name>If_alcohol_used_in_Q26_Frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q27, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <name>If_alcohol_used_in_Q27_Frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q28, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <name>If_alcohol_used_in_Q28_Frequency</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- Please check dates sequential order, Q21a &lt; = Q33b12 --></errorMessage>
         <name>Q21a_Q33b12_Sequential_order</name>
     </validationRules>
@@ -2210,8 +2246,7 @@ Hepatitis A and B vaccination --></help>
         <name>Q21a_Q37_Sequential_order</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Please check the Age of first use, Q24a &lt; = Age,
-if not applicable code 88 --></errorMessage>
+        <errorMessage><!-- Please check the Age of first use, Q24a &lt; = Age, if not applicable code 88, if not known code 99 --></errorMessage>
         <name>Q24a_Age_first_use_less_than_Client_Age</name>
     </validationRules>
     <validationRules>
@@ -2219,21 +2254,57 @@ if not applicable code 88 --></errorMessage>
         <name>Q24b_Specify_first_drug_used</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- If Q25a has been specified, please complete Q25b, Q25c and Q25d --></errorMessage>
-        <name>Q25d_Age_at_1st_use</name>
+        <errorMessage><!-- Q25c Frequency of use in last month must match Q28g Number of days alcohol consumed, If no use in the last month, Q28f = 0 and Q28g = 0 --></errorMessage>
+        <name>Q25c_frequency_Alcohol_use</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q26c Frequency of use in last month must match Q28g Number of days alcohol consumed, If no use in the last month, Q28f = 0 and Q28g = 0 --></errorMessage>
+        <name>Q26c_frequency_Alcohol_use</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q27c Frequency of use in last month must match Q28g Number of days alcohol consumed, If no use in the last month, Q28f = 0 and Q28g = 0 --></errorMessage>
+        <name>Q27c_frequency_Alcohol_use</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Q28c Frequency of use in last month must match Q28g Number of days alcohol consumed, If no use in the last month, Q28f = 0 and Q28g = 0 --></errorMessage>
+        <name>Q28c_frequency_Alcohol_use</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Q28e = &quot;8.Other&quot;, please specify type of alcohol used --></errorMessage>
+        <name>Q28e_another_type_of_alcohol_specified</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please complete Q29a, Q29b, Q29c and Q30 for all treated clients --></errorMessage>
         <name>Q29a_Q29b_Q29c_Q30_Risk_behaviour</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Please check the Age of first injected, Q29c &lt; = Age,
-if not applicable code 88 --></errorMessage>
+        <errorMessage><!-- If Q29b Ever injected = 1. Yes, Q29c CANNOT be code 88 or 0 --></errorMessage>
+        <name>Q29b_Ever_Injected_Age_first_injected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Q29b = 1. Yes, Q30 CANNOT BE &quot;8. Not applicable&quot; --></errorMessage>
+        <name>Q29b_Q30_Consistency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the Age of first injected, it MUST BE Q29c &lt; = Age, or Q29c &lt; = Age of first use of any injected drug in Q25, Q26, Q27, or Q28.
+If never injected, code 88. If not known, code 99. --></errorMessage>
         <name>Q29c_Age_first_use_less_than_Client_Age</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- If Q33a24 = TRUE, please specify treatment site number --></errorMessage>
         <name>Q33a24_Specify_treatment_site_number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the information consistency and dates sequential order Q21a &lt;= Q33b25 --></errorMessage>
+        <name>Q33a25_Key_Worker_appointed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the information consistency and dates sequential order Q21a &lt;= Q33b26 --></errorMessage>
+        <name>Q33a26_Case_Manager_appointed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, check Q33a Main Intervention and Date Commenced are indicated properly --></errorMessage>
+        <name>Q33a_Main_Intervention_Check</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please specify Q33a main intervention provided --></errorMessage>
@@ -2282,6 +2353,10 @@ if not applicable code 88 --></errorMessage>
     <validationRules>
         <errorMessage><!-- Please check dates sequential order, Q33b23 &lt; = Q33c23 --></errorMessage>
         <name>Q33b23_Q33c23_Sequential_order</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the information consistency and dates sequential order Q21a &lt;= Q33b27 --></errorMessage>
+        <name>Q33b27_Date_care_plan_was_put_in_place</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please check dates sequential order, Q33b28 &lt; = Q33c28 --></errorMessage>
@@ -2352,6 +2427,10 @@ if not applicable code 88 --></errorMessage>
         <name>Q34_Outcome_specified</name>
     </validationRules>
     <validationRules>
+        <errorMessage><!-- Please specify where client was transferred to (centre name, if centre name is not in the list Q38b, use Q38b Other and add centre name or address details) --></errorMessage>
+        <name>Q34_Outcome_transferred_specified</name>
+    </validationRules>
+    <validationRules>
         <errorMessage><!-- If outcome for main treatment intervention is premature exit from treatment site (Q34 = 6), please complete main reason for non-compliance --></errorMessage>
         <name>Q35_Reason_for_exti</name>
     </validationRules>
@@ -2370,5 +2449,9 @@ if not applicable code 88 --></errorMessage>
     <validationRules>
         <errorMessage><!-- Q37 Treatment exit date cannot be prior to an intervention finish date --></errorMessage>
         <name>Q37_final_discharge</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please specify if the screening was ordered by the court or the service provider --></errorMessage>
+        <name>Q42a_and_Q42b_screening_ordered_by</name>
     </validationRules>
 </CustomObjectTranslation>

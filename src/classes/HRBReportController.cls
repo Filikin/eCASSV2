@@ -276,8 +276,6 @@ public with sharing class HRBReportController
 				oneTreatment.X33a27_Care_Plan__c =  'FALSE';
 				oneTreatment.X33a28_Facilitated_detox__c =  'FALSE';
 				oneTreatment.X33b1_Date_Commenced__c = null;
-				oneTreatment.X33b10_Date_Commenced__c = null;
-//				oneTreatment.X33b11_Date_Commenced__c = null;
 				oneTreatment.X33b12_Date_Commenced__c = null;
 				oneTreatment.X33b13_Date_Commenced__c = null;
 				oneTreatment.X33b14_Date_Commenced__c = null;

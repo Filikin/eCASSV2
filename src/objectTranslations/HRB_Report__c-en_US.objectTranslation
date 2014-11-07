@@ -59,6 +59,10 @@
     </layouts>
     <startsWith>Consonant</startsWith>
     <webLinks>
+        <label><!-- Attach_HRB_Forms --></label>
+        <name>Attach_HRB_Forms</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Generate_Report --></label>
         <name>Generate_Report</name>
     </webLinks>
