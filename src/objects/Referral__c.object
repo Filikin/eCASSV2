@@ -441,6 +441,11 @@
         <type>Picklist</type>
     </fields>
     <label>Referral</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Referral Name</label>
         <type>Text</type>

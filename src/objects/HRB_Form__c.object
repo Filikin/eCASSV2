@@ -428,6 +428,72 @@ CASE(X28h_Extent_of_drinking_problem__c,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Any_Outstanding_Charges__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Any Outstanding Charges?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Any_other_info_re_use_of_drugs_alcohol__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information about your use of drugs or alcohol that you think we should know?</inlineHelpText>
+        <label>Any other info re use of drugs - alcohol</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Are_you_a_parent_or_guardian__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Are you a parent or guardian?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Are_you_accessing_a_clinic__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Are you accessing a clinic?</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Are you accessing a clinic?)</relationshipLabel>
+        <relationshipName>HRB_Forms7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Are_you_on_medication_for_mental_health__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are you on any medication for your mental health?</inlineHelpText>
+        <label>Are you on medication for mental health</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aspect_of_physical_health_worried_about__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any aspect of your physical health that you are worried about?</inlineHelpText>
+        <label>Aspect of physical health worried about</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>AssCriteriaDate_del__c</fullName>
         <externalId>false</externalId>
         <formula>DATEVALUE(
@@ -757,6 +823,52 @@ IF( ISPICKVAL( X28b_Route_of_Admin_Sub4__c , &quot;1. Inject&quot;), X28d_Age_of
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Court_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Court Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Current_level_of_drug_or_alcohol_use__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How would you describe your current level of drug or alcohol use?</inlineHelpText>
+        <label>Current level of drug or alcohol use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Chaotic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Detoxing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drug Free</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Currently_in_social_welfare_payments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Currently in social welfare payments?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>DOC__c</fullName>
@@ -1295,6 +1407,89 @@ Case(X22_Ever_previously_treated_re_drug__c,
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Date_linked_in_with_service_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Date linked in with service 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_linked_in_with_service_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Date linked in with service 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_linked_in_with_service_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Date linked in with service 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_linked_with_a_psychiatrist__c</fullName>
+        <externalId>false</externalId>
+        <label>Date linked with a psychiatrist</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_received_treatment_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Date received treatment 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_received_treatment_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Date received treatment 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_received_treatment_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Date received treatment 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_received_treatment_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Date received treatment 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Do_you_have_another_source_of_income__c</fullName>
+        <externalId>false</externalId>
+        <label>Do you have another source of income?</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Drug_Type__c</fullName>
         <externalId>false</externalId>
         <formula>IF( X14_Main_Reason_for_Referral_Drug__r.drugtype__c = &quot;2&quot;, &quot;2. ILICIT DRUG&quot;,
@@ -1381,6 +1576,109 @@ IF(AND( TEXT(X29b_Ever_injected__c ) = &quot;9. Not Known&quot;, X29c_Age_first_
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ever_been_convicted_of_a_sexual_offence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever been convicted of a sexual offence?</inlineHelpText>
+        <label>Ever been convicted of a sexual offence</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_been_convicted_of_an_assault__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever been convicted of an assault?</inlineHelpText>
+        <label>Ever been convicted of an assault?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_been_on_Community_Employment_Progr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever been on a Community Employment (CE) Programme?</inlineHelpText>
+        <label>Ever been on Community Employment Progr.</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_had_an_overdose__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever had an overdose, either accidental or intentional?</inlineHelpText>
+        <label>Ever had an overdose?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_had_any_eating_disorders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you have or have you ever had any eating disorders?</inlineHelpText>
+        <label>Ever had any eating disorders?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_linkedin_addiction_homeless_service__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you linked in with addiction or homeless services before?</inlineHelpText>
+        <label>Ever linkedin addiction/homeless service</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ever_suffered_from_received_treatment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever suffered from or received treatment for any of the following?</inlineHelpText>
+        <label>Ever suffered from/received treatment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Depression</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bipolar Disorder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Schizophrenia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mood Disorders</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Any other psychiatric condition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Ever_think_about_committing_suicide__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you ever think about committing suicide?</inlineHelpText>
+        <label>Ever think about committing suicide?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>ExitAfter__c</fullName>
@@ -1538,6 +1836,52 @@ X24b_Specify_first_drug_used__r.DrugCode__c)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Have_you_been_to_prison__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Have you been to prison?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_attempted_suicide__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Have you ever attempted suicide?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_been_convicted_of_arson__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Have you ever been convicted of arson?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_caused_yourself_any_harm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever caused yourself any harm i.e. cutting, biting, burning?</inlineHelpText>
+        <label>Have you ever caused yourself any harm</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_linked_with_a_psychiatrist__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Have you ever linked with a psychiatrist</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>INJECTED__c</fullName>
         <externalId>false</externalId>
         <formula>IF( OR( X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;,
@@ -1560,6 +1904,42 @@ Case(X29b_Ever_injected__c,
 &quot;9. Not Known&quot;,&quot;9&quot;,
 &quot;&quot;))</formula>
         <label>INJECTED</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_Drug_Free_how_many_months__c</fullName>
+        <externalId>false</externalId>
+        <label>If Drug Free, how many months?</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_yes_please_specify_medication_for_PH__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If you are on any medication for your physical health, please specify</inlineHelpText>
+        <label>If yes, please specify medication for PH</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_yes_please_specify_treatment_PH__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If you receiving any treatment for a physical health condition, please specify treatment</inlineHelpText>
+        <label>If yes, please specify treatment PH</label>
+        <length>200</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -2058,7 +2438,9 @@ IF(AND(ISBLANK(X33b23_Date_Commenced__c ), TEXT(X33a_Main_Intervention__c ) = &q
     <fields>
         <fullName>Main_Intervention_Valid__c</fullName>
         <externalId>false</externalId>
-        <formula>IF(X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;, &quot;HRB OK&quot;,
+        <formula>IF(Pause__c = TRUE, &quot;Pause ON, Treatment Invalid&quot;, 
+
+IF(X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;, &quot;HRB OK&quot;,
 
 IF(AND(TEXT( X15b_If_client_referred__c ) = &quot;8. Other (specify)&quot;, ISBLANK( X15b8_Other_specify__c )), &quot;Q15b8 Other specify Incomplete&quot;,
 
@@ -2106,7 +2488,7 @@ IF(AND(ISBLANK(X33b26_Date_case_manager_was_appointed__c), TEXT(X33a_Main_Interv
 
 IF(AND(ISBLANK(X33b28_Date_Commenced__c), TEXT(X33a_Main_Intervention__c ) = &quot;28. Facilitated detox&quot;), &quot;Q33a Main Intervention Invalid&quot;,
 
-&quot;HRB OK&quot; ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )</formula>
+&quot;HRB OK&quot; ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Main Intervention Valid</label>
         <required>false</required>
@@ -2114,6 +2496,16 @@ IF(AND(ISBLANK(X33b28_Date_Commenced__c), TEXT(X33a_Main_Intervention__c ) = &qu
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medication_for_your_physical_health__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are you on any medication for your physical health?</inlineHelpText>
+        <label>Medication for your physical health</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Mobile__c</fullName>
@@ -2126,6 +2518,29 @@ IF(AND(ISBLANK(X33b28_Date_Commenced__c), TEXT(X33a_Main_Intervention__c ) = &qu
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_of_probation_officer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Name of probation officer</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>HRB Forms (Name of probation officer)</relationshipLabel>
+        <relationshipName>HRB_Forms2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Need_support_with_reading_writing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you need any support with your reading or writing or counting?</inlineHelpText>
+        <label>Need support with reading/writing</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>NonCompliance__c</fullName>
@@ -2185,6 +2600,71 @@ Case(X35_Reason_for_exit_6_above__c,
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offences__c</fullName>
+        <externalId>false</externalId>
+        <label>Offences</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_info_re_charges_we_should_know__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information about charges that you think we should know?</inlineHelpText>
+        <label>Other info re charges we should know</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_info_re_education_we_should_know__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information about your education that you think we should know?</inlineHelpText>
+        <label>Other info re education we should know</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_info_re_personal_situation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information about your personal situation that you think we should know?</inlineHelpText>
+        <label>Other info re personal situation</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_info_re_your_health_we_should_know__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information about your health that you think we should know?</inlineHelpText>
+        <label>Other info re your health we should know</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_info_that_you_think_we_should_know__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is there any other information that you think we should know?</inlineHelpText>
+        <label>Other info that you think we should know</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>Outcome__c</fullName>
@@ -2328,6 +2808,70 @@ Case(X25b_Route_of_Admin_Main_sub__c,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Previous_addiction_treatment_centre_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous addiction treatment centre 1</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Previous addiction treatment centre 1)</relationshipLabel>
+        <relationshipName>HRB_Forms3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_addiction_treatment_centre_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous addiction treatment centre 2</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Previous addiction treatment centre 2)</relationshipLabel>
+        <relationshipName>HRB_Forms4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_addiction_treatment_centre_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous addiction treatment centre 3</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Previous addiction treatment centre 3)</relationshipLabel>
+        <relationshipName>HRB_Forms5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_addiction_treatment_centre_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous addiction treatment centre 4</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Previous addiction treatment centre 4)</relationshipLabel>
+        <relationshipName>HRB_Forms6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Problem_with_other_addictive_behaviours__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you have a problem with any other addictive behaviours, such as gambling, self-harming etc.?</inlineHelpText>
+        <label>Problem with other addictive behaviours</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>QUARTERCP__c</fullName>
         <externalId>false</externalId>
         <formula>CASE(TEXT( MONTH(X13_Date_of_Referral__c)), 
@@ -2429,6 +2973,16 @@ CASE(Text( MONTH(X16_Date_of_Assessment__c)) ,
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Receiving_treatment_for_physical_health__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are you receiving any treatment for a physical health condition?</inlineHelpText>
+        <label>Receiving treatment for physical health</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Record_Valid__c</fullName>
@@ -2639,6 +3193,45 @@ Case( X42a_Urine_screeding_during_treatment__c ,
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_linked_in_with_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service linked in with 1</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Service linked in with 1)</relationshipLabel>
+        <relationshipName>HRB_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_linked_in_with_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service linked in with 2</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Service linked in with 2)</relationshipLabel>
+        <relationshipName>HRB_Forms1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_linked_in_with_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service linked in with 3</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HRB Forms (Service linked in with 3)</relationshipLabel>
+        <relationshipName>HRB_Forms2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Source__c</fullName>
@@ -3262,6 +3855,28 @@ CASE(  X18b_Reason_removed_from_waiting_list__c  ,
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>What_is_your_medical_card_expiry_date__c</fullName>
+        <externalId>false</externalId>
+        <label>What is your medical card expiry date?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Who_is_your_GP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Who is your GP</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>HRB Forms (Who is your GP)</relationshipLabel>
+        <relationshipName>HRB_Forms1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>X13_Date_of_Referral__c</fullName>
@@ -5831,6 +6446,1975 @@ Hepatitis A and B vaccination</inlineHelpText>
         <type>Text</type>
     </nameField>
     <pluralLabel>HRB Forms</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>HRB_Form</fullName>
+        <active>true</active>
+        <label>HRB Form</label>
+        <picklistValues>
+            <picklist>Centre__c</picklist>
+            <values>
+                <fullName>13687 Finglas addiction support team %28FAST%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3002 St Anne%27s Hospital Shanakiel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3003 Psychiatric Unit%2C Bantry General Hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3004 SHB Addiction Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3005 Tabor Lodge</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_level_of_drug_or_alcohol_use__c</picklist>
+            <values>
+                <fullName>Chaotic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detoxing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Free</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ever_suffered_from_received_treatment__c</picklist>
+            <values>
+                <fullName>Any other psychiatric condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bipolar Disorder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Depression</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mood Disorders</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schizophrenia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X14_Main_Reason_for_referral__c</picklist>
+            <values>
+                <fullName>1%2E Alcohol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Illicit drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Licit drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other problem</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X15_Source_of_referral__c</picklist>
+            <values>
+                <fullName>1%2E Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E Outreach worker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E Mobile bus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2E Mental health liaison nurse at A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%2E Accident %26 emergency other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%2E Mental health facility %28including psychiatrist%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Friends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other drug treatment centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E General practitioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Acute hospital service excluding A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Social services%2FCommunity services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Court%2Fprobation%2Fpolice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>99%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X15b_If_client_referred__c</picklist>
+            <values>
+                <fullName>1%2E Client moved address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Clients management%2Fsecurity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Dual diagnosis %28psychiatric%2Fsubstance use co-morbidity%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Treatment for blood borne diseases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Client unstable requires substitution treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Other treatment required %28excluding substitution%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Client stable%2C transferred to satellite clinic or GP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other %28specify%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X17a_Assessment_outcome__c</picklist>
+            <values>
+                <fullName>1%2E Suitable for treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Unsuitable for treatment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X17b_Assessment_criterion_fulfilled__c</picklist>
+            <values>
+                <fullName>1%2EYes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X18a_Clients_treatment_status__c</picklist>
+            <values>
+                <fullName>1%2E Offered treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Placed on waiting list for opiate substitute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Transferred to another site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Psychiatric assessment only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Placed on other drug treatment waiting list</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X18b_Reason_removed_from_waiting_list__c</picklist>
+            <values>
+                <fullName>1%2E Treatment offered with this centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Client did not fulfil criteria to commence treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Client did not accept substitution%2Fother drug treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Client transferred%2Fcommenced treatment with another centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Service unable to contact%2Flocate client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Client admitted to hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Client sent to prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Client died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Other %28specify%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X19_Accepted_place_at_this_centre__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X22_Ever_previously_treated_alc_drug__c</picklist>
+            <values>
+                <fullName>1%2E Never treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Previously treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X22_Ever_previously_treated_re_drug__c</picklist>
+            <values>
+                <fullName>1%2E Never treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Previously treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X23_Type_of_contact_with_this_centre__c</picklist>
+            <values>
+                <fullName>1%2E First treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E One or more treatment periods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X25b_Route_of_Admin_Main_sub__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X25c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X26b_Route_of_Admin_Sub2__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X26c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X27b_Route_of_Admin_Sub3__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X27c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28b_Route_of_Admin_Sub4__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28e_Preferred_types_of_alcohol_consumed__c</picklist>
+            <values>
+                <fullName>2%2E Beer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Spirits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Fortified wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Cider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Alcopops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other %28e%2Eg%2E methylated spirits%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28h_Extent_of_drinking_problem__c</picklist>
+            <values>
+                <fullName>2%2E Hazardous drinker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Harmful drinker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Dependent drinker</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X29a_Injected_in_past_month__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X29b_Ever_injected__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X30_Ever_shared_any_injecting_equipment__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a24_Sent_to_another_site__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a25_Key_Worder_appointed__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a26_Case_Manager_appointed__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a27_Care_Plan__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a28_Facilitated_detox__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a_Main_Intervention__c</picklist>
+            <values>
+                <fullName>1%2E Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E Medication free therapy psychosocial therapy other etc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Psychiatric therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2E Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%2E Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%2E Family Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%2E Brief intervention%3A individual education%2Fawareness programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%2E Group education%2Fawareness programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%2E Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%2E Complementary therapies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%2E Strengthening family programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24%2E Sent to another site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2E Key Worker appointed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26%2E Case Manager appointed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27%2E Care Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28%2E Facilitated detox</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X34_Outcome_for_MAIN_treatment__c</picklist>
+            <values>
+                <fullName>1%2E Treatment completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E General medical transfer or medical issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E No longer lives in the area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Mental health transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Prison to prison transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Transferred stable* %28including release linking patient to other treatment site or other prison treatment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Transferred unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Client did not wish to attend further treatment sessions because he%2Fshe considered him%2Fherself to be stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Client refused to have further sessions or did not return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Premature exit from treatment for non-compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Released from prison but not linked to other treatment site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Sentenced to prison</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X35_Reason_for_exit_6_above__c</picklist>
+            <values>
+                <fullName>1%2E Drug taking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Violent behaviour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Illegal activities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Not observing other rules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Alcohol taking</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X36_Client_s_Condition_on_discharge__c</picklist>
+            <values>
+                <fullName>1%2E Stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X38a_Aftercare_provided_by_this_centre__c</picklist>
+            <values>
+                <fullName>0%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X40_Vaccination__c</picklist>
+            <values>
+                <fullName>1%2E First dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Second dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Third dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Booster dose 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Booster dose 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Adequate titre protective</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X41_Viral_Screening_uptake__c</picklist>
+            <values>
+                <fullName>1%2E HIV test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Hepatitis B test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Hepatitis C test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X42a_Urine_screeding_during_treatment__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X42b_If_screening_ordered_by__c</picklist>
+            <values>
+                <fullName>1%2E Treatment Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Court</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>HRB_Form_NDRIC_Assessment</fullName>
+        <active>true</active>
+        <label>HRB Form + NDRIC Assessment</label>
+        <picklistValues>
+            <picklist>Centre__c</picklist>
+            <values>
+                <fullName>13687 Finglas addiction support team %28FAST%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3002 St Anne%27s Hospital Shanakiel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3003 Psychiatric Unit%2C Bantry General Hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3004 SHB Addiction Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3005 Tabor Lodge</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_level_of_drug_or_alcohol_use__c</picklist>
+            <values>
+                <fullName>Chaotic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detoxing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Free</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ever_suffered_from_received_treatment__c</picklist>
+            <values>
+                <fullName>Any other psychiatric condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bipolar Disorder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Depression</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mood Disorders</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schizophrenia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X14_Main_Reason_for_referral__c</picklist>
+            <values>
+                <fullName>1%2E Alcohol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Illicit drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Licit drug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other problem</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X15_Source_of_referral__c</picklist>
+            <values>
+                <fullName>1%2E Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E Outreach worker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E Mobile bus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2E Mental health liaison nurse at A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%2E Accident %26 emergency other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%2E Mental health facility %28including psychiatrist%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Friends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other drug treatment centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E General practitioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Acute hospital service excluding A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Social services%2FCommunity services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Court%2Fprobation%2Fpolice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>99%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X15b_If_client_referred__c</picklist>
+            <values>
+                <fullName>1%2E Client moved address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Clients management%2Fsecurity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Dual diagnosis %28psychiatric%2Fsubstance use co-morbidity%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Treatment for blood borne diseases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Client unstable requires substitution treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Other treatment required %28excluding substitution%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Client stable%2C transferred to satellite clinic or GP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other %28specify%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X17a_Assessment_outcome__c</picklist>
+            <values>
+                <fullName>1%2E Suitable for treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Unsuitable for treatment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X17b_Assessment_criterion_fulfilled__c</picklist>
+            <values>
+                <fullName>1%2EYes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X18a_Clients_treatment_status__c</picklist>
+            <values>
+                <fullName>1%2E Offered treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Placed on waiting list for opiate substitute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Transferred to another site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Psychiatric assessment only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Placed on other drug treatment waiting list</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X18b_Reason_removed_from_waiting_list__c</picklist>
+            <values>
+                <fullName>1%2E Treatment offered with this centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Client did not fulfil criteria to commence treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Client did not accept substitution%2Fother drug treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Client transferred%2Fcommenced treatment with another centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Service unable to contact%2Flocate client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Client admitted to hospital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Client sent to prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Client died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Other %28specify%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X19_Accepted_place_at_this_centre__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X22_Ever_previously_treated_alc_drug__c</picklist>
+            <values>
+                <fullName>1%2E Never treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Previously treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X22_Ever_previously_treated_re_drug__c</picklist>
+            <values>
+                <fullName>1%2E Never treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Previously treated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X23_Type_of_contact_with_this_centre__c</picklist>
+            <values>
+                <fullName>1%2E First treatment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E One or more treatment periods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X25b_Route_of_Admin_Main_sub__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X25c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X26b_Route_of_Admin_Sub2__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X26c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X27b_Route_of_Admin_Sub3__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X27c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28b_Route_of_Admin_Sub4__c</picklist>
+            <values>
+                <fullName>1%2E Inject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Smoke</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Eat%2Fdrink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Sniff%2Fsnort%2F inhale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Sublingual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Rectal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Topical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28c_Frequency_of_use_in_last_mth__c</picklist>
+            <values>
+                <fullName>1%2E Once a week or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E 2-6 days per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E No use in past month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28e_Preferred_types_of_alcohol_consumed__c</picklist>
+            <values>
+                <fullName>2%2E Beer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Spirits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Fortified wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Cider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Alcopops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Other %28e%2Eg%2E methylated spirits%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X28h_Extent_of_drinking_problem__c</picklist>
+            <values>
+                <fullName>2%2E Hazardous drinker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Harmful drinker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Dependent drinker</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X29a_Injected_in_past_month__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X29b_Ever_injected__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not Known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X30_Ever_shared_any_injecting_equipment__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Not known</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a24_Sent_to_another_site__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a25_Key_Worder_appointed__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a26_Case_Manager_appointed__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a27_Care_Plan__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a28_Facilitated_detox__c</picklist>
+            <values>
+                <fullName>FALSE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TRUE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X33a_Main_Intervention__c</picklist>
+            <values>
+                <fullName>1%2E Brief intervention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E Medication free therapy psychosocial therapy other etc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Psychiatric therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Individual counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%2E Group counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%2E Social and%2For occupational reintegration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%2E Family Therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%2E Brief intervention%3A individual education%2Fawareness programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%2E Group education%2Fawareness programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%2E Aftercare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%2E Complementary therapies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%2E Strengthening family programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24%2E Sent to another site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%2E Key Worker appointed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26%2E Case Manager appointed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27%2E Care Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28%2E Facilitated detox</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X34_Outcome_for_MAIN_treatment__c</picklist>
+            <values>
+                <fullName>1%2E Treatment completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%2E Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%2E General medical transfer or medical issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%2E No longer lives in the area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%2E Mental health transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E Prison to prison transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Transferred stable* %28including release linking patient to other treatment site or other prison treatment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Transferred unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Client did not wish to attend further treatment sessions because he%2Fshe considered him%2Fherself to be stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Client refused to have further sessions or did not return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Premature exit from treatment for non-compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%2E Released from prison but not linked to other treatment site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E Sentenced to prison</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X35_Reason_for_exit_6_above__c</picklist>
+            <values>
+                <fullName>1%2E Drug taking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Violent behaviour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Illegal activities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Not observing other rules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Alcohol taking</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X36_Client_s_Condition_on_discharge__c</picklist>
+            <values>
+                <fullName>1%2E Stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X38a_Aftercare_provided_by_this_centre__c</picklist>
+            <values>
+                <fullName>0%2E No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X40_Vaccination__c</picklist>
+            <values>
+                <fullName>1%2E First dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Second dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Third dose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E Booster dose 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E Booster dose 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E Adequate titre protective</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X41_Viral_Screening_uptake__c</picklist>
+            <values>
+                <fullName>1%2E HIV test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Hepatitis B test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E Hepatitis C test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X42a_Urine_screeding_during_treatment__c</picklist>
+            <values>
+                <fullName>1%2E Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E No</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>X42b_If_screening_ordered_by__c</picklist>
+            <values>
+                <fullName>1%2E Treatment Provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E Court</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>X13_Date_of_Referral__c</customTabListAdditionalFields>

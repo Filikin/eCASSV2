@@ -77,6 +77,34 @@
         <name>AlcoholExtent__c</name>
     </fields>
     <fields>
+        <label><!-- Any Outstanding Charges? --></label>
+        <name>Any_Outstanding_Charges__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your use of drugs or alcohol that you think we should know? --></help>
+        <label><!-- Any other info re use of drugs - alcohol --></label>
+        <name>Any_other_info_re_use_of_drugs_alcohol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you a parent or guardian? --></label>
+        <name>Are_you_a_parent_or_guardian__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you accessing a clinic? --></label>
+        <name>Are_you_accessing_a_clinic__c</name>
+        <relationshipLabel><!-- HRB Forms (Are you accessing a clinic?) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Are you on any medication for your mental health? --></help>
+        <label><!-- Are you on medication for mental health --></label>
+        <name>Are_you_on_medication_for_mental_health__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any aspect of your physical health that you are worried about? --></help>
+        <label><!-- Aspect of physical health worried about --></label>
+        <name>Aspect_of_physical_health_worried_about__c</name>
+    </fields>
+    <fields>
         <label><!-- AssCriteriaDate --></label>
         <name>AssCriteriaDate_del__c</name>
     </fields>
@@ -152,7 +180,7 @@
     <fields>
         <label><!-- Client Account --></label>
         <name>Client_Account__c</name>
-        <relationshipLabel><!-- HRB Forms --></relationshipLabel>
+        <relationshipLabel><!-- HRB Forms (Client Account) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Client ID --></label>
@@ -166,6 +194,35 @@
         <label><!-- Client --></label>
         <name>Contact__c</name>
         <relationshipLabel><!-- HRB Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Court Date --></label>
+        <name>Court_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- How would you describe your current level of drug or alcohol use? --></help>
+        <label><!-- Current level of drug or alcohol use --></label>
+        <name>Current_level_of_drug_or_alcohol_use__c</name>
+        <picklistValues>
+            <masterLabel>Chaotic</masterLabel>
+            <translation><!-- Chaotic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detoxing</masterLabel>
+            <translation><!-- Detoxing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug Free</masterLabel>
+            <translation><!-- Drug Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stable</masterLabel>
+            <translation><!-- Stable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Currently in social welfare payments? --></label>
+        <name>Currently_in_social_welfare_payments__c</name>
     </fields>
     <fields>
         <label><!-- DOC --></label>
@@ -253,6 +310,42 @@
         <name>Date_latest_intervention_commenced__c</name>
     </fields>
     <fields>
+        <label><!-- Date linked in with service 1 --></label>
+        <name>Date_linked_in_with_service_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked in with service 2 --></label>
+        <name>Date_linked_in_with_service_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked in with service 3 --></label>
+        <name>Date_linked_in_with_service_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked with a psychiatrist --></label>
+        <name>Date_linked_with_a_psychiatrist__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 1 --></label>
+        <name>Date_received_treatment_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 2 --></label>
+        <name>Date_received_treatment_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 3 --></label>
+        <name>Date_received_treatment_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 4 --></label>
+        <name>Date_received_treatment_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you have another source of income? --></label>
+        <name>Do_you_have_another_source_of_income__c</name>
+    </fields>
+    <fields>
         <label><!-- Drug Type --></label>
         <name>Drug_Type__c</name>
     </fields>
@@ -263,6 +356,66 @@
     <fields>
         <label><!-- Drug Validation --></label>
         <name>Drug_Validation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been convicted of a sexual offence? --></help>
+        <label><!-- Ever been convicted of a sexual offence --></label>
+        <name>Ever_been_convicted_of_a_sexual_offence__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been convicted of an assault? --></help>
+        <label><!-- Ever been convicted of an assault? --></label>
+        <name>Ever_been_convicted_of_an_assault__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been on a Community Employment (CE) Programme? --></help>
+        <label><!-- Ever been on Community Employment Progr. --></label>
+        <name>Ever_been_on_Community_Employment_Progr__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever had an overdose, either accidental or intentional? --></help>
+        <label><!-- Ever had an overdose? --></label>
+        <name>Ever_had_an_overdose__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you have or have you ever had any eating disorders? --></help>
+        <label><!-- Ever had any eating disorders? --></label>
+        <name>Ever_had_any_eating_disorders__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you linked in with addiction or homeless services before? --></help>
+        <label><!-- Ever linkedin addiction/homeless service --></label>
+        <name>Ever_linkedin_addiction_homeless_service__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever suffered from or received treatment for any of the following? --></help>
+        <label><!-- Ever suffered from/received treatment --></label>
+        <name>Ever_suffered_from_received_treatment__c</name>
+        <picklistValues>
+            <masterLabel>Any other psychiatric condition</masterLabel>
+            <translation><!-- Any other psychiatric condition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bipolar Disorder</masterLabel>
+            <translation><!-- Bipolar Disorder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Depression</masterLabel>
+            <translation><!-- Depression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mood Disorders</masterLabel>
+            <translation><!-- Mood Disorders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schizophrenia</masterLabel>
+            <translation><!-- Schizophrenia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Do you ever think about committing suicide? --></help>
+        <label><!-- Ever think about committing suicide? --></label>
+        <name>Ever_think_about_committing_suicide__c</name>
     </fields>
     <fields>
         <label><!-- ExitAfter --></label>
@@ -299,8 +452,43 @@
         <relationshipLabel><!-- HRB Forms --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Have you been to prison? --></label>
+        <name>Have_you_been_to_prison__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever attempted suicide? --></label>
+        <name>Have_you_ever_attempted_suicide__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever been convicted of arson? --></label>
+        <name>Have_you_ever_been_convicted_of_arson__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever caused yourself any harm i.e. cutting, biting, burning? --></help>
+        <label><!-- Have you ever caused yourself any harm --></label>
+        <name>Have_you_ever_caused_yourself_any_harm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever linked with a psychiatrist --></label>
+        <name>Have_you_ever_linked_with_a_psychiatrist__c</name>
+    </fields>
+    <fields>
         <label><!-- INJECTED --></label>
         <name>INJECTED__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Drug Free, how many months? --></label>
+        <name>If_Drug_Free_how_many_months__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you are on any medication for your physical health, please specify --></help>
+        <label><!-- If yes, please specify medication for PH --></label>
+        <name>If_yes_please_specify_medication_for_PH__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you receiving any treatment for a physical health condition, please specify treatment --></help>
+        <label><!-- If yes, please specify treatment PH --></label>
+        <name>If_yes_please_specify_treatment_PH__c</name>
     </fields>
     <fields>
         <label><!-- Inter12 --></label>
@@ -375,8 +563,23 @@
         <name>Main_Intervention_Valid__c</name>
     </fields>
     <fields>
+        <help><!-- Are you on any medication for your physical health? --></help>
+        <label><!-- Medication for your physical health --></label>
+        <name>Medication_for_your_physical_health__c</name>
+    </fields>
+    <fields>
         <label><!-- Mobile --></label>
         <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name of probation officer --></label>
+        <name>Name_of_probation_officer__c</name>
+        <relationshipLabel><!-- HRB Forms (Name of probation officer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Do you need any support with your reading or writing or counting? --></help>
+        <label><!-- Need support with reading/writing --></label>
+        <name>Need_support_with_reading_writing__c</name>
     </fields>
     <fields>
         <label><!-- NonCompliance --></label>
@@ -389,6 +592,35 @@
     <fields>
         <label><!-- Number of completed Treatment --></label>
         <name>Number_of_completed_Treatment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offences --></label>
+        <name>Offences__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about charges that you think we should know? --></help>
+        <label><!-- Other info re charges we should know --></label>
+        <name>Other_info_re_charges_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your education that you think we should know? --></help>
+        <label><!-- Other info re education we should know --></label>
+        <name>Other_info_re_education_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your personal situation that you think we should know? --></help>
+        <label><!-- Other info re personal situation --></label>
+        <name>Other_info_re_personal_situation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your health that you think we should know? --></help>
+        <label><!-- Other info re your health we should know --></label>
+        <name>Other_info_re_your_health_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information that you think we should know? --></help>
+        <label><!-- Other info that you think we should know --></label>
+        <name>Other_info_that_you_think_we_should_know__c</name>
     </fields>
     <fields>
         <label><!-- Outcome --></label>
@@ -419,6 +651,31 @@
         <name>Pause__c</name>
     </fields>
     <fields>
+        <label><!-- Previous addiction treatment centre 1 --></label>
+        <name>Previous_addiction_treatment_centre_1__c</name>
+        <relationshipLabel><!-- HRB Forms (Previous addiction treatment centre 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 2 --></label>
+        <name>Previous_addiction_treatment_centre_2__c</name>
+        <relationshipLabel><!-- HRB Forms (Previous addiction treatment centre 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 3 --></label>
+        <name>Previous_addiction_treatment_centre_3__c</name>
+        <relationshipLabel><!-- HRB Forms (Previous addiction treatment centre 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 4 --></label>
+        <name>Previous_addiction_treatment_centre_4__c</name>
+        <relationshipLabel><!-- HRB Forms (Previous addiction treatment centre 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Do you have a problem with any other addictive behaviours, such as gambling, self-harming etc.? --></help>
+        <label><!-- Problem with other addictive behaviours --></label>
+        <name>Problem_with_other_addictive_behaviours__c</name>
+    </fields>
+    <fields>
         <label><!-- QUARTERCP --></label>
         <name>QUARTERCP__c</name>
     </fields>
@@ -437,6 +694,11 @@
     <fields>
         <label><!-- RecYear --></label>
         <name>RecYear__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are you receiving any treatment for a physical health condition? --></help>
+        <label><!-- Receiving treatment for physical health --></label>
+        <name>Receiving_treatment_for_physical_health__c</name>
     </fields>
     <fields>
         <label><!-- Record Valid --></label>
@@ -473,6 +735,21 @@
     <fields>
         <label><!-- Screen --></label>
         <name>Screen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 1 --></label>
+        <name>Service_linked_in_with_1__c</name>
+        <relationshipLabel><!-- HRB Forms (Service linked in with 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 2 --></label>
+        <name>Service_linked_in_with_2__c</name>
+        <relationshipLabel><!-- HRB Forms (Service linked in with 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 3 --></label>
+        <name>Service_linked_in_with_3__c</name>
+        <relationshipLabel><!-- HRB Forms (Service linked in with 3) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Source --></label>
@@ -568,6 +845,15 @@ Type 1 = Completed Treatment --></help>
     <fields>
         <label><!-- WaitStatus --></label>
         <name>WaitStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your medical card expiry date? --></label>
+        <name>What_is_your_medical_card_expiry_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Who is your GP --></label>
+        <name>Who_is_your_GP__c</name>
+        <relationshipLabel><!-- HRB Forms (Who is your GP) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 13 Date of Referral --></label>
@@ -2120,6 +2406,14 @@ Hepatitis A and B vaccination --></help>
             <section>Main Treatment Intervention</section>
         </sections>
     </layouts>
+    <recordTypes>
+        <label><!-- HRB Form --></label>
+        <name>HRB_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HRB Form + NDRIC Assessment --></label>
+        <name>HRB_Form_NDRIC_Assessment</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- All interventions details must be either complete or blank when date of final discharge is set --></errorMessage>
