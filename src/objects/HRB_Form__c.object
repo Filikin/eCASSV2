@@ -163,11 +163,15 @@ CASE( X19_Accepted_place_at_this_centre__c ,
     <fields>
         <fullName>Age__c</fullName>
         <externalId>false</externalId>
-        <formula>IF( X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;,  
+        <formula>IF(NOT(ISBLANK( Contact__r.Birthdate)),
+
+IF( X14_Main_Reason_for_Referral_Drug__r.DrugCode__c = &quot;994&quot;,  
 
  FLOOR((X13_Date_of_Referral__c - Contact__r.Birthdate) /365.25),
 
- FLOOR(( X16_Date_of_Assessment__c - Contact__r.Birthdate )/365.25) )</formula>
+ FLOOR(( X16_Date_of_Assessment__c - Contact__r.Birthdate )/365.25) ),
+
+99)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Age</label>
         <precision>18</precision>
@@ -1815,6 +1819,18 @@ X24b_Specify_first_drug_used__r.DrugCode__c)</formula>
         <externalId>false</externalId>
         <label>FIRSTDRUX</label>
         <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HRBRecord_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Only to be used for HRB Reports purposes. This field is related to ID and UniqID</inlineHelpText>
+        <label>HRBRecord Name</label>
+        <length>20</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -6387,7 +6403,7 @@ Hepatitis A and B vaccination</inlineHelpText>
     <fields>
         <fullName>id__c</fullName>
         <externalId>false</externalId>
-        <formula>RIGHT( Name ,3)</formula>
+        <formula>RIGHT(HRBRecord_Name__c,3)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>id</label>
         <required>false</required>
@@ -8636,7 +8652,7 @@ TEXT( X25c_Frequency_of_use_in_last_mth__c) &lt;&gt; &quot;4. No use in past mon
 OR(X28f_How_many_drinks_per_occasion__c = 0,
 X28g_Number_of_days_alcohol_consumed__c = 0))))</errorConditionFormula>
         <errorDisplayField>X25c_Frequency_of_use_in_last_mth__c</errorDisplayField>
-        <errorMessage>Q25, Frequency of alcohol use in last month must match the answers on Q28e and Q28h</errorMessage>
+        <errorMessage>Q25, Frequency of alcohol use in last month must match the answers on Q28f and Q28g</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>If_alcohol_used_in_Q26_Frequency</fullName>
@@ -8658,7 +8674,7 @@ TEXT( X26c_Frequency_of_use_in_last_mth__c ) &lt;&gt; &quot;4. No use in past mo
 OR(X28f_How_many_drinks_per_occasion__c = 0,
 X28g_Number_of_days_alcohol_consumed__c = 0))))</errorConditionFormula>
         <errorDisplayField>X26c_Frequency_of_use_in_last_mth__c</errorDisplayField>
-        <errorMessage>Q26, Frequency of alcohol use in last month must match the answers on Q28e and Q28h</errorMessage>
+        <errorMessage>Q26, Frequency of alcohol use in last month must match the answers on Q28f and Q28g</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>If_alcohol_used_in_Q27_Frequency</fullName>
@@ -8680,7 +8696,7 @@ TEXT( X27c_Frequency_of_use_in_last_mth__c ) &lt;&gt; &quot;4. No use in past mo
 OR(X28f_How_many_drinks_per_occasion__c = 0,
 X28g_Number_of_days_alcohol_consumed__c = 0))))</errorConditionFormula>
         <errorDisplayField>X27c_Frequency_of_use_in_last_mth__c</errorDisplayField>
-        <errorMessage>Q27, Frequency of alcohol use in last month must match the answers on Q28e and Q28h</errorMessage>
+        <errorMessage>Q27, Frequency of alcohol use in last month must match the answers on Q28f and Q28g</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>If_alcohol_used_in_Q28_Frequency</fullName>
@@ -8702,7 +8718,7 @@ TEXT( X28c_Frequency_of_use_in_last_mth__c ) &lt;&gt; &quot;4. No use in past mo
 OR(X28f_How_many_drinks_per_occasion__c = 0,
 X28g_Number_of_days_alcohol_consumed__c = 0))))</errorConditionFormula>
         <errorDisplayField>X28c_Frequency_of_use_in_last_mth__c</errorDisplayField>
-        <errorMessage>Q28, Frequency of alcohol use in last month must match the answers on Q28e and Q28h</errorMessage>
+        <errorMessage>Q28, Frequency of alcohol use in last month must match the answers on Q28f and Q28g</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Q21a_Q33b12_Sequential_order</fullName>

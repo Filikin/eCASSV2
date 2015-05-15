@@ -12,7 +12,7 @@ private class TestOneHRBForm {
         Area_of_Residence__c res = new Area_of_Residence__c (Name='Shankill', Area_Code__c='339', CCA__c='1204', City_County__c='D', Tableyear2012__c=true);
         insert res;
 
-        Contact driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1');
+        Contact driver = new Contact(AccountId=acct1.Id,lastname='Driver',firstname='apex1',Client_ID__c='ID12345');
         driver.MailingStreet = '3 test screen \ntest area\ntest city';
         driver.MailingCity = 'Dublin';
         driver.X4_Gender__c = 'Male';

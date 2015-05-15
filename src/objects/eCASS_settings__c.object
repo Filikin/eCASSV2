@@ -20,6 +20,15 @@ Everything else is left alone</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Autonumber_Client_ID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If on, then this client id field is not used in the eCASS reports, instead an autonumber is used. So the Record Valid on the Contact ignores Client ID</inlineHelpText>
+        <label>Autonumber Client ID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Care_Plan_Overview_Print_Page__c</fullName>
         <defaultValue>&quot;CarePlanOverviewPrint&quot;</defaultValue>
         <externalId>false</externalId>

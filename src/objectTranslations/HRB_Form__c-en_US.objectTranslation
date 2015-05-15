@@ -446,6 +446,11 @@
         <name>FIRSTDRUX__c</name>
     </fields>
     <fields>
+        <help><!-- Only to be used for HRB Reports purposes. This field is related to ID and UniqID --></help>
+        <label><!-- HRBRecord Name --></label>
+        <name>HRBRecord_Name__c</name>
+    </fields>
+    <fields>
         <help><!-- This will be populated automatically when you click the button in the HRB Report --></help>
         <label><!-- HRB Report --></label>
         <name>HRB_Report__c</name>
@@ -2280,6 +2285,161 @@ Hepatitis A and B vaccination --></help>
         <name>id__c</name>
     </fields>
     <layouts>
+        <layout>HRB and NDRIC Initial Assessment</layout>
+        <sections>
+            <label><!-- 1. Brief Intervention --></label>
+            <section>1. Brief Intervention</section>
+        </sections>
+        <sections>
+            <label><!-- 12. Medication-free therapy --></label>
+            <section>12. Medication-free therapy</section>
+        </sections>
+        <sections>
+            <label><!-- 13. Psychiatric therapy --></label>
+            <section>13. Psychiatric therapy</section>
+        </sections>
+        <sections>
+            <label><!-- 14. Individual counselling --></label>
+            <section>14. Individual counselling</section>
+        </sections>
+        <sections>
+            <label><!-- 15. Group Counselling --></label>
+            <section>15. Group Counselling</section>
+        </sections>
+        <sections>
+            <label><!-- 16. Social and/or occupational reintegration --></label>
+            <section>16. Social and/or occupational reintegration</section>
+        </sections>
+        <sections>
+            <label><!-- 17. Family Therapy --></label>
+            <section>17. Family Therapy</section>
+        </sections>
+        <sections>
+            <label><!-- 18. Brief intervention: individual education/awareness programme --></label>
+            <section>18. Brief intervention: individual education/awareness programme</section>
+        </sections>
+        <sections>
+            <label><!-- 19. Group education/awareness programme --></label>
+            <section>19. Group education/awareness programme</section>
+        </sections>
+        <sections>
+            <label><!-- 20. Aftercare --></label>
+            <section>20. Aftercare</section>
+        </sections>
+        <sections>
+            <label><!-- 21. Complimentary Therapies --></label>
+            <section>21. Complimentary Therapies</section>
+        </sections>
+        <sections>
+            <label><!-- 23. Strengthening family programme --></label>
+            <section>23. Strengthening family programme</section>
+        </sections>
+        <sections>
+            <label><!-- 24. Sent to another site --></label>
+            <section>24. Sent to another site</section>
+        </sections>
+        <sections>
+            <label><!-- 25. Key Worker appointed --></label>
+            <section>25. Key Worker appointed</section>
+        </sections>
+        <sections>
+            <label><!-- 26. Case Manager appointed --></label>
+            <section>26. Case Manager appointed</section>
+        </sections>
+        <sections>
+            <label><!-- 27. Care Plan --></label>
+            <section>27. Care Plan</section>
+        </sections>
+        <sections>
+            <label><!-- 28. Facilitated detox --></label>
+            <section>28. Facilitated detox</section>
+        </sections>
+        <sections>
+            <label><!-- Addiction or homeless services --></label>
+            <section>Addiction or homeless services</section>
+        </sections>
+        <sections>
+            <label><!-- C. Referral / Assessment details --></label>
+            <section>C. Referral / Assessment details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- D. Treatment details --></label>
+            <section>D. Treatment details</section>
+        </sections>
+        <sections>
+            <label><!-- E. Substance use (Excluding Alcohol and Tobacco) --></label>
+            <section>E. Substance use (Excluding Alcohol and Tobacco)</section>
+        </sections>
+        <sections>
+            <label><!-- E. Substance use (Including Alcohol) --></label>
+            <section>E. Substance use (Including Alcohol)</section>
+        </sections>
+        <sections>
+            <label><!-- E. Substance use - If alcohol is listed as a problem substance at Q25-Q28 --></label>
+            <section>E. Substance use - If alcohol is listed as a problem substance at Q25-Q28</section>
+        </sections>
+        <sections>
+            <label><!-- Education, Training and Employment --></label>
+            <section>Education, Training and Employment</section>
+        </sections>
+        <sections>
+            <label><!-- Emotional and Mental Health --></label>
+            <section>Emotional and Mental Health</section>
+        </sections>
+        <sections>
+            <label><!-- F. Risk Behaviour --></label>
+            <section>F. Risk Behaviour</section>
+        </sections>
+        <sections>
+            <label><!-- G. Activity details --></label>
+            <section>G. Activity details</section>
+        </sections>
+        <sections>
+            <label><!-- H. Exit details --></label>
+            <section>H. Exit details</section>
+        </sections>
+        <sections>
+            <label><!-- HRB Compliance Fields --></label>
+            <section>HRB Compliance Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Health --></label>
+            <section>Health</section>
+        </sections>
+        <sections>
+            <label><!-- If &quot;17. Assessment Option&quot;  is &quot;2. Unsuitable&quot; STOP.  Ensure Q14 is complete --></label>
+            <section>If &quot;17. Assessment Option&quot;  is &quot;2. Unsuitable&quot; STOP.  Ensure Q14 is complete</section>
+        </sections>
+        <sections>
+            <label><!-- If &quot;18. treatment status&quot; is 3 or 4  STOP. Ensure Q14 is complete --></label>
+            <section>If &quot;18. treatment status&quot; is 3 or 4  STOP. Ensure Q14 is complete</section>
+        </sections>
+        <sections>
+            <label><!-- If &quot;19. Accepted place ...&quot; is &quot;2. NO&quot;, STOP. Ensure Q14 is complete --></label>
+            <section>If &quot;19. Accepted place ...&quot; is &quot;2. NO&quot;, STOP. Ensure Q14 is complete</section>
+        </sections>
+        <sections>
+            <label><!-- Justice and Legal Issues --></label>
+            <section>Justice and Legal Issues</section>
+        </sections>
+        <sections>
+            <label><!-- Main Treatment Intervention --></label>
+            <section>Main Treatment Intervention</section>
+        </sections>
+        <sections>
+            <label><!-- Physical Health --></label>
+            <section>Physical Health</section>
+        </sections>
+        <sections>
+            <label><!-- Previous Treatment Details --></label>
+            <section>Previous Treatment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>Treatment Layout 2012</layout>
         <sections>
             <label><!-- 1. Brief Intervention --></label>
@@ -2468,19 +2628,19 @@ Hepatitis A and B vaccination --></help>
         <name>IF_Q37_is_completed_Inter28</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Q25, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <errorMessage><!-- Q25, Frequency of alcohol use in last month must match the answers on Q28f and Q28g --></errorMessage>
         <name>If_alcohol_used_in_Q25_Frequency</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Q26, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <errorMessage><!-- Q26, Frequency of alcohol use in last month must match the answers on Q28f and Q28g --></errorMessage>
         <name>If_alcohol_used_in_Q26_Frequency</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Q27, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <errorMessage><!-- Q27, Frequency of alcohol use in last month must match the answers on Q28f and Q28g --></errorMessage>
         <name>If_alcohol_used_in_Q27_Frequency</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Q28, Frequency of alcohol use in last month must match the answers on Q28e and Q28h --></errorMessage>
+        <errorMessage><!-- Q28, Frequency of alcohol use in last month must match the answers on Q28f and Q28g --></errorMessage>
         <name>If_alcohol_used_in_Q28_Frequency</name>
     </validationRules>
     <validationRules>

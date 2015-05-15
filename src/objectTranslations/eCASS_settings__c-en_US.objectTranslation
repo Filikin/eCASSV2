@@ -18,6 +18,11 @@ Everything else is left alone --></help>
         <name>Attendance_Name_Template__c</name>
     </fields>
     <fields>
+        <help><!-- If on, then this client id field is not used in the eCASS reports, instead an autonumber is used. So the Record Valid on the Contact ignores Client ID --></help>
+        <label><!-- Autonumber Client ID --></label>
+        <name>Autonumber_Client_ID__c</name>
+    </fields>
+    <fields>
         <help><!-- Change this if you want a different page printed for the care plan overview --></help>
         <label><!-- Care Plan Overview Print Page --></label>
         <name>Care_Plan_Overview_Print_Page__c</name>
