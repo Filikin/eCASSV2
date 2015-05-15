@@ -1,0 +1,2059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>TOP is Treatment Outcome Profile</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acute_housing_problem__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Accomodation items for past 30 days</inlineHelpText>
+        <label>Acute housing problem</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>units/day</inlineHelpText>
+        <label>Alcohol Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Alcohol Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Alcohol_Week_1__c  +  Alcohol_Week_2__c  +  Alcohol_Week_3__c  +  Alcohol_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Alcohol Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Days substance used
+Week 1 = 4 weeks ago</inlineHelpText>
+        <label>Alcohol Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Alcohol Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Alcohol Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alcohol_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>SD/day</inlineHelpText>
+        <label>Alcohol Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Amphetamines Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Amphetamines Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Amphetamines_Week_1__c  +Amphetamines_Week_2__c  +Amphetamines_Week_3__c  +Amphetamines_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amphetamines Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Amphetamines Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Amphetamines Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Amphetamines Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amphetamines_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Amphetamines Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>At_risk_of_eviction__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>At risk of eviction</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Benzodiazepines Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Benzodiazepines Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Benzodiazepines_Week_1__c  +Benzodiazepines_Week_2__c + Benzodiazepines_Week_3__c  +Benzodiazepines_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Benzodiazepines Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Benzodiazepines Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Benzodiazepines Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Benzodiazepines Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Benzodiazepines_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Benzodiazepines Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>spliff/day</inlineHelpText>
+        <label>Cannabis Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Cannabis Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Cannabis_Week_1__c + Cannabis_Week_2__c + Cannabis_Week_3__c  + Cannabis_Week_4__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cannabis Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>spliff/day</inlineHelpText>
+        <label>Cannabis Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Cannabis Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Cannabis Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cannabis_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Cannabis Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>TOPs</relationshipLabel>
+        <relationshipName>TOPs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Cocaine Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Cocaine Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Cocaine_Week_1__c + Cocaine_Week_2__c +Cocaine_Week_3__c +Cocaine_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cocaine Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Cocaine Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Cocaine Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Cocaine Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cocaine_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Cocaine Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Committed_assault_or_violence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Committed assault or violence</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Crack_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Crack Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Crack_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Crack Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Crack_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Crack_Week_1__c + Crack_Week_2__c  +Crack_Week_3__c + Crack_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Crack Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Crack_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Crack Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Crack_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Crack Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Crack_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Crack Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Crack_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Crack Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_attended_school_or_college_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Days_attended_school_or_college__c + Days_attended_school_or_college_Week_2__c + Days_attended_school_or_college_Week_3__c +  Days_attended_school_or_college_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days attended school or college Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_attended_school_or_college_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Days attended school or college Week 2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_attended_school_or_college_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Days attended school or college Week 3</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_attended_school_or_college_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Days attended school or college Week 4</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_attended_school_or_college__c</fullName>
+        <externalId>false</externalId>
+        <label>Days attended school or college Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_had_contact_with_significant_other__c</fullName>
+        <description>Number of days client had contact in the past 30 days (e.g. talked or telephone)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days client had contact in the past 30 days (e.g. talked or telephone)</inlineHelpText>
+        <label>Days had contact with significant other</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_paid_work_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Days_paid_work_Week_1__c  +  Days_paid_work_Week_2__c  +  Days_paid_work_Week_3__c  +  Days_paid_work_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days paid work Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_paid_work_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Days paid work Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_paid_work_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Days paid work Week 2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_paid_work_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Days paid work Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_paid_work_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Days paid work Week 4</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_where_there_was_conflict__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days where there was conflict in the past 30 days (i.e. had major arguments)</inlineHelpText>
+        <label>Days where there was conflict</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug_Selling_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Drug_Selling_Week_1__c + Drug_Selling_Week_2__c  +Drug_Selling_Week_3__c  +Drug_Selling_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drug Selling Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug_Selling_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Days Drug Selling in Week</inlineHelpText>
+        <label>Drug Selling Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug_Selling_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Drug Selling in Week</inlineHelpText>
+        <label>Drug Selling Week 2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug_Selling_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Days Drug Selling in Week</inlineHelpText>
+        <label>Drug Selling Week 3</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drug_Selling_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Days Drug Selling in Week</inlineHelpText>
+        <label>Drug Selling Week 4</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Ecstasy Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Ecstasy Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Ecstasy_week1__c  +Ecstasy_Week_2__c + Ecstasy_Week_3__c  +Ecstasy_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ecstasy Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Ecstasy Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Ecstasy Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Ecstasy Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ecstasy_week1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Ecstasy Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ever_Injected__c</fullName>
+        <externalId>false</externalId>
+        <label>Ever Injected</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fraud_forgery_handling_stolen_goods__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fraud, forgery, handling stolen goods</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Head Shop Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Head Shop Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Head_Shop_Week_1__c + Head_Shop_Week_2__c  +Head_Shop_Week_3__c  +Head_Shop_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Head Shop Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Head Shop Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Head Shop Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Head Shop Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Head_Shop_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Head Shop Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Injected_using_shared_spoon_or_filter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Injected using a spoon, water or filter used by someone else</inlineHelpText>
+        <label>Injected using shared spoon or filter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Injected_with_shared_needed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Injected with needle of syringe used by someone else?</inlineHelpText>
+        <label>Injected with shared needed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>No_Days_Injected_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <label>No. Days Injected Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Days_Injected_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>No. Days Injected Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Days_Injected_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>No. Days Injected Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Days_Injected_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>No. Days Injected Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Days_injected_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_Days_Injected_Week_1__c  +No_Days_Injected_Week_2__c + No_Days_Injected_Week_3__c + No_Days_Injected_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Days injected Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Opiates Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Opiates Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opiates_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Opiates_Week_1__c  +  Opiates_Week_2__c  +  Opiates_Week_3__c  +  Opiates_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opiates Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Opiates Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>herion, illicit methadone
+g/day</inlineHelpText>
+        <label>Opiates Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Opiates Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opiates_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>g/day</inlineHelpText>
+        <label>Opiates Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_property_theft_or_burglary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other property theft or burglary</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>tablets/day</inlineHelpText>
+        <label>Other sedatives Average</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Route__c</fullName>
+        <externalId>false</externalId>
+        <label>Other sedatives Route</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 = inject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 = smoke</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 = eat/drink</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 = sniff/snort</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 = sublingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 = rectal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 = topical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 = not known</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Other_sedatives_Week_1__c  +Other_sedatives_Week_2__c + Other_sedatives_Week_3__c  +Other_sedatives_Week_4__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Other sedatives Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>zimovane
+tablets/day</inlineHelpText>
+        <label>Other sedatives Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>zimovane
+tablets/day</inlineHelpText>
+        <label>Other sedatives Week 2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>zimovane
+tablets/days</inlineHelpText>
+        <label>Other sedatives Week 3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_sedatives_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>zimovane
+tablets/days</inlineHelpText>
+        <label>Other sedatives Week 4</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overall_Quality_of_Life__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Client&apos;s rating of overall quality of life (e.g. able to enjoy life, gets on wekk with family and partner)</inlineHelpText>
+        <label>Overall Quality of Life</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Physical_Health_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Physical Health Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Psychological_health_status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Client&apos;s rating ofpsychoological health status (anxiety, depression and problem emotions and feelings)</inlineHelpText>
+        <label>Psychological health status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shoplifting_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Shoplifting_Week_1__c + Shoplifting_Week_2__c + Shoplifting_Week_3__c + Shoplifting_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shoplifting Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shoplifting_Week_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Days shoplifting</inlineHelpText>
+        <label>Shoplifting Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shoplifting_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Days Shoplifting</inlineHelpText>
+        <label>Shoplifting Week 2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shoplifting_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Days Shoplifting</inlineHelpText>
+        <label>Shoplifting Week 3</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shoplifting_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Days Shoplifting</inlineHelpText>
+        <label>Shoplifting Week 4</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Substance_Use__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Left Column: Record the number of days substance used each week&quot;&amp; BR() &amp;
+&quot;Right column: Record the average amount on a using day&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Substance Use</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TOP_Interview_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>TOP Interview Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Theft_from_or_of_vehicle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Theft from or of vehicle</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Times_injected_per_day_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Times_injected_per_day__c  +Times_injected_per_day_Week_2__c  +Times_injected_per_day_Week_3__c + Times_injected_per_day_Week_4__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Times injected per day Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_injected_per_day_Week_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Times injected per day Week 2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_injected_per_day_Week_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Times injected per day Week 3</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_injected_per_day_Week_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Times injected per day Week 4</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_injected_per_day__c</fullName>
+        <externalId>false</externalId>
+        <label>Times injected per day Week 1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Treatment_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Treatment Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Start</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>TOP</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>TOP_Interview_Date__c</columns>
+        <columns>NAME</columns>
+        <columns>Physical_Health_Status__c</columns>
+        <columns>Psychological_health_status__c</columns>
+        <columns>Overall_Quality_of_Life__c</columns>
+        <columns>Number_of_Days_injected_Total__c</columns>
+        <columns>Alcohol_Total__c</columns>
+        <columns>Opiates_Total__c</columns>
+        <columns>Ecstasy_Total__c</columns>
+        <columns>Crack_Total__c</columns>
+        <columns>Cocaine_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TOP-{DD}/{MM}/{YY}-{000}</displayFormat>
+        <label>TOP Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>TOPs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>TOP_Interview_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Overall_Quality_of_Life__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Physical_Health_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Psychological_health_status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Number_of_Days_injected_Total__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Alcohol_Total__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Cocaine_Total__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opiates_Total__c</customTabListAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

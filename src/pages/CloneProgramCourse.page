@@ -1,0 +1,13 @@
+<apex:page standardController="Program_Service__c" extensions="CloneProgramCourse" showHeader="false" action="{!doClone}">
+<!-- add the fields here you want cloned -->
+{!Program_Service__c.Name}
+{!Program_Service__c.Title_id__c}
+{!Program_Service__c.Start_Date__c}
+{!Program_Service__c.End_Date__c}
+{!Program_Service__c.Course_Term__c}
+{!Program_Service__c.Course_Type__c}
+{!Program_Service__c.Lead_Staff__c}
+{!Program_Service__c.Status_of_Course__c}
+{!Program_Service__c.Number_of_Places__c}
+<apex:messages />
+</apex:page>

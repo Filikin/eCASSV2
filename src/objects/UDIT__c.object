@@ -1,0 +1,4262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AUDIT_Final_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>AUDIT_Sub_Score_1__c  +  AUDIT_Sub_Score_2__c  +  AUDIT_Sub_Score_3__c  +  AUDIT_Sub_Score_4__c  +  AUDIT_Sub_Score_5__c  +   AUDIT_Sub_Score_6__c  +  AUDIT_Sub_Score_7__c  +  AUDIT_Sub_Score_8__c  +  AUDIT_Sub_Score_9__c  +  AUDIT_Sub_Score_10__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>16-24 = Harmful, 25-40 = Hazardous &amp; 20 to 40 indicates dependence</inlineHelpText>
+        <label>AUDIT Final Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_10__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Has_concerned_person_suggested_cut_down__c  ),
+&quot;NO&quot;, 0,
+&quot;Yes, but not in last year&quot;, 2,
+&quot;Yes, during the last year&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(How_often_do_you_drink_alcohol__c) , 
+&quot;NEVER&quot;, 0,
+&quot;Monthly or less&quot;, 1,
+&quot;2 to 4 times a month&quot;, 2,
+&quot;2 to 3 times a week&quot;, 3,
+&quot;4 or more times a week&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( How_many_drinks_do_you_have_typical_day__c ) ,
+&quot;1 or 2&quot;, 0,
+&quot;3 or 4&quot;, 1,
+&quot;5 or 6&quot;, 2,
+&quot;7 to 9&quot;, 3,
+&quot;10 or more&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( How_often_do_you_have_5_or_more_drinks__c ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(  How_often_you_were_not_able_stop_drink__c  ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_5__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(  How_often_you_failed_do_expected_of_you__c  ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_6__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(  How_often_you_needed_a_drink_in_morning__c  ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_7__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(  How_often_you_had_a_remorse_after_drink__c  ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_8__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(  How_often_you_unable_remember_last_night__c  ) ,
+&quot;NEVER&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AUDIT_Sub_Score_9__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( Have_you_been_injured_because_of_drink__c ),
+&quot;NO&quot;, 0,
+&quot;Yes, but not in last year&quot;, 2,
+&quot;Yes, during the last year&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUDIT Sub Score 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client__r.Age__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anyone_worried_about_your_drug_use__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Concern from others
+11. Has a relative or a friend, a doctor or a nurse, or anyone else, been worried about your drug use or said to you that you should stop using drugs?</inlineHelpText>
+        <label>Anyone worried about your drug use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, but not over the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, over the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( How_often_do_you_use_cannabis__c ), 
+&quot;Never&quot;, 0,
+&quot;Monthly or less&quot;, 1,
+&quot;2-4 Times A Month&quot;, 2,
+&quot;2-3 times a week&quot;, 3,
+&quot;4 or more times a week&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( Hours_were_you_stoned_using_cannabis__c ), 
+&quot;Less than 1&quot;, 0,
+&quot;1 or 2&quot;, 1,
+&quot;3 or 4&quot;, 2,
+&quot;5 or 6&quot;, 3,
+&quot;7 or more&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( How_often_unable_to_stop_using_cannabis__c ), 
+&quot;Never&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2, 
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Fail_to_do_the_expected_due_to_cannabis__c  ),
+&quot;Never&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_5__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Time_using_recovering_from_cannabis__c  ),
+&quot;Never&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_6__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Problem_with_your_memory_after_cannabis__c  ),
+&quot;Never&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_7__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  You_use_cannabis_physically_hazardous__c  ),
+&quot;Never&quot;, 0,
+&quot;Less than monthly&quot;, 1,
+&quot;Monthly&quot;, 2,
+&quot;Weekly&quot;, 3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Sub_Score_8__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Have_you_ever_thought_stopping_cannabis__c ),
+&quot;Never&quot;, 0,
+&quot;Yes, but not in the past 6 months&quot;, 2,
+&quot;Yes, during the past 6 months&quot;, 4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Sub Score 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CUDIT_Total_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CUDIT_Sub_Score_1__c + CUDIT_Sub_Score_2__c + CUDIT_Sub_Score_3__c + CUDIT_Sub_Score_4__c + CUDIT_Sub_Score_5__c + CUDIT_Sub_Score_6__c + CUDIT_Sub_Score_7__c + CUDIT_Sub_Score_8__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CUDIT Total Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client__c</fullName>
+        <externalId>false</externalId>
+        <label>Client</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>UDIT</relationshipLabel>
+        <relationshipName>UDIT</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Client_progress_to_an_initial_assessment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is it recommended service user progress to an initial assessment?</inlineHelpText>
+        <label>Client progress to an initial assessment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Consent_given_to_refer_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Consent given to refer 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Consent_given_to_refer_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Consent given to refer 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Consent_given_to_refer_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Consent given to refer 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Consent_given_to_refer_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Consent given to refer 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_10__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Mental_physically_hurt_because_used_drug__c ),
+&quot;NO&quot;,0,
+&quot;Yes, but not over the last year&quot;,2,
+&quot;Yes, over the last year&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_11__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( Anyone_worried_about_your_drug_use__c  ),
+&quot;NO&quot;,0,
+&quot;Yes, but not over the last year&quot;,2,
+&quot;Yes, over the last year&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 11</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( How_often_use_drugs_other_than_alcohol__c ), 
+&quot;Never&quot;,0,
+&quot;Once a month or less often&quot;,1,
+&quot;2-4 times a month&quot;,2,
+&quot;2-3 times a week&quot;,3,
+&quot;4 times a week or more&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Use_more_than_one_drug_per_occasion__c  ),
+&quot;Never&quot;,0,
+&quot;Once a month or less often&quot;,1,
+&quot;2-4 times a month&quot;,2,
+&quot;2-3 times a week&quot;,3,
+&quot;4 times a week or more often&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( Times_you_take_drugs_on_a_typical_day__c ),
+&quot;0&quot;,0,
+&quot;1-2&quot;,1,
+&quot;3-4&quot;,2,
+&quot;5-6&quot;,3,
+&quot;7 or more&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( How_often_you_heavily_influenced_by_drug__c ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_5__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Long_for_drugs_so_strong_couldn_t_resist__c  ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_6__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  You_unable_to_stop_drugs_once_started__c  ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_7__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Fail_to_do_the_expected_due_to_drugs__c  ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_8__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  You_needed_drugs_after_heavy_drug_use__c  ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUDIT_Sub_Score_9__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(  Had_guilt_feelings_because_you_used_drug__c  ),
+&quot;Never&quot;,0,
+&quot;Less often than once a month&quot;,1,
+&quot;Every month&quot;,2,
+&quot;Every week&quot;,3,
+&quot;Daily or almost daily&quot;,4,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DUDIT Sub Score 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Discussed_a_follow_up_plan_from__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>We have discussed a follow up plan from this service on any agreed referrals as part of this screening process?</inlineHelpText>
+        <label>Discussed a follow up plan from</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Discussed_outcome_CUDIT_R_with_client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you discussed the outcome of the CUDIT -R with the service user and provided brief intervention?</inlineHelpText>
+        <label>Discussed outcome CUDIT-R  with client</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Discussed_outcome_of_AUDIT_with_client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you discussed the outcome of the AUDIT with the service user and provided brief intervention</inlineHelpText>
+        <label>Discussed outcome of AUDIT with client</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Discussed_reason_why_service_be_helpful__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If a referral is required to another substance misuse service; you have discussed with service user the reason why this would be helpful</inlineHelpText>
+        <label>Discussed reason why service be helpful</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fail_to_do_the_expected_due_to_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>4. How often during the past 6 months did you fail to do what was normally expected from you because of using cannabis?</inlineHelpText>
+        <label>Fail to do the expected due to cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fail_to_do_the_expected_due_to_drugs__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Priority of drug use
+7. How often over the past year have you taken drugs and then not done something you should have done?</inlineHelpText>
+        <label>Fail to do the expected due to drugs</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Client__r.X4_Gender__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gender</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Had_guilt_feelings_because_you_used_drug__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Guilt feelings
+9. How often over the past year have you had guilt feelings or a bad conscience because you used drugs?</inlineHelpText>
+        <label>Had guilt feelings because you used drug</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Has_concerned_person_suggested_cut_down__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>10. Has a relative, friend, doctor or other health care worker been concerned about your drinking or suggested you cut down?</inlineHelpText>
+        <label>Has concerned person suggested cut down</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, but not in last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, during the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_been_injured_because_of_drink__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>9. Have you or someone else been injured because of your drinking?</inlineHelpText>
+        <label>Have you been injured because of drink</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, but not in last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, during the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_thought_stopping_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>8. Have you ever thought about cutting down, or stopping, your use of cannabis?</inlineHelpText>
+        <label>Have you ever thought stopping cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, but not in the past 6 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, during the past 6 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Hours_were_you_stoned_using_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>2. How many hours were you ‘stoned’ on a typical day when you had been using cannabis?</inlineHelpText>
+        <label>Hours were you stoned using cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Less than 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_many_drinks_do_you_have_typical_day__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>2. How many standard drinks containing alcohol do you have on a typical day when you are drinking?</inlineHelpText>
+        <label>How many drinks do you have typical day</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 to 9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_do_you_drink_alcohol__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>1. How often do you have a drink containingc alcohol?</inlineHelpText>
+        <label>How often do you drink alcohol?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 to 4 times a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 to 3 times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_do_you_have_5_or_more_drinks__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>3. How often do you have 5 or more drinks in one occasion?</inlineHelpText>
+        <label>How often do you have 5 or more drinks</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_do_you_use_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>1. How often do you use cannabis?</inlineHelpText>
+        <label>How often do you use cannabis?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-4 Times A Month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_unable_to_stop_using_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>3. How often during the past 6 months did you find that you were not able to stop using cannabis once you had started?</inlineHelpText>
+        <label>How often unable to stop using cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_use_drugs_other_than_alcohol__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Frequency per week/month
+1. How often do you use drugs other than alcohol?</inlineHelpText>
+        <label>How often use drugs other than alcohol</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 times a week or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_failed_do_expected_of_you__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>5. How often in the last year have you failed to do what was normally expected of you because of drinking?</inlineHelpText>
+        <label>How often you failed do expected of you</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_had_a_remorse_after_drink__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>7. How often during the last year have you had a feeling of guilt or remorse after drinking?</inlineHelpText>
+        <label>How often you had a remorse after drink</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_heavily_influenced_by_drug__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Heavy use
+4. How often are you heavily influenced by drugs</inlineHelpText>
+        <label>How often you heavily influenced by drug</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_needed_a_drink_in_morning__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>6. How often during the last year have you needed a first drink in the morning to get yourself going ager a heavy drinking session?</inlineHelpText>
+        <label>How often you needed a drink in morning</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_unable_remember_last_night__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>8. How often during the last year have you been unable to remember what happened the night before because of your drinking?</inlineHelpText>
+        <label>How often you unable remember last night</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>How_often_you_were_not_able_stop_drink__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>4. How often during the last year have you found that you were not able to stop drinking once you started?</inlineHelpText>
+        <label>How often you were not able stop drink</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>If_yes_specify_risk_assessment_required__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, what is the identified risk assessment(s) required?</inlineHelpText>
+        <label>If yes, specify risk assessment required</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>If_yes_specify_risk_identfied__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, what is the identified risk assessment(s) required?</inlineHelpText>
+        <label>If yes, specify risk identfied</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Info_to_be_provided_back_to_ref_agency__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you discussed with the service user follow up information to be provided back to the referring agency and have agreed the information to be feedback?</inlineHelpText>
+        <label>Info to be provided back to ref agency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Long_for_drugs_so_strong_couldn_t_resist__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Craving
+5. Over the past year, have you felt that your longing for drugs was so strong that you could not resist it?</inlineHelpText>
+        <label>Long for drugs so strong couldn&apos;t resist</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Mental_physically_hurt_because_used_drug__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Harmful use
+10. Have you or anyone else been mentally/physically hurt because you used drugs?</inlineHelpText>
+        <label>Mental/physically hurt because used drug</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, but not over the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes, over the last year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Name_of_Assessment_Keyworker__c</fullName>
+        <externalId>false</externalId>
+        <label>Name of Assessment Keyworker</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offered_to_service_user_debrief_session__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you offered the service user a debrief session?</inlineHelpText>
+        <label>Offered to service user debrief session</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Outcome_of_CUDIT_R__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( CUDIT_Total_Score__c ,
+1,&quot;Low risk&quot;,
+2,&quot;Low risk&quot;,
+3,&quot;Low risk&quot;,
+4,&quot;Low risk&quot;,
+5,&quot;Low risk&quot;,
+6,&quot;Low risk&quot;,
+7,&quot;Low risk&quot;,
+8,&quot;Low risk&quot;,
+9,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+10,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+11,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+12,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+13,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+14,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+15,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+16,&quot;Hazardous cannabis use. You are likely to be having cannabis related problems&quot;,
+17,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+18,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+19,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+20,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+21,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+22,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+23,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+24,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+25,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+26,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+27,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+28,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+29,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+30,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+31,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+32,&quot;High level of cannabis use. You are most likely dependant on the drug&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Outcome of CUDIT - R</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Problem_with_your_memory_after_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>6. How often in the past 6 months have you had a problem with you memory or concentration after using cannabis?</inlineHelpText>
+        <label>Problem with your memory after cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_referral_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for referral 1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_referral_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for referral 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_referral_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for referral 3</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_referral_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for referral 4</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_been_identified_required_assessment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Have risks been identified that required risk assessments</inlineHelpText>
+        <label>Risk been identified required assessment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not at this time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Service_1_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service 1 Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_2_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service 2 Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_3_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service 3 Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_4_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service 4 Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signed_consent_form_for_referral_A__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>You and the service user completed and signed a consent form for referral and release of AUDIT, if appropriate</inlineHelpText>
+        <label>Signed consent form for referral A</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signed_consent_form_for_referral_C__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>You and the service user completed and signed a consent form for referral and release of CUDIT - R, if appropriate</inlineHelpText>
+        <label>Signed consent form for referral C</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signed_consent_form_for_referral_D__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>You and the service user completed and signed a consent form for referral and release of DUDIT, if appropriate</inlineHelpText>
+        <label>Signed consent form for referral D</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sub_score_for_alcohol_related_problems__c</fullName>
+        <externalId>false</externalId>
+        <formula>AUDIT_Sub_Score_7__c + AUDIT_Sub_Score_8__c + AUDIT_Sub_Score_9__c + AUDIT_Sub_Score_10__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub score for alcohol related problems:</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_score_for_dependence__c</fullName>
+        <externalId>false</externalId>
+        <formula>AUDIT_Sub_Score_4__c + AUDIT_Sub_Score_5__c + AUDIT_Sub_Score_6__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub score for dependence:</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_score_relating_to_consumption__c</fullName>
+        <externalId>false</externalId>
+        <formula>AUDIT_Sub_Score_1__c + AUDIT_Sub_Score_2__c + AUDIT_Sub_Score_3__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sub score relating to consumption:</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_using_recovering_from_cannabis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>5. How often is the past 6 months have you devoted a great deal of your time to getting, using or recovering from cannabis?</inlineHelpText>
+        <label>Time using/recovering from cannabis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Times_you_take_drugs_on_a_typical_day__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Frequency per day
+3. How many times do you take drugs on a typical day when you use drugs?</inlineHelpText>
+        <label>Times you take drugs on a typical day</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1-2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3-4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5-6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_DUDIT_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>DUDIT_Sub_Score_1__c + DUDIT_Sub_Score_2__c + DUDIT_Sub_Score_3__c + DUDIT_Sub_Score_4__c + DUDIT_Sub_Score_5__c + DUDIT_Sub_Score_6__c + DUDIT_Sub_Score_7__c + DUDIT_Sub_Score_8__c + DUDIT_Sub_Score_9__c + DUDIT_Sub_Score_10__c + DUDIT_Sub_Score_11__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total DUDIT Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Use_more_than_one_drug_per_occasion__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Poly-drug use
+2. Do you use more than one type of drug on the same occasion?</inlineHelpText>
+        <label>Use more than one drug per occasion?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 times a week or more often</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Used_cannabis_over_the_past_six_months__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you used any cannabis over the past six months?</inlineHelpText>
+        <label>Used cannabis over the past six months?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>You_needed_drugs_after_heavy_drug_use__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>‘Eye opener’ or Hair of the dog
+8. How often over the past year have you needed to take a drug the morning after heavy drug use the day before?</inlineHelpText>
+        <label>You needed drugs after heavy drug use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>You_unable_to_stop_drugs_once_started__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Objective: Loss of control
+6. Has it happened, over the past year that you have not been able to stop taking drugs once you started?</inlineHelpText>
+        <label>You unable to stop drugs once started</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>You_use_cannabis_physically_hazardous__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>7. How often do you use cannabis in situations that could be physically hazardous, such as driving, operating machinery, or caring for children:</inlineHelpText>
+        <label>You use cannabis physically hazardous</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>UDIT</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>UDIT-{ddmmyy}-{000}</displayFormat>
+        <label>UDIT Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>UDIT</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>AUDIT</fullName>
+        <active>true</active>
+        <description>AUDIT - Screening Tool (World Health Organisation)</description>
+        <label>AUDIT</label>
+        <picklistValues>
+            <picklist>Anyone_worried_about_your_drug_use__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_progress_to_an_initial_assessment__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_1__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_2__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_3__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_4__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Discussed_a_follow_up_plan_from__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_drugs__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Had_guilt_feelings_because_you_used_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Has_concerned_person_suggested_cut_down__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_been_injured_because_of_drink__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_ever_thought_stopping_cannabis__c</picklist>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in the past 6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the past 6 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hours_were_you_stoned_using_cannabis__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_many_drinks_do_you_have_typical_day__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 to 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_drink_alcohol__c</picklist>
+            <values>
+                <fullName>2 to 3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 to 4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_have_5_or_more_drinks__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_use_cannabis__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 Times A Month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_unable_to_stop_using_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_use_drugs_other_than_alcohol__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_failed_do_expected_of_you__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_had_a_remorse_after_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_heavily_influenced_by_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_needed_a_drink_in_morning__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_unable_remember_last_night__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_were_not_able_stop_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Info_to_be_provided_back_to_ref_agency__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Long_for_drugs_so_strong_couldn_t_resist__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Mental_physically_hurt_because_used_drug__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offered_to_service_user_debrief_session__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_with_your_memory_after_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_been_identified_required_assessment__c</picklist>
+            <values>
+                <fullName>Not at this time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Time_using_recovering_from_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Times_you_take_drugs_on_a_typical_day__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5-6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_more_than_one_drug_per_occasion__c</picklist>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more often</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_needed_drugs_after_heavy_drug_use__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_unable_to_stop_drugs_once_started__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_use_cannabis_physically_hazardous__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CUDIT</fullName>
+        <active>true</active>
+        <description>Cannabis Screening Tool Domain - CUDIT-R</description>
+        <label>CUDIT</label>
+        <picklistValues>
+            <picklist>Anyone_worried_about_your_drug_use__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_progress_to_an_initial_assessment__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_1__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_2__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_3__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_4__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Discussed_a_follow_up_plan_from__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_drugs__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Had_guilt_feelings_because_you_used_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Has_concerned_person_suggested_cut_down__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_been_injured_because_of_drink__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_ever_thought_stopping_cannabis__c</picklist>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in the past 6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the past 6 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hours_were_you_stoned_using_cannabis__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_many_drinks_do_you_have_typical_day__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 to 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_drink_alcohol__c</picklist>
+            <values>
+                <fullName>2 to 3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 to 4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_have_5_or_more_drinks__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_use_cannabis__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 Times A Month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_unable_to_stop_using_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_use_drugs_other_than_alcohol__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_failed_do_expected_of_you__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_had_a_remorse_after_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_heavily_influenced_by_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_needed_a_drink_in_morning__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_unable_remember_last_night__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_were_not_able_stop_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Info_to_be_provided_back_to_ref_agency__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Long_for_drugs_so_strong_couldn_t_resist__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Mental_physically_hurt_because_used_drug__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offered_to_service_user_debrief_session__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_with_your_memory_after_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_been_identified_required_assessment__c</picklist>
+            <values>
+                <fullName>Not at this time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Time_using_recovering_from_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Times_you_take_drugs_on_a_typical_day__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5-6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_more_than_one_drug_per_occasion__c</picklist>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more often</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_needed_drugs_after_heavy_drug_use__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_unable_to_stop_drugs_once_started__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_use_cannabis_physically_hazardous__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>DUDIT</fullName>
+        <active>true</active>
+        <description>Screening Tool Domain – DUDIT</description>
+        <label>DUDIT</label>
+        <picklistValues>
+            <picklist>Anyone_worried_about_your_drug_use__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_progress_to_an_initial_assessment__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_1__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_2__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_3__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Consent_given_to_refer_4__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Discussed_a_follow_up_plan_from__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Fail_to_do_the_expected_due_to_drugs__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Had_guilt_feelings_because_you_used_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Has_concerned_person_suggested_cut_down__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_been_injured_because_of_drink__c</picklist>
+            <values>
+                <fullName>NO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_you_ever_thought_stopping_cannabis__c</picklist>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not in the past 6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C during the past 6 months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Hours_were_you_stoned_using_cannabis__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_many_drinks_do_you_have_typical_day__c</picklist>
+            <values>
+                <fullName>1 or 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 or 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 or 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 to 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_drink_alcohol__c</picklist>
+            <values>
+                <fullName>2 to 3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 to 4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_have_5_or_more_drinks__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_do_you_use_cannabis__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 Times A Month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 or more times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly or less</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_unable_to_stop_using_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_use_drugs_other_than_alcohol__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_failed_do_expected_of_you__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_had_a_remorse_after_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_heavily_influenced_by_drug__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_needed_a_drink_in_morning__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_unable_remember_last_night__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_often_you_were_not_able_stop_drink__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEVER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Info_to_be_provided_back_to_ref_agency__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Long_for_drugs_so_strong_couldn_t_resist__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Mental_physically_hurt_because_used_drug__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C but not over the last year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes%2C over the last year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offered_to_service_user_debrief_session__c</picklist>
+            <values>
+                <fullName>Declined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_with_your_memory_after_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_been_identified_required_assessment__c</picklist>
+            <values>
+                <fullName>Not at this time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Time_using_recovering_from_cannabis__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Times_you_take_drugs_on_a_typical_day__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5-6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 or more</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_more_than_one_drug_per_occasion__c</picklist>
+            <values>
+                <fullName>2-3 times a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-4 times a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 times a week or more often</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Once a month or less often</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_needed_drugs_after_heavy_drug_use__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_unable_to_stop_drugs_once_started__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Every week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less often than once a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>You_use_cannabis_physically_hazardous__c</picklist>
+            <values>
+                <fullName>Daily or almost daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less than monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>
