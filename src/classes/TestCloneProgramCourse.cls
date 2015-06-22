@@ -10,7 +10,7 @@ private class TestCloneProgramCourse
 	{
     	Contact client = new Contact (LastName='Test '+count);
     	insert client;
-      	Enrolment__c en = new Enrolment__c (Name='Session '+count, Program_Service__c=course.id, Young_Person__c=client.id);
+      	Enrolment__c en = new Enrolment__c (Name='Session '+count, Program_Service__c=course.id, Young_Person__c=client.id, Status_on_Programme__c='Active');
     	insert en;
 	}
 

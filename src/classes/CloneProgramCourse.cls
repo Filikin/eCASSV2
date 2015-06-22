@@ -21,8 +21,9 @@ global with sharing class CloneProgramCourse
 		insert clonePS;
 
 		list <Enrolment__c> clonedEnrolments = new list <Enrolment__c>();
-		for (Enrolment__c oldEnrolment : [select id, Name, Young_Person__c, Care_Plan_Objective__c, Date_joined_program__c from Enrolment__c where Program_Service__c = :ps.id])
+		for (Enrolment__c oldEnrolment : [select id, Status_on_Programme__c, Name, Young_Person__c, Care_Plan_Objective__c, Date_joined_program__c from Enrolment__c where Program_Service__c = :ps.id])
 		{
+			if (AppConfigSupport.OnlyCloneActiveEnrolments == true && oldEnrolment.Status_on_Programme__c != 'Active') continue;
 			Enrolment__c clonedEnrolment = oldEnrolment.clone (false, true);
 			clonedEnrolment.Program_Service__c = clonePS.id;
 			clonedEnrolments.add (clonedEnrolment);

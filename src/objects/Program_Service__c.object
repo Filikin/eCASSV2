@@ -430,4 +430,14 @@
         <searchResultsAdditionalFields>Title_id__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Clone_with_Enrolments</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Clone with Enrolments</masterLabel>
+        <openType>replace</openType>
+        <page>CloneProgramCourse</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

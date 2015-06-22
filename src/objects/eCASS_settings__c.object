@@ -116,6 +116,15 @@ Everything else is left alone</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Only_clone_active_enrolments__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>When this is turned on, the &quot;Clone with Enrolments&quot; button on the Program/Course only clones the enrolments where the status is Active, otherwise it clones them all</inlineHelpText>
+        <label>Only clone active enrolments</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Organisation_Name__c</fullName>
         <defaultValue>&quot;Organisation&quot;</defaultValue>
         <externalId>false</externalId>

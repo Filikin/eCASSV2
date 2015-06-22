@@ -241,4 +241,8 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Clone_with_Enrolments --></label>
+        <name>Clone_with_Enrolments</name>
+    </webLinks>
 </CustomObjectTranslation>

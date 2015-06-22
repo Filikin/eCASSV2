@@ -35,6 +35,7 @@ global with sharing class AppConfigSupport {
 				theobject.Organisation_Name__c = 'Test';
 				theobject.Rules_on__c = true;
 				theobject.Referral_Name_Template__c = 'REF-$NAME$-$DATE$';
+				theobject.Only_clone_active_enrolments__c = true;
 				testconfig = theobject;
 			}
 		}
@@ -118,6 +119,14 @@ global with sharing class AppConfigSupport {
 		get
 		{
 			return GeteCASSSettings().Referral_Name_Template__c;
+		}
+	}
+	
+	public static Boolean OnlyCloneActiveEnrolments
+	{
+		get
+		{
+			return GeteCASSSettings().Only_clone_active_enrolments__c;
 		}
 	}
 }

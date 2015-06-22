@@ -66,6 +66,11 @@ Everything else is left alone --></help>
         <name>HRB_Form_Name_Template__c</name>
     </fields>
     <fields>
+        <help><!-- When this is turned on, the &quot;Clone with Enrolments&quot; button on the Program/Course only clones the enrolments where the status is Active, otherwise it clones them all --></help>
+        <label><!-- Only clone active enrolments --></label>
+        <name>Only_clone_active_enrolments__c</name>
+    </fields>
+    <fields>
         <label><!-- Organisation Name --></label>
         <name>Organisation_Name__c</name>
     </fields>
