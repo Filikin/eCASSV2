@@ -48,10 +48,13 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Used to select the range and type of HRB Report</description>
     <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Period__c</fullName>
         <externalId>false</externalId>
@@ -140,6 +143,16 @@
         <searchFilterFields>NAME</searchFilterFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Attach_HRB_Forms</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Attach HRB Forms</masterLabel>
+        <openType>replace</openType>
+        <page>AddTreatmentToReport</page>
+        <protected>false</protected>
+    </webLinks>
     <webLinks>
         <fullName>Generate_Report</fullName>
         <availability>online</availability>

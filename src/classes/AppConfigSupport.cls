@@ -3,8 +3,9 @@
 	Purpose: Provide centralised access to the custom settings and make a copy available in test
 	Copied from Advanced Apex Programming by Dan Appleman
 */
-public with sharing class AppConfigSupport {
+global with sharing class AppConfigSupport {
 	private static eCASS_settings__c testconfig = null;
+	public static final Integer MAX_NAME_SIZE = 30;
 	
 	public static eCASS_settings__c GeteCASSSettings()
 	{
@@ -34,6 +35,7 @@ public with sharing class AppConfigSupport {
 				theobject.Organisation_Name__c = 'Test';
 				theobject.Rules_on__c = true;
 				theobject.Referral_Name_Template__c = 'REF-$NAME$-$DATE$';
+				theobject.Only_clone_active_enrolments__c = true;
 				testconfig = theobject;
 			}
 		}
@@ -96,7 +98,7 @@ public with sharing class AppConfigSupport {
 		}
 	}
 	
-	public static Boolean TriggersDisabled
+	global static Boolean TriggersDisabled
 	{
 		get
 		{
@@ -104,7 +106,7 @@ public with sharing class AppConfigSupport {
 		}
 	}
 
-	public static Boolean ValidationRulesOn
+	global static Boolean ValidationRulesOn
 	{
 		get
 		{
@@ -117,6 +119,14 @@ public with sharing class AppConfigSupport {
 		get
 		{
 			return GeteCASSSettings().Referral_Name_Template__c;
+		}
+	}
+	
+	public static Boolean OnlyCloneActiveEnrolments
+	{
+		get
+		{
+			return GeteCASSSettings().Only_clone_active_enrolments__c;
 		}
 	}
 }

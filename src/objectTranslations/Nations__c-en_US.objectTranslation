@@ -8,13 +8,5 @@
         <plural>true</plural>
         <value>Nations</value>
     </caseValues>
-    <fields>
-        <label><!-- ANCHORID --></label>
-        <name>ANCHORID__c</name>
-    </fields>
-    <fields>
-        <label><!-- NationCode --></label>
-        <name>NationCode__c</name>
-    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

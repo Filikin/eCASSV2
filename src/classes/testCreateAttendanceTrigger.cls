@@ -27,7 +27,7 @@ private class testCreateAttendanceTrigger
         
         Integer preAttendances = [select count() from Attendance__c];
         
-        Program_Session__c session = new Program_Session__c (Program_Service__c=program.id);
+        Program_Session__c session = new Program_Session__c (Program_Service__c=program.id, Session_Date__c= system.today());
         insert session;
         
         ProgramAttendanceListView rsa = new ProgramAttendanceListView(session);
@@ -38,7 +38,7 @@ private class testCreateAttendanceTrigger
         system.assert (postAttendances > preAttendances);
 
         // tick all the attendances
-        list<Attendance__c>attendances = [select Id, Attended__c from Attendance__c where Program_Session__c = :session.Id];
+        list<Attendance__c>attendances = [select Id, Attended__c, Young_Person__c from Attendance__c where Program_Session__c = :session.Id];
         for (Attendance__c oneAtt: attendances) oneAtt.Attended__c = true;
         update attendances;
         
@@ -50,10 +50,11 @@ private class testCreateAttendanceTrigger
         insert enrole3;
         
         // test an attendance been deleted
+        ID contactWithDeletedAttendance = attendances[0].Young_Person__c;      
         delete attendances[0];
         session = [select Attendances__c from Program_Session__c where Id = :session.Id];
         system.assertEquals (1, session.Attendances__c);
-        
+               
         // count the enrolments in the course
         program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
         system.assertEquals (3, program.Total_EnrolmentsV2__c);
@@ -68,7 +69,9 @@ private class testCreateAttendanceTrigger
         delete enrole;
         program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
         system.assertEquals (1, program.Total_EnrolmentsV2__c);
+        
     }
+     
     
     static testMethod void testCreateCarePlanStepAttendanceTrigger()
     {

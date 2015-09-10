@@ -8,44 +8,5 @@
         <plural>true</plural>
         <value>Drop-in</value>
     </caseValues>
-    <fields>
-        <label><!-- Date --></label>
-        <name>Date__c</name>
-    </fields>
-    <fields>
-        <label><!-- Drop-In --></label>
-        <name>Drop_In__c</name>
-        <picklistValues>
-            <masterLabel>Monday Social</masterLabel>
-            <translation><!-- Monday Social --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Tuesday AM</masterLabel>
-            <translation><!-- Tuesday AM --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Tuesday PM</masterLabel>
-            <translation><!-- Tuesday PM --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Speaker --></label>
-        <name>Speaker__c</name>
-    </fields>
-    <fields>
-        <label><!-- Video --></label>
-        <name>Video__c</name>
-    </fields>
-    <fields>
-        <label><!-- What Happened --></label>
-        <name>What_Happened__c</name>
-    </fields>
-    <layouts>
-        <layout>Drop-in Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

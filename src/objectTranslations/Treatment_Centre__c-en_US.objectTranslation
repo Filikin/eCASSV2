@@ -8,45 +8,5 @@
         <plural>true</plural>
         <value>Treatment Centres</value>
     </caseValues>
-    <fields>
-        <label><!-- ANCHORID --></label>
-        <name>ANCHORID__c</name>
-    </fields>
-    <fields>
-        <label><!-- CCA --></label>
-        <name>CCA__c</name>
-    </fields>
-    <fields>
-        <label><!-- CentreNo --></label>
-        <name>CentreNo__c</name>
-    </fields>
-    <fields>
-        <label><!-- CentreType --></label>
-        <name>CentreType__c</name>
-    </fields>
-    <fields>
-        <label><!-- CountyCode --></label>
-        <name>CountyCode__c</name>
-    </fields>
-    <fields>
-        <label><!-- HB --></label>
-        <name>HB__c</name>
-    </fields>
-    <fields>
-        <label><!-- Login --></label>
-        <name>Login__c</name>
-    </fields>
-    <fields>
-        <label><!-- PI --></label>
-        <name>PI__c</name>
-    </fields>
-    <fields>
-        <label><!-- StatType --></label>
-        <name>StatType__c</name>
-    </fields>
-    <fields>
-        <label><!-- Transfer --></label>
-        <name>Transfer__c</name>
-    </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

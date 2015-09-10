@@ -41,14 +41,17 @@ trigger CreateUpdateCarePlanStepOnAttendance on Attendance__c (after insert, aft
                 else
                 {
                     Care_plan_step__c oneStep = currentStepsMap.get (oneAttendance.id);
-                    oneStep.Date__c=oneAttendance.Care_plan_step_date__c;
-                    oneStep.Description__c=oneAttendance.Care_plan_step_description__c;
-                    
-                    oneStep.Status_Comment__c = '';
-                    if (oneAttendance.Comment__c != null) oneStep.Status_Comment__c = oneAttendance.Comment__c;
-                    if (oneAttendance.Comment__c != null && oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += ' - ';
-                    if (oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += 'Interaction: ' + oneAttendance.Interaction__c;
-                    oneStep.Status__c = oneAttendance.Attended__c ? 'Attended' : 'Did not attend';
+                    if (oneStep != null)
+                    {
+	                    oneStep.Date__c=oneAttendance.Care_plan_step_date__c;
+	                    oneStep.Description__c=oneAttendance.Care_plan_step_description__c;
+	                    
+	                    oneStep.Status_Comment__c = '';
+	                    if (oneAttendance.Comment__c != null) oneStep.Status_Comment__c = oneAttendance.Comment__c;
+	                    if (oneAttendance.Comment__c != null && oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += ' - ';
+	                    if (oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += 'Interaction: ' + oneAttendance.Interaction__c;
+	                    oneStep.Status__c = oneAttendance.Attended__c ? 'Attended' : 'Did not attend';
+	                }
                 }
             }
         }       

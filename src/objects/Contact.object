@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>AddContact</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>AddToCampaign</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -53,10 +57,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>MapHighlightAction</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>Merge</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -97,6 +97,7 @@
     <enableHistory>false</enableHistory>
     <fields>
         <fullName>AccountId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -136,12 +137,33 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Area of Residence and Reg Code</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Area_of_Residence__c.Tableyear2012__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>Area_of_Residence__c</referenceTo>
         <relationshipLabel>Contacts</relationshipLabel>
         <relationshipName>Contacts</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssistantName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AssistantPhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Birthdate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>CCA__c</fullName>
@@ -168,6 +190,15 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Case Worker</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>General contact</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Contacts (Case Worker)</relationshipLabel>
         <relationshipName>Contacts1</relationshipName>
@@ -255,6 +286,18 @@
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Department</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>EDLEVEL__c</fullName>
@@ -374,6 +417,10 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>EmployCode__c</fullName>
         <externalId>false</externalId>
         <formula>Case( X11_Employement_Status__c,
@@ -410,6 +457,10 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Full_name__c</fullName>
         <externalId>false</externalId>
         <formula>FirstName &amp; &quot; &quot; &amp; LastName</formula>
@@ -434,6 +485,15 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>GP</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Contact_Type__c</field>
+                <operation>equals</operation>
+                <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Contacts (GP)</relationshipLabel>
         <relationshipName>ContactsGP</relationshipName>
@@ -526,6 +586,18 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HomePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Initials__c</fullName>
         <externalId>false</externalId>
         <formula>LEFT (FirstName,1) &amp; LEFT (LastName, 1)</formula>
@@ -545,6 +617,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Key_Worker_Phone__c</fullName>
         <externalId>false</externalId>
         <formula>Key_Worker__r.MobilePhone</formula>
@@ -559,6 +635,15 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Key Worker</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>General contact</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Contacts (Key Worker)</relationshipLabel>
         <relationshipName>Contacts</relationshipName>
@@ -622,6 +707,21 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>LastCURequestDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LastCUUpdateDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Last_face_to_face_contact__c</fullName>
+        <description>Date of most recent attendance (where attended = true).  Set by trigger on attendance record insert and update.</description>
+        <externalId>false</externalId>
+        <label>Last face to face contact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>
@@ -646,6 +746,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -671,12 +772,20 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>MailingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Member_of_staff__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Member of staff</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>NOK_from_other_agency__c</fullName>
@@ -697,6 +806,10 @@
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Nationality__c</fullName>
@@ -756,7 +869,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>OtherAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OtherPhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -769,6 +891,10 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Presenting_Issues__c</fullName>
@@ -816,6 +942,20 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Probation Officer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>General contact</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.Contact_Type__c</field>
+                <operation>equals</operation>
+                <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Contacts (Probation Officer)</relationshipLabel>
         <relationshipName>Contacts2</relationshipName>
@@ -835,19 +975,27 @@
     <fields>
         <fullName>Record_Valid__c</fullName>
         <externalId>false</externalId>
-        <formula>if (isnull( Birthdate ),&quot;No birth date&quot;, 
-if(Age__c &lt; 13 || Age__c &gt; 85, &quot;Age invalid&quot;,  
+        <formula>if( $Setup.eCASS_settings__c.Autonumber_Client_ID__c = false &amp;&amp; isblank (  Client_ID__c  ), &quot;No Client ID&quot;, 
+if( AND(NOT(ISBLANK(Birthdate)),Age__c &lt; 13 || Age__c &gt; 85), &quot;Age invalid&quot;,
 if(ispickval(X4_Gender__c,&quot;&quot;),&quot;No gender&quot;,
-if(ispickval(X7a_Living_with_whom__c ,&quot;&quot;) ,&quot;7a invalid&quot;,
-if(ispickval(X7b_Livin_Where__c ,&quot;&quot;) , &quot;7b invalid&quot;,
-if(isblank(Area_of_Residence_and_Reg_Code__c),&quot;Area of res invalid&quot;,
-if(ispickval(X10a_Nationality__c,&quot;&quot; ),&quot;10a invalid&quot;, 
-if(ispickval(X10b_Ethnic_Background__c,&quot;&quot; ),&quot;10b invalid&quot;,
-if(ispickval(X11_Employement_Status__c,&quot;&quot; ),&quot;11 invalid&quot;, 
+if(ispickval(X7a_Living_with_whom__c ,&quot;&quot;) ,&quot;Q7a invalid&quot;,
+if(ispickval(X7b_Livin_Where__c ,&quot;&quot;) , &quot;Q7b invalid&quot;,
+if(AND(BEGINS(TEXT(X7a_Living_with_whom__c), &quot;2.&quot;), BEGINS(TEXT(X7b_Livin_Where__c), &quot;4&quot;)),&quot;Q7b invalid&quot;,
+if(AND(BEGINS(TEXT(X7b_Livin_Where__c),&quot;3.&quot;)|| BEGINS(TEXT(X7b_Livin_Where__c),&quot;2.&quot;),TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;), &quot;7a invalid&quot;,
+if(ISBLANK(Area_of_Residence_and_Reg_Code__c), &quot;Invalid Area of Residence&quot;,
+if(ispickval(X10a_Nationality__c,&quot;&quot; ),&quot;Q10a invalid&quot;,
+if(ispickval(X10b_Ethnic_Background__c,&quot;&quot; ),&quot;Q10b invalid&quot;,
+if(AND(TEXT( X10a_Nationality__c ) = &quot;2. Other&quot;, ISBLANK( X10a_Nationality_Other__c )),&quot;Q10a Nationality Other Invalid&quot;,
+if(ispickval(X11_Employement_Status__c,&quot;&quot; ),&quot;11 invalid&quot;,
+if(AND(TEXT(X11_Employement_Status__c) = &quot;8. Other (specify)&quot;, ISBLANK( X11_Employement_Status_other__c )),&quot;please complete Q11 Employment Status other&quot;,
 if(AND(TEXT(X11_Employement_Status__c) &lt;&gt; &quot;8. Other (specify)&quot;, NOT(ISBLANK(X11_Employement_Status_other__c))),&quot;11 Employment status other, only required when Q11 = 8. Other (specify)&quot;,
-if(X12a_Age_left_primary_school__c &lt;= 0,&quot;12a invalid&quot;, 
-if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;12b invalid&quot;,
-&quot;HRB OK&quot;))))))))))))</formula>
+if(AND( TEXT(X11_Employement_Status__c )= &quot;4. Student&quot;, TEXT( X12a_Age_left_primary_school__c) = &quot;1&quot;), &quot;Q12a Invalid&quot;,
+if(X12a_Age_left_primary_school__c &lt; 1,&quot;12a invalid&quot;,
+if(AND( TEXT(X11_Employement_Status__c )= &quot;4. Student&quot;, TEXT( X12b_Education_highest_level__c ) &lt;&gt; &quot;8. Still in education&quot;), &quot;Q12b Invalid&quot;,
+if(AND(TEXT(X12b_Education_highest_level__c) = &quot;8. Still in education&quot;,TEXT(X11_Employement_Status__c) &lt;&gt; &quot;4. Student&quot;), &quot;Q11 Invalid&quot;,
+if(AND(Age__c &lt; 16,ispickval(X11_Employement_Status__c ,&quot;2. Unemployed&quot;)),&quot;Q11 Invalid&quot;,
+if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;Q12b invalid&quot;,
+&quot;HRB OK&quot;))))))))))))))))))))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Record Valid</label>
         <required>false</required>
@@ -932,6 +1080,7 @@ if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;12b invalid&qu
     </fields>
     <fields>
         <fullName>ReportsToId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -949,6 +1098,20 @@ if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;12b invalid&qu
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Social worker</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>General contact</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.Contact_Type__c</field>
+                <operation>equals</operation>
+                <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Contacts (Social worker)</relationshipLabel>
         <relationshipName>Contacts3</relationshipName>
@@ -977,6 +1140,10 @@ if(ispickval(X12b_Education_highest_level__c,&quot;&quot; ),&quot;12b invalid&qu
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>X10a_Nationality_Other__c</fullName>
@@ -1374,89 +1541,6 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
         </filters>
         <label>New This Week</label>
     </listViews>
-    <namedFilters>
-        <fullName>Contact_00NG0000008tiOpMAI</fullName>
-        <active>true</active>
-        <field>Contact.GP__c</field>
-        <filterItems>
-            <field>Contact.Contact_Type__c</field>
-            <operation>equals</operation>
-            <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact_GP</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>Contact_00NG0000008viZMMAY</fullName>
-        <active>true</active>
-        <field>Contact.Key_Worker__c</field>
-        <filterItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>General contact</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact_Key Worker</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>Contact_00NG0000008viZRMAY</fullName>
-        <active>true</active>
-        <field>Contact.Case_Worker__c</field>
-        <filterItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>General contact</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact_Case Worker</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>Contact_00NG0000008viZqMAI</fullName>
-        <active>true</active>
-        <field>Contact.Probation_Officer__c</field>
-        <filterItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>General contact</value>
-        </filterItems>
-        <filterItems>
-            <field>Contact.Contact_Type__c</field>
-            <operation>equals</operation>
-            <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact_Probation Officer</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>Contact_00NG0000008via0MAA</fullName>
-        <active>true</active>
-        <field>Contact.Social_worker__c</field>
-        <filterItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>General contact</value>
-        </filterItems>
-        <filterItems>
-            <field>Contact.Contact_Type__c</field>
-            <operation>equals</operation>
-            <value>Key Worker, Case Worker, Counsellor, GP, Probation Officer, Social worker</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact_Social worker</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01Ib0000000TUlbEAG_00Nb0000000iOU9EAM</fullName>
-        <active>true</active>
-        <field>Needle_Exchange__c.Client__c</field>
-        <filterItems>
-            <field>Contact.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Client</value>
-        </filterItems>
-        <infoMessage>Showing only clients</infoMessage>
-        <isOptional>true</isOptional>
-        <name>Needle &amp; Syringe Exchange_Client</name>
-    </namedFilters>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
         <fullName>Client</fullName>
@@ -2383,23 +2467,25 @@ X10a_Nationality_Other__r.NationCode__c))</formula>
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
+    <sharingModel>Private</sharingModel>
     <validationRules>
         <fullName>Client_Homeless</fullName>
-        <active>true</active>
-        <errorConditionFormula>AND(TEXT(X7b_Livin_Where__c) = &quot;3. Homeless&quot;,
+        <active>false</active>
+        <errorConditionFormula>AND( OR(TEXT(X7b_Livin_Where__c) = &quot;3. Homeless&quot;,TEXT(X7b_Livin_Where__c) = &quot;2. Institution(prison/residential care/halfway house)&quot;),
 TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionFormula>
+        <errorDisplayField>X7a_Living_with_whom__c</errorDisplayField>
         <errorMessage>If the client is homeless or in an institution, please, select Q7a = &quot;7. Other&quot;.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Employment_status_other_specified</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>AND( TEXT( X11_Employement_Status__c ) = &quot;8. Other (specify)&quot; , ISBLANK( X11_Employement_Status_other__c ))</errorConditionFormula>
         <errorDisplayField>X11_Employement_Status_other__c</errorDisplayField>
         <errorMessage>If Employment status = 8. Other (specify), please complete Q11 Employment Status other</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Nationality_Other_Specified</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>AND(TEXT( X10a_Nationality__c ) = &quot;2. Other&quot;,  ISBLANK( X10a_Nationality_Other__c ))</errorConditionFormula>
         <errorDisplayField>X10a_Nationality_Other__c</errorDisplayField>
         <errorMessage>If 2, please complete 10a Nationality Other</errorMessage>

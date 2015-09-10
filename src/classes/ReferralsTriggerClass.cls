@@ -27,6 +27,7 @@ public with sharing class ReferralsTriggerClass implements TriggerDispatcher.ITr
 			String clientName = oneRef.Client__c != null ? oneRef.Client__r.Name : '';
 			String clientInitials = oneRef.Client__c != null ? oneRef.Client__r.Initials__c : '';
 			String newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', refDate.format()).replace('$INITIALS$', clientInitials);
+			if (newName.length() > AppConfigSupport.MAX_NAME_SIZE) newName = newName.subString (0, AppConfigSupport.MAX_NAME_SIZE);
 			if (newName != oneRef.Name) 
 			{
 				oneRef.Name = newName;

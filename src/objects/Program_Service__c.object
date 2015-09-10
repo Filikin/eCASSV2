@@ -47,10 +47,13 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Attendance_of_participants__c</fullName>
         <externalId>false</externalId>
@@ -427,4 +430,14 @@
         <searchResultsAdditionalFields>Title_id__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Clone_with_Enrolments</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Clone with Enrolments</masterLabel>
+        <openType>replace</openType>
+        <page>CloneProgramCourse</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

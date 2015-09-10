@@ -2,6 +2,8 @@
 	Author: Eamon Kelly, Enclude
 	Purpose: When a new program session is created, find everyone who is enrolled in the course and create attendances for them in the session
 	Tested in testCreateAttendanceTrigger 
+	
+	History - fixed issue with creating a program containing an attendance with an enrollment with a deleted client
 */
 public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITriggerEntry
 {
@@ -31,11 +33,14 @@ public with sharing class ProgramSessionTrigger implements TriggerDispatcher.ITr
 		    {
 		        for (Enrolment__c onePersonEnrolment: servicesMap.get(sNew.Program_Service__c).Participants__r)
 	    	    {
-	        	    Attendance__c oneAttended = new Attendance__c (Name='FromSession', Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id, RecordTypeId = courseAttendanceRecordTypeId);
-	            	attendances.add (oneAttended);
+	    	    	if (onePersonEnrolment.Young_Person__c != null)
+	    	    	{
+		        	    Attendance__c oneAttended = new Attendance__c (Name='FromSession', Young_Person__c=onePersonEnrolment.Young_Person__c, Program_Session__c=sNew.id, Enrolment__c=onePersonEnrolment.id, RecordTypeId = courseAttendanceRecordTypeId);
+		            	attendances.add (oneAttended);
+	    	    	}
 		        } 
 		    }
-	    	insert attendances;
+	    	if (attendances.size() > 0) insert attendances;
 		}
 	}
 }
