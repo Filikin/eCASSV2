@@ -1,95 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Care_Plan_Add_Standard_Objectives</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Add Standard Objectives</shortDescription>
+        <value>Add Standard Objectives</value>
+    </labels>
+    <labels>
         <fullName>Care_Plan_Administration_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Care Plan Administration title</shortDescription>
         <value>Care Plan Administration</value>
     </labels>
     <labels>
+        <fullName>Care_Plan_Attendance_Steps_Title</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Attendance Steps Title</shortDescription>
+        <value>Attendance Steps</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Hide_Attendance_Steps</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Hide Attendance Steps</shortDescription>
+        <value>Hide Attendance Steps</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_New_Step_button</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan New Step button</shortDescription>
+        <value>New Step</value>
+    </labels>
+    <labels>
         <fullName>Care_Plan_Objective</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Care Plan Objective</shortDescription>
         <value>Care Plan Objective</value>
     </labels>
     <labels>
+        <fullName>Care_Plan_Objective_Plural</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Objective Plural</shortDescription>
+        <value>Objectives</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Review_Details_Header</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Review Details Header</shortDescription>
+        <value>Details of this review</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Review_Details_Title</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Review Details Title</shortDescription>
+        <value>Review Details for</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Review_Saved</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Review Saved</shortDescription>
+        <value>Your changes have been saved</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Review_Title</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Review Title</shortDescription>
+        <value>Care Plan Review</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Review_without_Client</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Review without Client</shortDescription>
+        <value>Please select the client for this review and press Save, you will then be taken to the page to complete the review</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Save_Std_Objective</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Save Std Objective</shortDescription>
+        <value>Save and Add Standard Objectives</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Save_and_Add_new_objective</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Save and Add new objective</shortDescription>
+        <value>Save and Add New Objective</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Show_Attendance_Steps</fullName>
+        <categories>Care plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Show Attendance Steps</shortDescription>
+        <value>Show Attendance Steps</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Step_Lookup_Hints</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Step Lookup Hints</shortDescription>
+        <value>Showing only this client&apos;s task care plan steps</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Step_Lookup_Label</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Step Lookup Label</shortDescription>
+        <value>Search by care plan step name</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Step_Lookup_Name_Column</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Step Lookup Name Column</shortDescription>
+        <value>Ref</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Step_Plural</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Step Plural</shortDescription>
+        <value>Steps</value>
+    </labels>
+    <labels>
+        <fullName>Care_Plan_Task_Steps_Title</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Plan Task Steps Title</shortDescription>
+        <value>Task Steps</value>
+    </labels>
+    <labels>
         <fullName>Care_plan</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Care plan</shortDescription>
         <value>Care plan</value>
     </labels>
     <labels>
         <fullName>Care_plan_objectives</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Care plan objectives</shortDescription>
         <value>Care plan objectives</value>
     </labels>
     <labels>
         <fullName>Care_plan_steps</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Care plan steps</shortDescription>
         <value>Care plan steps</value>
     </labels>
     <labels>
         <fullName>Client</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Client</shortDescription>
         <value>client</value>
     </labels>
     <labels>
+        <fullName>Client_Calendar_Duration_Change_Warning</fullName>
+        <categories>Client Calendar</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Calendar Duration Change Warning</shortDescription>
+        <value>&quot;The end time of &quot; + event.title + &quot; is now &quot; + event.end.format (&apos;HH:mm&apos;) + &quot;\nIs this okay?&quot;</value>
+    </labels>
+    <labels>
+        <fullName>Client_Calendar_Header</fullName>
+        <categories>Client Calendar</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Calendar Header</shortDescription>
+        <value>Calendar for</value>
+    </labels>
+    <labels>
+        <fullName>Client_Calendar_Moving_Warning</fullName>
+        <categories>Client Calendar</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Calendar Moving Warning</shortDescription>
+        <value>&quot;You are moving &quot; + event.title + &quot; to &quot; + event.start.format(&apos;dddd, Do MMMM YYYY HH:mm&apos;) + &quot;\nAre you sure you want to do this?&quot;</value>
+    </labels>
+    <labels>
+        <fullName>Client_Calendar_Title</fullName>
+        <categories>Client Calendar</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Calendar Title</shortDescription>
+        <value>Client Calendar</value>
+    </labels>
+    <labels>
+        <fullName>Clone_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clone Button</shortDescription>
+        <value>Clone</value>
+    </labels>
+    <labels>
         <fullName>Comment</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Comment</shortDescription>
         <value>Comment: Reasons achieved or not!</value>
     </labels>
     <labels>
+        <fullName>Course_Attendance_Record_Type</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Course Attendance Record Type</shortDescription>
+        <value>Course Attendance</value>
+    </labels>
+    <labels>
+        <fullName>Create_Standard_Care_Plan_Button_Title</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Create Standard Care Plan Button Title</shortDescription>
+        <value>Create Standard Care Plan</value>
+    </labels>
+    <labels>
         <fullName>Date</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Date</shortDescription>
         <value>Date</value>
     </labels>
     <labels>
         <fullName>Date_completed</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Date completed</shortDescription>
         <value>Date completed</value>
     </labels>
     <labels>
         <fullName>Date_objective_set</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Date objective set</shortDescription>
         <value>Date objective set</value>
     </labels>
     <labels>
         <fullName>Description</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Description</shortDescription>
         <value>Description</value>
     </labels>
     <labels>
+        <fullName>Drop_In_Attendance_Record_Type</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Drop In Attendance Record Type</shortDescription>
+        <value>Drop In Attendance</value>
+    </labels>
+    <labels>
         <fullName>Drug_and_Alcohol_Use_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Drug and Alcohol Use title</shortDescription>
         <value>Drug and Alcohol Use</value>
     </labels>
     <labels>
+        <fullName>Fields_To_Clone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fields To Clone</shortDescription>
+        <value>These fields will be copied to the new program, you may modify the fields and then press &quot;Clone&quot; to confirm</value>
+    </labels>
+    <labels>
         <fullName>Goal</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Goal</shortDescription>
         <value>Goal</value>
+    </labels>
+    <labels>
+        <fullName>HRB_Add_Treatments_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRB Add Treatments Title</shortDescription>
+        <value>These treatments will be attempted to be added to the report</value>
+    </labels>
+    <labels>
+        <fullName>HRB_Click_to_return_to_report</fullName>
+        <categories>HRB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRB Click to return to report</shortDescription>
+        <value>To return to the HRB report page, click here</value>
     </labels>
     <labels>
         <fullName>HRB_Form_Open_Msg</fullName>
@@ -99,30 +328,46 @@
         <value>You cannot open a new HRB Form until all the other HRB Forms on this client are closed</value>
     </labels>
     <labels>
+        <fullName>HRB_Treatments_added_title</fullName>
+        <categories>HRB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRB Treatments added title</shortDescription>
+        <value>Treatments added to HRB Report</value>
+    </labels>
+    <labels>
+        <fullName>HRB_Treatments_not_added_title</fullName>
+        <categories>HRB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRB Treatments not added title</shortDescription>
+        <value>Treatments NOT added to HRB Report</value>
+    </labels>
+    <labels>
         <fullName>How_will_progress_be_measured</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>How will progress be measured</shortDescription>
         <value>How will progress be measured</value>
     </labels>
     <labels>
         <fullName>Lead_agency</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Lead agency</shortDescription>
         <value>Lead agency</value>
     </labels>
     <labels>
         <fullName>Lead_key_worker</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Lead key worker</shortDescription>
         <value>Lead key worker</value>
     </labels>
     <labels>
         <fullName>Legal_Problems_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Legal Problems title</shortDescription>
         <value>Legal Problems</value>
     </labels>
@@ -130,30 +375,38 @@
         <fullName>Mark_as_attended</fullName>
         <categories>Attendances</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Mark as attended</shortDescription>
         <value>Click to mark as Attended</value>
     </labels>
     <labels>
         <fullName>Next_review_date</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Next review date</shortDescription>
         <value>Next review date</value>
     </labels>
     <labels>
         <fullName>Objective_Status</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Objective Status</shortDescription>
         <value>Objective Status</value>
     </labels>
     <labels>
         <fullName>Objective_and_timescale</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Objective and timescale</shortDescription>
         <value>Objective and timescale</value>
+    </labels>
+    <labels>
+        <fullName>One_to_One_Attendance_Record_Type</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>One to One Attendance Record Type</shortDescription>
+        <value>One to One Attendance</value>
     </labels>
     <labels>
         <fullName>OpenHRBFormsTitle</fullName>
@@ -163,51 +416,59 @@
         <value>Open Forms, click one to go to it</value>
     </labels>
     <labels>
+        <fullName>Open_Access_Attendance_Record_Type</fullName>
+        <categories>Attendances</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Open Access Attendance Record Type</shortDescription>
+        <value>Open Access Attendance</value>
+    </labels>
+    <labels>
         <fullName>Organisation_Name</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Organisation Name</shortDescription>
         <value>eCASS</value>
     </labels>
     <labels>
         <fullName>Outcome</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Outcome</shortDescription>
         <value>Outcome</value>
     </labels>
     <labels>
         <fullName>Person_Responsible_for_Action</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Person_Responsible_for_Action</shortDescription>
         <value>Person Responsible for Action</value>
     </labels>
     <labels>
         <fullName>Physical_and_Psychological_Problems_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Physical and Psychological Problems title</shortDescription>
         <value>Physical and Psychological Problems</value>
     </labels>
     <labels>
         <fullName>Print</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Print</shortDescription>
         <value>Print</value>
     </labels>
     <labels>
         <fullName>Related_Organisation</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Related_Organisation</shortDescription>
         <value>Related Organisation</value>
     </labels>
     <labels>
         <fullName>Risk_Assessment_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Risk Assessment title</shortDescription>
         <value>Risk Assessment</value>
     </labels>
@@ -219,10 +480,26 @@
         <value>1</value>
     </labels>
     <labels>
+        <fullName>Select_Client</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Client</shortDescription>
+        <value>Please select a client for this review</value>
+    </labels>
+    <labels>
+        <fullName>Select_care_plan_objectives</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select care plan objectives</shortDescription>
+        <value>Select the care plan objectives and steps to include in this care plan for</value>
+    </labels>
+    <labels>
         <fullName>Session_Date</fullName>
         <categories>Attendances</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Session Date</shortDescription>
         <value>Session Date</value>
     </labels>
@@ -230,63 +507,79 @@
         <fullName>Session_Details</fullName>
         <categories>Attendances</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Session Details</shortDescription>
         <value>Session Details</value>
     </labels>
     <labels>
+        <fullName>Skip_Standard_Objectives</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Skip Standard Objectives</shortDescription>
+        <value>Skip this and go to the review</value>
+    </labels>
+    <labels>
         <fullName>Social_Functioning_title</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Social Functioning title</shortDescription>
         <value>Social Functioning</value>
     </labels>
     <labels>
+        <fullName>Standard_Care_Plan_Creation_Title</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Standard Care Plan Creation Title</shortDescription>
+        <value>Care Plan Creation</value>
+    </labels>
+    <labels>
         <fullName>Step_Status</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Step_Status</shortDescription>
         <value>Status</value>
     </labels>
     <labels>
         <fullName>Step_Status_Comment</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Step_Status_Comment</shortDescription>
         <value>Status Comment</value>
     </labels>
     <labels>
         <fullName>Step_name</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Step name</shortDescription>
         <value>Step name</value>
     </labels>
     <labels>
         <fullName>Support_Agencies</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Support Agencies</shortDescription>
         <value>Support Agencies</value>
     </labels>
     <labels>
         <fullName>Support_Agencies_working_with</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Support Agencies working with</shortDescription>
         <value>Support Agencies working with</value>
     </labels>
     <labels>
         <fullName>Time_frame</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Time frame</shortDescription>
         <value>Time frame</value>
     </labels>
     <labels>
         <fullName>Work_to_be_done_to_achieve_objective</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Work to be done to achieve objective</shortDescription>
         <value>Work to be done to achieve objective</value>
     </labels>

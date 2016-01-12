@@ -31,7 +31,7 @@ global with sharing class CloneProgramCourse
 		
 		insert clonedEnrolments;
 		
-        String clonePSURL = '/' + clonePS.ID + '/e?retURL=%2F' + clonePS.ID;
+        String clonePSURL = '/' + clonePS.ID; 
         PageReference clonePSPage = new PageReference(clonePSURL);
         return clonePSPage;
 	}

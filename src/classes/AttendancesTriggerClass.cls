@@ -162,14 +162,17 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	                else
 	                {
 	                    Care_plan_step__c oneStep = currentStepsMap.get (oneAttendance.id);
-	                    oneStep.Date__c=oneAttendance.Care_plan_step_date__c;
-	                    oneStep.Description__c=oneAttendance.Care_plan_step_description__c;
+						if (oneStep != null)
+						{
+							oneStep.Date__c=oneAttendance.Care_plan_step_date__c;
+							oneStep.Description__c=oneAttendance.Care_plan_step_description__c;
 	                    
-	                    oneStep.Status_Comment__c = '';
-	                    if (oneAttendance.Comment__c != null) oneStep.Status_Comment__c = oneAttendance.Comment__c;
-	                    if (oneAttendance.Comment__c != null && oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += ' - ';
-	                    if (oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += 'Interaction: ' + oneAttendance.Interaction__c;
-	                    oneStep.Status__c = oneAttendance.Attended__c ? 'Attended' : 'Did not attend';
+							oneStep.Status_Comment__c = '';
+							if (oneAttendance.Comment__c != null) oneStep.Status_Comment__c = oneAttendance.Comment__c;
+							if (oneAttendance.Comment__c != null && oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += ' - ';
+							if (oneAttendance.Interaction__c != null) oneStep.Status_Comment__c += 'Interaction: ' + oneAttendance.Interaction__c;
+							oneStep.Status__c = oneAttendance.Attended__c ? 'Attended' : 'Did not attend';
+						}
 	                }
 	            }
 	        }       
@@ -311,8 +314,8 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 	
 	public void DefaultAttendanceFlagForDropInAndOpenAccess(List <Attendance__c> newList)
 	{  
-		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance'].Id; 
-		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance'].Id;  
+		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance' limit 1].Id; 
+		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance' limit 1].Id;  
 		
 		for (Attendance__c att: newList)
 		{

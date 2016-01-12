@@ -3,7 +3,6 @@
     <narrowComponents>standard-CreateNew</narrowComponents>
     <narrowComponents>standard-UsefulLinks</narrowComponents>
     <narrowComponents>standard-RecentItems</narrowComponents>
-    <narrowComponents>DateOfBirth</narrowComponents>
     <wideComponents>standard-Dashboard</wideComponents>
     <wideComponents>standard-Calendar</wideComponents>
     <wideComponents>standard-Tasks</wideComponents>

@@ -3,6 +3,8 @@
 	Purpose: Test the treatments to make sure they pass the validation rules by adding a pointer to the HRB Report object
 	Called from: AddTreatmentToReport page which is called from a button on the HRB Report page
 	Tested in: TestAddTreatmentToReport
+
+	EK 22/09/2015 To avoid XSRF issues, the list of treatments to be added is displayed first and then added to the report when a button is clicked
 */
 public with sharing class AddTreatmentToReport 
 {
@@ -17,15 +19,17 @@ public with sharing class AddTreatmentToReport
 		}	
 	}
 	
-    public HRB_Form__c[] TreatmentsWithClientsList; // these are the HRB forms
+    public HRB_Form__c[] TreatmentsWithClientsList {get;Set;} // these are the HRB forms
     public HRB_Report__c reportParams {get;set;} // this will be the object with the date range (last year, q1 etc)
 	public list<TreatmentMessages> passed {get;set;}
 	public list<TreatmentMessages> failed {get; set;}
 	public Integer TreatmentsListSize {get;set;}
 	public Integer TreatmentsToProcess {get;set;}
+	public Boolean showResults {get; Set;}
 	
 	public AddTreatmentToReport (ApexPages.StandardController controller)
 	{
+		showResults = false;
 		passed = new list<TreatmentMessages>();
 		failed = new list<TreatmentMessages>();
 		this.reportParams = (HRB_Report__c)controller.getRecord();
@@ -58,7 +62,7 @@ public with sharing class AddTreatmentToReport
         String startReportPeriod = String.valueOf(year) + startMonthDay;
         String endReportPeriod = String.valueOf(year) + endMonthDay;
  
- 		String queryString = 'select id, Name, HRB_Report__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c, Treatment_Type_Check__c from HRB_Form__c where HRB_Report__c != \'' + reportParams.Id + '\' and ';
+ 		String queryString = 'select id, Name, Contact__c, X16_Date_of_Assessment__c, HRB_Report__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c, Treatment_Type_Check__c from HRB_Form__c where HRB_Report__c != \'' + reportParams.Id + '\' and ';
  		
  		 if (reportParams.Type_of_report__c == 'Clients who entered during the report period') 
          {
@@ -78,7 +82,10 @@ public with sharing class AddTreatmentToReport
          	TreatmentsWithClientsList = Database.query(queryString);
          }
          system.debug ('Number of possible treatments: ' + TreatmentsWithClientsList.size());
-         
+     }
+
+	 public void ProcessTreatments ()
+	 {
          for (HRB_Form__c oneTreatment: TreatmentsWithClientsList)
          {
          	system.debug ('Treatment limits rows: ' + Limits.getLimitDmlRows() + ' queries: ' + Limits.getLimitQueries());
@@ -115,5 +122,6 @@ public with sharing class AddTreatmentToReport
 			    }
 			}
          }
+		 showResults = true;
 	}
 }

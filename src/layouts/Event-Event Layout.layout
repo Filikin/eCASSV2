@@ -37,6 +37,10 @@
                 <behavior>Readonly</behavior>
                 <field>Related_Attendance__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Main_focus_of_session__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

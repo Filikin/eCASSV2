@@ -115,6 +115,55 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Main_focus_of_session__c</fullName>
+        <externalId>false</externalId>
+        <label>Main focus of session</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Drugs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alcohol</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mental Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Justice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Money/Budgeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Person_Responsible_for_Step__c</fullName>
         <externalId>false</externalId>
         <label>Person Responsible for Step</label>
@@ -238,26 +287,6 @@
             </picklistValues>
             <picklistValues>
                 <fullName>No Show</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>=================</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Started</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Not Started</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>On Hold</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Completed</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>

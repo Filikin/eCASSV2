@@ -30,7 +30,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>CarePlanStepCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
@@ -54,6 +56,56 @@
     <enableReports>true</enableReports>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Attendance_Review_Fields</fullName>
+        <description>Attendance Fields to display in Care Plan Review - DO NOT include Name, Description or ID</description>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date_step_completed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Attendance Review Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Review_Fields</fullName>
+        <description>Task Fields to display in Care Plan Review - DO NOT include Name, Description, ID or What step needs to happen first</description>
+        <displayedFields>
+            <field>Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Person_Responsible_for_Action__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date_of_expected_completion__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date_step_completed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status_Comment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Task Review Fields</label>
+    </fieldSets>
     <fields>
         <fullName>Care_Plan_Objective__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -89,7 +141,23 @@
     <fields>
         <fullName>Date__c</fullName>
         <externalId>false</externalId>
-        <label>Date</label>
+        <label>Date Step Set</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_expected_completion__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of expected completion</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_step_completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Date step completed</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
@@ -103,6 +171,65 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Detail_if_unsuccessful__c</fullName>
+        <externalId>false</externalId>
+        <label>Detail if unsuccessful</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ID_of_What_Needs_Template__c</fullName>
+        <description>This is the ID of the step template referenced by &quot;What step needs to happen first&quot;</description>
+        <externalId>false</externalId>
+        <label>ID of What Needs Template</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ID_of_template__c</fullName>
+        <description>This is the ID of the template used to create this step</description>
+        <externalId>false</externalId>
+        <label>ID of template</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_external_which_agency__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>If external, which agency</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Care plan steps</relationshipLabel>
+        <relationshipName>Care_plan_steps</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>If_successful_or_in_progress__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If successful or in progress (with challenges)</inlineHelpText>
+        <label>If successful or in progress</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Person_Responsible_for_Action__c</fullName>
@@ -152,24 +279,30 @@
         <externalId>false</externalId>
         <label>Status</label>
         <picklist>
+            <controllingField>Step_records_attendance__c</controllingField>
             <picklistValues>
                 <fullName>Booked</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Attended</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Cancelled with notice and reason</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Cancelled Late</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>No Show</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -177,25 +310,45 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Started</fullName>
-                <default>false</default>
+                <fullName>Open</fullName>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+                <default>true</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Not Started</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>On Hold</fullName>
+                <fullName>Blocked</fullName>
+                <controllingFieldValues>unchecked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Completed</fullName>
+                <controllingFieldValues>unchecked</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Step_records_attendance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Step records attendance</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>What_step_needs_to_happen_first__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>What care plan step needs to happen first?</inlineHelpText>
+        <label>What step needs to happen first</label>
+        <referenceTo>Care_plan_step__c</referenceTo>
+        <relationshipLabel>Care plan steps</relationshipLabel>
+        <relationshipName>Care_plan_steps</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <label>Care plan step</label>
     <listViews>

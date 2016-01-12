@@ -465,7 +465,8 @@ private class TestAddTreatmentToReport
         ApexPages.StandardController treatmentController = new ApexPages.StandardController(params5);        
         AddTreatmentToReport hrb = new AddTreatmentToReport(treatmentController);
  		hrb.Initialise ();
- 
+		hrb.ProcessTreatments ();
+
    		system.assertEquals(1, hrb.TreatmentsWithClientsList.size());
   		system.assertEquals (params5.id, hrb.TreatmentsWithClientsList[0].HRB_Report__c);
     }
@@ -480,6 +481,7 @@ private class TestAddTreatmentToReport
         ApexPages.StandardController treatmentController = new ApexPages.StandardController(params5);        
         AddTreatmentToReport hrb = new AddTreatmentToReport(treatmentController);
  		hrb.Initialise ();
+		hrb.ProcessTreatments ();
  
  		// Q20 should be > 0
  		HRB_Form__c oneTreatment = [select ID, X20_Number_times_started_this_year__c from HRB_Form__c where ID=:hrb.TreatmentsWithClientsList[0].id limit 1];

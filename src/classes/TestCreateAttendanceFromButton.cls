@@ -3,7 +3,7 @@ private class TestCreateAttendanceFromButton {
 
     static testMethod void testContactButtons() 
     {
-	   	Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+	   	Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client' limit 1].id;
     	Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
     	insert youngPerson;
     	

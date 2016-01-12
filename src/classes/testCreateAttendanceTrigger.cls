@@ -123,7 +123,7 @@ private class testCreateAttendanceTrigger
         Test.stopTest();
         
         Care_plan_step__c careplanstep = [select ID, Reference__c, Status__c, Description__c from Care_plan_step__c where Care_Plan_Objective__c = :careplan.id limit 1];
-//        System.assertEquals ('Attended', careplanstep.Status__c); -- this test fails when uploading the package, no idea why
+        System.assertEquals ('Attended', careplanstep.Status__c); 
     }
     
     static testMethod void testUpdateAttendanceOnCarePlanStep2()
@@ -170,7 +170,7 @@ private class testCreateAttendanceTrigger
     
     static testMethod void createAttendanceFromEventTest() 
     {
-        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client' limit 1].id;
         Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
         insert youngPerson;
     
@@ -203,7 +203,7 @@ private class testCreateAttendanceTrigger
    
     static testMethod void createAttendanceFromEventSeriesTest() 
     {
-        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client' limit 1].id;
         Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
         insert youngPerson;
     
@@ -221,7 +221,7 @@ private class testCreateAttendanceTrigger
     
     static testMethod void createAttendanceWithActivityClassificationFromEventTest() 
     {
-        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
+        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client' limit 1].id;
         Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
         insert youngPerson;
     

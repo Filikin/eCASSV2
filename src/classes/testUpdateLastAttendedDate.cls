@@ -133,9 +133,9 @@ private class testUpdateLastAttendedDate {
         List <Attendance__c> attendances = new List <Attendance__c>([select Id, Attended__c, Young_Person__c from Attendance__c where Program_Session__c = :session.Id]);
         system.assertequals(False, attendances[0].Attended__c);
 
-		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance'].Id;  
-		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance'].Id; 
-		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance'].Id;   
+		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance' limit 1].Id;  
+		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance' limit 1].Id; 
+		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance' limit 1].Id;   
 
     	Attendance__c att1 = new Attendance__c(Young_Person__c = youngPerson.ID, RecordTypeID = one2oneAttendanceRecordTypeID);
     	insert att1;

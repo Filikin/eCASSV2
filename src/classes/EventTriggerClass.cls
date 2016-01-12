@@ -32,16 +32,15 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
         list<Attendance__c> attendancesToCreate = new list <Attendance__c>();
         
         // first make sure the contact is a client
-        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
         set <id>contactsSet = new set <id>(); 
         for (Event oneEvent: evtList)
         {
             contactsSet.add (oneEvent.WhoId);
         }
-        map <Id, Contact> clients = new map <Id, Contact>([select Id, Name, Initials__c from Contact where RecordTypeId = :clientRecordTypeId and Id in :contactsSet]);
+        map <Id, Contact> clients = new map <Id, Contact>([select Id, Name, Initials__c from Contact where RecordType.DeveloperName = 'Client' and Id in :contactsSet]);
         
         // now create the attendances
-        Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance'].Id;
+        Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance' limit 1].Id;
         for (Event oneEvent: evtList)
         {
             system.debug ('Event: ' + oneEvent);

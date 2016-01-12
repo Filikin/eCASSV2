@@ -67,5 +67,7 @@ private class testCarePlanEventTrigger
 		CarePlanDomainController cp = new CarePlanDomainController ();
 		cp.carePlanGoal = careplan;
 		cp.adminFlag = true;
+
+		System.assertEquals ('Improve welbeing', cp.carePlanGoal.Name);
 	}
 }
