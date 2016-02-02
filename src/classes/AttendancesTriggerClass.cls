@@ -2,7 +2,7 @@
 	Author: Eamon Kelly, Enclude
 	Purpose: Need to act as a rollup on the attendance to the program session    
 		Only for sessions that Attended__c to true  
-		When an attendence is created or modified that is associated with an enrolment that is linked to a care plan objective, 
+		When an attendance is created or modified that is associated with an enrolment that is linked to a care plan objective, 
 		create or modify the care plan step on that care plan objective
 		Restrict attendance name to 30 characters 
 		
@@ -192,6 +192,9 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			referencedClientSet.add(a.Young_Person__c);
 		}
 		
+		// Filter out the clients that the user doesn't have access to
+		referencedClientSet = filterInAccessableClients (referencedClientSet);
+
 		Map <ID, Contact> contactMap = new Map <ID, Contact> ([Select ID, Last_face_to_face_contact__c from Contact 
 																	where ID in :referencedClientSet]);
 		
@@ -212,43 +215,46 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		for (Attendance__c thisAttendance: attList)
 		{
 			thisClient = contactMap.get(thisAttendance.Young_Person__c);
-			if (thisAttendance.Attended__c == true)
+			if (thisClient != null)
 			{
-				if ( (thisClient.Last_face_to_face_contact__c == null) ||
-				     (thisAttendance.Attendance_Date__c > thisClient.Last_face_to_face_contact__c))
+				if (thisAttendance.Attended__c == true)
 				{
-					thisClient.Last_face_to_face_contact__c = thisAttendance.Attendance_Date__c;
-					
-					// Depending on type of attendance record, get URL or something appropriate to put into Last Contact Type
-					// Do this later!!
-					
-					contactsForUpdate.add(thisClient);
-				}
-			}	
-			else if (oldMap != null) 
-			{
-				// This is an update.  Need to check if previously-attended record is now marked unattended
-				Attendance__c beforeUpdateAtt = oldMap.get(thisAttendance.ID);
-				if ((beforeUpdateAtt != null) && (beforeUpdateAtt.Attended__c == true) &&
-					(thisClient.Last_face_to_face_contact__c != null) && (thisAttendance.Attendance_Date__c == thisClient.Last_face_to_face_contact__c))
-				{
-					// Get new date to replace existing date, or set to null if no such date
-					thisClient.Last_face_to_face_contact__c = null;
-					for (Attendance__c att: allAttendancesForReferencedClients)
+					if ( (thisClient.Last_face_to_face_contact__c == null) ||
+					     (thisAttendance.Attendance_Date__c > thisClient.Last_face_to_face_contact__c))
 					{
-						if (att.Young_Person__c == thisAttendance.Young_Person__c)
+						thisClient.Last_face_to_face_contact__c = thisAttendance.Attendance_Date__c;
+						
+						// Depending on type of attendance record, get URL or something appropriate to put into Last Contact Type
+						// Do this later!!
+						
+						contactsForUpdate.add(thisClient);
+					}
+				}	
+				else if (oldMap != null) 
+				{
+					// This is an update.  Need to check if previously-attended record is now marked unattended
+					Attendance__c beforeUpdateAtt = oldMap.get(thisAttendance.ID);
+					if ((beforeUpdateAtt != null) && (beforeUpdateAtt.Attended__c == true) &&
+						(thisClient.Last_face_to_face_contact__c != null) && (thisAttendance.Attendance_Date__c == thisClient.Last_face_to_face_contact__c))
+					{
+						// Get new date to replace existing date, or set to null if no such date
+						thisClient.Last_face_to_face_contact__c = null;
+						for (Attendance__c att: allAttendancesForReferencedClients)
 						{
-							thisClient.Last_face_to_face_contact__c = att.Attendance_Date__c;
-							break;
-						}
-					}								
-					contactsForUpdate.add(thisClient);
+							if (att.Young_Person__c == thisAttendance.Young_Person__c)
+							{
+								thisClient.Last_face_to_face_contact__c = att.Attendance_Date__c;
+								break;
+							}
+						}								
+						contactsForUpdate.add(thisClient);
+					}
 				}
 			}
 		}
 		
 		// Update records
-		update contactsForUpdate; 
+		if (contactsForUpdate.size() > 0) update contactsForUpdate; 
 	}		
 	
 	public void updateLastContactDateOnDelete(map<Id, Attendance__c> oldMap)
@@ -278,6 +284,9 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			}		
 		}
 			
+		// Filter out the clients that the user doesn't have access to
+		referencedClientSet = filterInAccessableClients (referencedClientSet);
+		
 		Map<ID, Contact> referencedClientMap = new Map<ID, Contact>([SELECT Id, Last_face_to_face_contact__c FROM Contact 
 																	 WHERE Id in :referencedClientSet]);
 																	 
@@ -307,8 +316,7 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 				contactsForUpdate.add(thisClient);
 			}
 		}
-		if (contactsForUpdate != null)
-			update contactsForUpdate;
+		if (contactsForUpdate.size() > 0) update contactsForUpdate; 
 		
 	}
 	
@@ -328,5 +336,16 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		}
 				
 	}	
+	
+	public set <ID> filterInAccessableClients (set <ID> clientSet)
+	{
+		list <UserRecordAccess> accessableClientsAccess = [select RecordID from UserRecordAccess where UserId=:UserInfo.getUserId() and RecordId in :clientSet and HasEditAccess=true limit 200];
+		set <ID> accessableClients = new set <ID>();
+		for (UserRecordAccess oneAccess : accessableClientsAccess)
+		{
+			accessableClients.add (oneAccess.RecordID);
+		}
+		return accessableClients;
+	}
 		
 }

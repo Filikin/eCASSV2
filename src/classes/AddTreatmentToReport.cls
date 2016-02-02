@@ -5,6 +5,7 @@
 	Tested in: TestAddTreatmentToReport
 
 	EK 22/09/2015 To avoid XSRF issues, the list of treatments to be added is displayed first and then added to the report when a button is clicked
+	EK 29/01/2016 Changing to update the treatments all in one go (needed for end of year)
 */
 public with sharing class AddTreatmentToReport 
 {
@@ -86,6 +87,7 @@ public with sharing class AddTreatmentToReport
 
 	 public void ProcessTreatments ()
 	 {
+         list<HRB_Form__c> TreatmentsToUpdate = new list<HRB_Form__c>(); // these are the HRB forms
          for (HRB_Form__c oneTreatment: TreatmentsWithClientsList)
          {
          	system.debug ('Treatment limits rows: ' + Limits.getLimitDmlRows() + ' queries: ' + Limits.getLimitQueries());
@@ -110,7 +112,7 @@ public with sharing class AddTreatmentToReport
 				oneTreatment.HRB_Report__c = reportParams.id;
 				try
 				{
-	 				update oneTreatment;
+	 				TreatmentsToUpdate.add (oneTreatment);
 		            passed.add (new TreatmentMessages(oneTreatment, oneTreatment.name + ' Attached'));
 		            system.debug ('Treatment added ' + oneTreatment.name);
 				}
@@ -122,6 +124,7 @@ public with sharing class AddTreatmentToReport
 			    }
 			}
          }
+         if (TreatmentsToUpdate.size() > 0) update TreatmentsToUpdate;
 		 showResults = true;
 	}
 }

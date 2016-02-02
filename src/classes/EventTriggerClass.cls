@@ -188,7 +188,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
     public void CopyFieldsFromEventToAttendance (Event oneEvent, Attendance__c oneAttendance)
     // the field name must match exactly between the event and the attendance
     {
-        Schema.fieldset fs1 = Schema.SObjectType.Event.fieldSets.getMap().get('Fields_to_copy_to_attendances');
+        Schema.fieldset fs1 = Schema.SObjectType.Event.fieldSets.getMap().get(AppConfigSupport.PackagePrefix+'Fields_to_copy_to_attendances');
         if (fs1 == null) return; // field set not available
         
         List<Schema.FieldSetMember> allFields = fs1.getFields();                   // 1. Gather all fields interested into list.

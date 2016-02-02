@@ -480,6 +480,14 @@
         <value>1</value>
     </labels>
     <labels>
+        <fullName>Save_and_Print</fullName>
+        <categories>Care Plan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save and Print</shortDescription>
+        <value>Save and Print</value>
+    </labels>
+    <labels>
         <fullName>Select_Client</fullName>
         <categories>Care Plan</categories>
         <language>en_US</language>

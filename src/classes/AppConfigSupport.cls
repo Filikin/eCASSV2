@@ -7,7 +7,7 @@ global with sharing class AppConfigSupport {
 	private static eCASS_settings__c testconfig = null;
 	public static final Integer MAX_NAME_SIZE = 30;
 	
-	public static eCASS_settings__c GeteCASSSettings()
+	global static eCASS_settings__c GeteCASSSettings()
 	{
 		if(Test.isRunningTest() && testconfig!=null) return testconfig;
 		
@@ -104,6 +104,10 @@ global with sharing class AppConfigSupport {
 		{
 			return GeteCASSSettings().Disable_Triggers__c;
 		}
+		set
+		{
+			GeteCASSSettings().Disable_Triggers__c = TriggersDisabled;
+		}
 	}
 
 	global static Boolean ValidationRulesOn
@@ -129,4 +133,14 @@ global with sharing class AppConfigSupport {
 			return GeteCASSSettings().Only_clone_active_enrolments__c;
 		}
 	}
+	
+	public static String PackagePrefix
+	{
+		get
+		{
+			return ''; // think this is safer than letting the user control it in a custom setting
+//			return 'eCASS02t1__'; // think this is safer than letting the user control it in a custom setting
+		}
+	}
+	
 }
