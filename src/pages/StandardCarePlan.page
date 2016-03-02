@@ -1,0 +1,34 @@
+<apex:page standardcontroller="Contact" extensions="StandardCarePlanController" tabstyle="Care_Plan_Obj_Template__c" title="{!$Label.Standard_Care_Plan_Creation_Title}" showheader="{!$CurrentPage.parameters.POPUP = null}">
+    <script type="text/javascript">
+    function closeGoal()
+    {
+        window.opener.refreshGoalList();
+        window.close();
+        return true;
+    }
+    </script>
+    <apex:form id="cpcreate">
+        <apex:pagemessages />
+        <apex:pageblock title="{!$Label.Select_care_plan_objectives} {!Contact.Name}" id="Goals">
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!CreateCarePlan}" value="{!$Label.Create_Standard_Care_Plan_Button_Title}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!GoToReview}" value="{!$Label.Skip_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!AddObjectives}" oncomplete="closeGoal()" value="{!$Label.Care_Plan_Add_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = '1'}" />
+            </apex:pageblockbuttons>
+            <apex:pageblocktable value="{!goalList}" var="oneGoal">
+                <apex:column width="5%">
+                    <apex:inputfield value="{!oneGoal.Include_this_objective__c}" />
+                </apex:column>
+                <apex:column headervalue="{!$Label.Care_Plan_Objective_Plural}" value="{!oneGoal.Area__c} - {!oneGoal.name}" width="30%" />
+                <apex:column >
+                    <apex:pageblocktable value="{!oneGoal.Care_Plan_Step_Templates__r}" var="oneStep" rendered="{!oneGoal.Care_Plan_Step_Templates__r.size > 0}">
+                        <apex:column width="5%">
+                            <apex:inputfield value="{!oneStep.Include_this_step__c}" />
+                        </apex:column>
+                        <apex:column headervalue="{!oneGoal.Name} {!$Label.Care_Plan_Step_Plural}" value="{!oneStep.Description__c}" />
+                    </apex:pageblocktable>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

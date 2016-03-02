@@ -1,0 +1,12 @@
+<apex:page standardController="Care_Plan_Objective__c" renderAs="pdf">
+    <apex:form id="goal">
+        <apex:pageBlock title="Objective for {!Care_Plan_Objective__c.Client__r.Name}: {!Care_Plan_Objective__c.Name}" >
+            <apex:pageBlockSection title="Objective Details" columns="1">
+                <apex:outputField value="{!Care_Plan_Objective__c.Area__c}" />
+                <apex:outputField value="{!Care_Plan_Objective__c.Objective_Status__c}" />
+                <apex:outputField value="{!Care_Plan_Objective__c.Objective_and_Timescale__c}" />
+                <apex:outputField value="{!Care_Plan_Objective__c.Date_completed__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

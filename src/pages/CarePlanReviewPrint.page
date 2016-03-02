@@ -1,0 +1,74 @@
+<apex:page standardcontroller="Care_Plan_Review__c" extensions="CarePlanReviewController" title="{!$Label.Care_Plan_Review_Title}" 
+	showheader="false" applybodytag="false" renderas="pdf" standardStylesheets="false"  applyHtmlTag="false">
+	<head>
+    <style type="text/css">
+        .commentsBox {
+            width: 400px;
+            }
+        h2 {
+        	font-size: x-large;
+        	}
+        	td {
+    		padding-left: 20px;
+    		padding-right: 20px;
+		} 
+       	.mytable td {
+    		padding: 5px;
+		} 
+		.labelCol {
+        	font-size: small;
+		}
+    </style>
+    </head>
+    <apex:pageblock id="Goals" rendered="{!Client != null}" >
+    <h2>{!$Label.Care_Plan_Review_Details_Title} {!client.Name}</h2>
+        	<table class="mytable">
+        		<tr>
+        			<td>{!$ObjectType.Care_Plan_Review__c.fields.Client_present_at_review__c.Label}:&nbsp;<apex:outputfield value="{!Care_Plan_Review__c.Client_present_at_review__c}" /></td>
+		            <td>{!$ObjectType.Care_Plan_Review__c.fields.Review_Date__c.Label}:&nbsp;<apex:outputfield value="{!Care_Plan_Review__c.Review_Date__c}" /></td>
+            	</tr>
+            	<tr>
+            		<td>{!$ObjectType.Care_Plan_Review__c.fields.Review_Completed__c.Label}:&nbsp;<apex:outputfield value="{!Care_Plan_Review__c.Review_Completed__c}" /></td>
+            		<td>{!$ObjectType.Care_Plan_Review__c.fields.Next_Review_Date__c.Label}:&nbsp;<apex:outputfield value="{!Care_Plan_Review__c.Next_Review_Date__c}" /></td>
+            	</tr>
+            	<tr>
+            		<td>{!$ObjectType.Care_Plan_Review__c.fields.Summary__c.Label}:&nbsp;<apex:outputtext styleclass="commentsBox" value="{!Care_Plan_Review__c.Summary__c}" /></td>
+            	</tr>
+            </table>
+        <apex:repeat value="{!goalList}" var="oneGoal" rendered="{!Care_Plan_Review__c.Review_Completed__c = false}">
+            <apex:pageblocksection title="{!oneGoal.Area__c} - {!oneGoal.Name}" columns="1" html-data-id="{!oneGoal.ID}">
+                <apex:pageblocksection columns="2">
+                    <apex:repeat value="{!goalHeaderFields}" var="oneField">
+                        <apex:outputfield value="{!oneGoal[oneField.fieldPath]}" />
+                    </apex:repeat>
+                    <apex:repeat value="{!goalFields}" var="oneField">
+                        <apex:outputfield value="{!oneGoal[oneField.fieldPath]}" />
+                    </apex:repeat>
+                </apex:pageblocksection>
+                <apex:outputpanel styleclass="red" layout="block" rendered="{!oneGoal.Number_of_Task_Steps__c>0}">
+                    <apex:pageblocksection title="{!$Label.Care_Plan_Task_Steps_Title} - {!oneGoal.Name}" columns="1" id="TaskSteps">
+                        <apex:repeat value="{!oneGoal.Care_plan_steps__r}" var="oneCarePlanStep">
+                            <apex:pageblocksection title="{!oneCarePlanStep.Name} - {!oneCarePlanStep.Description__c}" columns="2" id="Steps" rendered="{!LEFT(oneCarePlanStep.Reference__c,3) != attendancePrefix}">
+                                <apex:outputfield value="{!oneCarePlanStep.What_step_needs_to_happen_first__c}" id="careplansteplookup" />
+                                <apex:repeat value="{!stepTaskFields}" var="oneField">
+                                    <apex:outputfield value="{!oneCarePlanStep[oneField.fieldPath]}" />
+                                </apex:repeat>
+                            </apex:pageblocksection>
+                        </apex:repeat>
+                    </apex:pageblocksection>
+                </apex:outputpanel>
+                <apex:outputpanel styleclass="violet" layout="block" rendered="{!oneGoal.Number_of_Attendance_Steps__c>0}">
+                    <apex:pageblocksection title="{!$Label.Care_Plan_Attendance_Steps_Title} - {!oneGoal.Name}" columns="1" id="AttendanceSteps" rendered="{!showAttendanceSteps}">
+                        <apex:repeat value="{!oneGoal.Care_plan_steps__r}" var="oneCarePlanStep">
+                            <apex:pageblocksection title="{!oneCarePlanStep.Name} - {!oneCarePlanStep.Description__c}" columns="2" id="Steps" rendered="{!LEFT(oneCarePlanStep.Reference__c,3) = attendancePrefix}">
+                                <apex:repeat value="{!stepAttendanceFields}" var="oneField">
+                                    <apex:outputfield value="{!oneCarePlanStep[oneField.fieldPath]}" />
+                                </apex:repeat>
+                            </apex:pageblocksection>
+                        </apex:repeat>
+                    </apex:pageblocksection>
+                </apex:outputpanel>
+            </apex:pageblocksection>
+        </apex:repeat>
+    </apex:pageblock>
+</apex:page>

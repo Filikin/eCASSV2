@@ -1,0 +1,22 @@
+<apex:page standardController="Program_Service__c" extensions="CloneProgramCourse" showHeader="true">
+<!-- add the fields here you want cloned -->
+    <apex:form >
+        <apex:pageBlock title="{!$Label.Fields_To_Clone}">
+            <apex:pageblocksection columns="1">
+                <apex:inputfield value="{!Program_Service__c.Name}" />
+                <apex:inputfield value="{!Program_Service__c.Title_id__c}" />
+                <apex:inputfield value="{!Program_Service__c.Start_Date__c}" />
+                <apex:inputfield value="{!Program_Service__c.End_Date__c}" />
+                <apex:inputfield value="{!Program_Service__c.Course_Term__c}" />
+                <apex:inputfield value="{!Program_Service__c.Course_Type__c}" />
+                <apex:inputfield value="{!Program_Service__c.Lead_Staff__c}" />
+                <apex:inputfield value="{!Program_Service__c.Status_of_Course__c}" />
+                <apex:inputfield value="{!Program_Service__c.Number_of_Places__c}" />
+            </apex:pageblocksection>
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="{!$Label.Clone_Button}" action="{!doClone}" />
+            </apex:pageblockbuttons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:messages />
+</apex:page>

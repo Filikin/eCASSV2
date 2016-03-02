@@ -1,0 +1,96 @@
+<apex:page standardController="Care_plan_step__c" extensions="CarePlanStepCreation" title="Create Care Plan Step" sidebar="false" showheader="false">
+    <script type="text/javascript">
+        function openLookup(baseURL, width, modified, searchParam)
+        {
+            var originalbaseURL = baseURL;
+            var originalwidth = width;
+            var originalmodified = modified;
+            var originalsearchParam = searchParam;
+
+            var lookupType = baseURL.substr(baseURL.length-3, 3);
+            if (modified == '1') baseURL = baseURL + searchParam;
+
+            var isCustomLookup = false;
+
+            if(lookupType == "{!careplanstepPrefix}")
+            {
+                var urlArr = baseURL.split("&");
+                var txtId = '';
+                if(urlArr.length > 2)
+                {
+                    urlArr = urlArr[1].split('=');
+                    txtId = urlArr[1];
+                }
+
+                // Following is the url of Custom Lookup page. You need to change that accordingly
+                baseURL = "/apex/CustomCarePlanStepLookup?txt=" + txtId;
+
+                // Following is the id of apex:form control "myForm". You need to change that accordingly
+                baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.step}");
+                if (modified == '1')
+                {
+                    baseURL = baseURL + "&lksearch=" + searchParam;
+                }
+
+                // add the ID of the client (would love to add the id of the care plan objective!)
+                baseURL = baseURL + "&clientID=" + "{!clientID}";
+
+                // Following is the ID of inputField that is the lookup to be customized as custom lookup
+                if(txtId.indexOf('careplansteplookup') > -1 )
+                {
+                    isCustomLookup = true;
+                }
+           }
+
+           if(isCustomLookup == true)
+           {
+                openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+           }
+           else
+           {
+                if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+                openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+           }
+        }
+
+    function newWindow(url)
+    {
+        window.open(url,'','scrollbars=yes,menubar=no,height=400,width=600,resizable=yes,toolbar=no,location=no,status=yes');
+        return true;
+    }
+    function newGoal(url)
+    {
+        window.open(url,'','scrollbars=yes,menubar=no,height=400,width=600,resizable=yes,toolbar=no,location=no,status=yes');
+        return true;
+    }
+
+    function setFocusOnLoad() {}
+    </script>
+   <apex:pageMessages />
+  <Script type="text/javascript">
+    function closeStep() 
+    {
+        window.opener.refreshGoalList();
+        window.close();
+        return true;
+    }
+  </Script>
+    <apex:form id="step">
+        <apex:pageBlock title="Record Care Plan Step" mode="edit">
+            <apex:pageblocksection title="Details" columns="1">
+                <apex:inputfield value="{!step.What_step_needs_to_happen_first__c}" id="careplansteplookup" />
+                <apex:inputfield value="{!step.Description__c}" />
+                <apex:repeat value="{!stepFields}" var="oneField">
+                    <apex:inputfield value="{!step[oneField.fieldPath]}" />
+                </apex:repeat>
+            </apex:pageblocksection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}" oncomplete="closeStep()" rerender="step"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}" onclick="closeStep()" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:outputpanel style="display:none">
+            <apex:inputfield value="{!step.Step_records_attendance__c}" />
+        </apex:outputpanel>
+    </apex:form> 
+</apex:page>

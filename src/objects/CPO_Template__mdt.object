@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When a standard care plan is created, these objectives will be copied into that plan</description>
+    <fields>
+        <fullName>Area__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>One of:
+Drug Use
+Alcohol Use
+Accomodation/Independent Living
+Mental Health
+Physical Health
+Justice and Legal
+Family and Relationships
+Finance
+Employment
+Education and Training</inlineHelpText>
+        <label>Area</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Include_this__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Tick to include this objective in the care plan</inlineHelpText>
+        <label>Include this objective</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Objective_Note__c</fullName>
+        <externalId>false</externalId>
+        <label>Objective Note</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Objective_Status__c</fullName>
+        <defaultValue>&quot;In Progress&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>One of:
+Draft
+In Progress
+Blocked
+Closed</inlineHelpText>
+        <label>Objective Status</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Obsolete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If ticked, then this care plan objective will not appear in the list of standard objectives</inlineHelpText>
+        <label>Obsolete</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <defaultValue>&quot;Medium&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>One of:
+Low
+Medium
+High</inlineHelpText>
+        <label>Priority</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Care Plan Objective Template</label>
+    <pluralLabel>Care Plan Objective Templates</pluralLabel>
+</CustomObject>

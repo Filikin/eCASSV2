@@ -1,0 +1,37 @@
+<apex:page standardcontroller="Contact" extensions="StandardCarePlanControllerUsingMetaData" tabstyle="Care_Plan_Objective__c" title="{!$Label.Standard_Care_Plan_Creation_Title}" showheader="{!$CurrentPage.parameters.POPUP = null}">
+<!--Author: Eamon Kelly, Enclude -->
+    <script type="text/javascript">
+    function closeGoal()
+    {
+        window.opener.refreshGoalList();
+        window.close();
+        return true;
+    }
+    </script>
+    <apex:form id="cpcreate">
+        <apex:pagemessages />
+        <apex:pageblock title="{!$Label.Select_care_plan_objectives} {!Contact.Name}" id="Goals">
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!CreateCarePlan}" value="{!$Label.Create_Standard_Care_Plan_Button_Title}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!GoToReview}" value="{!$Label.Skip_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!AddObjectives}" oncomplete="closeGoal()" value="{!$Label.Care_Plan_Add_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = '1'}" />
+            </apex:pageblockbuttons>
+            <apex:pageblocktable value="{!goalList}" var="oneGoal">
+                <apex:column width="5%">
+                    <apex:inputCheckBox value="{!oneGoal.bIncludeThisGoal}" selected="{!oneGoal.bIncludeThisGoal}"/>
+                </apex:column>
+                <apex:column headervalue="{!$Label.Care_Plan_Objective_Plural}" value="{!oneGoal.thisGoal.Area__c} - {!oneGoal.thisGoal.MasterLabel}" width="30%" />
+                <apex:column headervalue="{!$Label.Care_Plan_Step_Plural}">
+                    <apex:pageblocktable value="{!stepList}" var="oneStep" >
+                        <apex:column width="5%" headerValue="" rendered="{!oneStep.thisStep.Care_Plan_Obj_Template__c = oneGoal.thisGoal.DeveloperName}">
+                            <apex:inputCheckBox value="{!oneStep.bIncludeThisStep}" selected="{!oneStep.bIncludeThisStep}" />
+                        </apex:column>
+                        <apex:column rendered="{!oneStep.thisStep.Care_Plan_Obj_Template__c = oneGoal.thisGoal.DeveloperName}">
+ 	                    	<apex:outputText value="{!oneStep.thisStep.MasterLabel}" />
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>
