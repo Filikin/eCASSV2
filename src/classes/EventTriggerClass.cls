@@ -32,16 +32,15 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
         list<Attendance__c> attendancesToCreate = new list <Attendance__c>();
         
         // first make sure the contact is a client
-        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client'].id;
         set <id>contactsSet = new set <id>(); 
         for (Event oneEvent: evtList)
         {
             contactsSet.add (oneEvent.WhoId);
         }
-        map <Id, Contact> clients = new map <Id, Contact>([select Id, Name, Initials__c from Contact where RecordTypeId = :clientRecordTypeId and Id in :contactsSet]);
+        map <Id, Contact> clients = new map <Id, Contact>([select Id, Name, Initials__c from Contact where RecordType.DeveloperName = 'Client' and Id in :contactsSet]);
         
         // now create the attendances
-        Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance'].Id;
+        Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance' limit 1].Id;
         for (Event oneEvent: evtList)
         {
             system.debug ('Event: ' + oneEvent);
@@ -189,7 +188,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
     public void CopyFieldsFromEventToAttendance (Event oneEvent, Attendance__c oneAttendance)
     // the field name must match exactly between the event and the attendance
     {
-        Schema.fieldset fs1 = Schema.SObjectType.Event.fieldSets.getMap().get('Fields_to_copy_to_attendances');
+        Schema.fieldset fs1 = Schema.SObjectType.Event.fieldSets.getMap().get(AppConfigSupport.PackagePrefix+'Fields_to_copy_to_attendances');
         if (fs1 == null) return; // field set not available
         
         List<Schema.FieldSetMember> allFields = fs1.getFields();                   // 1. Gather all fields interested into list.

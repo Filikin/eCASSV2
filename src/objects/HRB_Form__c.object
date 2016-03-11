@@ -46,6 +46,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Record of Treatment - Section D, E, F, G and H of HRB Form</description>
@@ -55,6 +56,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -2337,6 +2339,7 @@ TEXT( X19_Accepted_place_at_this_centre__c ) = &quot;2. No&quot;),
 
 CASE( X33a_Main_Intervention__c , 
 &quot;1. Brief intervention&quot;,&quot;1&quot;,
+&quot;8. Methadone substitution&quot;,&quot;8&quot;,
 &quot;12. Medication free therapy psychosocial therapy other etc&quot;,&quot;12&quot;,
 &quot;13. Psychiatric therapy&quot;,&quot;13&quot;,
 &quot;14. Individual counselling&quot;,&quot;14&quot;,
@@ -5439,6 +5442,7 @@ If not known, code 99.</inlineHelpText>
     <fields>
         <fullName>X33a_Main_Intervention__c</fullName>
         <description>1.  Brief intervention
+8.  Methadone substitution 
 12.  Medication-free therapy(psychosocial therapy, therapeutic community, Minnesota model etc)
 14.  Individual counselling
 15.  Group counselling.
@@ -5462,6 +5466,10 @@ Some of these sessions may be as a group or couples or one on one.
         <picklist>
             <picklistValues>
                 <fullName>1. Brief intervention</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8. Methadone substitution</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -5716,6 +5724,17 @@ each type of treatment intervention</inlineHelpText>
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>X33b8_Date_Commenced__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date commenced
+each type of treatment intervention</inlineHelpText>
+        <label>33b8 Date Commenced</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>X33c12_Date_Completed__c</fullName>
         <description>Medication-free therapy - Date Completed</description>
         <externalId>false</externalId>
@@ -5857,6 +5876,16 @@ each type of treatment intervention</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Facilitated detox - Date Completed</inlineHelpText>
         <label>33c28 Date Completed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X33c8_Date_Completed__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Methadone substitution - Date Completed</inlineHelpText>
+        <label>33c8 Date Completed</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -6041,6 +6070,20 @@ each type of treatment intervention</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Facilitated detox - Number of sessions provided</inlineHelpText>
         <label>33d28 Number of Sessions</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X33d8_Number_of_Sessions__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Methadone substitution - Number of Sessions</inlineHelpText>
+        <label>33d8 Number of Sessions</label>
         <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
@@ -7267,6 +7310,10 @@ Hepatitis A and B vaccination</inlineHelpText>
             </values>
             <values>
                 <fullName>28%2E Facilitated detox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2E Methadone substitution</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -9144,6 +9191,7 @@ AND(X21a_Date_This_treatment_started__c &gt; X33b26_Date_case_manager_was_appoin
         <fullName>Q33a_Main_Intervention_Check</fullName>
         <active>true</active>
         <errorConditionFormula>AND(TEXT(X33a_Main_Intervention__c) = &quot;1. Brief intervention&quot;, ISBLANK(X33b1_Date_Commenced__c) )||
+AND(TEXT(X33a_Main_Intervention__c) = &quot;8. Methadone substitution&quot;, ISBLANK(X33b8_Date_Commenced__c) )||
 AND(TEXT(X33a_Main_Intervention__c) = &quot;12. Medication free therapy psychosocial therapy other etc&quot;, ISBLANK(X33b12_Date_Commenced__c) )||
 AND(TEXT(X33a_Main_Intervention__c) = &quot;13. Psychiatric therapy&quot;, ISBLANK(X33b13_Date_Commenced__c) )||
 AND(TEXT(X33a_Main_Intervention__c) = &quot;14. Individual counselling&quot;, ISBLANK(X33b14_Date_Commenced__c) )||
@@ -9169,6 +9217,7 @@ AND(TEXT(X33a_Main_Intervention__c) = &quot;28. Facilitated detox&quot;, ISBLANK
 ISBLANK(TEXT(X33a_Main_Intervention__c ) ),
 OR( 
 NOT(ISBLANK(X33b1_Date_Commenced__c)),
+NOT(ISBLANK(X33b8_Date_Commenced__c)),
 NOT(ISBLANK(X33b12_Date_Commenced__c )),
 NOT(ISBLANK(X33b13_Date_Commenced__c )),
 NOT(ISBLANK(X33b14_Date_Commenced__c )),

@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
@@ -52,8 +53,19 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>ExtraFields</fullName>
+        <availableFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Allows the admin to select extra fields in the attendance update page</description>
+        <label>ExtraFields</label>
+    </fieldSets>
     <fields>
         <fullName>Activity_Type__c</fullName>
         <externalId>false</externalId>
@@ -404,7 +416,7 @@
         <defaultValue>$Setup.eCASS_settings__c.Default_attendance_duration__c</defaultValue>
         <externalId>false</externalId>
         <label>Duration (in minutes)</label>
-        <precision>3</precision>
+        <precision>6</precision>
         <required>false</required>
         <scale>0</scale>
         <trackTrending>false</trackTrending>

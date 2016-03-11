@@ -388,6 +388,7 @@ private class TestOneHRBForm {
  	    ApexPages.StandardController treatmentController = new ApexPages.StandardController(params5);        
         AddTreatmentToReport hrbReport = new AddTreatmentToReport(treatmentController);
  		hrbReport.Initialise ();
+		hrbReport.ProcessTreatments();
  
         HRBReportController hrb = new HRBReportController(params5);
         HRB_Form__c[]  treatments = hrb.getTreatmentsWithClients();

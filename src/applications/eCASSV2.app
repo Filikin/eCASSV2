@@ -17,4 +17,5 @@
     <tab>TOP__c</tab>
     <tab>UDIT__c</tab>
     <tab>Referral__c</tab>
+    <tab>Care_Plan_Review__c</tab>
 </CustomApplication>

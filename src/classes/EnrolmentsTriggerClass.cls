@@ -39,7 +39,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 			String clientInitials = oneEnr.Young_Person__c != null ? oneEnr.Young_Person__r.Initials__c : '';
 			String newName;
 			newName = nameTemplate.replace('$NAME$', clientName).replace('$DATE$', enrolmentDate.format()).replace('$INITIALS$', clientInitials);
-			if (newName.length() >= AppConfigSupport.MAX_NAME_SIZE) newName = newName.subString (0, AppConfigSupport.MAX_NAME_SIZE);
+			if (newName.length() > AppConfigSupport.MAX_NAME_SIZE) newName = newName.subString (0, AppConfigSupport.MAX_NAME_SIZE);
 			if (newName != oneEnr.Name) 
 			{
 				oneEnr.Name = newName;
@@ -51,7 +51,7 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 
 	public void CreateSessionsOnNewEnrolment (list<Enrolment__c> newList) 
 	{
-		Id courseAttendanceRecordTypeId = [select Id from RecordType where DeveloperName = 'Course_Attendance'].Id;
+		Id courseAttendanceRecordTypeId = [select Id from RecordType where DeveloperName = 'Course_Attendance' limit 1].Id;
 		List<Attendance__c> attendanceList = new List<Attendance__c>{};
 		if (newList.size() < 10) // not required for mass import
 		{

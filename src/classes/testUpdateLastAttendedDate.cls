@@ -112,7 +112,6 @@ private class testUpdateLastAttendedDate {
 
     static testMethod void testAttendedFlagSetOnDropInOpenAccessInsert()
     {
-   		return;
     	// Insert new attendance record for all record types
     	// Verify that the Attended__c flag is automatically set to true for 
     	// Drop in and Open Access attendance records only
@@ -133,9 +132,9 @@ private class testUpdateLastAttendedDate {
         List <Attendance__c> attendances = new List <Attendance__c>([select Id, Attended__c, Young_Person__c from Attendance__c where Program_Session__c = :session.Id]);
         system.assertequals(False, attendances[0].Attended__c);
 
-		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance'].Id;  
-		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance'].Id; 
-		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance'].Id;   
+		Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance' limit 1].Id;  
+		Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance' limit 1].Id; 
+		Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance' limit 1].Id;   
 
     	Attendance__c att1 = new Attendance__c(Young_Person__c = youngPerson.ID, RecordTypeID = one2oneAttendanceRecordTypeID);
     	insert att1;
@@ -157,4 +156,69 @@ private class testUpdateLastAttendedDate {
     	system.assertequals(True, attendances[0].Attended__c);
 	    	
    	}
+    
+    
+    static testMethod void testLastContactDateUpdatedOnDropInOpenAccessDelete()
+    {
+        // Insert new attendance record for all record types
+        // Verify that the Attended__c flag is automatically set to true for 
+        // Drop in and Open Access attendance records only
+        Contact youngPerson = new Contact (LastName = 'Kelly');
+        insert youngPerson;
+        Contact youngPerson2 = new Contact (LastName = 'Smith');
+        insert youngPerson2;
+        
+        Program_Service__c program = new Program_Service__c (Name = 'Music');
+        insert program;
+        
+        Enrolment__c enrole = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
+        insert enrole;
+        
+        Program_Session__c session = new Program_Session__c (Program_Service__c=program.id, Session_Date__c= system.today()-20);
+        insert session;
+        
+        List <Attendance__c> attendances = new List <Attendance__c>([select Id, Attended__c, Young_Person__c from Attendance__c where Program_Session__c = :session.Id]);
+        system.assertequals(False, attendances[0].Attended__c);
+        
+        attendances[0].Attended__c = true;
+        update attendances[0];
+
+        Id one2oneAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='One_to_One_Attendance' limit 1].Id;  
+        Id openAccessAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Open_Access_Attendance' limit 1].Id; 
+        Id dropInAttendanceRecordTypeID = [select Id from RecordType where DeveloperName='Drop_In_Attendance' limit 1].Id;   
+
+        Attendance__c att1 = new Attendance__c(Young_Person__c = youngPerson.ID, RecordTypeID = one2oneAttendanceRecordTypeID, 
+                                                Date_and_time_of_attendance__c = system.now());
+        insert att1;
+        
+        attendances = [select Id, Attended__c, Young_Person__c from Attendance__c where RecordTypeID = :one2oneAttendanceRecordTypeID];
+        system.assertequals(False, attendances[0].Attended__c);
+        
+        Drop_in__c dropIn = new Drop_in__c(Name = 'Test Drop-in', Date__c = system.today());
+        insert dropIn;      
+        Attendance__c att2 = new Attendance__c(Young_Person__c = youngPerson.ID, Drop_in__c = dropIn.ID, RecordTypeID = dropInAttendanceRecordTypeID);
+        insert att2;
+        attendances = [select Id, Attended__c, Young_Person__c from Attendance__c where RecordTypeID = :dropInAttendanceRecordTypeID];
+        system.debug('Drop in attendances:'+attendances);
+        
+        system.assertequals(True, attendances[0].Attended__c);
+                
+        Attendance__c att3 = new Attendance__c(Young_Person__c = youngPerson.ID, RecordTypeID = openAccessAttendanceRecordTypeID, 
+                                                Date_and_Time_client_entered__c = system.now().addDays(3));
+        insert att3;
+        attendances = [select Id, Attended__c, Young_Person__c from Attendance__c where RecordTypeID = :openAccessAttendanceRecordTypeID];
+        system.assertequals(True, attendances[0].Attended__c);
+            
+        List <Contact> updatedContactList = [Select LastName, Last_face_to_face_contact__c from Contact];
+        system.assertEquals(system.today()+3, updatedContactList[0].Last_face_to_face_contact__c);
+        
+        delete att3;
+        updatedContactList = [Select LastName, Last_face_to_face_contact__c from Contact];
+        system.assertEquals(system.today(), updatedContactList[0].Last_face_to_face_contact__c);
+        
+        delete att1;
+        updatedContactList = [Select LastName, Last_face_to_face_contact__c from Contact];
+        system.assertEquals(system.today(), updatedContactList[0].Last_face_to_face_contact__c);
+            
+    }
 }

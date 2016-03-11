@@ -44,6 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
@@ -51,6 +52,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -58,10 +60,6 @@
         <externalId>false</externalId>
         <label>Client Status</label>
         <picklist>
-            <picklistValues>
-                <fullName>Waiting List</fullName>
-                <default>false</default>
-            </picklistValues>
             <picklistValues>
                 <fullName>Active</fullName>
                 <default>false</default>
@@ -91,6 +89,14 @@
         <fullName>Date_Started_on_Programme__c</fullName>
         <externalId>false</externalId>
         <label>Date Started on Programme</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Exit__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Exit</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
@@ -189,32 +195,40 @@
         <externalId>false</externalId>
         <label>Reason not accepted</label>
         <picklist>
+            <controllingField>Referral_Status__c</controllingField>
             <picklistValues>
                 <fullName>Not met criteria (referred on)</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Not met criteria (not referred on)</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>No show - follow-up</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>No show - no follow-up</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Moved</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Deceased</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Prison</fullName>
+                <controllingFieldValues>Not Accepted</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -451,6 +465,768 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Referrals</pluralLabel>
+    <recordTypes>
+        <fullName>Incoming</fullName>
+        <active>true</active>
+        <label>Incoming</label>
+        <picklistValues>
+            <picklist>Client_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_Exit__c</picklist>
+            <values>
+                <fullName>Client did not wish to attend further treatment sessions because he%2Fshe considered him%2Fherself to be stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client refused to have further sessions or did not return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General medical transfer or medical issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No longer lives in the area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premature exit from treatment for non-compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison to prison transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released from prison but not linked to other treatment site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sentenced to prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred stable* %28including release linking patient to other treatment site or other prison treatment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_not_accepted__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - no follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28not referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_from_internal__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_to_Programme__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_of_Referral__c</picklist>
+            <values>
+                <fullName>Accident %26 emergency other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acute hospital service excluding A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Court</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General practitioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JLO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health facility %28including psychiatrist%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health liaison nurse at A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other drug treatment centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach worker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Police</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Probation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social services%2FCommunity services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal</fullName>
+        <active>true</active>
+        <label>Internal</label>
+        <picklistValues>
+            <picklist>Client_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_Exit__c</picklist>
+            <values>
+                <fullName>Client did not wish to attend further treatment sessions because he%2Fshe considered him%2Fherself to be stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client refused to have further sessions or did not return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General medical transfer or medical issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No longer lives in the area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premature exit from treatment for non-compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison to prison transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released from prison but not linked to other treatment site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sentenced to prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred stable* %28including release linking patient to other treatment site or other prison treatment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_not_accepted__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - no follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28not referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_from_internal__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_to_Programme__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_of_Referral__c</picklist>
+            <values>
+                <fullName>Accident %26 emergency other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acute hospital service excluding A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Court</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General practitioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JLO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health facility %28including psychiatrist%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health liaison nurse at A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other drug treatment centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach worker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Police</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Probation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social services%2FCommunity services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Outgoing</fullName>
+        <active>true</active>
+        <label>Outgoing</label>
+        <picklistValues>
+            <picklist>Client_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_Exit__c</picklist>
+            <values>
+                <fullName>Client did not wish to attend further treatment sessions because he%2Fshe considered him%2Fherself to be stable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client refused to have further sessions or did not return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Died</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General medical transfer or medical issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No longer lives in the area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premature exit from treatment for non-compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison to prison transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released from prison but not linked to other treatment site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sentenced to prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred stable* %28including release linking patient to other treatment site or other prison treatment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transferred unstable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treatment completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_not_accepted__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No show - no follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28not referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not met criteria %28referred on%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_from_internal__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referred_to_Programme__c</picklist>
+            <values>
+                <fullName>CE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cocaine Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drop-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug Programme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_of_Referral__c</picklist>
+            <values>
+                <fullName>Accident %26 emergency other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acute hospital service excluding A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Court</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General practitioner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JLO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health facility %28including psychiatrist%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health liaison nurse at A%26E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile bus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other drug treatment centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outreach worker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Police</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Probation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social services%2FCommunity services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

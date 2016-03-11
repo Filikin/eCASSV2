@@ -27,6 +27,10 @@
         <name>Theme_Activity_Type__c</name>
     </fields>
     <fields>
+        <label><!-- Was the area coordinator present --></label>
+        <name>Was_the_area_coordinator_present__c</name>
+    </fields>
+    <fields>
         <label><!-- Teacher --></label>
         <name>Youth_Worker__c</name>
         <relationshipLabel><!-- Program Sessions --></relationshipLabel>

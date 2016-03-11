@@ -32,6 +32,10 @@
                 <behavior>Edit</behavior>
                 <field>Attendances__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Was_the_area_coordinator_present__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

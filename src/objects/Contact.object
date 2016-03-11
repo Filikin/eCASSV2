@@ -53,10 +53,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>MapHighlightAction</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>Merge</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -2501,6 +2497,26 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <protected>false</protected>
     </webLinks>
     <webLinks>
+        <fullName>Care_Plan_Review</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Care Plan Review</masterLabel>
+        <openType>replace</openType>
+        <page>CarePlanReview</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Client_Calendar</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Client Calendar</masterLabel>
+        <openType>replace</openType>
+        <page>ClientCalendar</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>Enroll_in_course</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
@@ -2511,6 +2527,17 @@ TEXT(X7a_Living_with_whom__c) &lt;&gt; &quot;7. Other&quot;)</errorConditionForm
         <page>EnrolmentListPage</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Individual_Client_Activity</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Individual Client Activity</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/00Ob0000003mttu?pv0={!Contact.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>View_care_plan</fullName>

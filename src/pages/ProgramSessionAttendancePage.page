@@ -1,10 +1,10 @@
 <apex:page standardController="Program_Session__c" extensions="ProgramAttendanceListView">
 
-	<h2>{!$Label.Session_Details}: {!Program_Session__c.Program_Service__r.Name} </h2>
-	<br/>
-	<h3>{!$Label.Session_Date}: <apex:outputText value="{0,date, d MMM yyyy}"><apex:param value="{!Program_Session__c.Session_Date__c}" /></apex:outputText></h3>
-	<apex:form rendered="{!userCanUpdate}">
-		<apex:pageBlock title="{!$ObjectType.Attendance__c.labelPlural}" id="youngPeopleList">
+    <h2>{!$Label.Session_Details}: {!Program_Session__c.Program_Service__r.Name} </h2>
+    <br/>
+    <h3>{!$Label.Session_Date}: <apex:outputText value="{0,date, d MMM yyyy}"><apex:param value="{!Program_Session__c.Session_Date__c}" /></apex:outputText></h3>
+    <apex:form rendered="{!userCanUpdate}">
+        <apex:pageBlock title="{!$ObjectType.Attendance__c.labelPlural}" id="youngPeopleList">
                 <apex:pageBlockTable value="{!AttendanceList}" var="attendance">
                     <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Name.Label}">
                         <apex:outputText value="{!attendance.Young_Person_name__c}"/>
@@ -12,17 +12,22 @@
                     <apex:column headerValue="{!$Label.Mark_as_attended}"  style="width:150px"  rendered="{!$ObjectType.Attendance__c.Fields.Attended__c.updateable}">
                         <apex:inputField value="{!attendance.Attended__c}"/>
                     </apex:column>
-					<apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Interaction__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Interaction__c.updateable}">
+                    <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Interaction__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Interaction__c.updateable}">
                         <apex:inputField value="{!attendance.Interaction__c}"/>
                     </apex:column>
                     <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Comment__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Comment__c.updateable}">
                         <apex:inputField value="{!attendance.Comment__c}" style="width:300px"/>
                     </apex:column>
+  					<apex:repeat value="{!extraAttendanceFields}" var="oneField">
+  						<apex:column headerValue="{!oneField.Label}">
+                            <apex:inputfield value="{!attendance[oneField.fieldPath]}" />
+                    	</apex:column>
+                    </apex:repeat>
                 </apex:pageBlockTable>
         </apex:pageBlock>
         <apex:commandButton action="{!submit}" value="Save Changes" />
     </apex:form>
-    		<apex:pageBlock title="{!$ObjectType.Attendance__c.labelPlural}" id="youngPeopleList" rendered="{!not(userCanUpdate)}">
+            <apex:pageBlock title="{!$ObjectType.Attendance__c.labelPlural}" id="youngPeopleList" rendered="{!not(userCanUpdate)}">
                 <apex:pageBlockTable value="{!AttendanceList}" var="attendance">
                     <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Name.Label}">
                         <apex:outputText value="{!attendance.Young_Person_name__c}"/>
@@ -30,7 +35,7 @@
                     <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Attended__c.Label}"  style="width:150px" rendered="{!$ObjectType.Attendance__c.Fields.Attended__c.accessible}">
                         <apex:outputField value="{!attendance.Attended__c}"/>
                     </apex:column>
-					<apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Interaction__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Interaction__c.accessible}">
+                    <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Interaction__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Interaction__c.accessible}">
                         <apex:outputField value="{!attendance.Interaction__c}"/>
                     </apex:column>
                     <apex:column headerValue="{!$ObjectType.Attendance__c.Fields.Comment__c.Label}" rendered="{!$ObjectType.Attendance__c.Fields.Comment__c.accessible}">

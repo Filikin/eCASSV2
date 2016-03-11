@@ -33,6 +33,16 @@ Everything else is left alone --></help>
         <name>Care_Plan_Print_Page__c</name>
     </fields>
     <fields>
+        <help><!-- The latest time shown on the client calendar --></help>
+        <label><!-- Client Calendar End Time --></label>
+        <name>Client_Calendar_End_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- The earliest time shown on the client calendar --></help>
+        <label><!-- Client Calendar Start Time --></label>
+        <name>Client_Calendar_Start_Time__c</name>
+    </fields>
+    <fields>
         <help><!-- On enrolment in a course, create past attendance records --></help>
         <label><!-- Create past attendances --></label>
         <name>Create_past_attendances__c</name>

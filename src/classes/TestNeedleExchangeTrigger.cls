@@ -12,7 +12,7 @@ private class TestNeedleExchangeTrigger
         Needle_Syringe_Stock__c testStock = new Needle_Syringe_Stock__c (Name='Dublin', X1ml_Diabetic__c=100, X1ml_Filter__c=100);
         insert testStock;
         
-        ID clientRecordTypeID = [select ID from RecordType where Name='Client'].id;
+        ID clientRecordTypeID = [select ID from RecordType where Name='Client' limit 1].id;
         Contact client = new Contact (LastName = 'Fred', X4_Gender__c = 'Male', RecordTypeID=clientRecordTypeID);
         insert client;
  

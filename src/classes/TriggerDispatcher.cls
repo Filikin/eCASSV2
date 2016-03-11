@@ -24,7 +24,14 @@ public class TriggerDispatcher
 	{
 		if (AppConfigSupport.TriggersDisabled == true) return;
 		
-		if (TriggerObject == 'CarePlanObjective')
+		if (TriggerObject == 'CarePlanReview')
+		{
+			InTrigger = true;
+			activeFunction = new CarePlanReviewTrigger();
+			activeFunction.MainEntry (TriggerObject, isBefore, isDelete, isAfter, isInsert, isUpdate, isExecuting, newList, newMap, oldList, oldMap);
+			InTrigger = false;
+		}
+		else if (TriggerObject == 'CarePlanObjective')
 		{
 			InTrigger = true;
 			activeFunction = new CreateUpdateCarePlanClass();

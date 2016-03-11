@@ -22,12 +22,46 @@
         <name>Client_name__c</name>
     </fields>
     <fields>
-        <label><!-- Date --></label>
+        <label><!-- Date Step Set --></label>
         <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of expected completion --></label>
+        <name>Date_of_expected_completion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date step completed --></label>
+        <name>Date_step_completed__c</name>
     </fields>
     <fields>
         <label><!-- Description --></label>
         <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detail if unsuccessful --></label>
+        <name>Detail_if_unsuccessful__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID of What Needs Template --></label>
+        <name>ID_of_What_Needs_Template__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID of template --></label>
+        <name>ID_of_template__c</name>
+    </fields>
+    <fields>
+        <label><!-- If external, which agency --></label>
+        <name>If_external_which_agency__c</name>
+        <relationshipLabel><!-- Care plan steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If successful or in progress (with challenges) --></help>
+        <label><!-- If successful or in progress --></label>
+        <name>If_successful_or_in_progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Note --></label>
+        <name>Note__c</name>
     </fields>
     <fields>
         <label><!-- Person Responsible for Action --></label>
@@ -61,6 +95,10 @@
             <translation><!-- Attended --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Booked</masterLabel>
             <translation><!-- Booked --></translation>
         </picklistValues>
@@ -81,17 +119,19 @@
             <translation><!-- No Show --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Not Started</masterLabel>
-            <translation><!-- Not Started --></translation>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>On Hold</masterLabel>
-            <translation><!-- On Hold --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Started</masterLabel>
-            <translation><!-- Started --></translation>
-        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Step records attendance --></label>
+        <name>Step_records_attendance__c</name>
+    </fields>
+    <fields>
+        <help><!-- What care plan step needs to happen first? --></help>
+        <label><!-- What step needs to happen first --></label>
+        <name>What_step_needs_to_happen_first__c</name>
+        <relationshipLabel><!-- Care plan steps --></relationshipLabel>
     </fields>
     <layouts>
         <layout>Care plan step Layout</layout>
@@ -101,4 +141,8 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New_Care_Plan_Step_from_Review --></label>
+        <name>New_Care_Plan_Step_from_Review</name>
+    </webLinks>
 </CustomObjectTranslation>

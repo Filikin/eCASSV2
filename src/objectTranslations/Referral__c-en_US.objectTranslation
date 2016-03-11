@@ -19,10 +19,6 @@
             <masterLabel>Inactive</masterLabel>
             <translation><!-- Inactive --></translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Waiting List</masterLabel>
-            <translation><!-- Waiting List --></translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Client --></label>
@@ -32,6 +28,10 @@
     <fields>
         <label><!-- Date Started on Programme --></label>
         <name>Date_Started_on_Programme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Exit --></label>
+        <name>Date_of_Exit__c</name>
     </fields>
     <fields>
         <label><!-- Date of Referral --></label>
@@ -297,15 +297,37 @@
         </picklistValues>
     </fields>
     <layouts>
-        <layout>Referral Layout</layout>
-        <sections>
-            <label><!-- Client Status --></label>
-            <section>Client Status</section>
-        </sections>
+        <layout>Internal Layout</layout>
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
         </sections>
     </layouts>
+    <layouts>
+        <layout>Outgoing Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Referral Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Incoming --></label>
+        <name>Incoming</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal --></label>
+        <name>Internal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Outgoing --></label>
+        <name>Outgoing</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

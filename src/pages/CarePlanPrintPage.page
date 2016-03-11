@@ -41,29 +41,29 @@
                         <apex:pageBlockSection title="{!$Label.Care_plan_steps}" columns="1">
                             <apex:repeat value="{!oneCarePlanObjective.Care_plan_steps__r}" var="oneCarePlanStep">
                                 <apex:outputPanel layout="none">
-                                	<table>
-					                    <col width="20%"/>
-					                    <col width="30%"/>
-					                    <col width="10%"/>
-					                    <col width="40%"/>
-                                		<tr>
-											<td><strong>{!$Label.Step_name}:</strong></td><td><apex:outputField value=" {!oneCarePlanStep.Name}"/></td>
-		                                    <td><strong>{!$Label.Date}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Date__c}"/></td>
-		                                </tr>
-		                                <tr>
-		                                	<td><strong>{!$Label.Person_Responsible_for_Action}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Person_Responsible_for_Action__c}"/></td>
-		                                    <td><strong>{!$Label.Step_Status}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Status__c}"/></td>
-		                                </tr>
-		                                <tr>
-		                                	<td><strong>{!$Label.Related_Organisation}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Related_Organisation__c}"/></td>
-                                     		<td><strong>{!$Label.Step_Status_Comment}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Status_Comment__c}"/></td>
-                                     	</tr>
-                                     	<tr>
-											<td><strong>{!$Label.Description}:</strong></td><td colspan="3"><apex:outputText value=" {!oneCarePlanStep.Description__c}"/></td>
-                                     	</tr>
+                                    <table>
+                                        <col width="20%"/>
+                                        <col width="30%"/>
+                                        <col width="10%"/>
+                                        <col width="40%"/>
+                                        <tr>
+                                            <td><strong>{!$Label.Step_name}:</strong></td><td><apex:outputField value=" {!oneCarePlanStep.Name}"/></td>
+                                            <td><strong>{!$Label.Date}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Date__c}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{!$Label.Person_Responsible_for_Action}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Person_Responsible_for_Action__c}"/></td>
+                                            <td><strong>{!$Label.Step_Status}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Status__c}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{!$Label.Related_Organisation}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Related_Organisation__c}"/></td>
+                                            <td><strong>{!$Label.Step_Status_Comment}:</strong></td><td><apex:outputText value=" {!oneCarePlanStep.Status_Comment__c}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>{!$Label.Description}:</strong></td><td colspan="3"><apex:outputText value=" {!oneCarePlanStep.Description__c}"/></td>
+                                        </tr>
                                      </table>
-	                            </apex:outputPanel>
-								<hr/>
+                                </apex:outputPanel>
+                                <hr/>
                             </apex:repeat>
                         </apex:pageBlockSection>
                     </apex:outputPanel>

@@ -12,28 +12,44 @@
         <label><!-- Area --></label>
         <name>Area__c</name>
         <picklistValues>
-            <masterLabel>Care Plan Administration</masterLabel>
-            <translation><!-- Care Plan Administration --></translation>
+            <masterLabel>Accomodation/Independent Living</masterLabel>
+            <translation><!-- Accomodation/Independent Living --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Drug &amp; Alcohol Use</masterLabel>
-            <translation><!-- Drug &amp; Alcohol Use --></translation>
+            <masterLabel>Alcohol Use</masterLabel>
+            <translation><!-- Alcohol Use --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Legal Problems</masterLabel>
-            <translation><!-- Legal Problems --></translation>
+            <masterLabel>Drug Use</masterLabel>
+            <translation><!-- Drug Use --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Physical &amp; Psychological Problems</masterLabel>
-            <translation><!-- Physical &amp; Psychological Problems --></translation>
+            <masterLabel>Education and Training</masterLabel>
+            <translation><!-- Education and Training --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Risk Assessment</masterLabel>
-            <translation><!-- Risk Assessment --></translation>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Social Functioning</masterLabel>
-            <translation><!-- Social Functioning --></translation>
+            <masterLabel>Family and Relationships</masterLabel>
+            <translation><!-- Family and Relationships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Justice and Legal</masterLabel>
+            <translation><!-- Justice and Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mental Health</masterLabel>
+            <translation><!-- Mental Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical Health</masterLabel>
+            <translation><!-- Physical Health --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -83,8 +99,260 @@
         <name>Lead_key_worker_from_other_agency__c</name>
     </fields>
     <fields>
-        <label><!-- Next Review Date --></label>
+        <label><!-- Long Term Outcome --></label>
+        <name>Long_Term_Outcome__c</name>
+        <picklistValues>
+            <masterLabel>Access MABS and follow plan for three months</masterLabel>
+            <translation><!-- Access MABS and follow plan for three months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Access other HSE mental health services</masterLabel>
+            <translation><!-- Access other HSE mental health services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Access to specialist supports for children / family</masterLabel>
+            <translation><!-- Access to specialist supports for children / family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Achieved QQI qualification</masterLabel>
+            <translation><!-- Achieved QQI qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adhere to psychiatric treatment</masterLabel>
+            <translation><!-- Adhere to psychiatric treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend aftercare (fellowship)</masterLabel>
+            <translation><!-- Attend aftercare (fellowship) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend aftercare (programme)</masterLabel>
+            <translation><!-- Attend aftercare (programme) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend aftercare at least three times (fellowship)</masterLabel>
+            <translation><!-- Attend aftercare at least three times (fellowship) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend aftercare at least three times (programme)</masterLabel>
+            <translation><!-- Attend aftercare at least three times (programme) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend counselling or support groups for</masterLabel>
+            <translation><!-- Attend counselling or support groups for --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attend specialist health services</masterLabel>
+            <translation><!-- Attend specialist health services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Children return to family care</masterLabel>
+            <translation><!-- Children return to family care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete education / training programmes</masterLabel>
+            <translation><!-- Complete education / training programmes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete literacy programme</masterLabel>
+            <translation><!-- Complete literacy programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete methadone detox</masterLabel>
+            <translation><!-- Complete methadone detox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completely stop re-offending</masterLabel>
+            <translation><!-- Completely stop re-offending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Develop pro social peer network</masterLabel>
+            <translation><!-- Develop pro social peer network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engage regularly with alcohol services (monthly for three months)</masterLabel>
+            <translation><!-- Engage regularly with alcohol services (monthly for three months) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engage with drug services regularly, i.e. monthly for three months</masterLabel>
+            <translation><!-- Engage with drug services regularly, i.e. monthly for three months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get GP / medical card and access doctor</masterLabel>
+            <translation><!-- Get GP / medical card and access doctor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Improve diet / exercise</masterLabel>
+            <translation><!-- Improve diet / exercise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase access to children</masterLabel>
+            <translation><!-- Increase access to children --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase coping skills</masterLabel>
+            <translation><!-- Increase coping skills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase job readiness</masterLabel>
+            <translation><!-- Increase job readiness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual or family attend family support service, monthly for three months</masterLabel>
+            <translation><!-- Individual or family attend family support service, monthly for three months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keep treatment plan / appointments (when had not previously done this)</masterLabel>
+            <translation><!-- Keep treatment plan / appointments (when had not previously done this) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintain current housing (bills, self care)</masterLabel>
+            <translation><!-- Maintain current housing (bills, self care) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintained full or part time work for six months</masterLabel>
+            <translation><!-- Maintained full or part time work for six months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receive diagnosis of mental health issue</masterLabel>
+            <translation><!-- Receive diagnosis of mental health issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce Isolation</masterLabel>
+            <translation><!-- Reduce Isolation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce alcohol to zero</masterLabel>
+            <translation><!-- Reduce alcohol to zero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce alcohol use by goal amount</masterLabel>
+            <translation><!-- Reduce alcohol use by goal amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce drug use by goal amount</masterLabel>
+            <translation><!-- Reduce drug use by goal amount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce drug use to zero</masterLabel>
+            <translation><!-- Reduce drug use to zero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce frequency of offending</masterLabel>
+            <translation><!-- Reduce frequency of offending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduce risk behaviour</masterLabel>
+            <translation><!-- Reduce risk behaviour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register for social welfare when previously no payments</masterLabel>
+            <translation><!-- Register for social welfare when previously no payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register on housing list / remove barriers i.e. debt</masterLabel>
+            <translation><!-- Register on housing list / remove barriers i.e. debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repayment of debt</masterLabel>
+            <translation><!-- Repayment of debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolve outstanding charges</masterLabel>
+            <translation><!-- Resolve outstanding charges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure long term accommodation</masterLabel>
+            <translation><!-- Secure long term accommodation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure private rented / owner occupied</masterLabel>
+            <translation><!-- Secure private rented / owner occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure short term accommodation (emergency)</masterLabel>
+            <translation><!-- Secure short term accommodation (emergency) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure transitional accommodation</masterLabel>
+            <translation><!-- Secure transitional accommodation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stabilise methadone use</masterLabel>
+            <translation><!-- Stabilise methadone use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start full time employment</masterLabel>
+            <translation><!-- Start full time employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start opiate substitution treatment</masterLabel>
+            <translation><!-- Start opiate substitution treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start paid scheme (e.g. CE)</masterLabel>
+            <translation><!-- Start paid scheme (e.g. CE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start part time employment</masterLabel>
+            <translation><!-- Start part time employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start unpaid work (volunteering / interning)</masterLabel>
+            <translation><!-- Start unpaid work (volunteering / interning) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Successfully complete post release supervision period</masterLabel>
+            <translation><!-- Successfully complete post release supervision period --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support care of children outside the family</masterLabel>
+            <translation><!-- Support care of children outside the family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undertake actions to prepare for upcoming trial</masterLabel>
+            <translation><!-- Undertake actions to prepare for upcoming trial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undertake course or programme on family / relationships</masterLabel>
+            <translation><!-- Undertake course or programme on family / relationships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undertake family therapy / programme</masterLabel>
+            <translation><!-- Undertake family therapy / programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undertake self directed actions to improve family / relationship</masterLabel>
+            <translation><!-- Undertake self directed actions to improve family / relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went up one level on QQI (i.e. FETAC 2 to 3)</masterLabel>
+            <translation><!-- Went up one level on QQI (i.e. FETAC 2 to 3) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>plan for three months (including medication management)</masterLabel>
+            <translation><!-- plan for three months (including medication management) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>three or more sessions (HSE, community or private)</masterLabel>
+            <translation><!-- three or more sessions (HSE, community or private) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Next Review Date (obsolete) --></label>
         <name>Next_Review_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Attendance Steps --></label>
+        <name>Number_of_Attendance_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Task Steps --></label>
+        <name>Number_of_Task_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objective Note --></label>
+        <name>Objective_Note__c</name>
     </fields>
     <fields>
         <label><!-- Objective Status --></label>
@@ -119,6 +387,22 @@
         <name>Overall_Outcome__c</name>
     </fields>
     <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Referred to --></label>
         <name>Referred_to__c</name>
         <relationshipLabel><!-- Care Plan Objectives --></relationshipLabel>
@@ -144,7 +428,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- e.g. Use Pattern Chart or TOPS or data from metadone clinic! --></help>
+        <help><!-- e.g. Use Pattern Chart or TOPS or data from metadone clinic --></help>
         <label><!-- Tools: How are we going to measure this? --></label>
         <name>Tools_used__c</name>
     </fields>
@@ -155,16 +439,8 @@
     <layouts>
         <layout>Care Plan Objective Layout</layout>
         <sections>
-            <label><!-- Care Plan Details --></label>
-            <section>Care Plan Details</section>
-        </sections>
-        <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Info from other agency --></label>
-            <section>Info from other agency</section>
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>

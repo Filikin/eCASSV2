@@ -14,6 +14,10 @@
         <relationshipLabel><!-- Support agencies working with client --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Consent Valid until --></label>
+        <name>Consent_Valid_until__c</name>
+    </fields>
+    <fields>
         <label><!-- Contact --></label>
         <name>Contact__c</name>
         <relationshipLabel><!-- Clients supported --></relationshipLabel>
@@ -27,12 +31,57 @@
         <name>Contact_type__c</name>
     </fields>
     <fields>
+        <label><!-- Date consent given --></label>
+        <name>Date_consent_given__c</name>
+    </fields>
+    <fields>
         <label><!-- Email --></label>
         <name>Email__c</name>
     </fields>
     <fields>
+        <label><!-- How can information be shared --></label>
+        <name>How_can_information_be_shared__c</name>
+        <picklistValues>
+            <masterLabel>Letter</masterLabel>
+            <translation><!-- Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e-mail</masterLabel>
+            <translation><!-- e-mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>in person</masterLabel>
+            <translation><!-- in person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>salesforce</masterLabel>
+            <translation><!-- salesforce --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Support agencies working with client --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Support agency --></label>
         <name>Support_agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support agency status --></label>
+        <name>Support_agency_status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Telephone number --></label>

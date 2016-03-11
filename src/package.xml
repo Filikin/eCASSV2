@@ -26,6 +26,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>*</members>
         <members>Activity</members>
         <members>Contact</members>
         <members>Event</members>
@@ -38,6 +42,11 @@
     <types>
         <members>*</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>eCASS_Dashboards</members>
+        <members>eCASS_Dashboards/eCASS_Dashboard</members>
+        <name>Dashboard</name>
     </types>
     <types>
         <members>Logo</members>
@@ -61,9 +70,14 @@
         <members>Attendance__c-Drop In Attendance Layout</members>
         <members>Attendance__c-One to One Attendance</members>
         <members>Attendance__c-Open Access Attendance Layout</members>
+        <members>CPO_Template__mdt-Care Plan Objective Template Layout</members>
+        <members>CPS_Template__mdt-Care Plan Step Template Layout</members>
         <members>CRA_Goal__c-CRA Goal Layout</members>
         <members>CRA__c-CRA Layout</members>
+        <members>Care_Plan_Obj_Template__c-Care Plan Obj Template Layout</members>
         <members>Care_Plan_Objective__c-Care Plan Objective Layout</members>
+        <members>Care_Plan_Review__c-Care Plan Review Layout</members>
+        <members>Care_Plan_Step_Template__c-Care Plan Step Template Layout</members>
         <members>Care_plan_step__c-Care plan step Layout</members>
         <members>Contact-HRB Contact Layout</members>
         <members>Drop_in__c-Drop-in Layout</members>
@@ -78,13 +92,52 @@
         <members>Nations__c-Nation Layout</members>
         <members>Needle_Exchange__c-NSP Intervention Layout</members>
         <members>Needle_Syringe_Stock__c-Needle %26 Syringe Stock Layout</members>
+        <members>Open_Access_attendance__c-Open Access Layout</members>
         <members>Program_Service__c-Program Service Layout</members>
         <members>Program_Session__c-Program Session Layout</members>
+        <members>Referral__c-Internal Layout</members>
+        <members>Referral__c-Outgoing Layout</members>
         <members>Referral__c-Referral Layout</members>
         <members>Support_agency_working_with_client__c-Support agency working with client Layout</members>
+        <members>TOP__c-TOP Layout</members>
         <members>Treatment_Centre__c-Treatment Centre Layout</members>
+        <members>UDIT__c-AUDIT Layout</members>
+        <members>UDIT__c-CUDIT Layout</members>
+        <members>UDIT__c-DUDIT Layout</members>
         <members>Use_Pattern_Chart__c-Use Pattern Chart Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>eCASS_Dashboard_Reports</members>
+        <members>eCASS_Dashboard_Reports/Activities_by_programme</members>
+        <members>eCASS_Dashboard_Reports/Current_age_Gender</members>
+        <members>eCASS_Dashboard_Reports/New_clients_this_year</members>
+        <members>eCASS_Dashboard_Reports/Outgoing_referrals_this_year</members>
+        <members>eCASS_Dashboard_Reports/Treatment_outcomes</members>
+        <members>eCASS_Dashboard_Reports/Waiting_lists</members>
+        <members>eCASS_Report_Templates</members>
+        <members>eCASS_Report_Templates/Age_Gender_of_current_clients</members>
+        <members>eCASS_Report_Templates/All_Time_Main_Drug_Type</members>
+        <members>eCASS_Report_Templates/All_activities_by_programme</members>
+        <members>eCASS_Report_Templates/All_outgoing_referrals</members>
+        <members>eCASS_Report_Templates/Client_Activities_by_attendance_type</members>
+        <members>eCASS_Report_Templates/Client_casenote_report</members>
+        <members>eCASS_Report_Templates/Client_referrals_last_month</members>
+        <members>eCASS_Report_Templates/Client_referrals_to_programmes</members>
+        <members>eCASS_Report_Templates/Current_active_clients_by_programme</members>
+        <members>eCASS_Report_Templates/Current_waiting_lists</members>
+        <members>eCASS_Report_Templates/Group_attendance_last_month</members>
+        <members>eCASS_Report_Templates/Individual_Client_activity_report</members>
+        <members>eCASS_Report_Templates/Key_working_sessions_last_month</members>
+        <members>eCASS_Report_Templates/Monthly_Activity_report</members>
+        <members>eCASS_Report_Templates/Outgoing_this_year</members>
+        <members>eCASS_Report_Templates/Total_client_hours_1_2_1</members>
+        <members>eCASS_Report_Templates/Total_new_clients_this_year</members>
+        <members>eCASS_Report_Templates/Treatment_outcomes_NDTRS_forms</members>
+        <members>eCASS_Report_Templates/X18_Individual_Attendance_Rate</members>
+        <members>eCASS_Report_Templates/X19_No_shows_and_cancellations</members>
+        <members>eCASS_Report_Templates/main_drug_current_clients</members>
+        <name>Report</name>
     </types>
     <types>
         <members>*</members>
@@ -94,5 +147,5 @@
         <members>*</members>
         <name>Workflow</name>
     </types>
-    <version>33.0</version>
+    <version>35.0</version>
 </Package>

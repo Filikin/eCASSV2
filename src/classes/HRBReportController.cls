@@ -673,6 +673,7 @@ public with sharing class HRBReportController
 	    ApexPages.StandardController treatmentController1 = new ApexPages.StandardController(params);        
         AddTreatmentToReport hrbReport = new AddTreatmentToReport(treatmentController1);
         hrbReport.Initialise ();
+		hrbReport.ProcessTreatments();
 
         HRBReportController hrb = new HRBReportController(params);
 		system.assertEquals(1, hrb.TreatmentsWithClientsList.size());
@@ -686,6 +687,7 @@ public with sharing class HRBReportController
         ApexPages.StandardController treatmentController2 = new ApexPages.StandardController(params2);        
         AddTreatmentToReport hrbReport2 = new AddTreatmentToReport(treatmentController2);
         hrbReport2.Initialise ();
+		hrbReport2.ProcessTreatments();
 
         hrb = new HRBReportController(params2);
 
@@ -698,6 +700,7 @@ public with sharing class HRBReportController
 	    ApexPages.StandardController treatmentController3 = new ApexPages.StandardController(params3);        
         AddTreatmentToReport hrbReport3 = new AddTreatmentToReport(treatmentController3);
         hrbReport3.Initialise ();
+		hrbReport3.ProcessTreatments();
 
         hrb = new HRBReportController(params3);
 
@@ -710,6 +713,7 @@ public with sharing class HRBReportController
 	    ApexPages.StandardController treatmentController4 = new ApexPages.StandardController(params4);        
         AddTreatmentToReport hrbReport4 = new AddTreatmentToReport(treatmentController4);
         hrbReport4.Initialise ();
+		hrbReport4.ProcessTreatments();
 
         hrb = new HRBReportController(params4);
 

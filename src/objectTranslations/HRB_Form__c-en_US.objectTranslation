@@ -1840,6 +1840,10 @@ If not known, code 99. --></help>
             <masterLabel>28. Facilitated detox</masterLabel>
             <translation><!-- 28. Facilitated detox --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Methadone substitution</masterLabel>
+            <translation><!-- 8. Methadone substitution --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- Date commenced
@@ -1924,6 +1928,12 @@ each type of treatment intervention --></help>
         <name>X33b28_Date_Commenced__c</name>
     </fields>
     <fields>
+        <help><!-- Date commenced
+each type of treatment intervention --></help>
+        <label><!-- 33b8 Date Commenced --></label>
+        <name>X33b8_Date_Commenced__c</name>
+    </fields>
+    <fields>
         <help><!-- Medication-free therapy - Date Completed --></help>
         <label><!-- 33c12 Date Completed --></label>
         <name>X33c12_Date_Completed__c</name>
@@ -1991,6 +2001,11 @@ each type of treatment intervention --></help>
         <name>X33c28_Date_Completed__c</name>
     </fields>
     <fields>
+        <help><!-- Methadone substitution - Date Completed --></help>
+        <label><!-- 33c8 Date Completed --></label>
+        <name>X33c8_Date_Completed__c</name>
+    </fields>
+    <fields>
         <help><!-- Medication-free therapy - Number of Sessions --></help>
         <label><!-- 33d12 Number of Sessions --></label>
         <name>X33d12_Number_of_Sessions__c</name>
@@ -2053,6 +2068,11 @@ each type of treatment intervention --></help>
         <help><!-- Facilitated detox - Number of sessions provided --></help>
         <label><!-- 33d28 Number of Sessions --></label>
         <name>X33d28_Number_of_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Methadone substitution - Number of Sessions --></help>
+        <label><!-- 33d8 Number of Sessions --></label>
+        <name>X33d8_Number_of_Sessions__c</name>
     </fields>
     <fields>
         <label><!-- 34 Outcome - Other --></label>
