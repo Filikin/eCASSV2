@@ -69,8 +69,8 @@ private class testCreateAttendanceTrigger
         delete enrole;
         program = [select Id, Total_EnrolmentsV2__c from Program_Service__c where Id = :program.Id];
         system.assertEquals (1, program.Total_EnrolmentsV2__c);
-    }
         
+    }
      
     
     static testMethod void testCreateCarePlanStepAttendanceTrigger()

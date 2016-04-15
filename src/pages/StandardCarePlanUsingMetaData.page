@@ -1,0 +1,44 @@
+<apex:page standardcontroller="Contact" extensions="StandardCarePlanControllerUsingMetaData" tabstyle="Care_Plan_Objective__c" title="{!$Label.Standard_Care_Plan_Creation_Title}" showheader="{!$CurrentPage.parameters.POPUP = null}">
+<!--Author: Eamon Kelly, Enclude -->
+    <script type="text/javascript">
+    function closeGoal()
+    {
+        window.opener.refreshGoalList();
+        window.close();
+        return true;
+    }
+
+    </script>
+    <apex:form id="cpcreate">
+        <apex:pagemessages />
+        <apex:actionfunction name="goalClicked" action="{!AddGoal}" rerender="">
+            <apex:param name="firstParam" assignTo="{!currentGoal}" value="" />
+        </apex:actionfunction>
+        <apex:actionfunction name="stepClicked" action="{!AddStep}" rerender="" >
+            <apex:param name="firstParam" assignTo="{!currentStep}" value="" />
+        </apex:actionfunction>
+        <apex:pageblock title="{!$Label.Select_care_plan_objectives} {!Contact.Name}" id="Goals">
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!CreateCarePlan}" value="{!$Label.Create_Standard_Care_Plan_Button_Title}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!GoToReview}" value="{!$Label.Skip_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = null}" />
+                <apex:commandbutton action="{!AddObjectives}" oncomplete="closeGoal()" value="{!$Label.Care_Plan_Add_Standard_Objectives}" rendered="{!$CurrentPage.parameters.POPUP = '1'}" />
+            </apex:pageblockbuttons>
+            <apex:pageblocktable value="{!goalList}" var="oneGoal">
+                <apex:column width="5%">
+                    <apex:inputcheckbox value="{!oneGoal.bIncludeThisGoal}" selected="{!oneGoal.bIncludeThisGoal}" onclick="goalClicked('{!oneGoal.thisGoal.id}');" />
+                </apex:column>
+                <apex:column headervalue="{!$Label.Care_Plan_Objective_Plural}" value="{!oneGoal.thisGoal.Area__c} - {!oneGoal.thisGoal.MasterLabel}" width="30%" />
+                <apex:column headervalue="{!$Label.Care_Plan_Step_Plural}">
+                    <apex:pageblocktable value="{!oneGoal.stepList}" var="oneStep" >
+                        <apex:column width="5%" headerValue="">
+                            <apex:inputcheckbox value="{!oneStep.bIncludeThisStep}" selected="{!oneStep.bIncludeThisStep}" onclick="stepClicked('{!oneStep.thisStep.id}');" />
+                        </apex:column>
+                        <apex:column>
+ 	                    	<apex:outputText value="{!oneStep.thisStep.MasterLabel}" />
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

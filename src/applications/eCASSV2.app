@@ -4,8 +4,9 @@
     <description>Electronic Collaborative Addiction Services Solution</description>
     <label>eCASS V2</label>
     <logo>Logo/ENCLUDE_Technologies_for_nonprofit_excellence_logo.jpg</logo>
+    <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
-    <tab>standard-PartnerNetworkConnection</tab>
+    <tab>Referral__c</tab>
     <tab>Program_Service__c</tab>
     <tab>Care_Plan_Objective__c</tab>
     <tab>Needle_Exchange__c</tab>
@@ -16,6 +17,5 @@
     <tab>Drop_in__c</tab>
     <tab>TOP__c</tab>
     <tab>UDIT__c</tab>
-    <tab>Referral__c</tab>
     <tab>Care_Plan_Review__c</tab>
 </CustomApplication>

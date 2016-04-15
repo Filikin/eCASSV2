@@ -1,0 +1,51 @@
+<apex:page controller="CustomCarePlanStepLookupController"
+           title="Search"
+           showheader="false"
+           sidebar="false"
+           tabstyle="Care_plan_step__c"
+           id="pg">
+<script>
+/*    try
+    {
+        var x = window.opener.document.getElementById('cpreview').value;
+        alert(x);
+    }
+    catch (e)
+    {
+        alert (e);
+    }
+    */
+</script>
+
+    <apex:form >
+        <apex:outputpanel id="page" layout="block" style="margin:5px;padding:10px;padding-top:2px;">
+            <apex:actionregion >
+                <apex:outputpanel id="top" layout="block" style="margin:5px;padding:10px;padding-top:2px;">
+                    <apex:outputlabel value="{!$Label.Care_Plan_Step_Lookup_Label}" style="font-weight:Bold;padding-right:10px;" for="txtSearch" />
+                    <apex:inputtext id="txtSearch" value="{!searchString}" />
+                    <span style="padding-left:5px"><apex:commandbutton id="btnGo" value="Go" action="{!Search}" rerender="searchResults"></apex:commandbutton></span>
+                    <br/><apex:outputlabel value="{!$Label.Care_Plan_Step_Lookup_Hints}" />
+                </apex:outputpanel>
+
+                <apex:outputpanel id="pnlSearchResults" style="margin:10px;height:350px;overflow-Y:auto;" layout="block">
+                    <apex:pageblock id="searchResults">
+                        <apex:pageblocktable value="{!results}" var="a" id="tblResults">
+                            <apex:column >
+                                <apex:facet name="header">
+                                    <apex:outputpanel >{!$Label.Care_Plan_Step_Lookup_Name_Column}</apex:outputpanel>
+                                </apex:facet>
+                                <apex:outputlink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!TextBox}_lkid','{!TextBox}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Name}</apex:outputlink>
+                            </apex:column>
+                            <apex:column headervalue="{!$ObjectType.Care_plan_step__c.fields.Description__c.Label}">
+                                    <apex:outputfield value="{!a.Description__c}" />
+                                </apex:column>
+                            <apex:column headervalue="{!$ObjectType.Care_plan_step__c.fields.Care_Plan_Objective__c.Label}">
+                                <apex:outputfield value="{!a.Care_Plan_Objective__c}" />
+                            </apex:column>
+</apex:pageblocktable>
+                    </apex:pageblock>
+                </apex:outputpanel>
+            </apex:actionregion>
+        </apex:outputpanel>
+    </apex:form>
+</apex:page>

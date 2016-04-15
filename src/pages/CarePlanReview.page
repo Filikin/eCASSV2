@@ -1,0 +1,171 @@
+<apex:page standardcontroller="Care_Plan_Review__c" extensions="CarePlanReviewController" title="{!$Label.Care_Plan_Review_Title}" action="{!getClientCarePlan}">
+    <script type="text/javascript">
+        function openLookup(baseURL, width, modified, searchParam)
+        {
+            var originalbaseURL = baseURL;
+            var originalwidth = width;
+            var originalmodified = modified;
+            var originalsearchParam = searchParam;
+
+            var lookupType = baseURL.substr(baseURL.length-3, 3);
+            if (modified == '1') baseURL = baseURL + searchParam;
+
+            var isCustomLookup = false;
+
+            if(lookupType == "{!careplanstepPrefix}")
+            {
+                var urlArr = baseURL.split("&");
+                var txtId = '';
+                if(urlArr.length > 2)
+                {
+                    urlArr = urlArr[1].split('=');
+                    txtId = urlArr[1];
+                }
+
+                // Following is the url of Custom Lookup page. You need to change that accordingly
+                baseURL = "/apex/CustomCarePlanStepLookup?txt=" + txtId;
+
+                // Following is the id of apex:form control "myForm". You need to change that accordingly
+                baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.cpreview}");
+                if (modified == '1')
+                {
+                    baseURL = baseURL + "&lksearch=" + searchParam;
+                }
+
+                // add the ID of the client (would love to add the id of the care plan objective!)
+                baseURL = baseURL + "&clientID=" + "{!client.id}";
+
+                // Following is the ID of inputField that is the lookup to be customized as custom lookup
+                if(txtId.indexOf('careplansteplookup') > -1 )
+                {
+                    isCustomLookup = true;
+                }
+           }
+
+           if(isCustomLookup == true)
+           {
+                openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+           }
+           else
+           {
+                if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+                openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+           }
+        }
+
+    function newWindow(url)
+    {
+        window.open(url,'','scrollbars=yes,menubar=no,height=400,width=600,resizable=yes,toolbar=no,location=no,status=yes');
+        return true;
+    }
+    function newGoal(url)
+    {
+        window.open(url,'','scrollbars=yes,menubar=no,height=400,width=600,resizable=yes,toolbar=no,location=no,status=yes');
+        return true;
+    }
+
+    function setFocusOnLoad() {}
+    </script>
+    <style>
+        body .bPageBlock .pbBody .red .pbSubheader{
+            background-color:#c00000;
+        }
+        body .bPageBlock .pbBody .violet .pbSubheader {
+            background-color: #c000ff;
+        }
+        body .bPageBlock .pbBody .grey .pbSubheader{
+            background-color:#c0c0c0;
+        }
+        body .bPageBlock .pbBody .grey .pbSubheader h3{
+            color:#000;
+        }
+    </style>
+    <style type="text/css">
+        .commentsBox {
+            width: 400px;
+        }
+    </style>
+    <apex:form id="cpreview">
+        <apex:pagemessages />
+        <apex:actionfunction name="refreshGoalList" rerender="Goals" action="{!SaveReview}" />
+        <apex:pageblock title="{!$Label.Select_Client}" rendered="{!Client = null}">
+            <apex:pageblocksection >
+                <apex:inputfield value="{!Care_Plan_Review__c.Client__c}" />
+            </apex:pageblocksection>
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!Save}" />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+        <apex:pageblock title="{!$Label.Care_Plan_Review_Details_Title} {!client.Name}" id="Goals" rendered="{!Client != null}">
+            <apex:pageblocksection title="{!$Label.Care_Plan_Review_Details_Header}" columns="2" rendered="{!Care_Plan_Review__c.Review_Completed__c = true}">
+                <apex:outputfield value="{!Care_Plan_Review__c.Client_present_at_review__c}" />
+                <apex:outputfield value="{!Care_Plan_Review__c.Review_Date__c}" />
+                <apex:pageblocksectionitem />
+                <apex:outputfield value="{!Care_Plan_Review__c.Next_Review_Date__c}" />
+                <apex:outputfield styleclass="commentsBox" value="{!Care_Plan_Review__c.Summary__c}" />
+                <apex:outputfield value="{!Care_Plan_Review__c.Review_Completed__c}" />
+            </apex:pageblocksection>
+            <apex:pageblocksection title="{!$Label.Care_Plan_Review_Details_Header}" columns="2" rendered="{!Care_Plan_Review__c.Review_Completed__c = false}">
+                <apex:inputfield value="{!Care_Plan_Review__c.Client_present_at_review__c}" />
+                <apex:inputfield value="{!Care_Plan_Review__c.Review_Date__c}" />
+                <apex:pageblocksectionitem />
+                <apex:inputfield value="{!Care_Plan_Review__c.Next_Review_Date__c}" />
+                <apex:inputfield styleclass="commentsBox" value="{!Care_Plan_Review__c.Summary__c}" />
+                <apex:inputfield value="{!Care_Plan_Review__c.Review_Completed__c}" />
+            </apex:pageblocksection>
+            <apex:repeat value="{!goalList}" var="oneGoal" rendered="{!Care_Plan_Review__c.Review_Completed__c = false}">
+                <apex:pageblocksection title="{!oneGoal.Area__c} - {!oneGoal.Name}" columns="1" html-data-id="{!oneGoal.ID}">
+                    <apex:commandbutton value="{!$Label.Care_Plan_New_Step_button}" onclick="newWindow('{!URLFOR($Action.Care_plan_step__c.New_Care_Plan_Step_from_Review, Null, [PARENT=oneGoal.ID, CLIENT=client.ID])}')" />
+                    <apex:pageblocksection columns="2">
+                        <apex:repeat value="{!goalHeaderFields}" var="oneField">
+                            <apex:inputfield value="{!oneGoal[oneField.fieldPath]}" />
+                        </apex:repeat>
+                        <apex:repeat value="{!goalFields}" var="oneField">
+                            <apex:inputfield value="{!oneGoal[oneField.fieldPath]}" />
+                        </apex:repeat>
+                        <apex:outputpanel style="display:none">
+                            <apex:inputfield value="{!oneGoal.Area__c}" />
+                        </apex:outputpanel>                    </apex:pageblocksection>
+                    <apex:outputpanel styleclass="red" layout="block" rendered="{!oneGoal.Number_of_Task_Steps__c>0}">
+                        <apex:pageblocksection title="{!$Label.Care_Plan_Task_Steps_Title}" columns="2" id="TaskSteps">
+                            <apex:repeat value="{!oneGoal.Care_plan_steps__r}" var="oneCarePlanStep">
+                                <apex:pageblocksection title="{!oneCarePlanStep.Name} - {!oneCarePlanStep.Description__c}" columns="2" id="Steps" rendered="{!LEFT(oneCarePlanStep.Reference__c,3) != attendancePrefix}">
+                                    <apex:inputfield value="{!oneCarePlanStep.What_step_needs_to_happen_first__c}" id="careplansteplookup" />
+                                    <apex:repeat value="{!stepTaskFields}" var="oneField">
+                                        <apex:inputfield value="{!oneCarePlanStep[oneField.fieldPath]}" />
+                                    </apex:repeat>
+                                    <apex:outputpanel style="display:none">
+                                        <apex:inputfield value="{!oneCarePlanStep.Step_records_attendance__c}" />
+                                    </apex:outputpanel>
+                                </apex:pageblocksection>
+                            </apex:repeat>
+                        </apex:pageblocksection>
+                    </apex:outputpanel>
+                    <apex:outputpanel styleclass="violet" layout="block" rendered="{!oneGoal.Number_of_Attendance_Steps__c>0}">
+                        <apex:pageblocksection title="{!$Label.Care_Plan_Attendance_Steps_Title}" columns="2" id="AttendanceSteps" rendered="{!showAttendanceSteps}">
+                            <apex:repeat value="{!oneGoal.Care_plan_steps__r}" var="oneCarePlanStep">
+                                <apex:pageblocksection title="{!oneCarePlanStep.Name} - {!oneCarePlanStep.Description__c}" columns="2" id="Steps" rendered="{!LEFT(oneCarePlanStep.Reference__c,3) = attendancePrefix}">
+                                    <apex:repeat value="{!stepAttendanceFields}" var="oneField">
+                                        <apex:inputfield value="{!oneCarePlanStep[oneField.fieldPath]}" />
+                                    </apex:repeat>
+                                    <apex:outputpanel style="display:none">
+                                        <apex:inputfield value="{!oneCarePlanStep.Step_records_attendance__c}" />
+                                    </apex:outputpanel>
+                                </apex:pageblocksection>
+                            </apex:repeat>
+                        </apex:pageblocksection>
+                    </apex:outputpanel>
+                </apex:pageblocksection>
+            </apex:repeat>
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!SaveReview}" rendered="{!Care_Plan_Review__c.Review_Completed__c = false}" />
+                <apex:commandbutton value="{!$Label.Care_Plan_Save_and_Add_new_objective}" onclick="newWindow('/apex/CarePlanObjectiveCreation?CLIENT={!client.ID}')" rendered="{!Care_Plan_Review__c.Review_Completed__c = false}" />
+                <apex:commandbutton value="{!$Label.Care_Plan_Save_Std_Objective}" onclick="newWindow('/apex/StandardCarePlanUsingMetaData?ID={!client.ID}&POPUP=1')" rendered="{!Care_Plan_Review__c.Review_Completed__c=false}" />
+                <apex:commandbutton value="{!$Label.Save_and_Print}" action="{!SaveReview}" oncomplete="newWindow('/apex/CarePlanReviewPrint?ID={!Care_Plan_Review__c.ID}&PRINT=\'1\'&showAttendanceSteps={!showAttendanceSteps}')" />
+                <apex:commandbutton value="{!$Label.Care_Plan_Show_Attendance_Steps}" rerender="Goals" action="{!ShowAttSteps}" rendered="{!!showAttendanceSteps && Care_Plan_Review__c.Review_Completed__c = false}" />
+                <apex:commandbutton value="{!$Label.Care_Plan_Hide_Attendance_Steps}" rerender="Goals" action="{!HideAttSteps}" rendered="{!showAttendanceSteps && Care_Plan_Review__c.Review_Completed__c = false}" />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+    </apex:form>
+    <apex:pagemessages />
+</apex:page>

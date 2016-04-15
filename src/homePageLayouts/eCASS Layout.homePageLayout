@@ -3,6 +3,7 @@
     <narrowComponents>standard-CreateNew</narrowComponents>
     <narrowComponents>standard-UsefulLinks</narrowComponents>
     <narrowComponents>standard-RecentItems</narrowComponents>
+    <wideComponents>standard-Dashboard</wideComponents>
     <wideComponents>standard-Calendar</wideComponents>
     <wideComponents>standard-Tasks</wideComponents>
 </HomePageLayout>
