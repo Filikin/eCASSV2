@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -712,32 +708,35 @@ X18a3_Specify_Transferred__r.CentreNo__c )</formula>
         <externalId>false</externalId>
         <inlineHelpText>The first four digits are used as the centre number in the HRB report</inlineHelpText>
         <label>Treatment Centre</label>
-        <picklist>
-            <picklistValues>
-                <fullName>3002 St Anne&apos;s Hospital Shanakiel</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3003 Psychiatric Unit, Bantry General Hospital</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3004 SHB Addiction Services</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3005 Tabor Lodge</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13687 Finglas addiction support team (FAST)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3002 St Anne&apos;s Hospital Shanakiel</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3003 Psychiatric Unit, Bantry General Hospital</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3004 SHB Addiction Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3005 Tabor Lodge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13687 Finglas addiction support team (FAST)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Centre_number__c</fullName>
@@ -844,28 +843,31 @@ IF( ISPICKVAL( X28b_Route_of_Admin_Sub4__c , &quot;1. Inject&quot;), X28d_Age_of
         <externalId>false</externalId>
         <inlineHelpText>How would you describe your current level of drug or alcohol use?</inlineHelpText>
         <label>Current level of drug or alcohol use</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Chaotic</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Stable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Detoxing</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Drug Free</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Chaotic</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Detoxing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Drug Free</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Currently_in_social_welfare_payments__c</fullName>
@@ -1648,32 +1650,35 @@ IF(AND( TEXT(X29b_Ever_injected__c ) = &quot;9. Not Known&quot;, X29c_Age_first_
         <externalId>false</externalId>
         <inlineHelpText>Have you ever suffered from or received treatment for any of the following?</inlineHelpText>
         <label>Ever suffered from/received treatment</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Depression</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Bipolar Disorder</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Schizophrenia</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mood Disorders</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Any other psychiatric condition</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Depression</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bipolar Disorder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Schizophrenia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mood Disorders</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Any other psychiatric condition</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
@@ -2352,6 +2357,10 @@ CASE( X33a_Main_Intervention__c ,
 &quot;21. Complementary therapies&quot;,&quot;21&quot;,
 &quot;23. Strengthening family programme&quot;,&quot;23&quot;,
 &quot;24. Sent to another site&quot;,&quot;24&quot;,
+&quot;25. Key Worker appointed&quot;,&quot;25&quot;,
+&quot;26. Case Manager appointed&quot;,&quot;26&quot;,
+&quot;27. Care Plan&quot;,&quot;27&quot;,
+&quot;28. Facilitated detox&quot;,&quot;28&quot;,
 &quot;&quot;))</formula>
         <label>InterMain</label>
         <required>false</required>
@@ -2983,7 +2992,7 @@ CASE(Text( MONTH(X16_Date_of_Assessment__c)) ,
 
  YEAR( X13_Date_of_Referral__c ) ,
 
- YEAR( X16_Date_of_Assessment__c ) )</formula>
+ if (isBlank(X21a_Date_This_treatment_started__c), YEAR( X16_Date_of_Assessment__c ), YEAR(X21a_Date_This_treatment_started__c)) )</formula>
         <label>RecYear</label>
         <precision>18</precision>
         <required>false</required>
@@ -3460,6 +3469,15 @@ IF( AND(X29c_Age_first_injected__c &lt;&gt; 88, X29c_Age_first_injected__c &lt;&
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tick_to_confirm_2018_client_entry__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Tick to confirm 2018 client entry</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Titre__c</fullName>
@@ -3950,108 +3968,114 @@ CASE(  X18b_Reason_removed_from_waiting_list__c  ,
 1. Alcohol.     2. Illicit drug.   
 3. Licit drug.  4. Other problem</inlineHelpText>
         <label>14 Main Reason for referral</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Alcohol</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Illicit drug</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Licit drug</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Other problem</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Alcohol</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Illicit drug</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Licit drug</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Other problem</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X15_Source_of_referral__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>If 4, 5, 6, 13, 15, 17, please complete Q15b</inlineHelpText>
         <label>15a Source of referral</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Self</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Family</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Friends</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Other drug treatment centre</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. General practitioner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Acute hospital service excluding A&amp;E</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Social services/Community services</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Court/probation/police</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10. Outreach worker</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>11. Mobile bus</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12. School</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13. Prison</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14. Employer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>15. Mental health liaison nurse at A&amp;E</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>16. Accident &amp; emergency other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>17. Mental health facility (including psychiatrist)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>99. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Self</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Friends</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Other drug treatment centre</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. General practitioner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Acute hospital service excluding A&amp;E</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Social services/Community services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Court/probation/police</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10. Outreach worker</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11. Mobile bus</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12. School</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13. Prison</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14. Employer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15. Mental health liaison nurse at A&amp;E</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16. Accident &amp; emergency other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17. Mental health facility (including psychiatrist)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>99. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X15b8_Other_specify__c</fullName>
@@ -4067,103 +4091,133 @@ CASE(  X18b_Reason_removed_from_waiting_list__c  ,
         <externalId>false</externalId>
         <inlineHelpText>If Q15a = 4, 5, 6, 13, 15, 17, please complete Q15b</inlineHelpText>
         <label>15b If referred from another</label>
-        <picklist>
-            <controllingField>X15_Source_of_referral__c</controllingField>
-            <picklistValues>
-                <fullName>1. Client moved address</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Clients management/security</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Dual diagnosis (psychiatric/substance use co-morbidity)</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Treatment for blood borne diseases</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Client unstable requires substitution treatment</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Other treatment required (excluding substitution)</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Client stable, transferred to satellite clinic or GP</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Other (specify)</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Other</fullName>
-                <controllingFieldValues>13. Prison</controllingFieldValues>
-                <controllingFieldValues>15. Mental health liaison nurse at A&amp;E</controllingFieldValues>
-                <controllingFieldValues>17. Mental health facility (including psychiatrist)</controllingFieldValues>
-                <controllingFieldValues>4. Other drug treatment centre</controllingFieldValues>
-                <controllingFieldValues>5. General practitioner</controllingFieldValues>
-                <controllingFieldValues>6. Acute hospital service excluding A&amp;E</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>X15_Source_of_referral__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Client moved address</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Clients management/security</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Dual diagnosis (psychiatric/substance use co-morbidity)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Treatment for blood borne diseases</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Client unstable requires substitution treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Other treatment required (excluding substitution)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Client stable, transferred to satellite clinic or GP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Other (specify)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>1. Client moved address</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>2. Clients management/security</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>3. Dual diagnosis (psychiatric/substance use co-morbidity)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>4. Treatment for blood borne diseases</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>5. Client unstable requires substitution treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>6. Other treatment required (excluding substitution)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>7. Client stable, transferred to satellite clinic or GP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>8. Other (specify)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>13. Prison</controllingFieldValue>
+                <controllingFieldValue>15. Mental health liaison nurse at A&amp;E</controllingFieldValue>
+                <controllingFieldValue>17. Mental health facility (including psychiatrist)</controllingFieldValue>
+                <controllingFieldValue>4. Other drug treatment centre</controllingFieldValue>
+                <controllingFieldValue>5. General practitioner</controllingFieldValue>
+                <controllingFieldValue>6. Acute hospital service excluding A&amp;E</controllingFieldValue>
+                <valueName>8. Other</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X16_Date_of_Assessment__c</fullName>
@@ -4184,48 +4238,54 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB</description>
 2. Unsuitable for treatment
 If 2, Stop, Ensure Q14 is complete, send form to HRB</inlineHelpText>
         <label>17a Assessment outcome</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Suitable for treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Unsuitable for treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Suitable for treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Unsuitable for treatment</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X17b_Assessment_criterion_fulfilled__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>If  2. Stop &amp; return to HRB</inlineHelpText>
         <label>17b Assessment criterion fulfilled</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1.Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Pending</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Not applicable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1.Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Pending</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Not applicable</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X17c_Date_assessment_criteria_fulfilled__c</fullName>
@@ -4255,32 +4315,35 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>If 3 or 4 STOP and return form to HRB, IF 2,6 go to18b, if 1 go to 19</inlineHelpText>
         <label>18a Client’s treatment status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Offered treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Placed on waiting list for opiate substitute</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Placed on other drug treatment waiting list</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Psychiatric assessment only</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Transferred to another site</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Offered treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Placed on waiting list for opiate substitute</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Placed on other drug treatment waiting list</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Psychiatric assessment only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Transferred to another site</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X18b4_Client_transferred_specify_centre__c</fullName>
@@ -4311,68 +4374,74 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>If 1 continue form, otherwise STOP and return to HRB</inlineHelpText>
         <label>18b Reason removed from waiting list</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Treatment offered with this centre</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Client did not fulfil criteria to commence treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Client did not accept substitution/other drug treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Client transferred/commenced treatment with another centre</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Service unable to contact/locate client</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Client admitted to hospital</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Client sent to prison</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Client died</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Other (specify)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Treatment offered with this centre</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Client did not fulfil criteria to commence treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Client did not accept substitution/other drug treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Client transferred/commenced treatment with another centre</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Service unable to contact/locate client</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Client admitted to hospital</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Client sent to prison</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Client died</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Other (specify)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X19_Accepted_place_at_this_centre__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>If 2, STOP and return form to HRB.</inlineHelpText>
         <label>19 Accepted place at this centre</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X20_Number_times_started_this_year__c</fullName>
@@ -4420,36 +4489,51 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>1. Never treated  2. Previously treated.  8. Not applicable  9. Not known</inlineHelpText>
         <label>22 Ever previously treated re alcohol</label>
-        <picklist>
-            <controllingField>X14_Main_Reason_for_referral__c</controllingField>
-            <picklistValues>
-                <fullName>1. Never treated</fullName>
-                <controllingFieldValues>1. Alcohol</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Previously treated</fullName>
-                <controllingFieldValues>1. Alcohol</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Not applicable</fullName>
-                <controllingFieldValues>1. Alcohol</controllingFieldValues>
-                <controllingFieldValues>2. Illicit drug</controllingFieldValues>
-                <controllingFieldValues>3. Licit drug</controllingFieldValues>
-                <controllingFieldValues>4. Other problem</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <controllingFieldValues>1. Alcohol</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>X14_Main_Reason_for_referral__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Never treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Previously treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Not applicable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>1. Alcohol</controllingFieldValue>
+                <valueName>1. Never treated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1. Alcohol</controllingFieldValue>
+                <valueName>2. Previously treated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1. Alcohol</controllingFieldValue>
+                <controllingFieldValue>2. Illicit drug</controllingFieldValue>
+                <controllingFieldValue>3. Licit drug</controllingFieldValue>
+                <controllingFieldValue>4. Other problem</controllingFieldValue>
+                <valueName>8. Not applicable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1. Alcohol</controllingFieldValue>
+                <valueName>9. Not known</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X22_Ever_previously_treated_re_drug__c</fullName>
@@ -4457,60 +4541,78 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>1. Never treated  2. Previously treated.  8. Not applicable  9. Not known</inlineHelpText>
         <label>22 Ever previously treated re drug</label>
-        <picklist>
-            <controllingField>X14_Main_Reason_for_referral__c</controllingField>
-            <picklistValues>
-                <fullName>1. Never treated</fullName>
-                <controllingFieldValues>2. Illicit drug</controllingFieldValues>
-                <controllingFieldValues>3. Licit drug</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Previously treated</fullName>
-                <controllingFieldValues>2. Illicit drug</controllingFieldValues>
-                <controllingFieldValues>3. Licit drug</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Not applicable</fullName>
-                <controllingFieldValues>1. Alcohol</controllingFieldValues>
-                <controllingFieldValues>4. Other problem</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <controllingFieldValues>2. Illicit drug</controllingFieldValues>
-                <controllingFieldValues>3. Licit drug</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>X14_Main_Reason_for_referral__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Never treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Previously treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Not applicable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>1. Alcohol</controllingFieldValue>
+                <controllingFieldValue>4. Other problem</controllingFieldValue>
+                <valueName>8. Not applicable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2. Illicit drug</controllingFieldValue>
+                <controllingFieldValue>3. Licit drug</controllingFieldValue>
+                <valueName>1. Never treated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2. Illicit drug</controllingFieldValue>
+                <controllingFieldValue>3. Licit drug</controllingFieldValue>
+                <valueName>2. Previously treated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2. Illicit drug</controllingFieldValue>
+                <controllingFieldValue>3. Licit drug</controllingFieldValue>
+                <valueName>9. Not known</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X23_Type_of_contact_with_this_centre__c</fullName>
         <externalId>false</externalId>
         <label>23 Type of contact with this centre</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. First treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. One or more treatment periods</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. First treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. One or more treatment periods</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X24_Main_Drug_Problem_Name__c</fullName>
@@ -4619,75 +4721,81 @@ IF( X25a_Main_substance__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <fullName>X25b_Route_of_Admin_Main_sub__c</fullName>
         <externalId>false</externalId>
         <label>25b Route of Admin - Main sub</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Sniff/snort/ inhale</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Sniff/snort/ inhale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X25c_Frequency_of_use_in_last_mth__c</fullName>
         <externalId>false</externalId>
         <label>25c Frequency of use in last mth</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Once a week or less</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. 2-6 days per week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. No use in past month</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Once a week or less</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. 2-6 days per week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. No use in past month</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X25d_Age_at_1st_use__c</fullName>
@@ -4755,76 +4863,82 @@ IF( X26a_Substance_2__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <fullName>X26b_Route_of_Admin_Sub2__c</fullName>
         <externalId>false</externalId>
         <label>26b Route of Admin - Sub2</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Sniff/snort/ inhale</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Sniff/snort/ inhale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X26c_Frequency_of_use_in_last_mth__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>In last month</inlineHelpText>
         <label>26c Frequency of use in last mth</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Once a week or less</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. 2-6 days per week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. No use in past month</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Once a week or less</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. 2-6 days per week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. No use in past month</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X26d_Age_of_1st_use__c</fullName>
@@ -4892,76 +5006,82 @@ IF( X27a_Substance_3__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <fullName>X27b_Route_of_Admin_Sub3__c</fullName>
         <externalId>false</externalId>
         <label>27b Route of Admin - Sub3</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Sniff/snort/ inhale</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Sniff/snort/ inhale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X27c_Frequency_of_use_in_last_mth__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>In last month</inlineHelpText>
         <label>27c Frequency of use in last mth</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Once a week or less</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. 2-6 days per week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. No use in past month</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Once a week or less</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. 2-6 days per week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. No use in past month</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X27d_Age_of_1st_use__c</fullName>
@@ -5029,76 +5149,82 @@ IF( X28a_Substance_4__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <fullName>X28b_Route_of_Admin_Sub4__c</fullName>
         <externalId>false</externalId>
         <label>28b Route of Admin - Sub4</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Sniff/snort/ inhale</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Sniff/snort/ inhale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X28c_Frequency_of_use_in_last_mth__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>In last month</inlineHelpText>
         <label>28c Frequency of use in last mth</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Once a week or less</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. 2-6 days per week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. No use in past month</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Once a week or less</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. 2-6 days per week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. No use in past month</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X28d_Age_of_1st_use__c</fullName>
@@ -5131,40 +5257,43 @@ IF( X28a_Substance_4__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <externalId>false</externalId>
         <inlineHelpText>Please specify the preferred types of alcohol consumed</inlineHelpText>
         <label>28e Preferred types of alcohol consumed</label>
-        <picklist>
-            <picklistValues>
-                <fullName>2. Beer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Spirits</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Wine</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Fortified wine</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Cider</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Alcopops</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Other (e.g. methylated spirits)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2. Beer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Spirits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Wine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Fortified wine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Cider</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Alcopops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Other (e.g. methylated spirits)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
@@ -5203,70 +5332,79 @@ IF( X28a_Substance_4__r.drugtype__c = &quot;1&quot;, &quot;Alcohol&quot;,
         <externalId>false</externalId>
         <inlineHelpText>Please categorise the extent of the drinking problem</inlineHelpText>
         <label>28h Extent of drinking problem</label>
-        <picklist>
-            <picklistValues>
-                <fullName>2. Hazardous drinker</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Harmful drinker</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Dependent drinker</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2. Hazardous drinker</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Harmful drinker</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Dependent drinker</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X29a_Injected_in_past_month__c</fullName>
         <externalId>false</externalId>
         <label>29a Injected in past month</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X29b_Ever_injected__c</fullName>
         <externalId>false</externalId>
         <label>29b Ever injected</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not Known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not Known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X29c_Age_first_injected__c</fullName>
@@ -5289,54 +5427,72 @@ If not known, code 99.</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Ever shared any injecting equipment. If Q29b = 2. No Q30 should be 8. Not applicable</inlineHelpText>
         <label>30 Ever shared any injecting equipment</label>
-        <picklist>
-            <controllingField>X29b_Ever_injected__c</controllingField>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <controllingFieldValues>1. Yes</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <controllingFieldValues>1. Yes</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Not applicable</fullName>
-                <controllingFieldValues>2. No</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Not known</fullName>
-                <controllingFieldValues>1. Yes</controllingFieldValues>
-                <controllingFieldValues>9. Not Known</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>X29b_Ever_injected__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Not applicable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>1. Yes</controllingFieldValue>
+                <valueName>1. Yes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1. Yes</controllingFieldValue>
+                <valueName>2. No</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1. Yes</controllingFieldValue>
+                <controllingFieldValue>9. Not Known</controllingFieldValue>
+                <valueName>9. Not known</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2. No</controllingFieldValue>
+                <valueName>8. Not applicable</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a24_Sent_to_another_site__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>33a.24 Sent to another site for additional intervention not provided here</inlineHelpText>
         <label>33a24 Sent to another site</label>
-        <picklist>
-            <picklistValues>
-                <fullName>FALSE</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TRUE</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a24_Specify_site_name__c</fullName>
@@ -5367,77 +5523,89 @@ If not known, code 99.</inlineHelpText>
         <fullName>X33a25_Key_Worder_appointed__c</fullName>
         <externalId>false</externalId>
         <label>33a25 Key Worder appointed</label>
-        <picklist>
-            <picklistValues>
-                <fullName>FALSE</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TRUE</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a26_Case_Manager_appointed__c</fullName>
         <externalId>false</externalId>
         <label>33a26 Case Manager appointed</label>
-        <picklist>
-            <picklistValues>
-                <fullName>FALSE</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TRUE</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a27_Care_Plan__c</fullName>
         <externalId>false</externalId>
         <label>33a27 Care Plan</label>
-        <picklist>
-            <picklistValues>
-                <fullName>FALSE</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TRUE</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a28_Facilitated_detox__c</fullName>
         <externalId>false</externalId>
         <label>33a28 Facilitated detox</label>
-        <picklist>
-            <picklistValues>
-                <fullName>FALSE</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TRUE</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33a_Main_Intervention__c</fullName>
@@ -5463,84 +5631,87 @@ Some of these sessions may be as a group or couples or one on one.
 23. Strengthening family programme
 24.  Sent to another site</inlineHelpText>
         <label>33a Main Intervention</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Brief intervention</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Methadone substitution</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12. Medication free therapy psychosocial therapy other etc</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13. Psychiatric therapy</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14. Individual counselling</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>15. Group counselling</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>16. Social and/or occupational reintegration</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>17. Family Therapy</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>18. Brief intervention: individual education/awareness programme</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>19. Group education/awareness programme</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>20. Aftercare</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>21. Complementary therapies</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>23. Strengthening family programme</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>24. Sent to another site</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>25. Key Worker appointed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>26. Case Manager appointed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>28. Facilitated detox</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>27. Care Plan</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Brief intervention</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Methadone substitution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12. Medication free therapy psychosocial therapy other etc</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13. Psychiatric therapy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14. Individual counselling</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15. Group counselling</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16. Social and/or occupational reintegration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17. Family Therapy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>18. Brief intervention: individual education/awareness programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>19. Group education/awareness programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20. Aftercare</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>21. Complementary therapies</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>23. Strengthening family programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>24. Sent to another site</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>25. Key Worker appointed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>26. Case Manager appointed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>28. Facilitated detox</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>27. Care Plan</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X33b12_Date_Commenced__c</fullName>
@@ -6124,68 +6295,71 @@ each type of treatment intervention</inlineHelpText>
 4.  Client opt-out  because he/she considered him/herself to be stable 
 5. Client refused  further sessions or did not return for subsequent appointments</inlineHelpText>
         <label>34 Outcome for MAIN treatment</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Treatment completed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Transferred stable* (including release linking patient to other treatment site or other prison treatment)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Transferred unstable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Client did not wish to attend further treatment sessions because he/she considered him/herself to be stable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Client refused to have further sessions or did not return</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Premature exit from treatment for non-compliance</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7. Released from prison but not linked to other treatment site</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8. Died</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9. Sentenced to prison</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>11. General medical transfer or medical issue</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12. No longer lives in the area</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13. Mental health transfer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14. Prison to prison transfer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10. Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Treatment completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Transferred stable* (including release linking patient to other treatment site or other prison treatment)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Transferred unstable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Client did not wish to attend further treatment sessions because he/she considered him/herself to be stable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Client refused to have further sessions or did not return</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Premature exit from treatment for non-compliance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7. Released from prison but not linked to other treatment site</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8. Died</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9. Sentenced to prison</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11. General medical transfer or medical issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12. No longer lives in the area</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13. Mental health transfer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14. Prison to prison transfer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10. Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X35_Reason_for_exit_6_above__c</fullName>
@@ -6193,32 +6367,35 @@ each type of treatment intervention</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>35. If outcome for main treatment intervention is premature exit from treatment site (Q34 code 6), main reason for non-compliance</inlineHelpText>
         <label>35 Reason for exit (6. above)</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Drug taking</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Violent behaviour</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Illegal activities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Alcohol taking</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Not observing other rules</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Drug taking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Violent behaviour</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Illegal activities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Alcohol taking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Not observing other rules</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X36_Client_s_Condition_on_discharge__c</fullName>
@@ -6226,28 +6403,31 @@ each type of treatment intervention</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>36. Client’s condition at discharge or when last seen</inlineHelpText>
         <label>36 Client&apos;s Condition at discharge</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Stable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Unstable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Died</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Stable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Unstable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Died</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X36_Clients_condition_Other__c</fullName>
@@ -6279,20 +6459,23 @@ each type of treatment intervention</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Client referred to aftercare programme provided by this centre.</inlineHelpText>
         <label>38a Aftercare provided by this centre</label>
-        <picklist>
-            <picklistValues>
-                <fullName>0. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0. No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X38b_Name_of_other_site_for_treatment__c</fullName>
@@ -6341,36 +6524,39 @@ Hepatitis A and B vaccination</description>
         <inlineHelpText>Vaccination (any intervention provided at this centre during this treatment episode)
 Hepatitis A and B vaccination</inlineHelpText>
         <label>40 Vaccination</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. First dose</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Second dose</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Third dose</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. Booster dose 1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. Booster dose 2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. Adequate titre protective</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. First dose</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Second dose</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Third dose</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. Booster dose 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. Booster dose 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. Adequate titre protective</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X41_Viral_Screening_uptake__c</fullName>
@@ -6378,24 +6564,27 @@ Hepatitis A and B vaccination</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Viral screening uptake (please chose any interventions provided at this centre during this treatment episode)</inlineHelpText>
         <label>41 Viral Screening uptake</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. HIV test</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Hepatitis B test</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. Hepatitis C test</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. HIV test</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Hepatitis B test</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. Hepatitis C test</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X42a_Urine_screeding_during_treatment__c</fullName>
@@ -6403,20 +6592,23 @@ Hepatitis A and B vaccination</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Urine screening during treatment</inlineHelpText>
         <label>42a Urine screeding during treatment</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X42b_If_screening_ordered_by__c</fullName>
@@ -6428,20 +6620,23 @@ Hepatitis A and B vaccination</inlineHelpText>
 1. Treatment Provider                
  2. Court</inlineHelpText>
         <label>42b If screening ordered by</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. Treatment Provider</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. Court</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. Treatment Provider</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. Court</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>id__c</fullName>
@@ -6455,7 +6650,7 @@ Hepatitis A and B vaccination</inlineHelpText>
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>HRB Form</label>
+    <label>Old HRB Form</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
@@ -6464,6 +6659,8 @@ Hepatitis A and B vaccination</inlineHelpText>
         <columns>X16_Date_of_Assessment__c</columns>
         <columns>X17a_Assessment_outcome__c</columns>
         <columns>X18a_Clients_treatment_status__c</columns>
+        <columns>X33a_Main_Intervention__c</columns>
+        <columns>InterMain__c</columns>
         <columns>X37_Date_of_Final_Discharge__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
@@ -6504,7 +6701,7 @@ Hepatitis A and B vaccination</inlineHelpText>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>HRB Forms</pluralLabel>
+    <pluralLabel>Old HRB Forms</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>HRB_Form</fullName>

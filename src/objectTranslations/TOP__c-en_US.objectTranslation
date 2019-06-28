@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TOP</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TOPs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Accomodation items for past 30 days --></help>
+        <label><!-- Acute housing problem --></label>
+        <name>Acute_housing_problem__c</name>
+    </fields>
+    <fields>
+        <help><!-- units/day --></help>
+        <label><!-- Alcohol Average --></label>
+        <name>Alcohol_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alcohol Route --></label>
+        <name>Alcohol_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alcohol Total --></label>
+        <name>Alcohol_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Days substance used
+Week 1 = 4 weeks ago --></help>
+        <label><!-- Alcohol Week 1 --></label>
+        <name>Alcohol_Week_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alcohol Week 2 --></label>
+        <name>Alcohol_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alcohol Week 3 --></label>
+        <name>Alcohol_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- SD/day --></help>
+        <label><!-- Alcohol Week 4 --></label>
+        <name>Alcohol_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Amphetamines Average --></label>
+        <name>Amphetamines_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amphetamines Route --></label>
+        <name>Amphetamines_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amphetamines Total --></label>
+        <name>Amphetamines_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Amphetamines Week 1 --></label>
+        <name>Amphetamines_Week_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amphetamines Week 2 --></label>
+        <name>Amphetamines_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amphetamines Week 3 --></label>
+        <name>Amphetamines_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amphetamines Week 4 --></label>
+        <name>Amphetamines_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- At risk of eviction --></label>
+        <name>At_risk_of_eviction__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Benzodiazepines Average --></label>
+        <name>Benzodiazepines_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benzodiazepines Route --></label>
+        <name>Benzodiazepines_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Benzodiazepines Total --></label>
+        <name>Benzodiazepines_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Benzodiazepines Week 1 --></label>
+        <name>Benzodiazepines_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Benzodiazepines Week 2 --></label>
+        <name>Benzodiazepines_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Benzodiazepines Week 3 --></label>
+        <name>Benzodiazepines_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Benzodiazepines Week 4 --></label>
+        <name>Benzodiazepines_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- spliff/day --></help>
+        <label><!-- Cannabis Average --></label>
+        <name>Cannabis_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cannabis Route --></label>
+        <name>Cannabis_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cannabis Total --></label>
+        <name>Cannabis_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- spliff/day --></help>
+        <label><!-- Cannabis Week 1 --></label>
+        <name>Cannabis_Week_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cannabis Week 2 --></label>
+        <name>Cannabis_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cannabis Week 3 --></label>
+        <name>Cannabis_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cannabis Week 4 --></label>
+        <name>Cannabis_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- TOPs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Cocaine Average --></label>
+        <name>Cocaine_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cocaine Route --></label>
+        <name>Cocaine_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cocaine Total --></label>
+        <name>Cocaine_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Cocaine Week 1 --></label>
+        <name>Cocaine_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Cocaine Week 2 --></label>
+        <name>Cocaine_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Cocaine Week 3 --></label>
+        <name>Cocaine_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Cocaine Week 4 --></label>
+        <name>Cocaine_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Committed assault or violence --></label>
+        <name>Committed_assault_or_violence__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Crack Average --></label>
+        <name>Crack_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Crack Route --></label>
+        <name>Crack_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Crack Total --></label>
+        <name>Crack_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Crack Week 1 --></label>
+        <name>Crack_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Crack Week 2 --></label>
+        <name>Crack_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Crack Week 3 --></label>
+        <name>Crack_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Crack Week 4 --></label>
+        <name>Crack_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days attended school or college Total --></label>
+        <name>Days_attended_school_or_college_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days attended school or college Week 2 --></label>
+        <name>Days_attended_school_or_college_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days attended school or college Week 3 --></label>
+        <name>Days_attended_school_or_college_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days attended school or college Week 4 --></label>
+        <name>Days_attended_school_or_college_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days attended school or college Week 1 --></label>
+        <name>Days_attended_school_or_college__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days client had contact in the past 30 days (e.g. talked or telephone) --></help>
+        <label><!-- Days had contact with significant other --></label>
+        <name>Days_had_contact_with_significant_other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days paid work Total --></label>
+        <name>Days_paid_work_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days paid work Week 1 --></label>
+        <name>Days_paid_work_Week_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days paid work Week 2 --></label>
+        <name>Days_paid_work_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days paid work Week 3 --></label>
+        <name>Days_paid_work_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days paid work Week 4 --></label>
+        <name>Days_paid_work_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days where there was conflict in the past 30 days (i.e. had major arguments) --></help>
+        <label><!-- Days where there was conflict --></label>
+        <name>Days_where_there_was_conflict__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug Selling Total --></label>
+        <name>Drug_Selling_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Days Drug Selling in Week --></help>
+        <label><!-- Drug Selling Week 1 --></label>
+        <name>Drug_Selling_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Drug Selling in Week --></help>
+        <label><!-- Drug Selling Week 2 --></label>
+        <name>Drug_Selling_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Days Drug Selling in Week --></help>
+        <label><!-- Drug Selling Week 3 --></label>
+        <name>Drug_Selling_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Days Drug Selling in Week --></help>
+        <label><!-- Drug Selling Week 4 --></label>
+        <name>Drug_Selling_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Ecstasy Average --></label>
+        <name>Ecstasy_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ecstasy Route --></label>
+        <name>Ecstasy_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ecstasy Total --></label>
+        <name>Ecstasy_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Ecstasy Week 2 --></label>
+        <name>Ecstasy_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Ecstasy Week 3 --></label>
+        <name>Ecstasy_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Ecstasy Week 4 --></label>
+        <name>Ecstasy_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Ecstasy Week 1 --></label>
+        <name>Ecstasy_week1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ever Injected --></label>
+        <name>Ever_Injected__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fraud, forgery, handling stolen goods --></label>
+        <name>Fraud_forgery_handling_stolen_goods__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Head Shop Average --></label>
+        <name>Head_Shop_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Head Shop Route --></label>
+        <name>Head_Shop_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Head Shop Total --></label>
+        <name>Head_Shop_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Head Shop Week 1 --></label>
+        <name>Head_Shop_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Head Shop Week 2 --></label>
+        <name>Head_Shop_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Head Shop Week 3 --></label>
+        <name>Head_Shop_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Head Shop Week 4 --></label>
+        <name>Head_Shop_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Injected using a spoon, water or filter used by someone else --></help>
+        <label><!-- Injected using shared spoon or filter --></label>
+        <name>Injected_using_shared_spoon_or_filter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Injected with needle of syringe used by someone else? --></help>
+        <label><!-- Injected with shared needed --></label>
+        <name>Injected_with_shared_needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. Days Injected Week 1 --></label>
+        <name>No_Days_Injected_Week_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. Days Injected Week 2 --></label>
+        <name>No_Days_Injected_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. Days Injected Week 3 --></label>
+        <name>No_Days_Injected_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. Days Injected Week 4 --></label>
+        <name>No_Days_Injected_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Days injected Total --></label>
+        <name>Number_of_Days_injected_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Opiates Average --></label>
+        <name>Opiates_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opiates Route --></label>
+        <name>Opiates_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opiates Total --></label>
+        <name>Opiates_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Opiates Week 1 --></label>
+        <name>Opiates_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- herion, illicit methadone
+g/day --></help>
+        <label><!-- Opiates Week 2 --></label>
+        <name>Opiates_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Opiates Week 3 --></label>
+        <name>Opiates_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- g/day --></help>
+        <label><!-- Opiates Week 4 --></label>
+        <name>Opiates_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other property theft or burglary --></label>
+        <name>Other_property_theft_or_burglary__c</name>
+    </fields>
+    <fields>
+        <help><!-- tablets/day --></help>
+        <label><!-- Other sedatives Average --></label>
+        <name>Other_sedatives_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other sedatives Route --></label>
+        <name>Other_sedatives_Route__c</name>
+        <picklistValues>
+            <masterLabel>1 = inject</masterLabel>
+            <translation><!-- 1 = inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 = smoke</masterLabel>
+            <translation><!-- 2 = smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 = eat/drink</masterLabel>
+            <translation><!-- 3 = eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 = sniff/snort</masterLabel>
+            <translation><!-- 4 = sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 = sublingual</masterLabel>
+            <translation><!-- 5 = sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 = rectal</masterLabel>
+            <translation><!-- 6 = rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 = topical</masterLabel>
+            <translation><!-- 7 = topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 = not known</masterLabel>
+            <translation><!-- 9 = not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Other sedatives Total --></label>
+        <name>Other_sedatives_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- zimovane
+tablets/day --></help>
+        <label><!-- Other sedatives Week 1 --></label>
+        <name>Other_sedatives_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- zimovane
+tablets/day --></help>
+        <label><!-- Other sedatives Week 2 --></label>
+        <name>Other_sedatives_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- zimovane
+tablets/days --></help>
+        <label><!-- Other sedatives Week 3 --></label>
+        <name>Other_sedatives_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- zimovane
+tablets/days --></help>
+        <label><!-- Other sedatives Week 4 --></label>
+        <name>Other_sedatives_Week_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client&apos;s rating of overall quality of life (e.g. able to enjoy life, gets on wekk with family and partner) --></help>
+        <label><!-- Overall Quality of Life --></label>
+        <name>Overall_Quality_of_Life__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Physical Health Status --></label>
+        <name>Physical_Health_Status__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Client&apos;s rating ofpsychoological health status (anxiety, depression and problem emotions and feelings) --></help>
+        <label><!-- Psychological health status --></label>
+        <name>Psychological_health_status__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Shoplifting Total --></label>
+        <name>Shoplifting_Total__c</name>
+    </fields>
+    <fields>
+        <help><!-- Days shoplifting --></help>
+        <label><!-- Shoplifting Week 1 --></label>
+        <name>Shoplifting_Week_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Days Shoplifting --></help>
+        <label><!-- Shoplifting Week 2 --></label>
+        <name>Shoplifting_Week_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Days Shoplifting --></help>
+        <label><!-- Shoplifting Week 3 --></label>
+        <name>Shoplifting_Week_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Days Shoplifting --></help>
+        <label><!-- Shoplifting Week 4 --></label>
+        <name>Shoplifting_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Substance Use --></label>
+        <name>Substance_Use__c</name>
+    </fields>
+    <fields>
+        <label><!-- TOP Interview Date --></label>
+        <name>TOP_Interview_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Theft from or of vehicle --></label>
+        <name>Theft_from_or_of_vehicle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times injected per day Total --></label>
+        <name>Times_injected_per_day_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times injected per day Week 2 --></label>
+        <name>Times_injected_per_day_Week_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times injected per day Week 3 --></label>
+        <name>Times_injected_per_day_Week_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times injected per day Week 4 --></label>
+        <name>Times_injected_per_day_Week_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times injected per day Week 1 --></label>
+        <name>Times_injected_per_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treatment Stage --></label>
+        <name>Treatment_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Exit</masterLabel>
+            <translation><!-- Exit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start</masterLabel>
+            <translation><!-- Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 2</masterLabel>
+            <translation><!-- Top 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 3</masterLabel>
+            <translation><!-- Top 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 4</masterLabel>
+            <translation><!-- Top 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 5</masterLabel>
+            <translation><!-- Top 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 6</masterLabel>
+            <translation><!-- Top 6 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>TOP Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1: Substance use (Please leave blank only if info withheld) --></label>
+            <section>Section 1: Substance use (Please leave blank only if info withheld)</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1a: Substance use alcohol --></label>
+            <section>Section 1a: Substance use alcohol</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1b: Substance abuse Opiates --></label>
+            <section>Section 1b: Substance abuse Opiates</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1c: Substance abuse Crack --></label>
+            <section>Section 1c: Substance abuse Crack</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1d: Substance abuse Cocaine --></label>
+            <section>Section 1d: Substance abuse Cocaine</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1e: Substance abuse Amphetamines --></label>
+            <section>Section 1e: Substance abuse Amphetamines</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1f: Substance abuse Cannabis --></label>
+            <section>Section 1f: Substance abuse Cannabis</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1g: Substance abuse Ecstasy --></label>
+            <section>Section 1g: Substance abuse Ecstasy</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1h: Substance abuse Benzodiazepines --></label>
+            <section>Section 1h: Substance abuse Benzodiazepines</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1i: Substance abuse Other sedatives --></label>
+            <section>Section 1i: Substance abuse Other sedatives</section>
+        </sections>
+        <sections>
+            <label><!-- Section 1j: Substance abuse Head Shop --></label>
+            <section>Section 1j: Substance abuse Head Shop</section>
+        </sections>
+        <sections>
+            <label><!-- Section 2: Injecting risk behaviour (Leave blank only if info withheld) --></label>
+            <section>Section 2: Injecting risk behaviour (Leave blank only if info withheld)</section>
+        </sections>
+        <sections>
+            <label><!-- Section 3: Crime (Please leave blank only if info withheld) --></label>
+            <section>Section 3: Crime (Please leave blank only if info withheld)</section>
+        </sections>
+        <sections>
+            <label><!-- Section 4: Health and Social Funct  (Please leave blank only if info withheld) --></label>
+            <section>Section 4: Health and Social Funct  (Please leave blank only if info withheld)</section>
+        </sections>
+        <sections>
+            <label><!-- Section 4b: Work and Education --></label>
+            <section>Section 4b: Work and Education</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

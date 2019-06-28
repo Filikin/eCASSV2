@@ -9,6 +9,8 @@
 	27/1/2014 - adding CRUD support
 	20/11/2014 - adding Status field to list of fields retrieved (MK)
 	02/03/2016 - Allowing fields to be selected using a field set - other than the standard fields to avoid problems with existing installations
+	17/10/2017 - Ordering list of attendees by name
+	25/01/2018 - EK allowing ordering of list of attendees by a field specified in the custom setting
 */
 global with sharing class ProgramAttendanceListView 
 {
@@ -77,7 +79,8 @@ global with sharing class ProgramAttendanceListView
         {
             query += f.getFieldPath() + ', ';
         }
-        query += 'Name, id, Young_Person_Name__c, young_person__c, attended__c, Status__c, Interaction__c,comment__c, Duration_in_minutes__c from Attendance__c where Program_Session__c = \'' + session.id + '\'';        
+        query += 'Name, id, Young_Person_Name__c, young_person__c, attended__c, Status__c, Interaction__c,comment__c, Duration_in_minutes__c from Attendance__c where Program_Session__c = \'' + session.id + '\'';
+        query += ' Order by ' + AppConfigSupport.AttendanceSortField;        
 		system.debug ('Query is: ' + query);
         return query;
     }

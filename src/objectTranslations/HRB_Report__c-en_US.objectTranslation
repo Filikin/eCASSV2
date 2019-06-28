@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>HRB Report</value>
+        <value>Old HRB Report</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>HRB Reports</value>
+        <value>Old HRB Reports</value>
     </caseValues>
     <fields>
         <help><!-- Select the period for the report --></help>

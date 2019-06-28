@@ -37,62 +37,65 @@
         <fullName>Activity_Type__c</fullName>
         <externalId>false</externalId>
         <label>Activity Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Brief intervention</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Key Working</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Psychiatric treatment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual counselling</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Group counselling</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Social and/or occupational reintegration</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Family therapy</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Complimentary Therapy</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Genera Admin</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>HR</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Finance</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Interagency meeting</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Brief intervention</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Key Working</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Case Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Psychiatric treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Individual counselling</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group counselling</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social and/or occupational reintegration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Family therapy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complimentary Therapy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Genera Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Interagency meeting</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Care_plan_step_description__c</fullName>
@@ -118,50 +121,53 @@
         <fullName>Main_focus_of_session__c</fullName>
         <externalId>false</externalId>
         <label>Main focus of session</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Drugs</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alcohol</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mental Health</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Physical Health</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Housing</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Education</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Employment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Family</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Justice</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Money/Budgeting</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Drugs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alcohol</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mental Health</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Physical Health</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Housing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Justice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money/Budgeting</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Person_Responsible_for_Step__c</fullName>
@@ -176,42 +182,45 @@
         <fullName>Programme__c</fullName>
         <externalId>false</externalId>
         <label>Programme</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Drug Team</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cocaine</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Drop-in</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Outreach</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>CE Programme</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Family Support</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Aftercare</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Stabisation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Drug Team</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cocaine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Drop-in</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Outreach</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CE Programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Family Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Aftercare</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stabisation</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Related_Attendance_ID__c</fullName>
@@ -248,14 +257,17 @@
         <fullName>Related_Organisation__c</fullName>
         <externalId>false</externalId>
         <label>Related Organisation</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Status_Comment__c</fullName>
@@ -268,30 +280,33 @@
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Booked</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attended</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cancelled with notice and reason</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cancelled Late</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No Show</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Booked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attended</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled with notice and reason</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled Late</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Show</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <listViews>
         <fullName>AllActivities</fullName>

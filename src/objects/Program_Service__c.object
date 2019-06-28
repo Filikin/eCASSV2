@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -61,87 +57,96 @@
         <externalId>false</externalId>
         <inlineHelpText>Rate attendance of participants</inlineHelpText>
         <label>Attendance of participants</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Excellent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Good</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fair</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Poor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fair</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Course_Term__c</fullName>
         <externalId>false</externalId>
         <label>Course Term</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Term 1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Term 2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Term 3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Term 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Term 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Term 3</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Course_Type__c</fullName>
         <externalId>false</externalId>
         <label>Course Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>ESOL 1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>ESOL 2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>ESOL 3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>ESOL 4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>IT</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Numeracy</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ESOL 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESOL 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESOL 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESOL 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Numeracy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>End_Date__c</fullName>
@@ -187,27 +192,30 @@
         <externalId>false</externalId>
         <inlineHelpText>Rate the interest levels of participants</inlineHelpText>
         <label>Interest levels of participants</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Excellent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Good</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fair</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Poor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fair</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Lead_Staff__c</fullName>
@@ -248,53 +256,59 @@
         <externalId>false</externalId>
         <inlineHelpText>Rate programme/activity reflection and analysis</inlineHelpText>
         <label>Program reflection and analysis</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Excellent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Good</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fair</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Poor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fair</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Programme_Activity_Planning__c</fullName>
         <externalId>false</externalId>
         <label>Programme/Activity Planning</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Excellent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Good</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fair</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Poor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fair</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Start_Date__c</fullName>
@@ -308,23 +322,26 @@
         <fullName>Status_of_Course__c</fullName>
         <externalId>false</externalId>
         <label>Status of Course</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Planned</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Current</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Planned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Current</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Title_id__c</fullName>

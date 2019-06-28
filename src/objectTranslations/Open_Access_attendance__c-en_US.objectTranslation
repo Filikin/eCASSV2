@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Open Access</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Open Access</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advice and Support given --></label>
+        <name>Advice_and_Support_given__c</name>
+    </fields>
+    <fields>
+        <help><!-- CADS - Methadone Maintenance Programme/Counselling --></help>
+        <label><!-- CADS - MMP/Counselling --></label>
+        <name>CADS_MMP_C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- Open Access (Client) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client age --></label>
+        <name>Client_age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client gender --></label>
+        <name>Client_gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community Detox Programme --></label>
+        <name>Community_Detox_Programme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community GP --></label>
+        <name>Community_GP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complimentary Therapies --></label>
+        <name>Complimentary_Therapies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Computer --></label>
+        <name>Computer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coolmine Assessment --></label>
+        <name>Coolmine_Assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coolmine Information --></label>
+        <name>Coolmine_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date and Time client entered --></label>
+        <name>Date_and_Time_client_entered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date and Time client left --></label>
+        <name>Date_and_Time_client_left__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days since last activity --></label>
+        <name>Days_since_last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox/Residential Setting --></label>
+        <name>Detox_Residential_Setting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doctor --></label>
+        <name>Doctor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Housing Officer --></label>
+        <name>Housing_Officer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Should be given at third session --></help>
+        <label><!-- Induction given (3rd session) --></label>
+        <name>Induction_given__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fill in the key worker in the client record --></help>
+        <label><!-- Key worker offered (6th session) --></label>
+        <name>Key_worker_offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Laundry --></label>
+        <name>Laundry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Literacy --></label>
+        <name>Literacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Dublin</masterLabel>
+            <translation><!-- Dublin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limerick</masterLabel>
+            <translation><!-- Limerick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mullingar</masterLabel>
+            <translation><!-- Mullingar --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MQI Service --></label>
+        <name>MQI_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSP --></label>
+        <name>NSP__c</name>
+    </fields>
+    <fields>
+        <label><!-- None --></label>
+        <name>None__c</name>
+    </fields>
+    <fields>
+        <label><!-- Note anything left at reception --></label>
+        <name>Note_anything_left_at_reception__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nurse --></label>
+        <name>Nurse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nutrition --></label>
+        <name>Nutrition__c</name>
+    </fields>
+    <fields>
+        <label><!-- One-to-one brief intervention --></label>
+        <name>One_to_one_brief_intervention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Service --></label>
+        <name>Other_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other reason --></label>
+        <name>Other_reason__c</name>
+    </fields>
+    <fields>
+        <help><!-- If other, please specify --></help>
+        <label><!-- Other referral --></label>
+        <name>Other_referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outcome --></label>
+        <name>Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone call out --></label>
+        <name>Phone_call_out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-entry Dublin --></label>
+        <name>Pre_entry_Dublin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-entry Limerick --></label>
+        <name>Pre_entry_Limerick__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-entry Mullingar --></label>
+        <name>Pre_entry_Mullingar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Attending --></label>
+        <name>Reason_for_Attending__c</name>
+        <picklistValues>
+            <masterLabel>Crisis</masterLabel>
+            <translation><!-- Crisis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Homeless</masterLabel>
+            <translation><!-- Homeless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social</masterLabel>
+            <translation><!-- Social --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Substance use</masterLabel>
+            <translation><!-- Substance use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Relapse prevention --></label>
+        <name>Relapse_prevention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requests from client --></label>
+        <name>Requests_from_client__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIMON Community --></label>
+        <name>SIMON_Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session notes --></label>
+        <name>Session_notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Showers --></label>
+        <name>Showers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Welfare --></label>
+        <name>Social_Welfare__c</name>
+    </fields>
+    <fields>
+        <label><!-- St Marthas Longford --></label>
+        <name>St_Marthas_Longford__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stabilisation/Detox Limerick --></label>
+        <name>Stabilisation_Detox_Limerick__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stabilisation/Detox Mullingar --></label>
+        <name>Stabilisation_Detox_Mullingar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stepping Out Project --></label>
+        <name>Stepping_Out_Project__c</name>
+    </fields>
+    <fields>
+        <help><!-- This will send an email to someone --></help>
+        <label><!-- Suspect client is under 18 --></label>
+        <name>Suspect_client_is_under_18__c</name>
+    </fields>
+    <fields>
+        <label><!-- TFE Project --></label>
+        <name>TFE_Project__c</name>
+    </fields>
+    <fields>
+        <label><!-- VEC --></label>
+        <name>VEC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Who did induction --></label>
+        <name>Who_did_induction__c</name>
+        <relationshipLabel><!-- Open Access attendances (Who did induction) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other --></label>
+        <name>other__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- At least one of the referral out options must be checked, if no referrals out in this session, then tick &quot;None&quot; --></errorMessage>
+        <name>At_least_one_referral_out</name>
+    </validationRules>
+</CustomObjectTranslation>

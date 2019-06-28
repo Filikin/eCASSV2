@@ -48,6 +48,19 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
+        <label>This form is ONLY FOR CLIENTS WHO ENTERED IN 2018, use NDTRS LINK Form for 2019</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tick_to_confirm_2018_client_entry__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
         <label>HRB Compliance Fields</label>
         <layoutColumns>
             <layoutItems>

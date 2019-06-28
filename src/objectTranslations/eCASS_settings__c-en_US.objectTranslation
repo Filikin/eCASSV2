@@ -18,6 +18,10 @@ Everything else is left alone --></help>
         <name>Attendance_Name_Template__c</name>
     </fields>
     <fields>
+        <label><!-- Attendance Sort Field --></label>
+        <name>Attendance_Sort_Field__c</name>
+    </fields>
+    <fields>
         <help><!-- If on, then this client id field is not used in the eCASS reports, instead an autonumber is used. So the Record Valid on the Contact ignores Client ID --></help>
         <label><!-- Autonumber Client ID --></label>
         <name>Autonumber_Client_ID__c</name>
@@ -74,6 +78,10 @@ $INITIALS$ is replaced with the client&apos;s initials
 Everything else is left alone --></help>
         <label><!-- HRB Form Name Template --></label>
         <name>HRB_Form_Name_Template__c</name>
+    </fields>
+    <fields>
+        <label><!-- HealthAtlasEndpoint --></label>
+        <name>HealthAtlasEndpoint__c</name>
     </fields>
     <fields>
         <help><!-- When this is turned on, the &quot;Clone with Enrolments&quot; button on the Program/Course only clones the enrolments where the status is Active, otherwise it clones them all --></help>

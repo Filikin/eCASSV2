@@ -40,6 +40,10 @@
                 <behavior>Readonly</behavior>
                 <field>Date_of_Session__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Enrolment__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>

@@ -1,0 +1,34 @@
+<apex:page standardController="Contact" standardStylesheets="false" applyBodyTag="false" showHeader="false" sidebar="false">
+    <apex:includeLightning />
+	<style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        }
+        #lightningComponent {width: 100%;}
+    </style>
+    <div id="content">
+        <div id="lightningComponent"></div>
+    </div>
+
+    <script>
+    	var recordId = '{!Contact.Id}';
+    	var myUserContext = "{!$User.UITheme}";
+        $Lightning.use("c:HealthAtlasGetSmallArea", function() {
+          $Lightning.createComponent("c:HealthAtlas",
+          {recordId: recordId},
+          "lightningComponent",
+          function(cmp) 
+          {
+              	$A.eventService.addHandler({
+            	event: 'force:showToast',
+                	handler: function(event) 
+                	{
+                    	alert (event.getParams().message);
+                    	window.close();
+                    }
+                });
+          });
+        });
+    </script>
+</apex:page>

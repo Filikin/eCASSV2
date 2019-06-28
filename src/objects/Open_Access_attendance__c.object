@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -245,23 +241,26 @@
         <fullName>Location__c</fullName>
         <externalId>false</externalId>
         <label>Location</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Dublin</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mullingar</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Limerick</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dublin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mullingar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limerick</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>MQI_Service__c</fullName>
@@ -394,39 +393,42 @@
         <fullName>Reason_for_Attending__c</fullName>
         <externalId>false</externalId>
         <label>Reason for Attending</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Homeless</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Referral</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Substance use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Support</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Crisis</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Social</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Homeless</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Substance use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Crisis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Relapse_prevention__c</fullName>

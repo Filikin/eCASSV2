@@ -4,7 +4,9 @@
     <customButtons>Client_Calendar</customButtons>
     <customButtons>Care_Plan_Overview</customButtons>
     <customButtons>View_care_plan</customButtons>
+    <customButtons>Migrate_Client_to_NDTRS_2016</customButtons>
     <excludeButtons>Clone</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
     <excludeButtons>DisablePrmSuperUser</excludeButtons>
@@ -12,6 +14,7 @@
     <excludeButtons>EnablePrmSuperUser</excludeButtons>
     <excludeButtons>EnableSelfService</excludeButtons>
     <excludeButtons>RequestUpdate</excludeButtons>
+    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>ViewPartnerPortalUser</excludeButtons>
     <excludeButtons>ViewSelfService</excludeButtons>
@@ -40,6 +43,54 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Record_Valid__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Power_of_one__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X11c_Other_language_at_home__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X5_Living_with_whom__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Country_Of_Birth__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Education_Age__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Ethnic_cultural_background__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Language__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Living_Where__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Living_With__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Sex__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>LHO_Code__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TFA_Code__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -326,6 +377,15 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>X13_Main_Reason_for_referral__c</fields>
+        <fields>X15_Date_of_initial_assessment__c</fields>
+        <fields>X16_Assessment_outcome__c</fields>
+        <fields>X34_Client_s_Condition_on_discharge__c</fields>
+        <fields>X35_Date_of_Final_Discharge_or_transfer__c</fields>
+        <relatedList>NDTRS_Form_2016__c.Contact__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
         <fields>RECORDTYPE</fields>
         <fields>Date_of_Initial_Assessment__c</fields>
         <fields>Date_of_Assessment__c</fields>
@@ -370,7 +430,29 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Review_Date__c</fields>
+        <fields>Next_Review_Date__c</fields>
+        <fields>Review_Completed__c</fields>
+        <fields>Summary__c</fields>
+        <relatedList>Care_Plan_Review__c.Client__c</relatedList>
+        <sortField>Review_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
         <relatedList>UDIT__c.Client__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>TOP_Interview_Date__c</fields>
+        <fields>Overall_Quality_of_Life__c</fields>
+        <fields>Physical_Health_Status__c</fields>
+        <fields>Psychological_health_status__c</fields>
+        <fields>Number_of_Days_injected_Total__c</fields>
+        <fields>Alcohol_Total__c</fields>
+        <fields>Cocaine_Total__c</fields>
+        <fields>Opiates_Total__c</fields>
+        <relatedList>TOP__c.Client__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -382,16 +464,6 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Review_Date__c</fields>
-        <fields>Next_Review_Date__c</fields>
-        <fields>Review_Completed__c</fields>
-        <fields>Summary__c</fields>
-        <relatedList>Care_Plan_Review__c.Client__c</relatedList>
-        <sortField>Review_Date__c</sortField>
-        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

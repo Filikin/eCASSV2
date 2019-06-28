@@ -1,146 +1,163 @@
 /*
-	Author: Eamon Kelly, Enclude
-	Purpose: Provide centralised access to the custom settings and make a copy available in test
-	Copied from Advanced Apex Programming by Dan Appleman
+    Author: Eamon Kelly, Enclude
+    Purpose: Provide centralised access to the custom settings and make a copy available in test
+    Copied from Advanced Apex Programming by Dan Appleman
 */
 global with sharing class AppConfigSupport {
-	private static eCASS_settings__c testconfig = null;
-	public static final Integer MAX_NAME_SIZE = 30;
-	
-	global static eCASS_settings__c GeteCASSSettings()
-	{
-		if(Test.isRunningTest() && testconfig!=null) return testconfig;
-		
-		eCASS_settings__c theobject = eCASS_settings__c.getOrgDefaults();
-		eCASS_settings__c emptyObject = new eCASS_settings__c ();
-		if(theobject==null || theobject == emptyObject || Test.isRunningTest()) 
-		{
-			theobject = new eCASS_settings__c();
-			theobject.name = 'default';
-			if(!Test.isRunningTest()) 
-			{
-				Database.Insert(theobject);
-				theobject = eCASS_settings__c.getOrgDefaults();
-			}
-			else // set default test values (can be different from default values) 
-			{
-				theobject.Attendance_Name_Template__c = 'Att-$NAME$-$DATE$';
-				theobject.Care_Plan_Overview_Print_Page__c = 'CarePlanOverviewPrint';
-				theobject.Care_Plan_Print_Page__c = 'CarePlanPrintPage';
-				theobject.Create_past_attendances__c = false;
-				theobject.Default_attendance_duration__c = 60;
-				theobject.Disable_Triggers__c = false;
-				theobject.Enrolment_Name_Template__c = 'Enr-$NAME$-$DATE$';
-				theobject.HRB_Form_Name_Template__c = 'HRB-$NAME$-$DATE$';
-				theobject.Organisation_Name__c = 'Test';
-				theobject.Rules_on__c = true;
-				theobject.Referral_Name_Template__c = 'REF-$NAME$-$DATE$';
-				theobject.Only_clone_active_enrolments__c = true;
-				testconfig = theobject;
-			}
-		}
-		return theobject;
-	}
+    private static eCASS_settings__c testconfig = null;
+    public static final Integer MAX_NAME_SIZE = 30;
+    
+    global static eCASS_settings__c GeteCASSSettings()
+    {
+        if(Test.isRunningTest() && testconfig!=null) return testconfig;
+        
+        eCASS_settings__c theobject = eCASS_settings__c.getOrgDefaults();
+        eCASS_settings__c emptyObject = new eCASS_settings__c ();
+        if(theobject==null || theobject == emptyObject || Test.isRunningTest()) 
+        {
+            theobject = new eCASS_settings__c();
+            theobject.name = 'default';
+            if(!Test.isRunningTest()) 
+            {
+                Database.Insert(theobject);
+                theobject = eCASS_settings__c.getOrgDefaults();
+            }
+            else // set default test values (can be different from default values) 
+            {
+                theobject.Attendance_Name_Template__c = 'Att-$NAME$-$DATE$';
+                theobject.Care_Plan_Overview_Print_Page__c = 'CarePlanOverviewPrint';
+                theobject.Care_Plan_Print_Page__c = 'CarePlanPrintPage';
+                theobject.Create_past_attendances__c = false;
+                theobject.Default_attendance_duration__c = 60;
+                theobject.Disable_Triggers__c = false;
+                theobject.Enrolment_Name_Template__c = 'Enr-$NAME$-$DATE$';
+                theobject.HRB_Form_Name_Template__c = 'HRB-$NAME$-$DATE$';
+                theobject.Organisation_Name__c = 'Test';
+                theobject.Rules_on__c = true;
+                theobject.Referral_Name_Template__c = 'REF-$NAME$-$DATE$';
+                theobject.Only_clone_active_enrolments__c = true;
+                theobject.Attendance_Sort_Field__c = 'Young_Person_Name__c';
+                theobject.HealthAtlasEndpoint__c='https://hrb.healthatlasireland.ie/addrlookup/enclude?token=kE0FJo64q2Jo1ITP2yvT&cmd=liveSearch&address=';
+                testconfig = theobject;
+            }
+        }
+        return theobject;
+    }
 
-	public static String AttendanceNameTemplate
-	{
-		get
-		{
-			return GeteCASSSettings().Attendance_Name_Template__c;
-		}
-	}
-	
-	public static String EnrolmentNameTemplate
-	{
-		get
-		{
-			return GeteCASSSettings().Enrolment_Name_Template__c;
-		}
-	}
-	
-	public static String HRBFormNameTemplate
-	{
-		get
-		{
-			return GeteCASSSettings().HRB_Form_Name_Template__c;
-		}
-	}
-	
-	public static String CarePlanPrintPage
-	{
-		get
-		{
-			return GeteCASSSettings().Care_Plan_Print_Page__c;
-		}
-	}
-	
-	public static String CarePlanOverviewPrintPage
-	{
-		get
-		{
-			return GeteCASSSettings().Care_Plan_Overview_Print_Page__c;
-		}
-	}
+    public static String AttendanceNameTemplate
+    {
+        get
+        {
+            return GeteCASSSettings().Attendance_Name_Template__c;
+        }
+    }
+    
+    public static String EnrolmentNameTemplate
+    {
+        get
+        {
+            return GeteCASSSettings().Enrolment_Name_Template__c;
+        }
+    }
+    
+    public static String HRBFormNameTemplate
+    {
+        get
+        {
+            return GeteCASSSettings().HRB_Form_Name_Template__c;
+        }
+    }
+    
+    public static String CarePlanPrintPage
+    {
+        get
+        {
+            return GeteCASSSettings().Care_Plan_Print_Page__c;
+        }
+    }
+    
+    public static String CarePlanOverviewPrintPage
+    {
+        get
+        {
+            return GeteCASSSettings().Care_Plan_Overview_Print_Page__c;
+        }
+    }
 
-	public static Boolean CreatePastAttendances
-	{
-		get
-		{
-			return GeteCASSSettings().Create_past_attendances__c;
-		}
-	}
-	
-	public static Integer DefaultAttendanceDuration
-	{
-		get
-		{
-			return (Integer)GeteCASSSettings().Default_attendance_duration__c;
-		}
-	}
-	
-	global static Boolean TriggersDisabled
-	{
-		get
-		{
-			return GeteCASSSettings().Disable_Triggers__c;
-		}
-		set
-		{
-			GeteCASSSettings().Disable_Triggers__c = TriggersDisabled;
-		}
-	}
+    public static Boolean CreatePastAttendances
+    {
+        get
+        {
+            return GeteCASSSettings().Create_past_attendances__c;
+        }
+    }
+    
+    public static Integer DefaultAttendanceDuration
+    {
+        get
+        {
+            return (Integer)GeteCASSSettings().Default_attendance_duration__c;
+        }
+    }
+    
+    global static Boolean TriggersDisabled
+    {
+        get
+        {
+            return GeteCASSSettings().Disable_Triggers__c;
+        }
+        set
+        {
+            GeteCASSSettings().Disable_Triggers__c = TriggersDisabled;
+        }
+    }
 
-	global static Boolean ValidationRulesOn
-	{
-		get
-		{
-			return GeteCASSSettings().Rules_on__c;
-		}
-	}
-	
-	public static String ReferralNameTemplate
-	{
-		get
-		{
-			return GeteCASSSettings().Referral_Name_Template__c;
-		}
-	}
-	
-	public static Boolean OnlyCloneActiveEnrolments
-	{
-		get
-		{
-			return GeteCASSSettings().Only_clone_active_enrolments__c;
-		}
-	}
-	
-	public static String PackagePrefix
-	{
-		get
-		{
-			return ''; // think this is safer than letting the user control it in a custom setting
-//			return 'eCASS02t1__'; // think this is safer than letting the user control it in a custom setting
-		}
-	}
-	
+    global static Boolean ValidationRulesOn
+    {
+        get
+        {
+            return GeteCASSSettings().Rules_on__c;
+        }
+    }
+    
+    public static String ReferralNameTemplate
+    {
+        get
+        {
+            return GeteCASSSettings().Referral_Name_Template__c;
+        }
+    }
+    
+    public static Boolean OnlyCloneActiveEnrolments
+    {
+        get
+        {
+            return GeteCASSSettings().Only_clone_active_enrolments__c;
+        }
+    }
+    
+    public static String PackagePrefix
+    {
+        get
+        {
+          return ''; // think this is safer than letting the user control it in a custom setting
+//            return 'eCASS02t1__'; // think this is safer than letting the user control it in a custom setting
+        }
+    }
+    
+    public static String AttendanceSortField
+    {
+        get
+        {
+            if (GeteCASSSettings().Attendance_Sort_Field__c == null) return 'Young_Person_Name__c';
+            else return GeteCASSSettings().Attendance_Sort_Field__c;
+        }
+    }
+    public static String HealthAtlasEndpoint
+    {
+        get
+        {
+            return GeteCASSSettings().HealthAtlasEndpoint__c;
+        }   
+    }
 }

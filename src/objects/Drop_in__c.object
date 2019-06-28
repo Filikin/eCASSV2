@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -69,24 +65,27 @@
         <fullName>Drop_In__c</fullName>
         <externalId>false</externalId>
         <label>Drop-In</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Monday Social</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Tuesday AM</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Tuesday PM</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monday Social</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tuesday AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tuesday PM</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Speaker__c</fullName>

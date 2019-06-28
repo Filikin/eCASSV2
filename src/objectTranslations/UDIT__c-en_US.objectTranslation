@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>UDIT</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>UDIT</value>
+    </caseValues>
+    <fields>
+        <help><!-- 16-24 = Harmful, 25-40 = Hazardous &amp; 20 to 40 indicates dependence --></help>
+        <label><!-- AUDIT Final Score --></label>
+        <name>AUDIT_Final_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 10 --></label>
+        <name>AUDIT_Sub_Score_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 1 --></label>
+        <name>AUDIT_Sub_Score_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 2 --></label>
+        <name>AUDIT_Sub_Score_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 3 --></label>
+        <name>AUDIT_Sub_Score_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 4 --></label>
+        <name>AUDIT_Sub_Score_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 5 --></label>
+        <name>AUDIT_Sub_Score_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 6 --></label>
+        <name>AUDIT_Sub_Score_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 7 --></label>
+        <name>AUDIT_Sub_Score_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 8 --></label>
+        <name>AUDIT_Sub_Score_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- AUDIT Sub Score 9 --></label>
+        <name>AUDIT_Sub_Score_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <help><!-- Concern from others
+11. Has a relative or a friend, a doctor or a nurse, or anyone else, been worried about your drug use or said to you that you should stop using drugs? --></help>
+        <label><!-- Anyone worried about your drug use --></label>
+        <name>Anyone_worried_about_your_drug_use__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but not over the last year</masterLabel>
+            <translation><!-- Yes, but not over the last year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, over the last year</masterLabel>
+            <translation><!-- Yes, over the last year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 1 --></label>
+        <name>CUDIT_Sub_Score_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 2 --></label>
+        <name>CUDIT_Sub_Score_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 3 --></label>
+        <name>CUDIT_Sub_Score_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 4 --></label>
+        <name>CUDIT_Sub_Score_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 5 --></label>
+        <name>CUDIT_Sub_Score_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 6 --></label>
+        <name>CUDIT_Sub_Score_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 7 --></label>
+        <name>CUDIT_Sub_Score_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Sub Score 8 --></label>
+        <name>CUDIT_Sub_Score_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUDIT Total Score --></label>
+        <name>CUDIT_Total_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <relationshipLabel><!-- UDIT --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Is it recommended service user progress to an initial assessment? --></help>
+        <label><!-- Client progress to an initial assessment --></label>
+        <name>Client_progress_to_an_initial_assessment__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consent given to refer 1 --></label>
+        <name>Consent_given_to_refer_1__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consent given to refer 2 --></label>
+        <name>Consent_given_to_refer_2__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consent given to refer 3 --></label>
+        <name>Consent_given_to_refer_3__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consent given to refer 4 --></label>
+        <name>Consent_given_to_refer_4__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 10 --></label>
+        <name>DUDIT_Sub_Score_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 11 --></label>
+        <name>DUDIT_Sub_Score_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 1 --></label>
+        <name>DUDIT_Sub_Score_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 2 --></label>
+        <name>DUDIT_Sub_Score_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 3 --></label>
+        <name>DUDIT_Sub_Score_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 4 --></label>
+        <name>DUDIT_Sub_Score_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 5 --></label>
+        <name>DUDIT_Sub_Score_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 6 --></label>
+        <name>DUDIT_Sub_Score_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 7 --></label>
+        <name>DUDIT_Sub_Score_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 8 --></label>
+        <name>DUDIT_Sub_Score_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUDIT Sub Score 9 --></label>
+        <name>DUDIT_Sub_Score_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Assessment --></label>
+        <name>Date_of_Assessment__c</name>
+    </fields>
+    <fields>
+        <help><!-- We have discussed a follow up plan from this service on any agreed referrals as part of this screening process? --></help>
+        <label><!-- Discussed a follow up plan from --></label>
+        <name>Discussed_a_follow_up_plan_from__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Have you discussed the outcome of the CUDIT -R with the service user and provided brief intervention? --></help>
+        <label><!-- Discussed outcome CUDIT-R  with client --></label>
+        <name>Discussed_outcome_CUDIT_R_with_client__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you discussed the outcome of the AUDIT with the service user and provided brief intervention --></help>
+        <label><!-- Discussed outcome of AUDIT with client --></label>
+        <name>Discussed_outcome_of_AUDIT_with_client__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a referral is required to another substance misuse service; you have discussed with service user the reason why this would be helpful --></help>
+        <label><!-- Discussed reason why service be helpful --></label>
+        <name>Discussed_reason_why_service_be_helpful__c</name>
+    </fields>
+    <fields>
+        <help><!-- 4. How often during the past 6 months did you fail to do what was normally expected from you because of using cannabis? --></help>
+        <label><!-- Fail to do the expected due to cannabis --></label>
+        <name>Fail_to_do_the_expected_due_to_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Priority of drug use
+7. How often over the past year have you taken drugs and then not done something you should have done? --></help>
+        <label><!-- Fail to do the expected due to drugs --></label>
+        <name>Fail_to_do_the_expected_due_to_drugs__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+    </fields>
+    <fields>
+        <help><!-- Guilt feelings
+9. How often over the past year have you had guilt feelings or a bad conscience because you used drugs? --></help>
+        <label><!-- Had guilt feelings because you used drug --></label>
+        <name>Had_guilt_feelings_because_you_used_drug__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 10. Has a relative, friend, doctor or other health care worker been concerned about your drinking or suggested you cut down? --></help>
+        <label><!-- Has concerned person suggested cut down --></label>
+        <name>Has_concerned_person_suggested_cut_down__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but not in last year</masterLabel>
+            <translation><!-- Yes, but not in last year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, during the last year</masterLabel>
+            <translation><!-- Yes, during the last year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 9. Have you or someone else been injured because of your drinking? --></help>
+        <label><!-- Have you been injured because of drink --></label>
+        <name>Have_you_been_injured_because_of_drink__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but not in last year</masterLabel>
+            <translation><!-- Yes, but not in last year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, during the last year</masterLabel>
+            <translation><!-- Yes, during the last year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 8. Have you ever thought about cutting down, or stopping, your use of cannabis? --></help>
+        <label><!-- Have you ever thought stopping cannabis --></label>
+        <name>Have_you_ever_thought_stopping_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but not in the past 6 months</masterLabel>
+            <translation><!-- Yes, but not in the past 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, during the past 6 months</masterLabel>
+            <translation><!-- Yes, during the past 6 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 2. How many hours were you ‘stoned’ on a typical day when you had been using cannabis? --></help>
+        <label><!-- Hours were you stoned using cannabis --></label>
+        <name>Hours_were_you_stoned_using_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>1 or 2</masterLabel>
+            <translation><!-- 1 or 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 or 4</masterLabel>
+            <translation><!-- 3 or 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 or 6</masterLabel>
+            <translation><!-- 5 or 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 or more</masterLabel>
+            <translation><!-- 7 or more --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 1</masterLabel>
+            <translation><!-- Less than 1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 2. How many standard drinks containing alcohol do you have on a typical day when you are drinking? --></help>
+        <label><!-- How many drinks do you have typical day --></label>
+        <name>How_many_drinks_do_you_have_typical_day__c</name>
+        <picklistValues>
+            <masterLabel>1 or 2</masterLabel>
+            <translation><!-- 1 or 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10 or more</masterLabel>
+            <translation><!-- 10 or more --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 or 4</masterLabel>
+            <translation><!-- 3 or 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 or 6</masterLabel>
+            <translation><!-- 5 or 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 9</masterLabel>
+            <translation><!-- 7 to 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 1. How often do you have a drink containingc alcohol? --></help>
+        <label><!-- How often do you drink alcohol? --></label>
+        <name>How_often_do_you_drink_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>2 to 3 times a week</masterLabel>
+            <translation><!-- 2 to 3 times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 to 4 times a month</masterLabel>
+            <translation><!-- 2 to 4 times a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 or more times a week</masterLabel>
+            <translation><!-- 4 or more times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly or less</masterLabel>
+            <translation><!-- Monthly or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 3. How often do you have 5 or more drinks in one occasion? --></help>
+        <label><!-- How often do you have 5 or more drinks --></label>
+        <name>How_often_do_you_have_5_or_more_drinks__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 1. How often do you use cannabis? --></help>
+        <label><!-- How often do you use cannabis? --></label>
+        <name>How_often_do_you_use_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>2-3 times a week</masterLabel>
+            <translation><!-- 2-3 times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-4 Times A Month</masterLabel>
+            <translation><!-- 2-4 Times A Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 or more times a week</masterLabel>
+            <translation><!-- 4 or more times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly or less</masterLabel>
+            <translation><!-- Monthly or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 3. How often during the past 6 months did you find that you were not able to stop using cannabis once you had started? --></help>
+        <label><!-- How often unable to stop using cannabis --></label>
+        <name>How_often_unable_to_stop_using_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Frequency per week/month
+1. How often do you use drugs other than alcohol? --></help>
+        <label><!-- How often use drugs other than alcohol --></label>
+        <name>How_often_use_drugs_other_than_alcohol__c</name>
+        <picklistValues>
+            <masterLabel>2-3 times a week</masterLabel>
+            <translation><!-- 2-3 times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-4 times a month</masterLabel>
+            <translation><!-- 2-4 times a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 times a week or more</masterLabel>
+            <translation><!-- 4 times a week or more --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Once a month or less often</masterLabel>
+            <translation><!-- Once a month or less often --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 5. How often in the last year have you failed to do what was normally expected of you because of drinking? --></help>
+        <label><!-- How often you failed do expected of you --></label>
+        <name>How_often_you_failed_do_expected_of_you__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 7. How often during the last year have you had a feeling of guilt or remorse after drinking? --></help>
+        <label><!-- How often you had a remorse after drink --></label>
+        <name>How_often_you_had_a_remorse_after_drink__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Heavy use
+4. How often are you heavily influenced by drugs --></help>
+        <label><!-- How often you heavily influenced by drug --></label>
+        <name>How_often_you_heavily_influenced_by_drug__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 6. How often during the last year have you needed a first drink in the morning to get yourself going ager a heavy drinking session? --></help>
+        <label><!-- How often you needed a drink in morning --></label>
+        <name>How_often_you_needed_a_drink_in_morning__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 8. How often during the last year have you been unable to remember what happened the night before because of your drinking? --></help>
+        <label><!-- How often you unable remember last night --></label>
+        <name>How_often_you_unable_remember_last_night__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 4. How often during the last year have you found that you were not able to stop drinking once you started? --></help>
+        <label><!-- How often you were not able stop drink --></label>
+        <name>How_often_you_were_not_able_stop_drink__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEVER</masterLabel>
+            <translation><!-- NEVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If yes, what is the identified risk assessment(s) required? --></help>
+        <label><!-- If yes, specify risk assessment required --></label>
+        <name>If_yes_specify_risk_assessment_required__c</name>
+    </fields>
+    <fields>
+        <help><!-- If yes, what is the identified risk assessment(s) required? --></help>
+        <label><!-- If yes, specify risk identfied --></label>
+        <name>If_yes_specify_risk_identfied__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you discussed with the service user follow up information to be provided back to the referring agency and have agreed the information to be feedback? --></help>
+        <label><!-- Info to be provided back to ref agency --></label>
+        <name>Info_to_be_provided_back_to_ref_agency__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Craving
+5. Over the past year, have you felt that your longing for drugs was so strong that you could not resist it? --></help>
+        <label><!-- Long for drugs so strong couldn&apos;t resist --></label>
+        <name>Long_for_drugs_so_strong_couldn_t_resist__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Harmful use
+10. Have you or anyone else been mentally/physically hurt because you used drugs? --></help>
+        <label><!-- Mental/physically hurt because used drug --></label>
+        <name>Mental_physically_hurt_because_used_drug__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, but not over the last year</masterLabel>
+            <translation><!-- Yes, but not over the last year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, over the last year</masterLabel>
+            <translation><!-- Yes, over the last year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Name of Assessment Keyworker --></label>
+        <name>Name_of_Assessment_Keyworker__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you offered the service user a debrief session? --></help>
+        <label><!-- Offered to service user debrief session --></label>
+        <name>Offered_to_service_user_debrief_session__c</name>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Outcome of CUDIT - R --></label>
+        <name>Outcome_of_CUDIT_R__c</name>
+    </fields>
+    <fields>
+        <help><!-- 6. How often in the past 6 months have you had a problem with you memory or concentration after using cannabis? --></help>
+        <label><!-- Problem with your memory after cannabis --></label>
+        <name>Problem_with_your_memory_after_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for referral 1 --></label>
+        <name>Reason_for_referral_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for referral 2 --></label>
+        <name>Reason_for_referral_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for referral 3 --></label>
+        <name>Reason_for_referral_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for referral 4 --></label>
+        <name>Reason_for_referral_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have risks been identified that required risk assessments --></help>
+        <label><!-- Risk been identified required assessment --></label>
+        <name>Risk_been_identified_required_assessment__c</name>
+        <picklistValues>
+            <masterLabel>Not at this time</masterLabel>
+            <translation><!-- Not at this time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service 1 Type --></label>
+        <name>Service_1_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service 2 Type --></label>
+        <name>Service_2_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service 3 Type --></label>
+        <name>Service_3_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service 4 Type --></label>
+        <name>Service_4_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Name --></label>
+        <name>Service_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- You and the service user completed and signed a consent form for referral and release of AUDIT, if appropriate --></help>
+        <label><!-- Signed consent form for referral A --></label>
+        <name>Signed_consent_form_for_referral_A__c</name>
+    </fields>
+    <fields>
+        <help><!-- You and the service user completed and signed a consent form for referral and release of CUDIT - R, if appropriate --></help>
+        <label><!-- Signed consent form for referral C --></label>
+        <name>Signed_consent_form_for_referral_C__c</name>
+    </fields>
+    <fields>
+        <help><!-- You and the service user completed and signed a consent form for referral and release of DUDIT, if appropriate --></help>
+        <label><!-- Signed consent form for referral D --></label>
+        <name>Signed_consent_form_for_referral_D__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub score for alcohol related problems: --></label>
+        <name>Sub_score_for_alcohol_related_problems__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub score for dependence: --></label>
+        <name>Sub_score_for_dependence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub score relating to consumption: --></label>
+        <name>Sub_score_relating_to_consumption__c</name>
+    </fields>
+    <fields>
+        <help><!-- 5. How often is the past 6 months have you devoted a great deal of your time to getting, using or recovering from cannabis? --></help>
+        <label><!-- Time using/recovering from cannabis --></label>
+        <name>Time_using_recovering_from_cannabis__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Frequency per day
+3. How many times do you take drugs on a typical day when you use drugs? --></help>
+        <label><!-- Times you take drugs on a typical day --></label>
+        <name>Times_you_take_drugs_on_a_typical_day__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1-2</masterLabel>
+            <translation><!-- 1-2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-4</masterLabel>
+            <translation><!-- 3-4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-6</masterLabel>
+            <translation><!-- 5-6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 or more</masterLabel>
+            <translation><!-- 7 or more --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total DUDIT Score --></label>
+        <name>Total_DUDIT_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Poly-drug use
+2. Do you use more than one type of drug on the same occasion? --></help>
+        <label><!-- Use more than one drug per occasion? --></label>
+        <name>Use_more_than_one_drug_per_occasion__c</name>
+        <picklistValues>
+            <masterLabel>2-3 times a week</masterLabel>
+            <translation><!-- 2-3 times a week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-4 times a month</masterLabel>
+            <translation><!-- 2-4 times a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 times a week or more often</masterLabel>
+            <translation><!-- 4 times a week or more often --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Once a month or less often</masterLabel>
+            <translation><!-- Once a month or less often --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Have you used any cannabis over the past six months? --></help>
+        <label><!-- Used cannabis over the past six months? --></label>
+        <name>Used_cannabis_over_the_past_six_months__c</name>
+    </fields>
+    <fields>
+        <help><!-- ‘Eye opener’ or Hair of the dog
+8. How often over the past year have you needed to take a drug the morning after heavy drug use the day before? --></help>
+        <label><!-- You needed drugs after heavy drug use --></label>
+        <name>You_needed_drugs_after_heavy_drug_use__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Objective: Loss of control
+6. Has it happened, over the past year that you have not been able to stop taking drugs once you started? --></help>
+        <label><!-- You unable to stop drugs once started --></label>
+        <name>You_unable_to_stop_drugs_once_started__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every month</masterLabel>
+            <translation><!-- Every month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every week</masterLabel>
+            <translation><!-- Every week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less often than once a month</masterLabel>
+            <translation><!-- Less often than once a month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 7. How often do you use cannabis in situations that could be physically hazardous, such as driving, operating machinery, or caring for children: --></help>
+        <label><!-- You use cannabis physically hazardous --></label>
+        <name>You_use_cannabis_physically_hazardous__c</name>
+        <picklistValues>
+            <masterLabel>Daily or almost daily</masterLabel>
+            <translation><!-- Daily or almost daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than monthly</masterLabel>
+            <translation><!-- Less than monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>AUDIT Layout</layout>
+        <sections>
+            <label><!-- AUDIT - Screening Tool --></label>
+            <section>AUDIT - Screening Tool</section>
+        </sections>
+        <sections>
+            <label><!-- Alcohol Use Assessment --></label>
+            <section>Alcohol Use Assessment</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.3 --></label>
+            <section>Screening Procedure Linked: Section 4.3</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.4 --></label>
+            <section>Screening Procedure Linked: Section 4.4</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.6, 4.7 --></label>
+            <section>Screening Procedure Linked: Section 4.6, 4.7</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 5 --></label>
+            <section>Screening Procedure Linked: Section 5</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CUDIT Layout</layout>
+        <sections>
+            <label><!-- Cannabis Screening Tool Domain - CUDIT-R --></label>
+            <section>Cannabis Screening Tool Domain - CUDIT-R</section>
+        </sections>
+        <sections>
+            <label><!-- Cannabis Use Assessment --></label>
+            <section>Cannabis Use Assessment</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.3 --></label>
+            <section>Screening Procedure Linked: Section 4.3</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.4 --></label>
+            <section>Screening Procedure Linked: Section 4.4</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.6, 4.7 --></label>
+            <section>Screening Procedure Linked: Section 4.6, 4.7</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 5 --></label>
+            <section>Screening Procedure Linked: Section 5</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 5.4 --></label>
+            <section>Screening Procedure Linked: Section 5.4</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DUDIT Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DUDIT - Screening Tool --></label>
+            <section>DUDIT - Screening Tool</section>
+        </sections>
+        <sections>
+            <label><!-- Drug Use Assessment --></label>
+            <section>Drug Use Assessment</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.3 --></label>
+            <section>Screening Procedure Linked: Section 4.3</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.4 --></label>
+            <section>Screening Procedure Linked: Section 4.4</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 4.6, 4.7 --></label>
+            <section>Screening Procedure Linked: Section 4.6, 4.7</section>
+        </sections>
+        <sections>
+            <label><!-- Screening Procedure Linked: Section 5 --></label>
+            <section>Screening Procedure Linked: Section 5</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AUDIT --></label>
+        <name>AUDIT</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CUDIT --></label>
+        <name>CUDIT</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- DUDIT --></label>
+        <name>DUDIT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

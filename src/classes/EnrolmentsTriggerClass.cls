@@ -3,6 +3,8 @@
 	Purpose: When a client is enrolled in a course if Create_past_attendances__c is true in the settings, then create attendances for them in the previous sessions
 	Also used to count the enrolments in the course to avoid rollups - only active and completed
 	Tested in testCreateAttendanceTrigger 
+
+	UPdated 03/08/2018: If Create past attendances flag set, use date joined programme, if populated, to determine how far back to go when creating attendances for past sessions
 */
 public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.ITriggerEntry
 {
@@ -11,9 +13,11 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 	{
 		if (isInsert)
 		{
-			if (isBefore) CreateSessionsOnNewEnrolment (newList);
-			else if (isAfter)
+//			if (isBefore) CreateSessionsOnNewEnrolment (newList);
+//			else 
+                if (isAfter)
 			{
+                CreateSessionsOnNewEnrolment (newList);
 				ChangeName ((map<Id, Enrolment__c>)newMap);
 				CountNumberEnrolled (newList);
 			}
@@ -58,8 +62,10 @@ public with sharing class EnrolmentsTriggerClass implements TriggerDispatcher.IT
 			for (Enrolment__c oneEnroll: newList)
 			{
 				// get list of sessions and add an attendance record for each one
-				// TODO - for services that run forever, this would create too many past attendances, we need to decide how far back to go
-				for (Program_Session__c sess: [select id, Session_Date__c from Program_Session__c where Program_Service__c = :oneEnroll.Program_Service__c])
+				// MK 03/08/18:  If enrolment has program start date, use this to determine how far back to go
+				Date dateJoinedProgram = oneEnroll.Date_joined_program__c != null ? oneEnroll.Date_joined_program__c : Date.newInstance(1900,1,1);                
+				for (Program_Session__c sess: [select id, Session_Date__c from Program_Session__c where Program_Service__c = :oneEnroll.Program_Service__c
+                                                  and Session_Date__c >= :dateJoinedProgram])
 				{
 					if (sess.Session_Date__c < system.today() && AppConfigSupport.CreatePastAttendances == false) continue;
 					Attendance__c oneAttendance = new Attendance__c (Name='FromEnrolment', Program_Session__c=sess.id, Young_Person__c = oneEnroll.Young_Person__c, Enrolment__c=oneEnroll.id, RecordTypeId = courseAttendanceRecordTypeId);

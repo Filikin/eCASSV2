@@ -1,0 +1,3055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NDTRS LINK Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NDTRS LINK Forms</value>
+    </caseValues>
+    <fields>
+        <label><!-- AddedBy --></label>
+        <name>AddedBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Added --></label>
+        <name>Added__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Structured Aftercare Programme --></help>
+        <label><!-- Aftercare --></label>
+        <name>Aftercare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age 1st OpiateSub --></label>
+        <name>Age_1st_OpiateSub__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age_1st_Tx_Alcohol --></label>
+        <name>Age_1st_Tx_Alcohol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age_1st_Tx_Drug --></label>
+        <name>Age_1st_Tx_Drug__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age_1st_Tx_OtherProblem --></label>
+        <name>Age_1st_Tx_OtherProblem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- AlcUnspecified --></label>
+        <name>AlcUnspecified__c</name>
+    </fields>
+    <fields>
+        <label><!-- AlcoholExtSpecify --></label>
+        <name>AlcoholExtSpecify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alcohol_History --></label>
+        <name>Alcohol_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any Outstanding Charges? --></label>
+        <name>Any_Outstanding_Charges__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your use of drugs or alcohol that you think we should know? --></help>
+        <label><!-- Any other info re use of drugs - alcohol --></label>
+        <name>Any_other_info_re_use_of_drugs_alcohol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you a parent or guardian? --></label>
+        <name>Are_you_a_parent_or_guardian__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you accessing a clinic? --></label>
+        <name>Are_you_accessing_a_clinic__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Are you accessing a clinic?) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Are you on any medication for your mental health? --></help>
+        <label><!-- Are you on medication for mental health --></label>
+        <name>Are_you_on_medication_for_mental_health__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any aspect of your physical health that you are worried about? --></help>
+        <label><!-- Aspect of physical health worried about --></label>
+        <name>Aspect_of_physical_health_worried_about__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Outcome --></label>
+        <name>Assessment_Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Alcohol Detox1 --></label>
+        <name>Assist_Alcohol_Detox1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Alcohol Detox2 --></label>
+        <name>Assist_Alcohol_Detox2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Alcohol Detox3 --></label>
+        <name>Assist_Alcohol_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Alcohol_Detox_1 --></label>
+        <name>Assist_Alcohol_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Alcohol_Detox_2 --></label>
+        <name>Assist_Alcohol_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Alcohol_Detox_3 --></label>
+        <name>Assist_Alcohol_Detox_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Benzo Detox1 --></label>
+        <name>Assist_Benzo_Detox1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Benzo Detox2 --></label>
+        <name>Assist_Benzo_Detox2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Benzo Detox3 --></label>
+        <name>Assist_Benzo_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Benzo_Detox_1 --></label>
+        <name>Assist_Benzo_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Benzo_Detox_2 --></label>
+        <name>Assist_Benzo_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Benzo_Detox_3 --></label>
+        <name>Assist_Benzo_Detox_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Heroin Detox1 --></label>
+        <name>Assist_Heroin_Detox1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Heroin Detox2 --></label>
+        <name>Assist_Heroin_Detox2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Heroin Detox3 --></label>
+        <name>Assist_Heroin_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Heroin_Detox_1 --></label>
+        <name>Assist_Heroin_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Heroin_Detox_2 --></label>
+        <name>Assist_Heroin_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Heroin_Detox_3 --></label>
+        <name>Assist_Heroin_Detox_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist Methadone Detox1 --></label>
+        <name>Assist_Methadone_Detox1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist Methadone Detox2 --></label>
+        <name>Assist_Methadone_Detox2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist Methadone Detox3 --></label>
+        <name>Assist_Methadone_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Methadone_Detox_1 --></label>
+        <name>Assist_Methadone_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Methadone_Detox_2 --></label>
+        <name>Assist_Methadone_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Methadone_Detox_3 --></label>
+        <name>Assist_Methadone_Detox_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Other Detox1 --></label>
+        <name>Assist_Other_Detox1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Other Detox2 --></label>
+        <name>Assist_Other_Detox2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist Other Detox3 --></label>
+        <name>Assist_Other_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Other_Detox_1 --></label>
+        <name>Assist_Other_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Other_Detox_2 --></label>
+        <name>Assist_Other_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_Other_Detox_3 --></label>
+        <name>Assist_Other_Detox_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist ZDrugs Detox1 --></label>
+        <name>Assist_ZDrugs_Detox1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist ZDrugs Detox2 --></label>
+        <name>Assist_ZDrugs_Detox2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Medication used to assist detoxification --></help>
+        <label><!-- Assist ZDrugs Detox3 --></label>
+        <name>Assist_ZDrugs_Detox3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_ZDrugs_Detox_1 --></label>
+        <name>Assist_ZDrugs_Detox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_ZDrugs_Detox_2 --></label>
+        <name>Assist_ZDrugs_Detox_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assist_ZDrugs_Detox_3 --></label>
+        <name>Assist_ZDrugs_Detox_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- BBV1 --></label>
+        <name>BBV1__c</name>
+    </fields>
+    <fields>
+        <label><!-- BBV2 --></label>
+        <name>BBV2__c</name>
+    </fields>
+    <fields>
+        <label><!-- BBV3 --></label>
+        <name>BBV3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brief_Intervention --></label>
+        <name>Brief_Intervention__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buprenorphine --></label>
+        <name>Buprenorphine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Care_Plan --></label>
+        <name>Care_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case_Manager --></label>
+        <name>Case_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- CentreType --></label>
+        <name>CentreType__c</name>
+    </fields>
+    <fields>
+        <help><!-- The first five digits are used as the centre number in the HRB report --></help>
+        <label><!-- Treatment Centre --></label>
+        <name>Centre__c</name>
+        <picklistValues>
+            <masterLabel>10001 - eCass Training Service 14</masterLabel>
+            <translation><!-- 10001 - eCass Training Service 14 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Centre number --></label>
+        <name>Centre_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Age Injected --></label>
+        <name>Check_Age_Injected__c</name>
+    </fields>
+    <fields>
+        <label><!-- CleanDate --></label>
+        <name>CleanDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ClientSuitable --></label>
+        <name>ClientSuitable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Account --></label>
+        <name>Client_Account__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Client Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client ID --></label>
+        <name>Client_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Complementary Therapy --></help>
+        <label><!-- Complementary --></label>
+        <name>Complementary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Client) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Counsel_Group --></label>
+        <name>Counsel_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Counsel_Individual --></label>
+        <name>Counsel_Individual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Court Date --></label>
+        <name>Court_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>Created_By__c</name>
+    </fields>
+    <fields>
+        <help><!-- How would you describe your current level of drug or alcohol use? --></help>
+        <label><!-- Current level of drug or alcohol use --></label>
+        <name>Current_level_of_drug_or_alcohol_use__c</name>
+        <picklistValues>
+            <masterLabel>Chaotic</masterLabel>
+            <translation><!-- Chaotic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detoxing</masterLabel>
+            <translation><!-- Detoxing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug Free</masterLabel>
+            <translation><!-- Drug Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stable</masterLabel>
+            <translation><!-- Stable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Currently in social welfare payments? --></label>
+        <name>Currently_in_social_welfare_payments__c</name>
+    </fields>
+    <fields>
+        <help><!-- This will be populated by a trigger and will be the max of the date commenced fields --></help>
+        <label><!-- Date latest intervention commenced --></label>
+        <name>Date_latest_intervention_commenced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked in with service 1 --></label>
+        <name>Date_linked_in_with_service_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked in with service 2 --></label>
+        <name>Date_linked_in_with_service_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked in with service 3 --></label>
+        <name>Date_linked_in_with_service_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date linked with a psychiatrist --></label>
+        <name>Date_linked_with_a_psychiatrist__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Assessment --></label>
+        <name>Date_of_Assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Referral --></label>
+        <name>Date_of_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 1 --></label>
+        <name>Date_received_treatment_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 2 --></label>
+        <name>Date_received_treatment_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 3 --></label>
+        <name>Date_received_treatment_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date received treatment 4 --></label>
+        <name>Date_received_treatment_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Alcohol --></label>
+        <name>Detox_Alcohol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Benzo --></label>
+        <name>Detox_Benzo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Community --></label>
+        <name>Detox_Community__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Heroin --></label>
+        <name>Detox_Heroin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Methadone --></label>
+        <name>Detox_Methadone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Other _Specify --></label>
+        <name>Detox_Other_Specify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Other --></label>
+        <name>Detox_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detox_Zdrugs --></label>
+        <name>Detox_Zdrugs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Difficult_To_Assess --></label>
+        <name>Difficult_To_Assess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you have another source of income? --></label>
+        <name>Do_you_have_another_source_of_income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_1_Detail --></label>
+        <name>Drug_1_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_1_Frequency --></label>
+        <name>Drug_1_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_1_Route --></label>
+        <name>Drug_1_Route__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_2_Detail --></label>
+        <name>Drug_2_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_2_Frequency --></label>
+        <name>Drug_2_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_2_Route --></label>
+        <name>Drug_2_Route__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_3_Detail --></label>
+        <name>Drug_3_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_3_Frequency --></label>
+        <name>Drug_3_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_3_Route --></label>
+        <name>Drug_3_Route__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_4_Detail --></label>
+        <name>Drug_4_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_4_Frequency --></label>
+        <name>Drug_4_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_4_Route --></label>
+        <name>Drug_4_Route__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_5_Detail --></label>
+        <name>Drug_5_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_5_Frequency --></label>
+        <name>Drug_5_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_5_Route --></label>
+        <name>Drug_5_Route__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drug_History --></label>
+        <name>Drug_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Episode Comment --></label>
+        <name>Episode_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ever_Received_OpiateSub --></label>
+        <name>Ever_Received_OpiateSub__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been convicted of a sexual offence? --></help>
+        <label><!-- Ever been convicted of a sexual offence --></label>
+        <name>Ever_been_convicted_of_a_sexual_offence__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been convicted of an assault? --></help>
+        <label><!-- Ever been convicted of an assault? --></label>
+        <name>Ever_been_convicted_of_an_assault__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been on a Community Employment (CE) Programme? --></help>
+        <label><!-- Ever been on Community Employment Progr. --></label>
+        <name>Ever_been_on_Community_Employment_Progr__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever had an overdose, either accidental or intentional? --></help>
+        <label><!-- Ever had an overdose? --></label>
+        <name>Ever_had_an_overdose__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you have or have you ever had any eating disorders? --></help>
+        <label><!-- Ever had any eating disorders? --></label>
+        <name>Ever_had_any_eating_disorders__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you linked in with addiction or homeless services before? --></help>
+        <label><!-- Ever linkedin addiction/homeless service --></label>
+        <name>Ever_linkedin_addiction_homeless_service__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever suffered from or received treatment for any of the following? --></help>
+        <label><!-- Ever suffered from/received treatment --></label>
+        <name>Ever_suffered_from_received_treatment__c</name>
+        <picklistValues>
+            <masterLabel>Any other psychiatric condition</masterLabel>
+            <translation><!-- Any other psychiatric condition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bipolar Disorder</masterLabel>
+            <translation><!-- Bipolar Disorder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Depression</masterLabel>
+            <translation><!-- Depression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mood Disorders</masterLabel>
+            <translation><!-- Mood Disorders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schizophrenia</masterLabel>
+            <translation><!-- Schizophrenia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Do you ever think about committing suicide? --></help>
+        <label><!-- Ever think about committing suicide? --></label>
+        <name>Ever_think_about_committing_suicide__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExitAfter --></label>
+        <name>ExitAfter__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExitConditionUnknown --></label>
+        <name>ExitConditionUnknown__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExitCondition --></label>
+        <name>ExitCondition__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExitDate --></label>
+        <name>ExitDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Alcohol_Free --></label>
+        <name>Exit_Alcohol_Free__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Alcohol_Increased --></label>
+        <name>Exit_Alcohol_Increased__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Alcohol_Reduced --></label>
+        <name>Exit_Alcohol_Reduced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Alcohol_UnChanged --></label>
+        <name>Exit_Alcohol_UnChanged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Careplan_Gaps --></label>
+        <name>Exit_Careplan_Gaps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Centre --></label>
+        <name>Exit_Centre__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter centre name if centre not in service provider list --></help>
+        <label><!-- Exit Centre if not in list --></label>
+        <name>Exit_Centre_if_not_in_list__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Disengaged_Careplan --></label>
+        <name>Exit_Disengaged_Careplan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Drug_Free --></label>
+        <name>Exit_Drug_Free__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Drug_Increased --></label>
+        <name>Exit_Drug_Increased__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Drug_Reduced --></label>
+        <name>Exit_Drug_Reduced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Drug_UnChanged --></label>
+        <name>Exit_Drug_UnChanged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Engaging_Careplan --></label>
+        <name>Exit_Engaging_Careplan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Engaging_Services --></label>
+        <name>Exit_Engaging_Services__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Engaging_Therapeutic --></label>
+        <name>Exit_Engaging_Therapeutic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Other --></label>
+        <name>Exit_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Reached_Goals --></label>
+        <name>Exit_Reached_Goals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Reason --></label>
+        <name>Exit_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Unknown --></label>
+        <name>Exit_Unknown__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit_Unstructured_Aftercare --></label>
+        <name>Exit_Unstructured_Aftercare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extent_Problem --></label>
+        <name>Extent_Problem__c</name>
+    </fields>
+    <fields>
+        <label><!-- FIRSTDRU --></label>
+        <name>FIRSTDRUG__c</name>
+    </fields>
+    <fields>
+        <label><!-- FIRSTDRUID --></label>
+        <name>FIRSTDRUID__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Family Therapy --></help>
+        <label><!-- Family_Therapy --></label>
+        <name>Family_Therapy__c</name>
+    </fields>
+    <fields>
+        <label><!-- First_Drug_Detail --></label>
+        <name>First_Drug_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- First drug and age first used --></label>
+        <name>First_drug_and_age_first_used__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Group Education/ Awareness Programme --></help>
+        <label><!-- Group_Edu --></label>
+        <name>Group_Edu__c</name>
+    </fields>
+    <fields>
+        <label><!-- HIV_Test --></label>
+        <name>HIV_Test__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only to be used for HRB Reports purposes. This field is related to ID and UniqID --></help>
+        <label><!-- HRBRecord Name --></label>
+        <name>HRBRecord_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you been to prison? --></label>
+        <name>Have_you_been_to_prison__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever attempted suicide? --></label>
+        <name>Have_you_ever_attempted_suicide__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever been convicted of arson? --></label>
+        <name>Have_you_ever_been_convicted_of_arson__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever caused yourself any harm i.e. cutting, biting, burning? --></help>
+        <label><!-- Have you ever caused yourself any harm --></label>
+        <name>Have_you_ever_caused_yourself_any_harm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever linked with a psychiatrist --></label>
+        <name>Have_you_ever_linked_with_a_psychiatrist__c</name>
+    </fields>
+    <fields>
+        <label><!-- HepB_Test --></label>
+        <name>HepB_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- HepC_Test --></label>
+        <name>HepC_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISConcernedPerson --></label>
+        <name>ISConcernedPerson__c</name>
+    </fields>
+    <fields>
+        <label><!-- If Drug Free, how many months? --></label>
+        <name>If_Drug_Free_how_many_months__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you are on any medication for your physical health, please specify --></help>
+        <label><!-- If yes, please specify medication for PH --></label>
+        <name>If_yes_please_specify_medication_for_PH__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you receiving any treatment for a physical health condition, please specify treatment --></help>
+        <label><!-- If yes, please specify treatment PH --></label>
+        <name>If_yes_please_specify_treatment_PH__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Individual Education/ Awareness Programme --></help>
+        <label><!-- Individual_Edu --></label>
+        <name>Individual_Edu__c</name>
+    </fields>
+    <fields>
+        <label><!-- Injected_Ever --></label>
+        <name>Injected_Ever__c</name>
+    </fields>
+    <fields>
+        <label><!-- Injected Frequency --></label>
+        <name>Injected_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inter24 --></label>
+        <name>Inter24__c</name>
+    </fields>
+    <fields>
+        <label><!-- InterMain --></label>
+        <name>InterMain__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Key worker appointed/ number of key working sessions --></help>
+        <label><!-- Key_Worker --></label>
+        <name>Key_Worker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main Problem Group --></label>
+        <name>Main_Problem_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medication_Free --></label>
+        <name>Medication_Free__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are you on any medication for your physical health? --></help>
+        <label><!-- Medication for your physical health --></label>
+        <name>Medication_for_your_physical_health__c</name>
+    </fields>
+    <fields>
+        <label><!-- Methadone --></label>
+        <name>Methadone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile --></label>
+        <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multi1 --></label>
+        <name>Multi1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multi2 --></label>
+        <name>Multi2__c</name>
+    </fields>
+    <fields>
+        <label><!-- NDTRS 2016 Report --></label>
+        <name>NDTRS_2016_Report__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Name of probation officer --></label>
+        <name>Name_of_probation_officer__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Name of probation officer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Do you need any support with your reading or writing or counting? --></help>
+        <label><!-- Need support with reading/writing --></label>
+        <name>Need_support_with_reading_writing__c</name>
+    </fields>
+    <fields>
+        <label><!-- NonCompliance --></label>
+        <name>NonCompliance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not_Known --></label>
+        <name>Not_Known__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of completed Treatment CY --></label>
+        <name>Number_of_completed_Treatment_CY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of completed Treatment --></label>
+        <name>Number_of_completed_Treatment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offences --></label>
+        <name>Offences__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other2 --></label>
+        <name>Other2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other_Problem_History --></label>
+        <name>Other_Problem_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other_Problem_Name --></label>
+        <name>Other_Problem_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about charges that you think we should know? --></help>
+        <label><!-- Other info re charges we should know --></label>
+        <name>Other_info_re_charges_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your education that you think we should know? --></help>
+        <label><!-- Other info re education we should know --></label>
+        <name>Other_info_re_education_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your personal situation that you think we should know? --></help>
+        <label><!-- Other info re personal situation --></label>
+        <name>Other_info_re_personal_situation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information about your health that you think we should know? --></help>
+        <label><!-- Other info re your health we should know --></label>
+        <name>Other_info_re_your_health_we_should_know__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there any other information that you think we should know? --></help>
+        <label><!-- Other info that you think we should know --></label>
+        <name>Other_info_that_you_think_we_should_know__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMDRUGID --></label>
+        <name>PRIMDRUGID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pause --></label>
+        <name>Pause__c</name>
+    </fields>
+    <fields>
+        <help><!-- Placeholder for
+[Inter34] ,[InterCommDate34] ,[InterEndDate34] ,[InterNumber34] 
+ ,[Inter35] ,[InterCommDate35] ,[InterEndDate35] ,[InterNumber35]
+ [DetoxDrug1] ,[DetoxDrug2] ,[DetoxDrug3] --></help>
+        <label><!-- Placeholder for end section G --></label>
+        <name>Placeholder_for_end_section_G__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Alcopops --></label>
+        <name>Prefer_Alcopops__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Beer --></label>
+        <name>Prefer_Beer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Cider --></label>
+        <name>Prefer_Cider__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Fortified --></label>
+        <name>Prefer_Fortified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Other_Alcohol --></label>
+        <name>Prefer_Other_Alcohol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Spirits --></label>
+        <name>Prefer_Spirits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefer_Wine --></label>
+        <name>Prefer_Wine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premature_Exit_Reason --></label>
+        <name>Premature_Exit_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 1 --></label>
+        <name>Previous_addiction_treatment_centre_1__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Previous addiction treatment centre 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 2 --></label>
+        <name>Previous_addiction_treatment_centre_2__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Previous addiction treatment centre 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 3 --></label>
+        <name>Previous_addiction_treatment_centre_3__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Previous addiction treatment centre 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous addiction treatment centre 4 --></label>
+        <name>Previous_addiction_treatment_centre_4__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Previous addiction treatment centre 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Do you have a problem with any other addictive behaviours, such as gambling, self-harming etc.? --></help>
+        <label><!-- Problem with other addictive behaviours --></label>
+        <name>Problem_with_other_addictive_behaviours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Psychiatric --></label>
+        <name>Psychiatric__c</name>
+    </fields>
+    <fields>
+        <label><!-- QUARTERCP --></label>
+        <name>QUARTERCP__c</name>
+    </fields>
+    <fields>
+        <label><!-- QUARTER --></label>
+        <name>QUARTER__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecYear --></label>
+        <name>RecYear__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are you receiving any treatment for a physical health condition? --></help>
+        <label><!-- Receiving treatment for physical health --></label>
+        <name>Receiving_treatment_for_physical_health__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAOR --></label>
+        <name>SAOR__c</name>
+    </fields>
+    <fields>
+        <label><!-- SHARED --></label>
+        <name>SHARED__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPECIFYX --></label>
+        <name>SPECIFYX__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUBDRUGSPECIFY --></label>
+        <name>SUBDRUGSPECIFY__c</name>
+    </fields>
+    <fields>
+        <label><!-- ScreenBy --></label>
+        <name>ScreenBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Screen --></label>
+        <name>Screen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 1 --></label>
+        <name>Service_linked_in_with_1__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Service linked in with 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 2 --></label>
+        <name>Service_linked_in_with_2__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Service linked in with 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Service linked in with 3 --></label>
+        <name>Service_linked_in_with_3__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Service linked in with 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shared_Needle --></label>
+        <name>Shared_Needle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shared_Other --></label>
+        <name>Shared_Other__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Social and/or Occupational Reintegration --></help>
+        <label><!-- Social_Occ --></label>
+        <name>Social_Occ__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source of Referral --></label>
+        <name>Source_of_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status for HRB Report --></label>
+        <name>Status_for_HRB_Report__c</name>
+    </fields>
+    <fields>
+        <help><!-- 32a - Strengthening Family Programme --></help>
+        <label><!-- Strength_Family --></label>
+        <name>Strength_Family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Substance use Valid --></label>
+        <name>Substance_use_Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suitable_For_Tx_Specify --></label>
+        <name>Suitable_For_Tx_Specify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Referral/Assessment details --></label>
+        <name>Test_Referral_Assessment_details__c</name>
+    </fields>
+    <fields>
+        <help><!-- This form is ONLY FOR CLIENTS WHO ENTERED IN 2019. If client entered in 2018, use OLD HRB Form. --></help>
+        <label><!-- Tick to confirm 2019 client entry --></label>
+        <name>Tick_to_confirm_2019_client_entry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Times --></label>
+        <name>Times__c</name>
+    </fields>
+    <fields>
+        <label><!-- Titre --></label>
+        <name>Titre__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type 0 = Open Treatment
+Type 1 = Completed Treatment --></help>
+        <label><!-- Treatment Type Number --></label>
+        <name>Treatment_Type_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- UniqID --></label>
+        <name>UniqID__c</name>
+    </fields>
+    <fields>
+        <label><!-- UpdatedBy --></label>
+        <name>UpdatedBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated Date --></label>
+        <name>Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated --></label>
+        <name>Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vaccine1 --></label>
+        <name>Vaccine1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vaccine2 --></label>
+        <name>Vaccine2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vaccine3 --></label>
+        <name>Vaccine3__c</name>
+    </fields>
+    <fields>
+        <label><!-- VaccineB4 --></label>
+        <name>VaccineB4__c</name>
+    </fields>
+    <fields>
+        <label><!-- VaccineB5 --></label>
+        <name>VaccineB5__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your medical card expiry date? --></label>
+        <name>What_is_your_medical_card_expiry_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Who is your GP --></label>
+        <name>Who_is_your_GP__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (Who is your GP) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 12 Date of Referral --></label>
+        <name>X12_Date_of_Referral__c</name>
+    </fields>
+    <fields>
+        <label><!-- 13.2 Drug (specify) --></label>
+        <name>X13_2_Drug_specify__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (13.2 Drug (specify)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 13.4 Other problem (speciify) --></label>
+        <name>X13_4_Other_problem_speciify__c</name>
+    </fields>
+    <fields>
+        <help><!-- Based on main problem drug
+1. Alcohol.     2. Drug (specify)
+3. Concerned person.  4. Other problem (specify) --></help>
+        <label><!-- 13 Main Reason for referral --></label>
+        <name>X13_Main_Reason_for_referral__c</name>
+        <picklistValues>
+            <masterLabel>1. Alcohol</masterLabel>
+            <translation><!-- 1. Alcohol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Drug (specify)</masterLabel>
+            <translation><!-- 2. Drug (specify) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Concerned person</masterLabel>
+            <translation><!-- 3. Concerned person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Other problem (specify)</masterLabel>
+            <translation><!-- 4. Other problem (specify) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 14 Source of referral --></label>
+        <name>X14_Source_of_referral__c</name>
+        <picklistValues>
+            <masterLabel>1. Self</masterLabel>
+            <translation><!-- 1. Self --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Outreach worker</masterLabel>
+            <translation><!-- 10. Outreach worker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12. School or college</masterLabel>
+            <translation><!-- 12. School or college --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13. Prison</masterLabel>
+            <translation><!-- 13. Prison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14. Employer</masterLabel>
+            <translation><!-- 14. Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16. Emergency Department (ED)</masterLabel>
+            <translation><!-- 16. Emergency Department (ED) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17. Mental health professional</masterLabel>
+            <translation><!-- 17. Mental health professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18. Needle Exchange</masterLabel>
+            <translation><!-- 18. Needle Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Family</masterLabel>
+            <translation><!-- 2. Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Friends</masterLabel>
+            <translation><!-- 3. Friends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Other drug treatment centre</masterLabel>
+            <translation><!-- 4. Other drug treatment centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. General practitioner</masterLabel>
+            <translation><!-- 5. General practitioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Acute hospital service excluding emergency dept.</masterLabel>
+            <translation><!-- 6. Acute hospital service excluding emergency dept. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Social services/Community services</masterLabel>
+            <translation><!-- 7. Social services/Community services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Court/probation/police</masterLabel>
+            <translation><!-- 8. Court/probation/police --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 15 Date of initial assessment --></label>
+        <name>X15_Date_of_initial_assessment__c</name>
+    </fields>
+    <fields>
+        <help><!-- If 2, 3, 4 STOP and return form to HRB --></help>
+        <label><!-- 16 Assessment outcome --></label>
+        <name>X16_Assessment_outcome__c</name>
+        <picklistValues>
+            <masterLabel>1. Suitable for treatment in any drug/alcohol service</masterLabel>
+            <translation><!-- 1. Suitable for treatment in any drug/alcohol service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Unsuitable for drug or alcohol treatment</masterLabel>
+            <translation><!-- 2. Unsuitable for drug or alcohol treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Referred to another site, no intervention provided in this centre</masterLabel>
+            <translation><!-- 3. Referred to another site, no intervention provided in this centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Psychiatric assessment only</masterLabel>
+            <translation><!-- 4. Psychiatric assessment only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 17.9 Other specify --></label>
+        <name>X17_9_Ohter_specify__c</name>
+    </fields>
+    <fields>
+        <help><!-- If 1 continue form, otherwise STOP and return form to HRB --></help>
+        <label><!-- 17 Where client is suitable for treatmen --></label>
+        <name>X17_Where_client_is_suitable_for_treatme__c</name>
+        <picklistValues>
+            <masterLabel>1. Treatment offered with this centre and client accepted</masterLabel>
+            <translation><!-- 1. Treatment offered with this centre and client accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Treatment offered with this centre and client DID NOT accept</masterLabel>
+            <translation><!-- 10. Treatment offered with this centre and client DID NOT accept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Client did not fulfil criteria to commence treatment</masterLabel>
+            <translation><!-- 3. Client did not fulfil criteria to commence treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client commenced treatment with another centre</masterLabel>
+            <translation><!-- 4. Client commenced treatment with another centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Service unable to contact/locate client</masterLabel>
+            <translation><!-- 5. Service unable to contact/locate client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Client sent to prison</masterLabel>
+            <translation><!-- 7. Client sent to prison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Client died</masterLabel>
+            <translation><!-- 8. Client died --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Other (specify)</masterLabel>
+            <translation><!-- 9. Other (specify) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Number of times started treatment in this centre this year. (Jan-Dec)
+(Enter 1, if first time this year) --></help>
+        <label><!-- 18 Number times started this year --></label>
+        <name>X18_Number_times_started_this_year__c</name>
+    </fields>
+    <fields>
+        <label><!-- 19 History of treatment - Alcohol --></label>
+        <name>X19_History_of_treatment_Alcohol__c</name>
+        <picklistValues>
+            <masterLabel>1. Never treated</masterLabel>
+            <translation><!-- 1. Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Previously treated</masterLabel>
+            <translation><!-- 2. Previously treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Treatment status unknown</masterLabel>
+            <translation><!-- 9. Treatment status unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 19 History of treatment - Drugs --></label>
+        <name>X19_History_of_treatment_Drugs__c</name>
+        <picklistValues>
+            <masterLabel>1. Never treated</masterLabel>
+            <translation><!-- 1. Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Previously treated</masterLabel>
+            <translation><!-- 2. Previously treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Treatment status unknown</masterLabel>
+            <translation><!-- 9. Treatment status unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 19 History of treatment - Other --></label>
+        <name>X19_History_of_treatment_Other__c</name>
+        <picklistValues>
+            <masterLabel>1. Never treated</masterLabel>
+            <translation><!-- 1. Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Previously treated</masterLabel>
+            <translation><!-- 2. Previously treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Treatment status unknown</masterLabel>
+            <translation><!-- 9. Treatment status unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 99 if unknown --></help>
+        <label><!-- 19b Age first treated - Drugs --></label>
+        <name>X19b_Age_first_treated_Drugs__c</name>
+    </fields>
+    <fields>
+        <label><!-- 19b Age first treated - Other --></label>
+        <name>X19b_Age_first_treated_Other__c</name>
+    </fields>
+    <fields>
+        <help><!-- 99 if unknown --></help>
+        <label><!-- 19d Age first treated - Alcohol --></label>
+        <name>X19d_Age_first_treated_Alcohol__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ever received any opiate substitution before
+1. Previously received  2. Never received  99. Not known
+(excluding this current treatment) --></help>
+        <label><!-- 20a Ever received any opiate substitutio --></label>
+        <name>X20a_Ever_received_any_opiate_substituti__c</name>
+        <picklistValues>
+            <masterLabel>1. Previously received</masterLabel>
+            <translation><!-- 1. Previously received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Never received</masterLabel>
+            <translation><!-- 2. Never received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Age first received any opiate substitution (excluding this current treatment)
+99 if unknown
+88 Not Applicable if 20a=2 --></help>
+        <label><!-- 20b Age first received any opiate subst --></label>
+        <name>X20b_Age_first_received_any_opiate_subst__c</name>
+    </fields>
+    <fields>
+        <label><!-- 21a Date This treatment started --></label>
+        <name>X21a_Date_This_treatment_started__c</name>
+    </fields>
+    <fields>
+        <label><!-- 21a Main drug --></label>
+        <name>X21a_Main_drug__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (21a Main drug) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If receiving an opiate substitute
+(methadone/suboxone) date THIS substitution started --></help>
+        <label><!-- 21b Date substitution started --></label>
+        <name>X21b_Date_substitution_started__c</name>
+    </fields>
+    <fields>
+        <label><!-- 21b Route of Admin - Main drug --></label>
+        <name>X21b_Route_of_Admin_Main_drug__c</name>
+        <picklistValues>
+            <masterLabel>1. Inject</masterLabel>
+            <translation><!-- 1. Inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Smoke</masterLabel>
+            <translation><!-- 2. Smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Eat/drink</masterLabel>
+            <translation><!-- 3. Eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Sniff/snort</masterLabel>
+            <translation><!-- 4. Sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Rectal</masterLabel>
+            <translation><!-- 6. Rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Topical</masterLabel>
+            <translation><!-- 7. Topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In last month --></help>
+        <label><!-- 21c Frequency of use in last mth --></label>
+        <name>X21c_Frequency_of_use_in_last_mth__c</name>
+        <picklistValues>
+            <masterLabel>1. Once a week or less</masterLabel>
+            <translation><!-- 1. Once a week or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Daily</masterLabel>
+            <translation><!-- 3. Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. No use in past month</masterLabel>
+            <translation><!-- 4. No use in past month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. 4-6 days per week</masterLabel>
+            <translation><!-- 6. 4-6 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. 2-3 days per week</masterLabel>
+            <translation><!-- 7. 2-3 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If unknown enter 99 --></help>
+        <label><!-- 21d Age at 1st use --></label>
+        <name>X21d_Age_at_1st_use__c</name>
+    </fields>
+    <fields>
+        <help><!-- 1. Never treated  2. Previously treated.  8. Not applicable  9. Not known --></help>
+        <label><!-- 22 Ever previously treated re drug --></label>
+        <name>X22_Ever_previously_treated_re_drug__c</name>
+        <picklistValues>
+            <masterLabel>1. Never treated</masterLabel>
+            <translation><!-- 1. Never treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Previously treated</masterLabel>
+            <translation><!-- 2. Previously treated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Not applicable</masterLabel>
+            <translation><!-- 8. Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 22a Drug 2 --></label>
+        <name>X22a_Drug_2__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (22a Drug 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 22b Route of Admin - Drug2 --></label>
+        <name>X22b_Route_of_Admin_Drug2__c</name>
+        <picklistValues>
+            <masterLabel>1. Inject</masterLabel>
+            <translation><!-- 1. Inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Smoke</masterLabel>
+            <translation><!-- 2. Smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Eat/drink</masterLabel>
+            <translation><!-- 3. Eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Sniff/snort</masterLabel>
+            <translation><!-- 4. Sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Rectal</masterLabel>
+            <translation><!-- 6. Rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Topical</masterLabel>
+            <translation><!-- 7. Topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In last month --></help>
+        <label><!-- 22c Frequency of use in last mth --></label>
+        <name>X22c_Frequency_of_use_in_last_mth__c</name>
+        <picklistValues>
+            <masterLabel>1. Once a week or less</masterLabel>
+            <translation><!-- 1. Once a week or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Daily</masterLabel>
+            <translation><!-- 3. Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. No use in past month</masterLabel>
+            <translation><!-- 4. No use in past month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. 4-6 days per week</masterLabel>
+            <translation><!-- 6. 4-6 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. 2-3 days per week</masterLabel>
+            <translation><!-- 7. 2-3 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter 99 if not known --></help>
+        <label><!-- 22d Age of 1st use --></label>
+        <name>X22d_Age_of_1st_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- 23 Type of contact with this centre --></label>
+        <name>X23_Type_of_contact_with_this_centre__c</name>
+        <picklistValues>
+            <masterLabel>1. First treatment</masterLabel>
+            <translation><!-- 1. First treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. One or more treatment periods</masterLabel>
+            <translation><!-- 2. One or more treatment periods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 23a Drug 3 --></label>
+        <name>X23a_Drug_3__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (23a Drug 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 23b Route of Admin - Drug3 --></label>
+        <name>X23b_Route_of_Admin_Drug3__c</name>
+        <picklistValues>
+            <masterLabel>1. Inject</masterLabel>
+            <translation><!-- 1. Inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Smoke</masterLabel>
+            <translation><!-- 2. Smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Eat/drink</masterLabel>
+            <translation><!-- 3. Eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Sniff/snort</masterLabel>
+            <translation><!-- 4. Sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Sublingual</masterLabel>
+            <translation><!-- 5. Sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Rectal</masterLabel>
+            <translation><!-- 6. Rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Topical</masterLabel>
+            <translation><!-- 7. Topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In last month --></help>
+        <label><!-- 23c Frequency of use in last mth --></label>
+        <name>X23c_Frequency_of_use_in_last_mth__c</name>
+        <picklistValues>
+            <masterLabel>1. Once a week or less</masterLabel>
+            <translation><!-- 1. Once a week or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Daily</masterLabel>
+            <translation><!-- 3. Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. No use in past month</masterLabel>
+            <translation><!-- 4. No use in past month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. 4-6 days per week</masterLabel>
+            <translation><!-- 6. 4-6 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. 2-3 days per week</masterLabel>
+            <translation><!-- 7. 2-3 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter 99 if not known --></help>
+        <label><!-- 23d Age of 1st use --></label>
+        <name>X23d_Age_of_1st_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- 24a Drug 4 --></label>
+        <name>X24a_Drug_4__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (24a Drug 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 24b Route of Admin - Drug4 --></label>
+        <name>X24b_Route_of_Admin_Drug4__c</name>
+        <picklistValues>
+            <masterLabel>1. Inject</masterLabel>
+            <translation><!-- 1. Inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Smoke</masterLabel>
+            <translation><!-- 2. Smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Eat/drink</masterLabel>
+            <translation><!-- 3. Eat/drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Sniff/snort</masterLabel>
+            <translation><!-- 4. Sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Sublingual</masterLabel>
+            <translation><!-- 5. Sublingual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Rectal</masterLabel>
+            <translation><!-- 6. Rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Topical</masterLabel>
+            <translation><!-- 7. Topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In last month --></help>
+        <label><!-- 24c Frequency of use in last mth --></label>
+        <name>X24c_Frequency_of_use_in_last_mth__c</name>
+        <picklistValues>
+            <masterLabel>1. Once a week or less</masterLabel>
+            <translation><!-- 1. Once a week or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Daily</masterLabel>
+            <translation><!-- 3. Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. No use in past month</masterLabel>
+            <translation><!-- 4. No use in past month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. 4-6 days per week</masterLabel>
+            <translation><!-- 6. 4-6 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. 2-3 days per week</masterLabel>
+            <translation><!-- 7. 2-3 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter 99 if not knwon --></help>
+        <label><!-- 24d Age of 1st use --></label>
+        <name>X24d_Age_of_1st_use__c</name>
+    </fields>
+    <fields>
+        <label><!-- 25a Drug 5 --></label>
+        <name>X25a_Drug_5__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (25a Drug 5) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 25b Route of Admin - Drug5 --></label>
+        <name>X25b_Route_of_Admin_Drug5__c</name>
+        <picklistValues>
+            <masterLabel>1. Inject</masterLabel>
+            <translation><!-- 1. Inject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Smoke</masterLabel>
+            <translation><!-- 2. Smoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Eat/Drink</masterLabel>
+            <translation><!-- 3. Eat/Drink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Sniff/snort</masterLabel>
+            <translation><!-- 4. Sniff/snort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Rectal</masterLabel>
+            <translation><!-- 6. Rectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Topical</masterLabel>
+            <translation><!-- 7. Topical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In last month --></help>
+        <label><!-- 25c Frequency of use in last mth --></label>
+        <name>X25c_Frequency_of_use_in_last_mth__c</name>
+        <picklistValues>
+            <masterLabel>1. Once a week or less</masterLabel>
+            <translation><!-- 1. Once a week or less --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Daily</masterLabel>
+            <translation><!-- 3. Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. No use in past month</masterLabel>
+            <translation><!-- 4. No use in past month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. 4-6 days per week</masterLabel>
+            <translation><!-- 6. 4-6 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. 2-3 days per week</masterLabel>
+            <translation><!-- 7. 2-3 days per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not known</masterLabel>
+            <translation><!-- 9. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter 99 if not known --></help>
+        <label><!-- 25d Age of 1st use --></label>
+        <name>X25d_Age_of_1st_use__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excluding alcohol and tobacco
+If not applicable code 88
+99 if unknown --></help>
+        <label><!-- 26 Age first use any drug --></label>
+        <name>X26_Age_first_use_any_drug__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excluding alcohol and tobacco. First drug and age first used cannot be alcohol or tobacco --></help>
+        <label><!-- 27 Specify first drug ever used --></label>
+        <name>X27_Specify_first_drug_ever_used__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (27 Specify first drug ever used) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Was it difficult to assess which was the main problem drug? --></help>
+        <label><!-- 28 Difficult to assess main problem --></label>
+        <name>X28_Difficult_to_assess_main_problem__c</name>
+        <picklistValues>
+            <masterLabel>1. Yes</masterLabel>
+            <translation><!-- 1. Yes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. No</masterLabel>
+            <translation><!-- 2. No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>88. Not applicable</masterLabel>
+            <translation><!-- 88. Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 28 Main Drug Problem Name --></label>
+        <name>X28_Main_Drug_Problem_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- If 8. Other, please specify --></help>
+        <label><!-- 29a8 Specify Other --></label>
+        <name>X29a8_Specify_Other__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please specify the preferred types of alcohol consumed --></help>
+        <label><!-- 29a Preferred types of alcohol consumed --></label>
+        <name>X29a_Preferred_types_of_alcohol_consumed__c</name>
+        <picklistValues>
+            <masterLabel>2. Beer</masterLabel>
+            <translation><!-- 2. Beer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Spirits</masterLabel>
+            <translation><!-- 3. Spirits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Wine</masterLabel>
+            <translation><!-- 4. Wine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Fortified wine</masterLabel>
+            <translation><!-- 5. Fortified wine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Cider</masterLabel>
+            <translation><!-- 6. Cider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Alcopops</masterLabel>
+            <translation><!-- 7. Alcopops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Other</masterLabel>
+            <translation><!-- 8. Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Alcohol unspecified</masterLabel>
+            <translation><!-- 9. Alcohol unspecified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How many standard drinks were consumed on a typical drinking day over the past month?   
+(If none write 0) --></help>
+        <label><!-- 29b How many drinks per occasion --></label>
+        <name>X29b_How_many_drinks_per_occasion__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please categorise the extent of the drinking problem --></help>
+        <label><!-- 29c Extent of drinking problem --></label>
+        <name>X29c_Extent_of_drinking_problem__c</name>
+        <picklistValues>
+            <masterLabel>2. Hazardous drinker</masterLabel>
+            <translation><!-- 2. Hazardous drinker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Harmful drinker</masterLabel>
+            <translation><!-- 3. Harmful drinker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Dependent drinker</masterLabel>
+            <translation><!-- 4. Dependent drinker --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please specify the number of previous alcohol detoxes
+(if none write 0, if unknown 99) --></help>
+        <label><!-- 29d Number of previous alcohol detoxes --></label>
+        <name>X29d_Number_of_previous_alcohol_detoxes__c</name>
+    </fields>
+    <fields>
+        <help><!-- If no or unknown, go to 30e --></help>
+        <label><!-- 30a Ever injected --></label>
+        <name>X30a_Ever_injected__c</name>
+        <picklistValues>
+            <masterLabel>1. Yes</masterLabel>
+            <translation><!-- 1. Yes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. No</masterLabel>
+            <translation><!-- 2. No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Not Known</masterLabel>
+            <translation><!-- 9. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter the age when the client first injected.
+If never injected, code 88.
+If not known, code 99. --></help>
+        <label><!-- 30b Age first injected --></label>
+        <name>X30b_Age_first_injected__c</name>
+    </fields>
+    <fields>
+        <label><!-- 30c Frequency of injecting --></label>
+        <name>X30c_Frequency_of_injecting__c</name>
+        <picklistValues>
+            <masterLabel>1. Injected in the last 30 days</masterLabel>
+            <translation><!-- 1. Injected in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Injected in the last 12 months but not in the last 30 days</masterLabel>
+            <translation><!-- 2. Injected in the last 12 months but not in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Injected but not in the last 12 months</masterLabel>
+            <translation><!-- 3. Injected but not in the last 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client did not wish to answer</masterLabel>
+            <translation><!-- 4. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>88. Not Applicable</masterLabel>
+            <translation><!-- 88. Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not Known</masterLabel>
+            <translation><!-- 99. Not Known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Ever shared needle and syringes  If Q30a = 2. No,  Q30 should be 2. Never shared and Q30e must be completed --></help>
+        <label><!-- 30d Ever shared needle and syringes --></label>
+        <name>X30d_Ever_shared_needle_and_syringes__c</name>
+        <picklistValues>
+            <masterLabel>1. Shared in the last 30 days</masterLabel>
+            <translation><!-- 1. Shared in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Never shared</masterLabel>
+            <translation><!-- 2. Never shared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Shared in the last 12 month but not in the last 30 days</masterLabel>
+            <translation><!-- 3. Shared in the last 12 month but not in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Shared but not in the last 12 months</masterLabel>
+            <translation><!-- 4. Shared but not in the last 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Client did not wish to answer</masterLabel>
+            <translation><!-- 5. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>88. Not Applicable</masterLabel>
+            <translation><!-- 88. Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Ever shared any other drug paraphernalia (excluding needles and syringes, e.g. straws, foil, pipes) --></help>
+        <label><!-- 30e Ever shared other drug paraphernalia --></label>
+        <name>X30e_Ever_shared_other_drug_paraphernali__c</name>
+        <picklistValues>
+            <masterLabel>1. Shared in the last 30 days</masterLabel>
+            <translation><!-- 1. Shared in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Never shared</masterLabel>
+            <translation><!-- 2. Never shared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Shared in the last 12 month but not in the last 30 days</masterLabel>
+            <translation><!-- 3. Shared in the last 12 month but not in the last 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Shared but not in the last 12 months</masterLabel>
+            <translation><!-- 4. Shared but not in the last 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Client did not wish to answer</masterLabel>
+            <translation><!-- 5. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 31a History of Hepatitis C screening --></label>
+        <name>X31a_History_of_Hepatitis_C_screening__c</name>
+        <picklistValues>
+            <masterLabel>1. Never tested</masterLabel>
+            <translation><!-- 1. Never tested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Tested in the past 12 months</masterLabel>
+            <translation><!-- 2. Tested in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Tested but not in the past 12 months</masterLabel>
+            <translation><!-- 3. Tested but not in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client did not wish to answer</masterLabel>
+            <translation><!-- 4. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 31b History of Hepatitis B screening --></label>
+        <name>X31b_History_of_Hepatitis_B_screening__c</name>
+        <picklistValues>
+            <masterLabel>1. Never tested</masterLabel>
+            <translation><!-- 1. Never tested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Tested in the past 12 months</masterLabel>
+            <translation><!-- 2. Tested in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Tested but not in the past 12 months</masterLabel>
+            <translation><!-- 3. Tested but not in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client did not wish to answer</masterLabel>
+            <translation><!-- 4. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 31c History of HIV screening --></label>
+        <name>X31c_History_of_HIV_screening__c</name>
+        <picklistValues>
+            <masterLabel>1. Never tested</masterLabel>
+            <translation><!-- 1. Never tested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Tested in the past 12 months</masterLabel>
+            <translation><!-- 2. Tested in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Tested but not in the past 12 months</masterLabel>
+            <translation><!-- 3. Tested but not in the past 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client did not wish to answer</masterLabel>
+            <translation><!-- 4. Client did not wish to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 32a22 Detox from other drug Specify --></label>
+        <name>X32a22_Detox_from_other_drug_Specify__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (32a22 Detox from other drug Specify) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 32a23 Key Worker appointed --></label>
+        <name>X32a23_Key_Worker_appointed__c</name>
+        <picklistValues>
+            <masterLabel>FALSE</masterLabel>
+            <translation><!-- FALSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRUE</masterLabel>
+            <translation><!-- TRUE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 32a24 Case Manager appointed --></label>
+        <name>X32a24_Case_Manager_appointed__c</name>
+        <picklistValues>
+            <masterLabel>FALSE</masterLabel>
+            <translation><!-- FALSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRUE</masterLabel>
+            <translation><!-- TRUE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 32a25 Care Plan --></label>
+        <name>X32a25_Care_Plan__c</name>
+        <picklistValues>
+            <masterLabel>FALSE</masterLabel>
+            <translation><!-- FALSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRUE</masterLabel>
+            <translation><!-- TRUE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 1. Brief intervention
+2. Individual counselling
+3. Group counselling
+4. Group education/awareness programme
+5. Individual education/awareness programme
+6. Medication free therapy
+7. Complementary therapies..... --></help>
+        <label><!-- 32a Main Intervention --></label>
+        <name>X32a_Main_Intervention__c</name>
+        <picklistValues>
+            <masterLabel>1. Brief intervention</masterLabel>
+            <translation><!-- 1. Brief intervention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Structured after care programme</masterLabel>
+            <translation><!-- 10. Structured after care programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11. Strengthening family programme</masterLabel>
+            <translation><!-- 11. Strengthening family programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12. Psychiatric treatment</masterLabel>
+            <translation><!-- 12. Psychiatric treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13. Multi component model</masterLabel>
+            <translation><!-- 13. Multi component model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14. Methadone substitution</masterLabel>
+            <translation><!-- 14. Methadone substitution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15. Buprenorphine/naloxone substitution</masterLabel>
+            <translation><!-- 15. Buprenorphine/naloxone substitution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16. Detox from alcohol</masterLabel>
+            <translation><!-- 16. Detox from alcohol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17. Detox from heroin</masterLabel>
+            <translation><!-- 17. Detox from heroin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18. Detox from methadone</masterLabel>
+            <translation><!-- 18. Detox from methadone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19. Detox from benzodiazepines</masterLabel>
+            <translation><!-- 19. Detox from benzodiazepines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Individual counselling</masterLabel>
+            <translation><!-- 2. Individual counselling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20. Detox from “Z” drugs</masterLabel>
+            <translation><!-- 20. Detox from “Z” drugs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21. Detox from other drug. Specify_________________</masterLabel>
+            <translation><!-- 21. Detox from other drug. Specify_________________ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22. Community detox</masterLabel>
+            <translation><!-- 22. Community detox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23. Key working</masterLabel>
+            <translation><!-- 23. Key working --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24. Case manager appointed</masterLabel>
+            <translation><!-- 24. Case manager appointed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25. Care plan</masterLabel>
+            <translation><!-- 25. Care plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Group counselling</masterLabel>
+            <translation><!-- 3. Group counselling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Group education/awareness programme</masterLabel>
+            <translation><!-- 4. Group education/awareness programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Individual education/awareness programme</masterLabel>
+            <translation><!-- 5. Individual education/awareness programme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Medication free therapy</masterLabel>
+            <translation><!-- 6. Medication free therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Complementary therapies</masterLabel>
+            <translation><!-- 7. Complementary therapies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Social and/or occupational reintegration</masterLabel>
+            <translation><!-- 8. Social and/or occupational reintegration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Family therapy</masterLabel>
+            <translation><!-- 9. Family therapy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 10. Structured Aftercare Programme --></help>
+        <label><!-- 32b10 Date started --></label>
+        <name>X32b10_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 11. Strengthening Family Programme --></help>
+        <label><!-- 32b11 Date started --></label>
+        <name>X32b11_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 12. Psychiatric Treatment --></help>
+        <label><!-- 32b12 Date started --></label>
+        <name>X32b12_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 13. Multicomponent model 1 --></help>
+        <label><!-- 32b13 Date started --></label>
+        <name>X32b13_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 14. Multicomponent model 2 --></help>
+        <label><!-- 32b14 Date started --></label>
+        <name>X32b14_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 15. Methadone substitution --></help>
+        <label><!-- 32b15 Date started --></label>
+        <name>X32b15_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 16. Buprenorphine/naloxoneSubstitution --></help>
+        <label><!-- 32b16 Date started --></label>
+        <name>X32b16_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 17. Detox Alcohol --></help>
+        <label><!-- 32b17 Date started --></label>
+        <name>X32b17_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 18. Detox from Heroin --></help>
+        <label><!-- 32b18 Date started --></label>
+        <name>X32b18_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 19. Detox from Methadone --></help>
+        <label><!-- 32b19 Date started --></label>
+        <name>X32b19_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for  - 1. Brief Intervention --></help>
+        <label><!-- 32b1 Date started --></label>
+        <name>X32b1_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 20. Detox from benzodiazepines --></help>
+        <label><!-- 32b20 Date started --></label>
+        <name>X32b20_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 21. Detox from Z drugs --></help>
+        <label><!-- 32b21 Date started --></label>
+        <name>X32b21_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 22. Detox from Other Drug --></help>
+        <label><!-- 32b22 Date started --></label>
+        <name>X32b22_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 23. Community detox --></help>
+        <label><!-- 32b23 Date started --></label>
+        <name>X32b23_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 24. Key worker appointed/ number of key working sessions --></help>
+        <label><!-- 32b24 Date started --></label>
+        <name>X32b24_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 25. Case manager appointed --></help>
+        <label><!-- 32b25 Date started --></label>
+        <name>X32b25_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 26. Care Plan --></help>
+        <label><!-- 32b26 Date started --></label>
+        <name>X32b26_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 27. SAOR --></help>
+        <label><!-- 32b27 Date started --></label>
+        <name>X32b27_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 28. Future Activity --></help>
+        <label><!-- 32b28 Date started --></label>
+        <name>X32b28_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Star date for Detox from Heroin --></help>
+        <label><!-- 32b29 Date started --></label>
+        <name>X32b29_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for  - 2. Individual Counseling --></help>
+        <label><!-- 32b2 Date started --></label>
+        <name>X32b2_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for Detox from Methadone --></help>
+        <label><!-- 32b30 Date started --></label>
+        <name>X32b30_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for Detox from Z drugs --></help>
+        <label><!-- 32b31 Date started --></label>
+        <name>X32b31_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for Detox from Other Drug --></help>
+        <label><!-- 32b32 Date started --></label>
+        <name>X32b32_Date_started__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32b33 Date started --></label>
+        <name>X32b33_Date_started__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32b34 Date started --></label>
+        <name>X32b34_Date_started__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32b36 Date started --></label>
+        <name>X32b36_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for  - 3. Group Counseling --></help>
+        <label><!-- 32b3 Date started --></label>
+        <name>X32b3_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 4. Individual Education/ Awareness Programme --></help>
+        <label><!-- 32b4 Date started --></label>
+        <name>X32b4_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 5. Group Education/ Awareness Programme --></help>
+        <label><!-- 32b5 Date started --></label>
+        <name>X32b5_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 6. Medication Free Therapy --></help>
+        <label><!-- 32b6 Date started --></label>
+        <name>X32b6_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 7. Complementary Therapy --></help>
+        <label><!-- 32b7 Date started --></label>
+        <name>X32b7_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 8. Social and/or Occupational Reintegration --></help>
+        <label><!-- 32b8 Date started --></label>
+        <name>X32b8_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date for - 9. Family Therapy --></help>
+        <label><!-- 32b9 Date started --></label>
+        <name>X32b9_Date_started__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 10. Structured Aftercare Programme --></help>
+        <label><!-- 32c10 Date of last visit --></label>
+        <name>X32c10_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 11. Strengthening Family Programme --></help>
+        <label><!-- 32c11 Date of last visit --></label>
+        <name>X32c11_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 12. Psychiatric Treatment --></help>
+        <label><!-- 32c12 Date of last visit --></label>
+        <name>X32c12_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 13. Multicomponent model 1 --></help>
+        <label><!-- 32c13 Date of last visit --></label>
+        <name>X32c13_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 14. Multicomponent model 2 --></help>
+        <label><!-- 32c14 Date of last visit --></label>
+        <name>X32c14_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 15. Methadone substitution --></help>
+        <label><!-- 32c15 Date of last visit --></label>
+        <name>X32c15_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 16. Buprenorphine/naloxoneSubstitution --></help>
+        <label><!-- 32c16 Date of last visit --></label>
+        <name>X32c16_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 17. Detox Alcohol --></help>
+        <label><!-- 32c17 Date of last visit --></label>
+        <name>X32c17_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 18. Detox from Heroin --></help>
+        <label><!-- 32c18 Date of last visit --></label>
+        <name>X32c18_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 19. Detox from Methadone --></help>
+        <label><!-- 32c19 Date of last visit --></label>
+        <name>X32c19_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 1. Brief Intervention --></help>
+        <label><!-- 32c1 Date of last visit --></label>
+        <name>X32c1_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 20. Detox from benzodiazepines --></help>
+        <label><!-- 32c20 Date of last visit --></label>
+        <name>X32c20_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 21. Detox from Z drugs --></help>
+        <label><!-- 32c21 Date of last visit --></label>
+        <name>X32c21_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 22. Detox from Other Drug --></help>
+        <label><!-- 32c22 Date of last visit --></label>
+        <name>X32c22_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 23. Community detox --></help>
+        <label><!-- 32c23 Date of last visit --></label>
+        <name>X32c23_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 24. Key worker appointed/ number of key working sessions --></help>
+        <label><!-- 32c24 Date of last visit --></label>
+        <name>X32c24_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 25. Case manager appointed --></help>
+        <label><!-- 32c25 Date of last visit --></label>
+        <name>X32c25_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 27. SAOR --></help>
+        <label><!-- 32c27 Date of last visit --></label>
+        <name>X32c27_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 28. Future Activity --></help>
+        <label><!-- 32c28 Date of last visit --></label>
+        <name>X32c28_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for Detox from Heroin --></help>
+        <label><!-- 32c29 Date of last visit --></label>
+        <name>X32c29_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 2. Individual Counseling --></help>
+        <label><!-- 32c2 Date of last visit --></label>
+        <name>X32c2_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for Detox from Methadone --></help>
+        <label><!-- 32c30 Date of last visit --></label>
+        <name>X32c30_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for Detox from Z drugs --></help>
+        <label><!-- 32c31 Date of last visit --></label>
+        <name>X32c31_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for Detox from Other Drug --></help>
+        <label><!-- 32c32 Date of last visit --></label>
+        <name>X32c32_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32c33 Date of last visit --></label>
+        <name>X32c33_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32c34 Date of last visit --></label>
+        <name>X32c34_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32c36 Date of last visit --></label>
+        <name>X32c36_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 3. Group Counseling --></help>
+        <label><!-- 32c3 Date of last visit --></label>
+        <name>X32c3_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 4. Individual Education/ Awareness Programme --></help>
+        <label><!-- 32c4 Date of last visit --></label>
+        <name>X32c4_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 5. Group Education/ Awareness Programme --></help>
+        <label><!-- 32c5 Date of last visit --></label>
+        <name>X32c5_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 6. Medication Free Therapy --></help>
+        <label><!-- 32c6 Date of last visit --></label>
+        <name>X32c6_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 7. Complementary Therapy --></help>
+        <label><!-- 32c7 Date of last visit --></label>
+        <name>X32c7_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 8. Social and/or Occupational Reintegration --></help>
+        <label><!-- 32c8 Date of last visit --></label>
+        <name>X32c8_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 9. Family Therapy --></help>
+        <label><!-- 32c9 Date of last visit --></label>
+        <name>X32c9_Date_of_last_visit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 10. Structured Aftercare Programme --></help>
+        <label><!-- 32d10 Number of sessions --></label>
+        <name>X32d10_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 11. Strengthening Family Programme --></help>
+        <label><!-- 32d11 Number of sessions --></label>
+        <name>X32d11_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 12. Psychiatric Treatment --></help>
+        <label><!-- 32d12 Number of sessions --></label>
+        <name>X32d12_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 13. Multicomponent model 1 --></help>
+        <label><!-- 32d13 Number of sessions --></label>
+        <name>X32d13_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 14. Multicomponent model 2 --></help>
+        <label><!-- 32d14 Number of sessions --></label>
+        <name>X32d14_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 15. Methadone substitution --></help>
+        <label><!-- 32d15 Number of sessions --></label>
+        <name>X32d15_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 16. Buprenorphine/naloxoneSubstitution --></help>
+        <label><!-- 32d16 Number of sessions --></label>
+        <name>X32d16_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 17. Detox Alcohol --></help>
+        <label><!-- 32d17 Number of sessions --></label>
+        <name>X32d17_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 18. Detox from Heroin --></help>
+        <label><!-- 32d18 Number of sessions --></label>
+        <name>X32d18_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 19. Detox from Methadone --></help>
+        <label><!-- 32d19 Number of sessions --></label>
+        <name>X32d19_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 1. Brief Intervention --></help>
+        <label><!-- 32d1 Number of sessions --></label>
+        <name>X32d1_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 20. Detox from benzodiazepines --></help>
+        <label><!-- 32d20 Number of sessions --></label>
+        <name>X32d20_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 21. Detox from Z drugs --></help>
+        <label><!-- 32d21 Number of sessions --></label>
+        <name>X32d21_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 22. Detox from Other Drug --></help>
+        <label><!-- 32d22 Number of sessions --></label>
+        <name>X32d22_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 23. Community detox --></help>
+        <label><!-- 32d23 Number of sessions --></label>
+        <name>X32d23_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 24. Key worker appointed/ number of key working sessions --></help>
+        <label><!-- 32d24 Number of sessions --></label>
+        <name>X32d24_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 25. Case manager appointed --></help>
+        <label><!-- 32d25 Number of sessions --></label>
+        <name>X32d25_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 27. SAOR --></help>
+        <label><!-- 32d27 Number of sessions --></label>
+        <name>X32d27_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 28. Future Activity --></help>
+        <label><!-- 32d28 Number of Sessions --></label>
+        <name>X32d28_Number_of_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Detox from Heroin Sessions --></help>
+        <label><!-- 32d29 Number of Sessions --></label>
+        <name>X32d29_Number_of_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 2. Individual Counseling --></help>
+        <label><!-- 32d2 Number of sessions --></label>
+        <name>X32d2_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Detox from Methadone Sessions --></help>
+        <label><!-- 32d30 Number of sessions --></label>
+        <name>X32d30_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Detox from Z drugs Sessions --></help>
+        <label><!-- 32d31 Number of sessions --></label>
+        <name>X32d31_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Detox from Other Drug Sessions --></help>
+        <label><!-- 32d32 Number of sessions --></label>
+        <name>X32d32_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32d33 Number of session --></label>
+        <name>X32d33_Number_of_session__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32d34 Number of sessions --></label>
+        <name>X32d34_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <label><!-- 32d36 Number of sessions --></label>
+        <name>X32d36_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 3. Group Counseling --></help>
+        <label><!-- 32d3 Number of sessions --></label>
+        <name>X32d3_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 4. Individual Education/ Awareness Programme --></help>
+        <label><!-- 32d4 Number of sessions --></label>
+        <name>X32d4_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 5. Group Education/ Awareness Programme --></help>
+        <label><!-- 32d5 Number of sessions --></label>
+        <name>X32d5_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 6. Medication Free Therapy --></help>
+        <label><!-- 32d6 Number of sessions --></label>
+        <name>X32d6_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 7. Complementary Therapy --></help>
+        <label><!-- 32d7 Number of sessions --></label>
+        <name>X32d7_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Finish date for - 8. Social and/or Occupational Reintegration --></help>
+        <label><!-- 32d8 Number of sessions --></label>
+        <name>X32d8_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of sessions - 9. Family Therapy --></help>
+        <label><!-- 32d9 Number of sessions --></label>
+        <name>X32d9_Number_of_sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- If &quot;10. Other&quot;  (33a) please specify --></help>
+        <label><!-- 33a10 Exit detail - Other --></label>
+        <name>X33a10_Exit_detail_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- 33a24 Specify site name --></label>
+        <name>X33a24_Specify_site_name__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (33a24 Specify site name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please refer to Treatment Centres Tab and select the Treatment Centre Number --></help>
+        <label><!-- 33a24 Specify treatment site number --></label>
+        <name>X33a24_Specify_treatment_site_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- 33a28 Facilitated detox --></label>
+        <name>X33a28_Facilitated_detox__c</name>
+        <picklistValues>
+            <masterLabel>FALSE</masterLabel>
+            <translation><!-- FALSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRUE</masterLabel>
+            <translation><!-- TRUE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If option 2 selected in 33a, when specify the centre the client was transferred or referred to --></help>
+        <label><!-- 33a2 Transfer to Centre --></label>
+        <name>X33a2_Transfer_to_Centre__c</name>
+        <relationshipLabel><!-- NDTRS LINK Forms (33a2 Transfer to Centre) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- 33a6. If outcome for main treatment intervention is premature exit from treatment site (Q33a code 6), main reason for non-compliance --></help>
+        <label><!-- 33a6 Reason for exit (6. above) --></label>
+        <name>X33a6_Reason_for_exit_6_above__c</name>
+        <picklistValues>
+            <masterLabel>1. Drug taking</masterLabel>
+            <translation><!-- 1. Drug taking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Violent behaviour</masterLabel>
+            <translation><!-- 2. Violent behaviour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Illegal activities</masterLabel>
+            <translation><!-- 3. Illegal activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Breaking service contract</masterLabel>
+            <translation><!-- 4. Breaking service contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Alcohol taking</masterLabel>
+            <translation><!-- 5. Alcohol taking --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Close 
+1. Treatment completed
+2. Transferred/referred to another drug/alcohol treatment service
+4. Client declined further treatment
+5. Client did not return for appointments (no show/DNA)
+6. Premature exit for non-compliance. Specify reason --></help>
+        <label><!-- 33a Exit details --></label>
+        <name>X33a_Exit_details__c</name>
+        <picklistValues>
+            <masterLabel>1. Treatment completed</masterLabel>
+            <translation><!-- 1. Treatment completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Other (specify)</masterLabel>
+            <translation><!-- 10. Other (specify) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12. No longer lives in the area</masterLabel>
+            <translation><!-- 12. No longer lives in the area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14. Prison to prison transfer</masterLabel>
+            <translation><!-- 14. Prison to prison transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Transferred/referred to another drug/alcohol treatment service</masterLabel>
+            <translation><!-- 2. Transferred/referred to another drug/alcohol treatment service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Client declined further treatment</masterLabel>
+            <translation><!-- 4. Client declined further treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Client did not return for appointments (no show/DNA)</masterLabel>
+            <translation><!-- 5. Client did not return for appointments (no show/DNA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Premature exit for non-compliance. Specify reason</masterLabel>
+            <translation><!-- 6. Premature exit for non-compliance. Specify reason --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Released from prison but not linked to other treatment service</masterLabel>
+            <translation><!-- 7. Released from prison but not linked to other treatment service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Died</masterLabel>
+            <translation><!-- 8. Died --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9. Sentenced to prison</masterLabel>
+            <translation><!-- 9. Sentenced to prison --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please specify the number of family member or significant others(who were not treated for a personal addiction) involved in this treatment (please write 0 if none)
+99 if unknown --></help>
+        <label><!-- 33b Number of others involved --></label>
+        <name>X33b_Number_of_others_involved__c</name>
+    </fields>
+    <fields>
+        <help><!-- Methadone substitution - Number of Sessions --></help>
+        <label><!-- 33d8 Number of Sessions --></label>
+        <name>X33d8_Number_of_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- 34. At end of treatment or when last seen, client is/has --></help>
+        <label><!-- 34 Client&apos;s Condition at discharge --></label>
+        <name>X34_Client_s_Condition_on_discharge__c</name>
+        <picklistValues>
+            <masterLabel>1. Drug free</masterLabel>
+            <translation><!-- 1. Drug free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10. Substantially reached priority goals</masterLabel>
+            <translation><!-- 10. Substantially reached priority goals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11. Engaging with care plan</masterLabel>
+            <translation><!-- 11. Engaging with care plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12. Disengaged from care plan</masterLabel>
+            <translation><!-- 12. Disengaged from care plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13. Care plan gaps and blocks identified</masterLabel>
+            <translation><!-- 13. Care plan gaps and blocks identified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14. Engaging with other services (e.g. housing, education)</masterLabel>
+            <translation><!-- 14. Engaging with other services (e.g. housing, education) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15. Engaging with other therapeutic services (e.g. self help groups, AA)</masterLabel>
+            <translation><!-- 15. Engaging with other therapeutic services (e.g. self help groups, AA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16. Engaging in other unstructured aftercare</masterLabel>
+            <translation><!-- 16. Engaging in other unstructured aftercare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17. Other (specify)</masterLabel>
+            <translation><!-- 17. Other (specify) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Drug use unchanged</masterLabel>
+            <translation><!-- 2. Drug use unchanged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Drug use increased</masterLabel>
+            <translation><!-- 3. Drug use increased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Drug use reduced</masterLabel>
+            <translation><!-- 4. Drug use reduced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Abstaining from alcohol</masterLabel>
+            <translation><!-- 5. Abstaining from alcohol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Alcohol consumption unchanged</masterLabel>
+            <translation><!-- 6. Alcohol consumption unchanged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7. Alcohol consumption increased</masterLabel>
+            <translation><!-- 7. Alcohol consumption increased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8. Alcohol consumption reduced</masterLabel>
+            <translation><!-- 8. Alcohol consumption reduced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99. Not known</masterLabel>
+            <translation><!-- 99. Not known --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If &quot;17. Other&quot; above please specify --></help>
+        <label><!-- 34a17 Clients condition - Other specify --></label>
+        <name>X34a_17_Clients_condition_Other_specify__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of final discharge or transfer --></help>
+        <label><!-- 35 Date of Final Discharge or transfer --></label>
+        <name>X35_Date_of_Final_Discharge_or_transfer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client referred to aftercare programme provided by this centre. --></help>
+        <label><!-- 38a Aftercare provided by this centre --></label>
+        <name>X38a_Aftercare_provided_by_this_centre__c</name>
+        <picklistValues>
+            <masterLabel>0. No</masterLabel>
+            <translation><!-- 0. No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1. Yes</masterLabel>
+            <translation><!-- 1. Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Vaccination (any intervention provided at this centre during this treatment episode)
+Hepatitis A and B vaccination --></help>
+        <label><!-- 40 Vaccination --></label>
+        <name>X40_Vaccination__c</name>
+        <picklistValues>
+            <masterLabel>1. First dose</masterLabel>
+            <translation><!-- 1. First dose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Second dose</masterLabel>
+            <translation><!-- 2. Second dose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Third dose</masterLabel>
+            <translation><!-- 3. Third dose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4. Booster dose 1</masterLabel>
+            <translation><!-- 4. Booster dose 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5. Booster dose 2</masterLabel>
+            <translation><!-- 5. Booster dose 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6. Adequate titre protective</masterLabel>
+            <translation><!-- 6. Adequate titre protective --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Viral screening uptake (please chose any interventions provided at this centre during this treatment episode) --></help>
+        <label><!-- 41 Viral Screening uptake --></label>
+        <name>X41_Viral_Screening_uptake__c</name>
+        <picklistValues>
+            <masterLabel>1. HIV test</masterLabel>
+            <translation><!-- 1. HIV test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Hepatitis B test</masterLabel>
+            <translation><!-- 2. Hepatitis B test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3. Hepatitis C test</masterLabel>
+            <translation><!-- 3. Hepatitis C test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Urine screening during treatment --></help>
+        <label><!-- 42a Urine screeding during treatment --></label>
+        <name>X42a_Urine_screeding_during_treatment__c</name>
+        <picklistValues>
+            <masterLabel>1. Yes</masterLabel>
+            <translation><!-- 1. Yes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. No</masterLabel>
+            <translation><!-- 2. No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If yes, screening ordered by   
+1. Treatment Provider                
+ 2. Court --></help>
+        <label><!-- 42b If screening ordered by --></label>
+        <name>X42b_If_screening_ordered_by__c</name>
+        <picklistValues>
+            <masterLabel>1. Treatment Provider</masterLabel>
+            <translation><!-- 1. Treatment Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2. Court</masterLabel>
+            <translation><!-- 2. Court --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- id --></label>
+        <name>id__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- NDTRS Form --></label>
+        <name>HRB_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HRB Form + NDRIC Assessment --></label>
+        <name>HRB_Form_NDRIC_Assessment</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Check_Warnings --></label>
+        <name>Check_Warnings</name>
+    </webLinks>
+</CustomObjectTranslation>

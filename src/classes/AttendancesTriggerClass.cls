@@ -9,7 +9,8 @@
 	Updated by: Maeve Kerney, Enclude   
 	Purpose: Add code to update related contact record with date of last contact
 			 Also add code to set Attended__c value to true for Drop-in and Open Access attendances
-		
+	
+	EK 19/12/2016 Added exception handling when updating the contacts due to problems with NPSP	
 	Tested in testCreateAttendanceTrigger and testUpdateLastAttendedDate
 	
 	Called from: TriggerDispatcher
@@ -254,7 +255,17 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 		}
 		
 		// Update records
-		if (contactsForUpdate.size() > 0) update contactsForUpdate; 
+		if (contactsForUpdate.size() > 0) 
+		{
+			try
+			{
+				update contactsForUpdate;
+			}
+			catch (Exception e)
+			{
+				system.debug ('Failed to update contacts ' + e.getMessage());
+			} 
+		}
 	}		
 	
 	public void updateLastContactDateOnDelete(map<Id, Attendance__c> oldMap)

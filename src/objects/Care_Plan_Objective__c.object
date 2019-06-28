@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -115,52 +111,55 @@
         <fullName>Area__c</fullName>
         <externalId>false</externalId>
         <label>Area</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Drug Use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alcohol Use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Accomodation/Independent Living</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mental Health</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Physical Health</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Justice and Legal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Family and Relationships</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Finance</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Employment</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Education and Training</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Drug Use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alcohol Use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accomodation/Independent Living</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mental Health</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Physical Health</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Justice and Legal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Family and Relationships</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Education and Training</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Care_plan_step_count__c</fullName>
@@ -285,308 +284,488 @@
         <fullName>Long_Term_Outcome__c</fullName>
         <externalId>false</externalId>
         <label>Long Term Outcome</label>
-        <picklist>
-            <controllingField>Area__c</controllingField>
-            <picklistValues>
-                <fullName>Engage with drug services regularly, i.e. monthly for three months</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Start opiate substitution treatment</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce risk behaviour</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Stabilise methadone use</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Complete methadone detox</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce drug use by goal amount</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce drug use to zero</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend aftercare at least three times (programme)</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend aftercare at least three times (fellowship)</fullName>
-                <controllingFieldValues>Drug Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Engage regularly with alcohol services (monthly for three months)</fullName>
-                <controllingFieldValues>Alcohol Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce alcohol use by goal amount</fullName>
-                <controllingFieldValues>Alcohol Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce alcohol to zero</fullName>
-                <controllingFieldValues>Alcohol Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend aftercare (programme)</fullName>
-                <controllingFieldValues>Alcohol Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend aftercare (fellowship)</fullName>
-                <controllingFieldValues>Alcohol Use</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Register on housing list / remove barriers i.e. debt</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Secure short term accommodation (emergency)</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Secure transitional accommodation</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Secure long term accommodation</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Maintain current housing (bills, self care)</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Secure private rented / owner occupied</fullName>
-                <controllingFieldValues>Accomodation/Independent Living</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend counselling or support groups for</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>three or more sessions (HSE, community or private)</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Access other HSE mental health services</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Adhere to psychiatric treatment</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>plan for three months (including medication management)</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Receive diagnosis of mental health issue</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Increase coping skills</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce Isolation</fullName>
-                <controllingFieldValues>Mental Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Get GP / medical card and access doctor</fullName>
-                <controllingFieldValues>Physical Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attend specialist health services</fullName>
-                <controllingFieldValues>Physical Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Keep treatment plan / appointments (when had not previously done this)</fullName>
-                <controllingFieldValues>Physical Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Improve diet / exercise</fullName>
-                <controllingFieldValues>Physical Health</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Undertake actions to prepare for upcoming trial</fullName>
-                <controllingFieldValues>Justice and Legal</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Resolve outstanding charges</fullName>
-                <controllingFieldValues>Justice and Legal</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Successfully complete post release supervision period</fullName>
-                <controllingFieldValues>Justice and Legal</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Reduce frequency of offending</fullName>
-                <controllingFieldValues>Justice and Legal</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Completely stop re-offending</fullName>
-                <controllingFieldValues>Justice and Legal</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Support care of children outside the family</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Increase access to children</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Children return to family care</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Access to specialist supports for children / family</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Undertake family therapy / programme</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual or family attend family support service, monthly for three months</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Undertake course or programme on family / relationships</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Undertake self directed actions to improve family / relationship</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Develop pro social peer network</fullName>
-                <controllingFieldValues>Family and Relationships</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Access MABS and follow plan for three months</fullName>
-                <controllingFieldValues>Finance</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Register for social welfare when previously no payments</fullName>
-                <controllingFieldValues>Finance</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Repayment of debt</fullName>
-                <controllingFieldValues>Finance</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Start unpaid work (volunteering / interning)</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Start paid scheme (e.g. CE)</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Start part time employment</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Start full time employment</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Increase job readiness</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Maintained full or part time work for six months</fullName>
-                <controllingFieldValues>Employment</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Complete literacy programme</fullName>
-                <controllingFieldValues>Education and Training</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Complete education / training programmes</fullName>
-                <controllingFieldValues>Education and Training</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Went up one level on QQI (i.e. FETAC 2 to 3)</fullName>
-                <controllingFieldValues>Education and Training</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Achieved QQI qualification</fullName>
-                <controllingFieldValues>Education and Training</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>Area__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Engage with drug services regularly, i.e. monthly for three months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Start opiate substitution treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce risk behaviour</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Stabilise methadone use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete methadone detox</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce drug use by goal amount</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce drug use to zero</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend aftercare at least three times (programme)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend aftercare at least three times (fellowship)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Engage regularly with alcohol services (monthly for three months)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce alcohol use by goal amount</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce alcohol to zero</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend aftercare (programme)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend aftercare (fellowship)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Register on housing list / remove barriers i.e. debt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Secure short term accommodation (emergency)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Secure transitional accommodation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Secure long term accommodation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintain current housing (bills, self care)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Secure private rented / owner occupied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend counselling or support groups for</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>three or more sessions (HSE, community or private)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access other HSE mental health services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Adhere to psychiatric treatment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>plan for three months (including medication management)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Receive diagnosis of mental health issue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Increase coping skills</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce Isolation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Get GP / medical card and access doctor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attend specialist health services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Keep treatment plan / appointments (when had not previously done this)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Improve diet / exercise</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Undertake actions to prepare for upcoming trial</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Resolve outstanding charges</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Successfully complete post release supervision period</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reduce frequency of offending</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completely stop re-offending</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Support care of children outside the family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Increase access to children</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Children return to family care</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access to specialist supports for children / family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Undertake family therapy / programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Individual or family attend family support service, monthly for three months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Undertake course or programme on family / relationships</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Undertake self directed actions to improve family / relationship</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Develop pro social peer network</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access MABS and follow plan for three months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Register for social welfare when previously no payments</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Repayment of debt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Start unpaid work (volunteering / interning)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Start paid scheme (e.g. CE)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Start part time employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Start full time employment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Increase job readiness</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintained full or part time work for six months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete literacy programme</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete education / training programmes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Went up one level on QQI (i.e. FETAC 2 to 3)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Achieved QQI qualification</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Engage with drug services regularly, i.e. monthly for three months</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Start opiate substitution treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Reduce risk behaviour</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Stabilise methadone use</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Complete methadone detox</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Reduce drug use by goal amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Reduce drug use to zero</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Attend aftercare at least three times (programme)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Drug Use</controllingFieldValue>
+                <valueName>Attend aftercare at least three times (fellowship)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alcohol Use</controllingFieldValue>
+                <valueName>Engage regularly with alcohol services (monthly for three months)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alcohol Use</controllingFieldValue>
+                <valueName>Reduce alcohol use by goal amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alcohol Use</controllingFieldValue>
+                <valueName>Reduce alcohol to zero</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alcohol Use</controllingFieldValue>
+                <valueName>Attend aftercare (programme)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alcohol Use</controllingFieldValue>
+                <valueName>Attend aftercare (fellowship)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Register on housing list / remove barriers i.e. debt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Secure short term accommodation (emergency)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Secure transitional accommodation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Secure long term accommodation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Maintain current housing (bills, self care)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accomodation/Independent Living</controllingFieldValue>
+                <valueName>Secure private rented / owner occupied</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Attend counselling or support groups for</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>three or more sessions (HSE, community or private)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Access other HSE mental health services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Adhere to psychiatric treatment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>plan for three months (including medication management)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Receive diagnosis of mental health issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Increase coping skills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Reduce Isolation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Health</controllingFieldValue>
+                <valueName>Get GP / medical card and access doctor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Health</controllingFieldValue>
+                <valueName>Attend specialist health services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Health</controllingFieldValue>
+                <valueName>Keep treatment plan / appointments (when had not previously done this)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Health</controllingFieldValue>
+                <valueName>Improve diet / exercise</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Justice and Legal</controllingFieldValue>
+                <valueName>Undertake actions to prepare for upcoming trial</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Justice and Legal</controllingFieldValue>
+                <valueName>Resolve outstanding charges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Justice and Legal</controllingFieldValue>
+                <valueName>Successfully complete post release supervision period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Justice and Legal</controllingFieldValue>
+                <valueName>Reduce frequency of offending</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Justice and Legal</controllingFieldValue>
+                <valueName>Completely stop re-offending</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Support care of children outside the family</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Increase access to children</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Children return to family care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Access to specialist supports for children / family</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Undertake family therapy / programme</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Individual or family attend family support service, monthly for three months</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Undertake course or programme on family / relationships</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Undertake self directed actions to improve family / relationship</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Family and Relationships</controllingFieldValue>
+                <valueName>Develop pro social peer network</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finance</controllingFieldValue>
+                <valueName>Access MABS and follow plan for three months</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finance</controllingFieldValue>
+                <valueName>Register for social welfare when previously no payments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finance</controllingFieldValue>
+                <valueName>Repayment of debt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Start unpaid work (volunteering / interning)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Start paid scheme (e.g. CE)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Start part time employment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Start full time employment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Increase job readiness</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Employment</controllingFieldValue>
+                <valueName>Maintained full or part time work for six months</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education and Training</controllingFieldValue>
+                <valueName>Complete literacy programme</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education and Training</controllingFieldValue>
+                <valueName>Complete education / training programmes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education and Training</controllingFieldValue>
+                <valueName>Went up one level on QQI (i.e. FETAC 2 to 3)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education and Training</controllingFieldValue>
+                <valueName>Achieved QQI qualification</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Next_Review_Date__c</fullName>
@@ -636,28 +815,31 @@
         <fullName>Objective_Status__c</fullName>
         <externalId>false</externalId>
         <label>Objective Status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Draft</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Blocked</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Objective_and_Timescale__c</fullName>
@@ -692,24 +874,27 @@
         <fullName>Priority__c</fullName>
         <externalId>false</externalId>
         <label>Priority</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Medium</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>High</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Referred_to__c</fullName>
@@ -739,24 +924,27 @@
         <fullName>Time_Frame_short__c</fullName>
         <externalId>false</externalId>
         <label>Time Frame (short)</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Short-term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Medium-term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Long-term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Short-term</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Medium-term</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Long-term</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Tools_used__c</fullName>

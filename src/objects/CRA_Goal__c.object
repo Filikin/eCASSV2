@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -128,83 +124,86 @@
         <fullName>Problem_Areas_goals__c</fullName>
         <externalId>false</externalId>
         <label>Problem Areas/goals</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Health &amp; self care</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cannabis use/non use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alcohol use/non use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other drug use/non use</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Relationships with Partner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Relationships with friends</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Relationships with Parents/caregiver</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Job or education progress</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Social Activities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Recreational activities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Personal habits (e.g. getting up in the morning, being on time)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Legal issues</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Money management</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Emotional life (feelings)</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Communication</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>General happiness</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Motivation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Health &amp; self care</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cannabis use/non use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alcohol use/non use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other drug use/non use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Relationships with Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Relationships with friends</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Relationships with Parents/caregiver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Job or education progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social Activities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Recreational activities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Personal habits (e.g. getting up in the morning, being on time)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Legal issues</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Money management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Emotional life (feelings)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communication</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General happiness</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Motivation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Step_by_Step_Plan__c</fullName>

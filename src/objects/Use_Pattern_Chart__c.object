@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -95,28 +91,31 @@
         <fullName>AL_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>AL Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>AL_Use__c</fullName>
@@ -166,28 +165,31 @@
         <fullName>CA_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>CA Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>CA_Use__c</fullName>
@@ -237,28 +239,31 @@
         <fullName>CO_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>CO Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>CO_Use__c</fullName>
@@ -308,28 +313,31 @@
         <fullName>CR_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>CR Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>CR_Use__c</fullName>
@@ -405,28 +413,31 @@
         <fullName>DO_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>DO Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>DO_Use__c</fullName>
@@ -485,28 +496,31 @@
         <fullName>HA_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>HA Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>HA_Use__c</fullName>
@@ -556,28 +570,31 @@
         <fullName>H_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>H Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>H_Use__c</fullName>
@@ -627,28 +644,31 @@
         <fullName>MD_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>MD Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>MD_Use__c</fullName>
@@ -698,28 +718,31 @@
         <fullName>SD_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>SD Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SD_Use__c</fullName>
@@ -769,28 +792,31 @@
         <fullName>SO_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>SO Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SO_Use__c</fullName>
@@ -850,28 +876,31 @@
         <fullName>TR_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>TR Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>TR_Use__c</fullName>
@@ -931,28 +960,31 @@
         <fullName>UP_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>UP Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>UP_Use__c</fullName>
@@ -1002,28 +1034,31 @@
         <fullName>XX_Increase_Decrease__c</fullName>
         <externalId>false</externalId>
         <label>XX Increase/Decrease</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Increase</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decrease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cease</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cease</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>XX_Use__c</fullName>

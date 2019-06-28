@@ -19,6 +19,17 @@ Everything else is left alone</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Attendance_Sort_Field__c</fullName>
+        <defaultValue>&quot;Young_Person_Name__c&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Attendance Sort Field</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Autonumber_Client_ID__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -137,6 +148,15 @@ Everything else is left alone</inlineHelpText>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HealthAtlasEndpoint__c</fullName>
+        <defaultValue>&quot;https://hrb.healthatlasireland.ie/addrlookup/enclude?token=kE0FJo64q2Jo1ITP2yvT&amp;cmd=liveSearch&amp;address=&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>HealthAtlasEndpoint</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>Only_clone_active_enrolments__c</fullName>

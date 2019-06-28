@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -525,51 +521,54 @@
         <fullName>Location__c</fullName>
         <externalId>false</externalId>
         <label>Location</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Cavan</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dublin</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Laois</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Longford</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Louth</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Meath</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Monaghan</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Offaly</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Westmeath</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Limerick</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cavan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dublin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Laois</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Longford</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Louth</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monaghan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Offaly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Westmeath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limerick</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Long_Orange_Dispensed__c</fullName>
@@ -901,177 +900,279 @@
         <fullName>Sub_location__c</fullName>
         <externalId>false</externalId>
         <label>Sub-location</label>
-        <picklist>
-            <controllingField>Location__c</controllingField>
-            <picklistValues>
-                <fullName>Ardee</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Drogheda (North)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Drogheda (South)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Drogheda (LCDAT)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dundalk (Bridge Street)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dundalk (North)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dundalk (Simon)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dundalk (South)</fullName>
-                <controllingFieldValues>Louth</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Ashbourne</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Navan (Fair Green)</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Navan (North)</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Navan (South)</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Nobber</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Oldcastle</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Trim</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Athboy</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Duleek</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Dunshaughlin</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Kells</fullName>
-                <controllingFieldValues>Meath</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Bailieborough</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Bailieborough (CDA)</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Ballivor</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Ballyhaise</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Ballyjamesduff</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Bettystown</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cavan</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cavan (CDA)</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cootehill</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Kingscourt</fullName>
-                <controllingFieldValues>Cavan</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Limerick City</fullName>
-                <controllingFieldValues>Limerick</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Limerick Rural</fullName>
-                <controllingFieldValues>Limerick</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Clare</fullName>
-                <controllingFieldValues>Limerick</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>North Tipperary</fullName>
-                <controllingFieldValues>Limerick</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>Location__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ardee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Drogheda (North)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Drogheda (South)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Drogheda (LCDAT)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dundalk (Bridge Street)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dundalk (North)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dundalk (Simon)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dundalk (South)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ashbourne</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Navan (Fair Green)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Navan (North)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Navan (South)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nobber</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oldcastle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trim</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Athboy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duleek</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dunshaughlin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Kells</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bailieborough</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bailieborough (CDA)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ballivor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ballyhaise</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ballyjamesduff</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bettystown</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cavan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cavan (CDA)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cootehill</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Kingscourt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limerick City</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limerick Rural</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Clare</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North Tipperary</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Bailieborough</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Bailieborough (CDA)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Ballivor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Ballyhaise</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Ballyjamesduff</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Bettystown</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Cavan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Cavan (CDA)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Cootehill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cavan</controllingFieldValue>
+                <valueName>Kingscourt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Ardee</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Drogheda (North)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Drogheda (South)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Drogheda (LCDAT)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Dundalk (Bridge Street)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Dundalk (North)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Dundalk (Simon)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Louth</controllingFieldValue>
+                <valueName>Dundalk (South)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Ashbourne</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Navan (Fair Green)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Navan (North)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Navan (South)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Nobber</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Oldcastle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Trim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Athboy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Duleek</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Dunshaughlin</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Meath</controllingFieldValue>
+                <valueName>Kells</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limerick</controllingFieldValue>
+                <valueName>Limerick City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limerick</controllingFieldValue>
+                <valueName>Limerick Rural</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limerick</controllingFieldValue>
+                <valueName>Clare</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limerick</controllingFieldValue>
+                <valueName>North Tipperary</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Swabs_Dispensed__c</fullName>

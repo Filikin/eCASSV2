@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -256,15 +252,18 @@
         <fullName>Related_Organisation__c</fullName>
         <externalId>false</externalId>
         <label>Related Organisation</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Status_Comment__c</fullName>
@@ -278,56 +277,83 @@
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
-        <picklist>
-            <controllingField>Step_records_attendance__c</controllingField>
-            <picklistValues>
-                <fullName>Booked</fullName>
-                <controllingFieldValues>checked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Attended</fullName>
-                <controllingFieldValues>checked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cancelled with notice and reason</fullName>
-                <controllingFieldValues>checked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cancelled Late</fullName>
-                <controllingFieldValues>checked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No Show</fullName>
-                <controllingFieldValues>checked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>=================</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Open</fullName>
-                <controllingFieldValues>unchecked</controllingFieldValues>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Blocked</fullName>
-                <controllingFieldValues>unchecked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Completed</fullName>
-                <controllingFieldValues>unchecked</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <controllingField>Step_records_attendance__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Booked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Attended</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled with notice and reason</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled Late</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Show</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>=================</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <valueName>Open</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <valueName>Blocked</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>unchecked</controllingFieldValue>
+                <valueName>Completed</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Booked</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Attended</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Cancelled with notice and reason</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Cancelled Late</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>No Show</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Step_records_attendance__c</fullName>

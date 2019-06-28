@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>HRB Form</value>
+        <value>Old HRB Form</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>HRB Forms</value>
+        <value>Old HRB Forms</value>
     </caseValues>
     <fields>
         <label><!-- ALCOHOL --></label>
@@ -180,7 +180,7 @@
     <fields>
         <label><!-- Client Account --></label>
         <name>Client_Account__c</name>
-        <relationshipLabel><!-- HRB Forms (Client Account) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (Client Account) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Client ID --></label>
@@ -777,6 +777,10 @@
         <name>Test_Referral_Assessment_details__c</name>
     </fields>
     <fields>
+        <label><!-- Tick to confirm 2018 client entry --></label>
+        <name>Tick_to_confirm_2018_client_entry__c</name>
+    </fields>
+    <fields>
         <label><!-- Titre --></label>
         <name>Titre__c</name>
     </fields>
@@ -874,7 +878,7 @@ Type 1 = Completed Treatment --></help>
             <errorMessage><!-- Drug must be on the 2012 table --></errorMessage>
         </lookupFilter>
         <name>X14_Main_Reason_for_Referral_Drug__c</name>
-        <relationshipLabel><!-- HRB Forms (14 Main Reason for Referral - Drug) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (14 Main Reason for Referral - Drug) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Based on main problem drug
@@ -1066,7 +1070,7 @@ If 2, Stop, Ensure Q14 is complete, send form to HRB --></help>
         <help><!-- If 3 specify site transferred to and STOP. Ensure Q14 is complete and send form to the HRB. --></help>
         <label><!-- 18a3 Specify Transferred --></label>
         <name>X18a3_Specify_Transferred__c</name>
-        <relationshipLabel><!-- HRB Forms (18a3 Specify Transferred) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (18a3 Specify Transferred) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- If 3 or 4 STOP and return form to HRB, IF 2,6 go to18b, if 1 go to 19 --></help>
@@ -1245,7 +1249,7 @@ If not applicable code 88 --></help>
         <help><!-- Excluding Alcohol and Tobacco --></help>
         <label><!-- 24b Specify first drug used --></label>
         <name>X24b_Specify_first_drug_used__c</name>
-        <relationshipLabel><!-- HRB Forms (24b Specify first drug used) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (24b Specify first drug used) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 25 Drug Type --></label>
@@ -1258,7 +1262,7 @@ If not applicable code 88 --></help>
     <fields>
         <label><!-- 25a Main substance --></label>
         <name>X25a_Main_substance__c</name>
-        <relationshipLabel><!-- HRB Forms (25a Main substance) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (25a Main substance) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 25b Route of Admin - Main sub --></label>
@@ -1336,7 +1340,7 @@ If not applicable code 88 --></help>
     <fields>
         <label><!-- 26a Substance 2 --></label>
         <name>X26a_Substance_2__c</name>
-        <relationshipLabel><!-- HRB Forms (26a Substance 2) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (26a Substance 2) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 26b Route of Admin - Sub2 --></label>
@@ -1415,7 +1419,7 @@ If not applicable code 88 --></help>
     <fields>
         <label><!-- 27a Substance 3 --></label>
         <name>X27a_Substance_3__c</name>
-        <relationshipLabel><!-- HRB Forms (27a Substance 3) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (27a Substance 3) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 27b Route of Admin - Sub3 --></label>
@@ -1494,7 +1498,7 @@ If not applicable code 88 --></help>
     <fields>
         <label><!-- 28a Substance 4 --></label>
         <name>X28a_Substance_4__c</name>
-        <relationshipLabel><!-- HRB Forms (28a Substance 4) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (28a Substance 4) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- 28b Route of Admin - Sub4 --></label>
@@ -1705,7 +1709,7 @@ If not known, code 99. --></help>
     <fields>
         <label><!-- 33a24 Specify site name --></label>
         <name>X33a24_Specify_site_name__c</name>
-        <relationshipLabel><!-- HRB Forms (33a24 Specify site name) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (33a24 Specify site name) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Please refer to Treatment Centres Tab and select the Treatment Centre Number --></help>
@@ -1993,7 +1997,7 @@ each type of treatment intervention --></help>
         <help><!-- Centre number where case manager was appointed - select from dropdown list for Centre table --></help>
         <label><!-- 33c26 Case Treatment Centre --></label>
         <name>X33c26_Case_Treatment_Centre__c</name>
-        <relationshipLabel><!-- HRB Forms (33c26 Case Treatment Centre) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (33c26 Case Treatment Centre) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Facilitated detox - Date Completed --></help>
@@ -2213,7 +2217,7 @@ each type of treatment intervention --></help>
     <fields>
         <label><!-- 38b. Name of other site for treatment --></label>
         <name>X38b_Name_of_other_site_for_treatment__c</name>
-        <relationshipLabel><!-- HRB Forms (38b. Name of other site for treatment) --></relationshipLabel>
+        <relationshipLabel><!-- Old HRB Forms (38b. Name of other site for treatment) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- If site is not on the list 38b above --></help>
@@ -2584,6 +2588,10 @@ Hepatitis A and B vaccination --></help>
         <sections>
             <label><!-- Main Treatment Intervention --></label>
             <section>Main Treatment Intervention</section>
+        </sections>
+        <sections>
+            <label><!-- This form is ONLY FOR CLIENTS WHO ENTERED IN 2018, use NDTRS LINK Form for 2019 --></label>
+            <section>This form is ONLY FOR CLIENTS WHO ENTERED IN 2018, use NDTRS LINK Form for 2019</section>
         </sections>
     </layouts>
     <recordTypes>

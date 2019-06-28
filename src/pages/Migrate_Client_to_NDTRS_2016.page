@@ -1,0 +1,41 @@
+<apex:page standardController="Contact" extensions="MigrateClientController" tabStyle="Contact" lightningStyleSheets="true" showHeader="false" action="{!DoMigration}">
+	<apex:form >
+		<apex:sectionHeader title="Old Values"/>
+			<apex:pageBlock >
+				<apex:pageBlockSection >
+				<apex:outputText value="{!contact.X4_Gender__c}"/>
+				<apex:outputField value="{!contact.X7a_Living_with_whom__c}"/>
+				<apex:outputField value="{!contact.X7b_Livin_Where__c}"/>
+				<apex:outputField value="{!contact.X12b_Education_highest_level__c}"/>
+				<apex:outputField value="{!contact.X12a_Age_left_primary_school__c}"/>
+				<apex:outputField value="{!contact.X11_Employement_Status__c}"/>
+				<apex:outputField value="{!contact.X11_Employement_Status_other__c}"/>
+				<apex:outputField value="{!contact.X10b_Ethnic_Background__c}"/>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		<apex:sectionHeader title="New Values"/>
+			<apex:pageBlock >
+				<apex:pageBlockSection >
+					<apex:outputText value="{!contact.X4_Gender__c}"/>
+					<apex:outputField value="{!contact.X5_Living_with_whom__c}"/>
+					<apex:outputField value="{!contact.X7_Living_Where__c}"/>
+					<apex:outputField value="{!contact.X9a_Education_highest_level__c}"/>
+					<apex:outputField value="{!contact.X9b_Age_left_primary_school__c}"/>
+					<apex:outputField value="{!contact.X10_Employement_Status__c}"/>
+					<apex:outputField value="{!contact.X10_8_Specify_other_employment_status__c}"/>
+					<apex:outputField value="{!contact.X11b_Ethnic_cultural_background__c}"/>
+	 				<apex:pageBlockTable value="{!$ObjectType.Contact.FieldSets.Fields_to_initialise_during_migration}" var="f">
+	            		<apex:column value="{!f.Label}">
+	                		<apex:facet name="header">Label</apex:facet>
+	            		</apex:column> 
+			            <apex:column value="{!contact[f]}">
+	        		        <apex:facet name="header">Value</apex:facet>
+	            		</apex:column> 
+			        </apex:pageBlockTable> 
+	        	</apex:pageBlockSection>
+				<apex:pageBlockButtons >
+	                <apex:commandButton action="{!ConfirmChanges}" value="Confirm Changes"/>
+	            </apex:pageBlockButtons>		
+	        </apex:pageBlock>
+	   </apex:form>
+</apex:page>

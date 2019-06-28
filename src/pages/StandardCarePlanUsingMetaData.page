@@ -33,7 +33,7 @@
                         <apex:column width="5%" headerValue="">
                             <apex:inputcheckbox value="{!oneStep.bIncludeThisStep}" selected="{!oneStep.bIncludeThisStep}" onclick="stepClicked('{!oneStep.thisStep.id}');" />
                         </apex:column>
-                        <apex:column>
+                        <apex:column >
  	                    	<apex:outputText value="{!oneStep.thisStep.MasterLabel}" />
                         </apex:column>
                     </apex:pageblocktable>

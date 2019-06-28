@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -318,20 +314,23 @@ Client__r.MailingCountry</formula>
         <fullName>Assessment_outcome__c</fullName>
         <externalId>false</externalId>
         <label>Assessment outcome:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Suitable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Unsuitable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Suitable</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unsuitable</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Aware_of_risks_of_indirect_sharing__c</fullName>
@@ -339,20 +338,23 @@ Client__r.MailingCountry</formula>
         <inlineHelpText>Aware of risks of indirect sharing:
 (sharing filters, spoons, water, front/backloading)</inlineHelpText>
         <label>Aware of risks of indirect sharing:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Benefit_in_more_different_social_support__c</fullName>
@@ -1099,131 +1101,149 @@ What factors lead to greater risks in relation to drug use?
         <fullName>Engagement_in_FAS_CE_programme__c</fullName>
         <externalId>false</externalId>
         <label>Engagement in FAS CE programme?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ever_injected__c</fullName>
         <externalId>false</externalId>
         <label>Ever injected:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ever_overdosed__c</fullName>
         <externalId>false</externalId>
         <label>Ever overdosed:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ever_previously_treated_for_alcohol_use__c</fullName>
         <externalId>false</externalId>
         <label>Ever previously treated for alcohol use</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never treated</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Previously treated</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Not applicable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Previously treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not known</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not applicable</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ever_previously_treated_for_problem_drug__c</fullName>
         <externalId>false</externalId>
         <label>Ever previously treated for problem drug</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never treated</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Previously treated</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Not applicable</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Previously treated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not known</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not applicable</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ever_shared_injecting_equipment__c</fullName>
         <externalId>false</externalId>
         <label>Ever shared injecting equipment:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Family_Relationship_Case_live__c</fullName>
@@ -1287,125 +1307,137 @@ What factors lead to greater risks in relation to drug use?
         <fullName>Frequency_of_use_Drug_1__c</fullName>
         <externalId>false</externalId>
         <label>Frequency of use Drug 1</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. daily or almost daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. several times a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. at least once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. less than once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. daily or almost daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. several times a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. at least once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. less than once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Frequency_of_use_Drug_2__c</fullName>
         <externalId>false</externalId>
         <label>Frequency of use Drug 2</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. daily or almost daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. several times a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. at least once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. less than once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. daily or almost daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. several times a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. at least once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. less than once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Frequency_of_use_Drug_3__c</fullName>
         <externalId>false</externalId>
         <label>Frequency of use Drug 3</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. daily or almost daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. several times a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. at least once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. less than once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. daily or almost daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. several times a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. at least once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. less than once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Frequency_of_use_Drug_4__c</fullName>
         <externalId>false</externalId>
         <label>Frequency of use Drug 4</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. daily or almost daily</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. several times a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. at least once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. less than once a week</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. daily or almost daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. several times a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. at least once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. less than once a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Goals_longer_term_Accomodation__c</fullName>
@@ -1491,39 +1523,45 @@ What factors lead to greater risks in relation to drug use?
         <fullName>Have_you_been_screened_for_HIV__c</fullName>
         <externalId>false</externalId>
         <label>Have you been screened for HIV?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Have_you_been_screened_for_Hep_C__c</fullName>
         <externalId>false</externalId>
         <label>Have you been screened for Hep C?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Highest_level_completed__c</fullName>
@@ -1716,20 +1754,23 @@ MABS?</inlineHelpText>
         <fullName>Injected_in_past_month__c</fullName>
         <externalId>false</externalId>
         <label>Injected in past month:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Interest_in_accessing_counselling__c</fullName>
@@ -2199,20 +2240,23 @@ Solicitor?</inlineHelpText>
         <fullName>Received_information_on_sexual_health__c</fullName>
         <externalId>false</externalId>
         <label>Received information on sexual health?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Referred_to_name_agency_of_worker_O1__c</fullName>
@@ -2306,141 +2350,153 @@ Solicitor?</inlineHelpText>
         <fullName>Route_of_Trans_Drug_1__c</fullName>
         <externalId>false</externalId>
         <label>Route of Trans - Drug 1</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. rectal topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. rectal topical</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Route_of_Trans_Drug_2__c</fullName>
         <externalId>false</externalId>
         <label>Route of Trans - Drug 2</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. rectal topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. rectal topical</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Route_of_Trans_Drug_3__c</fullName>
         <externalId>false</externalId>
         <label>Route of Trans - Drug 3</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. rectal topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. rectal topical</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Route_of_Trans_Drug_4__c</fullName>
         <externalId>false</externalId>
         <label>Route of Trans - Drug 4</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1. inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2. smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3. eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4. sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5. sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6. rectal topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1. inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2. smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3. eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4. sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5. sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6. rectal topical</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Social_Supports_Case_live__c</fullName>
@@ -2532,40 +2588,43 @@ Solicitor?</inlineHelpText>
         <fullName>Specify_main_type_of_alcohol_consumed__c</fullName>
         <externalId>false</externalId>
         <label>Specify main type of alcohol consumed:</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Beer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>spirits</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>wine</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>fortified wine</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>cider</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>alcopops</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Beer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>spirits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>wine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>fortified wine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>cider</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>alcopops</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
@@ -2771,52 +2830,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area Drugs</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_Drugs__c</fullName>
@@ -2826,52 +2888,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area Health</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_E_T__c</fullName>
@@ -2881,52 +2946,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area - E/T</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_Emplo__c</fullName>
@@ -2936,52 +3004,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area - Emplo</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_F_R__c</fullName>
@@ -2991,52 +3062,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area - F&amp;R</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_In_Fi__c</fullName>
@@ -3046,52 +3120,55 @@ Taking your prescribed medication</inlineHelpText>
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area - In/Fi</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_Just_Le__c</fullName>
@@ -3102,52 +3179,55 @@ How does the service user describe themselves in relation to this area on a scal
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area-Just/Le</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>User_describe_themselves_in_area_So_Su__c</fullName>
@@ -3158,52 +3238,55 @@ How does the service user describe themselves in relation to this area on a scal
 4-6 = Currently working on changing the situation
 7-10 = Happy with changes and situation</inlineHelpText>
         <label>User describe themselves in area - So/Su</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>What_are_the_reasons_for_referral__c</fullName>
@@ -3378,275 +3461,305 @@ How does the service user describe themselves in relation to this area on a scal
         <externalId>false</externalId>
         <inlineHelpText>1. Do you think your use of ……….. (preference alcohol) is out of control?</inlineHelpText>
         <label>1. Use of alcohol is out of control?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X1_Use_of_drug_is_out_of_control__c</fullName>
         <externalId>false</externalId>
         <label>1. Use of drug is out of control?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X2_Prospect_of_not_taking_alcohol__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>2. Does the prospect of not taking …..make you anxious or worried?</inlineHelpText>
         <label>2. Prospect of not taking alcohol</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X2_Prospect_of_not_taking_drug__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>2. Does the prospect of not taking …..make you anxious or worried?</inlineHelpText>
         <label>2. Prospect of not taking drug</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X3_Worried_about_your_use_of_alcohol__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>3. Do you worry about your use of ……..?</inlineHelpText>
         <label>3. Worried about your use of alcohol</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X3_Worried_about_your_use_of_drug__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>3. Do you worry about your use of ……..?</inlineHelpText>
         <label>3. Worried about your use of drug</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X4_Did_you_wish_you_could_stop_alcohol__c</fullName>
         <externalId>false</externalId>
         <label>4. Did you wish you could stop alcohol</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X4_Did_you_wish_you_could_stop_drug__c</fullName>
         <externalId>false</externalId>
         <label>4. Did you wish you could stop drug</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Never / almost never</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Sometimes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Often</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Always / nearly always</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never / almost never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sometimes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Often</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always / nearly always</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X5_How_difficult_is_to_stop_alcohol__c</fullName>
         <externalId>false</externalId>
         <label>5. How difficult is to stop alcohol</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Not difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Quite Difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Very difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Impossible</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quite Difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Very difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Impossible</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>X5_How_difficult_is_to_stop_drugs__c</fullName>
         <externalId>false</externalId>
         <label>5. How difficult is to stop drugs</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Not difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Quite Difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Very difficult</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Impossible</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Quite Difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Very difficult</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Impossible</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>You_place_yourself_on_wheel_of_change__c</fullName>
@@ -3654,36 +3767,39 @@ How does the service user describe themselves in relation to this area on a scal
         <inlineHelpText>Worker is to explain the wheel of change diagram.
 Where would you place yourself on the wheel of change?</inlineHelpText>
         <label>You place yourself on wheel of change?</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Maintenance</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Relapse</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Pre-Comtemplation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Comtemplation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Determination</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Action</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Relapse</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-Comtemplation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Comtemplation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Determination</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Action</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>Assessment (National Framework)</label>
     <listViews>

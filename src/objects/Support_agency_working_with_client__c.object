@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -132,31 +128,34 @@
         <fullName>How_can_information_be_shared__c</fullName>
         <externalId>false</externalId>
         <label>How can information be shared</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Phone</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Letter</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>e-mail</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>salesforce</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>in person</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Letter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>e-mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>salesforce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>in person</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Organisation__c</fullName>
@@ -185,19 +184,22 @@
         <fullName>Support_agency_status__c</fullName>
         <externalId>false</externalId>
         <label>Support agency status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Telephone_number__c</fullName>

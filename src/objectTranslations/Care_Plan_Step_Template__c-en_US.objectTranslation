@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Care Plan Step Template</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Care Plan Step Templates</value>
+    </caseValues>
+    <fields>
+        <label><!-- Care Plan Obj Template --></label>
+        <name>Care_Plan_Obj_Template__c</name>
+        <relationshipLabel><!-- Care Plan Step Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This is the order the steps will be created in, to all the &quot;What step needs to happen first&quot; step to exist when this step is created --></help>
+        <label><!-- Creation Order --></label>
+        <name>Creation_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Tick to include this step in the care plan --></help>
+        <label><!-- Include this step --></label>
+        <name>Include_this_step__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What care plan step needs to happen first? --></help>
+        <label><!-- What step needs to happen first --></label>
+        <name>What_step_needs_to_happen_first__c</name>
+        <relationshipLabel><!-- Care plan steps --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

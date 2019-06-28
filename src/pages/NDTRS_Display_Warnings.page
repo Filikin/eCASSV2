@@ -1,0 +1,10 @@
+<apex:page standardController="NDTRS_Form_2016__c" extensions="NDTRS_Display_Warnings">
+    <apex:pageblock title="{!$Label.NDTRS_Warnings_title}" rendered="{!warnings.size > 0}">
+        <apex:pageblocktable value="{!warnings}" var="oneMsg">
+            <apex:column ><apex:outputlink value="/{!oneMsg.recordID}">{!oneMsg.errorMsg}</apex:outputlink></apex:column>
+        </apex:pageblocktable>
+    </apex:pageblock>
+    <apex:pageblock title="{!$Label.NDTRS_No_Warnings_Title}" rendered="{!warnings.size = 0}">
+    </apex:pageblock>
+    <apex:outputlink value="/{!currentForm.ID}">{!$Label.NDTRS_Click_to_return_to_treatment}</apex:outputlink>
+</apex:page>

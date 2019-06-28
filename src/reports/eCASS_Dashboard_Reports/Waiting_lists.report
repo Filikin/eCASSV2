@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$Contact.Full_name__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Date_of_Referral__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Referral__c.Referral_Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Waiting List</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Referral__c.Referred_to_Programme__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Referral__c.Referred_to_Programme__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Waiting lists</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Referral__c@Referral__c.Client__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Referral__c.Date_of_Referral__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Referral__c.Date_of_Referral__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

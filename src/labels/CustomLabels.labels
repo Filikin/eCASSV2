@@ -380,6 +380,2371 @@
         <value>Click to mark as Attended</value>
     </labels>
     <labels>
+        <fullName>NDTRS_ASSESS_Q12_and_Q15</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ASSESS Q12 and Q15</shortDescription>
+        <value>Date of assessment cannot be before date of referral or after date of first treatment. Please confirm and amend appropriate dates</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_AgeOpiateSub</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AgeOpiateSub</shortDescription>
+        <value>The client is recorded as previously receiving opiate substitution treatment but the age is missing. Please check and provide age.  If unknown, record 99.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Age_1st_Used</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Age 1st Used</shortDescription>
+        <value>The age (drug name) was 1st used does not match at Q21-25d and Q26</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Ages_of_1st_use_1st_injected_consistency</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ages of 1st use 1st injected consistency</shortDescription>
+        <value>The age that the client first injected (Q30b) is less than the age first used any drug (Q26).  Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Ages_of_1st_use_Q26</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ages of 1st use</shortDescription>
+        <value>The age the client first used any drug (Q26) cannot be greater than any of the ages recorded at Q21d-25d (excluding alcohol and other problems). Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Assessment_Date_Before_Referral</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Assessment Date Before Referral</shortDescription>
+        <value>Date of assessment cannot be before the date of referral. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Check_1st_drug_not_applicable</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check 1st drug not applicable</shortDescription>
+        <value>The clients has a drug problem listed (Q21a-Q25a) however age first used any drug (Q27a) and/or first drug any ever used (Q27b) are recorded as not applicable.  Please specify the age first used any drug and the first drug ever used (incl licit drugs).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Check_methadone</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check methadone</shortDescription>
+        <value>Methadone unspecified is listed as a problem drug, please clarify if it is street or prescribed methadone.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Click_to_return_to_treatment</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Click to return to treatment</shortDescription>
+        <value>Click to return to treatment</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Currently_Injecting_Q21_Q25_equal_4</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Currently Injecting Q21 Q25 equal 4</shortDescription>
+        <value>If the only record of injecting listed at Q21-25 for a problem drug is where frequency = 4, Q30c can&apos;t be 1.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Currently_Injecting_Q30a_equal_2</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Currently Injecting Q30a equal 2</shortDescription>
+        <value>This client is recorded as injecting in the past month. This does not correspond with history of injecting. Please confirm and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Currently_Injecting_Q30c</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Currently Injecting</shortDescription>
+        <value>This client reports injecting in the last 30 days, however injecting does not appear as the route of administration for a problem drug used in the last month.This is a contradiction. Please check and confirm: route of administration, frequency of use in the past month and whether they have injected in the past month</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_DOC_Before_Assessment_Date</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS DOC Before Assessment Date</shortDescription>
+        <value>Treatment start date (DOC) cannot be before ‘Referral’ and ‘Assessment’ dates.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Duplicate_drug</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate drug</shortDescription>
+        <value>The same drug is listed more than once in Q21a-Q25a.  Please check drugs are correct and where possible specify exact name.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_EmployCode</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmployCode</shortDescription>
+        <value>Client NDTRS LINK Demographic Details. Q10. Employment status of client is missing. Please provide correct details</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Ever_Injected</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ever Injected</shortDescription>
+        <value>The route for a problem drug has been entered as Injected, therefore Q30a &apos;Ever Injected&apos; must be yes. Please check and amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_ExitDate</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExitDate</shortDescription>
+        <value>The exit date is blank. Please check intervention end dates and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Exit_Date_Too_Early</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Exit Date Too Early</shortDescription>
+        <value>Date client finish treatment (Exitdate) can only be the same as or after ‘Referral’ , ‘Assess’, ‘Doc (treatment start date)’ and ‘Substart’  dates</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_First_drug_and_age_first_used_cannot_be_alcohol_or_tobacco</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>First drug and age first used cannot be alcohol or tobacco</shortDescription>
+        <value>Please specify age first used any drug and first drug used for this client (other than alcohol and tobacco) if applicable.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Freq_of_Injecting</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freq of Injecting</shortDescription>
+        <value>The client is recorded as ever injecting. Please provide information on frequency of injecting.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Homesless_prison_and_Living_with_Whom</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Homesless/prison and Living with Whom</shortDescription>
+        <value>Please confirm living status and living with who as if the client is in prison or institution then living with whom must be &quot;other&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Injected_but_not_in_last_30_days</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Injected but not in last 30 days</shortDescription>
+        <value>Please record the frequency of injecting.  If the client has been injecting in the 30 days prior to entering treatment, please update Q21-25 as appropriate.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Intervention_Date_Check</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Intervention Date Check</shortDescription>
+        <value>End date must be on or after the start date</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Intervention_Details_Check</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Intervention Details Check</shortDescription>
+        <value>All interventions details must be either complete or blank when date of final discharge is set</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Intervention_Start_Date</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Intervention Start Date</shortDescription>
+        <value>There must be a value at Q32b Treatment Interventions Date Started for at least one intervention. If there are any interventions listed, we must also have at least one start date listed.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Link_Form_Open_Msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Link Form Open Msg</shortDescription>
+        <value>You cannot open a new NDTRS Link Form until all the other NDTRS Link Forms on this client are closed</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Living_with_Children</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Living with Children</shortDescription>
+        <value>If option 5 or 6 selected at Q6. Must include at least one child living with the service user.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Living_with_Children_not_indicated</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Living with Children not indicated</shortDescription>
+        <value>If Total number of Children is &gt; 0 and not 99, Q6 must be 5 or 6</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Missing_Exit_Previous_Year</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Missing Exit Previous Year</shortDescription>
+        <value>This client appears to have started a treatment episode in a previous year and have started another new treatment episode in this current year. Please complete and return exit details (Q33 to Q35) for their previous treatment started in 20## as they should have been discharged</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Missing_drug_data</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Missing drug data</shortDescription>
+        <value>Route of Admin, Frequency of Use and Age first used must be entered where a problem has been entered at Q21-25a</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Missing_drug_name</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Missing drug name</shortDescription>
+        <value>Please specify the missing problem drugs at Q21, 22, 23, 24 or 25.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Neveralcohol</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Neveralcohol</shortDescription>
+        <value>This client appears to have been treated at this centre already for problem alcohol use and therefore cannot be recorded as never treated. Please check and correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Neverdrugs</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Neverdrugs</shortDescription>
+        <value>This client appears to have been treated at this centre already for problem drug use and therefore cannot be recorded as never treated. Please check and correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_No_Warnings_Title</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS No Warnings Title</shortDescription>
+        <value>No warnings detected</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Number_of_children_living_with_client</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Number of children living with client</shortDescription>
+        <value>Please enter the number of children at Q6, this is required because the client is said to be living with their children at Q5.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q13_blank</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q13 blank</shortDescription>
+        <value>The value for the main problem is missing. Please amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q18_Never_treated_and_Q19</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q18 Never treated and Q19</shortDescription>
+        <value>This client has attended this centre in the past (Q18), but is recorded as never been treated for drugs and/or alcohol in the past (Q19).  Please check and confirm:</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q19_alcohol_and_Q29_missing_alcohol_data</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q19 alcohol and Q29 missing alcohol data</shortDescription>
+        <value>Q29d if grater than 0 and different to 99, must be previously treated for alcohol at Q19</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q19_older_than_Q20b</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q19 older than Q20b</shortDescription>
+        <value>The age the client was first treated is recorded as being older than the age they first received opiate substitution (Q20b). Please check which is correct and amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q19_previously_treated_and_Q20a</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q19 previously treated and Q20a</shortDescription>
+        <value>If opiate substitution has been recorded at Q20a, please ensure Q19 shows previously treated for drugs and an age must be entered at Q20b</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q19_previously_treated_and_Q20b</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q19 previously treated and Q20b</shortDescription>
+        <value>If opiate substitution has been recorded at Q20a, please ensure Q19 shows previously treated for drugs and an age must be entered at Q20b</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Q9_and_Q10_Employment_and_Education</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Q9 and Q10 Employment and Education</shortDescription>
+        <value>Employment status (Q10) and education (Q9b) do not correspond.  Is the client currently a student (in main stream school or college) or are they attending a FAS/training course/Youth Reach.  If the client is a full time student they should be recorded as student in Employment status.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_REFERRAL_Q12</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REFERRAL Q12</shortDescription>
+        <value>Date of referral cannot be after date of assessment or date of treatment. Please confirm or correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Reason_Q13</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason Q13</shortDescription>
+        <value>Main problem drug or problem is missing. Please provide value</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Route_of_admin_Q21_Q25_not_equal_to_inject</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Route of admin Q21 Q25 not equal to inject</shortDescription>
+        <value>This client does not report injecting in the last 30 days (Q30c), therefore frequence at Q30c cannot be &quot;in the last 30 days&quot;. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_102</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 102</shortDescription>
+        <value>The clients listed below have unspecified cocaine recorded as a problem substance along with a specified type of cocaine. Please clarify whether the client has a problem with two forms of cocaine? Or should the unspecified cocaine be coke (powder) or crack?</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105_D1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>21a Main drug. This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105_D2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>22a Drug 2. This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105_D3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>23a Drug 3. This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105_D4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>24a Drug 4. This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_105_D5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 105</shortDescription>
+        <value>25a Drug 5. This client has {0} listed as a problem drug. Should this be street methadone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106_D1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>21a Main drug. This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106_D2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>22a Drug 2. This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106_D3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>23a Drug 3. This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106_D4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>24a Drug 4. This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_106_D5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 106</shortDescription>
+        <value>25a Drug 5. This client has {0} listed as a problem drug. Should this be street Suboxone? Otherwise please clarify and where possible please provide the problem opiate that brought the client to seek treatment originally (provide name, route, frequency and age first used).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107_D1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>21a Main drug. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107_D2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>22a Drug 2. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107_D3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>23a Drug 3. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107_D4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>24a Drug 4. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_107_D5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 107</shortDescription>
+        <value>25a Drug 5. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street methadone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108_D1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>21a Main drug. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108_D2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>22a Drug 2. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108_D3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>23a Drug 3. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108_D4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>24a Drug 4. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_108_D5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 108</shortDescription>
+        <value>25a Drug 5. This client has never previously been treated for drug use, yet {0} is listed as a problem drug. Is this street Suboxone? Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_111</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 111</shortDescription>
+        <value>This client appears to have starting using Drugs or Alcohol from a very young age/or aged over 45. This is unusual, please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_112</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 112</shortDescription>
+        <value>This client appears to have starting using alcohol from a very young age/or aged over 45. This is unusual, please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_116</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 116</shortDescription>
+        <value>At least 1 type of alcohol must be selected</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_117</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 117</shortDescription>
+        <value>The client is recorded as consuming more than 66 standard drinks in a typical drinking day in the past month. This is equivalent to drinking 3 bottles of whiskey. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_118</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 118</shortDescription>
+        <value>Alcohol is listed as a problem drug at Q21-25, therefore Q29a, b and c must all be answered</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_119</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 119</shortDescription>
+        <value>Client is recorded as having consumed no standard drinks in the past month at Q29b, however this does not match the frequency of alcohol use in problem drug table Q21-25. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_120</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 120</shortDescription>
+        <value>Client is recorded as having consumed a number of standard drinks in the past month at Q29b, however this does not match the frequency of alcohol use in problem drug table Q21-25. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_121</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 121</shortDescription>
+        <value>The client is recorded as having consumed alcohol in Q29a to 29c but alcohol is not recorded in the problem drug table. Please check and amend. Only include alcohol as a problem drug if it is part of the client current problems.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_124</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 124</shortDescription>
+        <value>The age that the client first injected (Q30b) is less than the age they started using their current problem drug(s) (Q21-25). Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_125</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 125</shortDescription>
+        <value>The primary problem drug is not injected daily however subsequent drug(s) (Q21a-25a) are injected on a daily basis. Please confirm that the order that the problem drugs are listed in the correct order.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_126</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 126</shortDescription>
+        <value>This client appears to have starting injecting drugs from a very young age/or aged over 45. This is unusual, please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_129</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 129</shortDescription>
+        <value>The client is recorded as currently injecting a drug. However the age the client first started injecting (any drug) (Q30b) is recorded as greater than the age at they first started using that particular drug. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_132</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 132</shortDescription>
+        <value>The client is recorded as having shared needles/syringes in the past but is recorded as never injecting or unknown. Please clarify.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_141</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 141</shortDescription>
+        <value>Sharing of any other drug paraphernalia (other than needles and syringes)(Q30e). This question is not answered. Please complete.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_144</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 144</shortDescription>
+        <value>Date a treatment started cannot be before the date of assessment. Please check and correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_145</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 145</shortDescription>
+        <value>The client is said to have exited treatment but some treatment interventions have not finish date recorded or number of sessions. Please check and update the record</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 1. Brief Intervention.The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_10</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 10. Family Therapy. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_11</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 11. Strengthening Family Programme. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_12</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 12. Psychiatric Treatment. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_13</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 13. Multicomponent model 1. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_14</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 14. Multicomponent model 2. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_15</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 15. Methadone substitution. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_16</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 16. Buprenorphine/naloxoneSubstitution. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_17</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 17. Detox Alcohol. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_18</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 18. Detox from Heroin. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_19</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 19. Detox from Methadone. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 2. Individual Counseling. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_20</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 20. Detox from benzodiazepines. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_21</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 21. Detox from Z drugs. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_22</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 22. Detox from Other Drug. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_23</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 23. Community detox. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_24</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 24. Key worker appointed/ number of key working sessions. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_25</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 25. Case manager appointed. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_27</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 27. SAOR. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_28</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 28. Future Activity. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 3. Group Counseling. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 4. Individual Education/ Awareness Programme. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 5. Group Education/ Awareness Programme. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_6</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 6. Medication Free Therapy. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_7</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 7. Complementary Therapy. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_8</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 8. Social and/or Occupational Reintegration. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_146_9</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 146</shortDescription>
+        <value>Please check Inter 9. Family Therapy. The number of sessions recorded for this intervention is greater than the number of days recorded. Usually only one session per day per intervention is recorded. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 1. Brief Intervention. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_10</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 10. Structured Aftercare Programme. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_11</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 11. Strengthening Family Programme. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_12</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 12. Psychiatric Treatment. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_13</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 13. Multicomponent model 1. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_14</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 14. Multicomponent model 2. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_15</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 15. Methadone substitution. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_16</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 16. Buprenorphine/naloxoneSubstitution. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_17</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 17. Detox Alcohol. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_18</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 18. Detox from Heroin. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_19</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 19. Detox from Methadone. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 2. Individual Counseling. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_20</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 20. Detox from benzodiazepines. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_21</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 21. Detox from Z drugs. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_22</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 22. Detox from Other Drug. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_23</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 23. Community detox. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_24</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 24. Key worker appointed/ number of key working sessions. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_25</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 25. Case manager appointed. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_27</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 27. SAOR. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_28</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 28. Future Activity. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 3. Group Counseling. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 4. Individual Education/ Awareness Programme. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 5. Group Education/ Awareness Programme. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_6</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 6. Medication Free Therapy. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_7</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 7. Complementary Therapy. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_8</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 8. Social and/or Occupational Reintegration. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_147_9</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 147</shortDescription>
+        <value>Please check Inter 9. Family Therapy. There is more than one year between date intervention started and date it finished. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148_DA</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Detox Alcohol. Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148_DB</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Detox from benzodiazepines. Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148_DH</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Detox from Heroin. Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148_DM</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Detox from Methadone. Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_148_DZ</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 148</shortDescription>
+        <value>Detox from Z drugs. Please check the drugs used to assist the detoxification process</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_149</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 149</shortDescription>
+        <value>This client is said to have received an alcohol detox but alcohol is not recorded as a problem drug. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_14_and_15</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 14 and 15</shortDescription>
+        <value>You must select gender and/or transgender preference (Q3) on the client</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_150</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 150</shortDescription>
+        <value>This client is said to have received a detox from heroin but heroin is not recorded as a problem drug. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_151</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 151</shortDescription>
+        <value>This client is said to have received a detox from methadone but methadone/or another opiate is not recorded as a problem drug. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_152</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 152</shortDescription>
+        <value>This client is said to have received a detox from a benzodiazepine but no benzodiazepine is recorded as a problem drug. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_153</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 153</shortDescription>
+        <value>This client is said to have received a detox from a Z drug but no Z drugs are recorded as a problem drug. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_155</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 155</shortDescription>
+        <value>EXAMPLEThe client is recorded as receiving a cannabis {0} detoxification but cannabis {0}is not listed as one of their problem drugs, please check and amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_156</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 156</shortDescription>
+        <value>The client is recorded as receiving opiate substitution but they have no opiates listed as a problem drug. There may be exceptions, but they are unusual. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_157</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 157</shortDescription>
+        <value>This client is recorded as receiving an opiate detoxification and opiate substitution during the same treatment episode dates. The dates should run conncurrently. Please amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_158</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 158</shortDescription>
+        <value>This client is recorded as receiving opiate substitution and medication free therapy during the same treatment episode dates. These interventions should run concurrently. Please amend.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_159</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 159</shortDescription>
+        <value>The client exited treatment for non compliance but reason was left blank. Please complete with the reason for non compliance (1 to 5 only).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_162</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 162</shortDescription>
+        <value>Has this client has left treatment? If so please ensure all treatment end dates are completed and update exit details.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>1. Brief Intervention. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_10</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>10. Structured Aftercare Programme. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_11</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>11. Strengthening Family Programme. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_12</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>12. Psychiatric Treatment. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_13</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>13. Multicomponent model 1. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_14</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>14. Multicomponent model 2. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_15</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>15. Methadone substitution. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_16</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>16. Buprenorphine/naloxoneSubstitution. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_17</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>17. Detox Alcohol. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_18</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>18. Detox from Heroin. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_19</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>19. Detox from Methadone. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>2. Individual Counseling. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_20</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>20. Detox from benzodiazepines. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_21</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>21. Detox from Z drugs. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_22</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>22. Detox from Other Drug. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_23</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>23. Community detox. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_24</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>24. Key worker appointed/ number of key working sessions. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_25</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>25. Case manager appointed. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_27</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>27. SAOR. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_28</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>28. Future Activity. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>3. Group Counseling. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>4. Individual Education/ Awareness Programme. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>5. Group Education/ Awareness Programme. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_6</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>6. Medication Free Therapy. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_7</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>7. Complementary Therapy. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_8</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>8. Social and/or Occupational Reintegration. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_163_9</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 163</shortDescription>
+        <value>9. Family Therapy. If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_164</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 164</shortDescription>
+        <value>If a client only receives one session of an intervention the start and end date must be the same. Please check and confirm dates and/or number of sessions.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_165</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 165</shortDescription>
+        <value>Please check dates: date client started treatment must be before or the same as date they finished treatment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_166</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 166</shortDescription>
+        <value>Please check dates: date of final discharge/exit cannot be before the date the client finished any of their treatment interventions</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_167</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 167</shortDescription>
+        <value>Please check dates: date of final discharge/exit cannot be before the date the client finished any of their treatment interventions</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_168</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 168</shortDescription>
+        <value>Please complete the number of sessions for each interventions with start and end dates.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_169</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 169</shortDescription>
+        <value>Please confirm the correct dates and number of sessions have been recorded. There should normally only be one session per day for each intervention</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_170</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 170</shortDescription>
+        <value>These options can only be chosen if treatment is provided within prison either through in-reach or prison medical services. Please amend your centretype or confirm with the NDTRS team that your service is now providing treatment in prison.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_171</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 171</shortDescription>
+        <value>Please clarify or specify the exit details of the client. Please provide text or choose most appropriate option from list</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_172</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 172</shortDescription>
+        <value>If client was transferred to another service, please specify the service name from the list. If you cannot find the service name choose ##### or contact ndtrs@hrb.ie. NOTE: ##### refers to the service provider label in the list corresponding to code 23232 (unspecified drug service)</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_173</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 173</shortDescription>
+        <value>Please check and confirm Q33d. If family therapy or strengthening family programme was part of the treatment provided then the number of family members involved (Q33d) should not be zero.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_175</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 175</shortDescription>
+        <value>The client is recorded as using opiates frequently immediately before entering medication free therapy immediately without getting any prior detoxification. Is this correct?</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_176</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 176</shortDescription>
+        <value>This clients is recorded as having received a strengthening family programme as an intervention, however s/he is older than 18 years. Was this family therapy or other meetings with family members? Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_177</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 177</shortDescription>
+        <value>The client is recorded as using drugs or alcohol frequently immediately before entering medication free therapy immediately without getting any prior detoxification. Is this correct?</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_178</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 178</shortDescription>
+        <value>Please check interventions given to this client. They are recorded as only receiving key working, care planning and/or case management as interventions on exit. Please record any other interventions that they may have received</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_179</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 179</shortDescription>
+        <value>Please specify client&apos;s condition on exit. Q33a Exit detail - Other: can only be entered if option 10 is selected at Q33a</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_17b</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 17b</shortDescription>
+        <value>The age of the client is less than 10 or over 75.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_180</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 180</shortDescription>
+        <value>Condition of client on exit is related to drug use however no drugs are recorded at Q21-25. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_181</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 181</shortDescription>
+        <value>Condition of client on exit is related to alcohol use however alcohol is not recorded at Q21-25. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_182</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 182</shortDescription>
+        <value>Clients condition on exit cannot be unknown and another option chosen. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_183</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 183</shortDescription>
+        <value>Please check the exit date against the end date of the other interventions. Exit date cannot be before any treatment end date.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_184</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 184</shortDescription>
+        <value>The client is recorded as been transferred or referred to another drug treatment service. Please provide details at Q33b.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_185</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 185</shortDescription>
+        <value>Please specify service that client was transferred or referred to.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_186</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 186</shortDescription>
+        <value>The following clients were treated in prison and family members were involved in this treatment (Q33c), please check and confirm the information provided is correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_187</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 187</shortDescription>
+        <value>The following clients all completed treatment however there is a gap between the date the last intervention finished and the date they were discharged. Should discharge date be the same date as the last intervention, as it would be agreed with the client that their treatment was completed?</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_188</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 188</shortDescription>
+        <value>Client is recorded as being released or transferred from prison, however does not appear to have received treatment in prison. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_189</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 189</shortDescription>
+        <value>Did the client have a care plan? If so lease update treatment interventions, otherwise amend condition at ext</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_20</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 20</shortDescription>
+        <value>Please confirm whether the client is in prison (centre type = 41)</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_25</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 25</shortDescription>
+        <value>The client is less than 15 and is recorded as having children, this is unusual, please check</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_26</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 26</shortDescription>
+        <value>The client is older than 55 and is recorded as having children under 5 years old, this is unusual, please check</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_28</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 28</shortDescription>
+        <value>Please record the highest level of education the client completed.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_29</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 29</shortDescription>
+        <value>Client NDTRS LINK Demographic Details. Q9b. Age left primary/secondary school is missing. Please complete Q9b.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_30</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 30</shortDescription>
+        <value>The age the client first left school is less than 6 or greater than 21 years. This is unlikely. Please confirm the age the client FIRST left primary or secondary school (not third level).</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_31</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 31</shortDescription>
+        <value>The client is recorded as been aged over 21 but still at school at Q9b. This question only applies to primary or secondary school. Please record age first left primary or secondary school</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_32</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 32</shortDescription>
+        <value>Education age and education level do not correspond. Client is said to have never been to school, please confirm that this is correct. If client has ever attended any schooling please provide age left school and highest level completed.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_33</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 33</shortDescription>
+        <value>The age the client FIRST left education is less than 16 but it is recorded that they completed the leaving cert. Please confirm that this is correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_34</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 34</shortDescription>
+        <value>The age the client FIRST left education is greater than 16 but it is recorded that they only completed primary education but not junior cert. Please confirm that this is correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_35</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 35</shortDescription>
+        <value>The age the client FIRST left education is less than 16 but it is recorded that they subsequently finished third level. Please confirm that this is correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_36</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 36</shortDescription>
+        <value>The age the client FIRST left education is greater than 14 but it is recorded that they did not complete primary education. Please confirm that this is correct</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_39</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 39</shortDescription>
+        <value>Employment status of client marked as unknown. Please provide correct details where possible.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_40</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 40</shortDescription>
+        <value>Please clarify or specify employment status - if other provide text or choose most appropriate option from list</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_42</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 42</shortDescription>
+        <value>This client is over 66 years old and recorded as unemployed. Please check details are correct as it is possible to claim old age pension after the age of 66.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_50</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 50</shortDescription>
+        <value>Reason why client did not accept treatment is missing. Please provide answer.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_1</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 1. Brief Intervention - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_10</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 10. Structured Aftercare Programme - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_11</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 11. Strengthening Family Programme - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_12</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 12. Psychiatric Treatment - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_13</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 13. Multicomponent model 1 - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_14</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 14. Multicomponent model 2 - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_15</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 15. Methadone substitution - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_16</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 16. Buprenorphine/naloxoneSubstitution - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_17</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 17. Detox Alcohol - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_18</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 18. Detox from Heroin - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_19</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 19. Detox from Methadone - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_2</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 2. Individual counselling - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_20</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 20. Detox from benzodiazepines - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_21</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 21. Detox from Z drugs - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_22</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 22. Detox from Other Drug - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_23</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 23. Community detox - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_24</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 24. Key worker appointed/ number of key working sessions - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_25</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 25. Case manager appointed - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_26</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 26. Care Plan - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_27</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 27. SAOR - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_28</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 28. Future Activity - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_3</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 3. Group Counselling - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_4</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 4. Individual Education/ Awareness Programme - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_5</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 5. Group Education/ Awareness Programme - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_6</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 6. Medication Free Therapy - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_7</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 7. Complementary Therapy - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_8</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 8. Social and/or Occupational Reintegration - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_51_9</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 51</shortDescription>
+        <value>Please confirm Inter 9. Family Therapy - the client waited 30 days or more to start treatment after assessment.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_6</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 6</shortDescription>
+        <value>There is over 3 months between either referral and assessment or assessment and treatment, please check that dates are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_60</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 60</shortDescription>
+        <value>This is the second treatment episode for this client this year, but s/he is recorded as never been treated for drugs in the past. This is only correct if they treated for alcohol. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_61</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 61</shortDescription>
+        <value>This is the second treatment episode for this client this year, but s/he is recorded as never been treated for alcohol in the past. This can only be correct if they were treated for drugs last time. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_62</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 62</shortDescription>
+        <value>This is the second treatment episode for this client this year, but s/he is recorded as never been treated for their problem (gambling etc) in the past. This can only be correct if they were treated for drugs and/or alcohol last time. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_63</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 63</shortDescription>
+        <value>The client is recorded as previously receiving opiate treatment but is recorded as never been treated for drugs in the past. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_68</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 68</shortDescription>
+        <value>Please check date the client started their opiate subsitution. It does not correlate with the other dateas entered</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_70</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 70</shortDescription>
+        <value>The age the client was first treated is younger than 16 years. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_72</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 72</shortDescription>
+        <value>Client has been previously treated for drugs. Age first treated is blank. Please record if possible age first treated for drugs (excluding alcohol and other problems). If unknown, record 99.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_73</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 73</shortDescription>
+        <value>Q19 History of treatment must be &apos;Previously Treated&apos; for at least one problem if Q18 is greater than 1</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_74</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 74</shortDescription>
+        <value>The age the client was first treated is younger than 16 years. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_75</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 75</shortDescription>
+        <value>Client has been previously treated for problem alcohol use. Age first treated is blank. Please record if possible age first treated for problem alcohol use (excluding drugs and other problems). If unknown, record 99.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_76a</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 76b</shortDescription>
+        <value>The client is being treated for other problems (gambling etc). Please provide treatment history details - ever treated, age first treated.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_76b</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 76b</shortDescription>
+        <value>The client is being treated for other problems (gambling etc). Please provide treatment history details - ever treated, age first treated.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_77</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 77</shortDescription>
+        <value>Name of other problem is missing. Please record.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_78</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 78</shortDescription>
+        <value>The age the client was first treated is younger than 16 years. Please check and confirm.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_79</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 79</shortDescription>
+        <value>Client has been previously treated for other problems (gambling etc). Age first treated is blank. Please record if possible age first treated (excluding alcohol drugs). If unknown, record 99.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_83</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 83</shortDescription>
+        <value>The client is recorded as receiving opiate substitution treatment before the age of 16. Please check and confirm that this is correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_88</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 88</shortDescription>
+        <value>It is very unusual to eat or drink Heroin. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_89</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 89</shortDescription>
+        <value>It is very unusual for {0} to be {1}. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_90</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 90</shortDescription>
+        <value>It is very unusual for (drug name) to be (route of admin). Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_91</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 91</shortDescription>
+        <value>It is very unusual for MDMA to be (route of admin). Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_92</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 92</shortDescription>
+        <value>It is very unusual for (drug name) to be (route of admin). Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_93</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 93</shortDescription>
+        <value>(drug name) usually falls into the category of eat/drink. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_94</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 94</shortDescription>
+        <value>{0} is usually sniffed. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_95</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 95</shortDescription>
+        <value>{0} is not usually injected. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_96</fullName>
+        <categories>NDTRS, Warning</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 96</shortDescription>
+        <value>{0} usually falls into the category of eat/drink. Please check the route of admin and drug are correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_99</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule 99</shortDescription>
+        <value>Please specify age first used any drug and first drug used for this client (other than alcohol and tobacco) if applicable.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Rule_EDLEVEL</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Rule EDLEVEL</shortDescription>
+        <value>Client NDTRS LINK Demographic Details. Q9a. Education highest level is missing. Please record the highest level of education the client completed</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_SPECIFYX_Q13_not_equal_Q21a</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SPECIFYX Q13 and Q21a</shortDescription>
+        <value>The main reason for referal (Q13) is different to the main problem drug in Q21a. They must be the same. Please check and correct.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_SharedNeedle</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SharedNeedle</shortDescription>
+        <value>The client is recorded as ever injecting. Please provide information around sharing needles and syringes.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Substart_Too_Early</fullName>
+        <categories>NDTRS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Substart Too Early</shortDescription>
+        <value>Substitution start date (Substart) can only be the same as or after  ‘Referral’ , ‘Assess’ and ‘Doc (treatment start date)’  dates</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Times_Q18_and_Q20a</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Times Q18 and Q20a</shortDescription>
+        <value>This client appears to have been treated at this centre already this year. Q18 must be checked and fixed to correspond with any other episodes for this client, in this centre, this year. If previous episodes are missing, please ensure these are entered.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Total_number_of_Children</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total number of Children</shortDescription>
+        <value>The total number of children which the client has is missing. Please provide value. If none, enter zero, if unknown enter 99</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Treatment_start_date</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Treatment start date</shortDescription>
+        <value>Please check the treatment start dates of all interventions, sa they cannot be before the date of initial assessment. Amend any incorrect dates.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Under_16_and_Unemployed</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Under 16 and Unemployed</shortDescription>
+        <value>This client is less than 16 years old and is unemployed. Please check details are correct as it is not possible to claim unemployment benefit until aged 16.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Viral_screening</fullName>
+        <categories>NDTRS, Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Viral screening</shortDescription>
+        <value>Please check and complete the clients history of viral screening. Some of the values are missing.</value>
+    </labels>
+    <labels>
+        <fullName>NDTRS_Warnings_title</fullName>
+        <categories>NDTRS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NDTRS Warnings title</shortDescription>
+        <value>Warnings about this treatment form</value>
+    </labels>
+    <labels>
         <fullName>Next_review_date</fullName>
         <language>en_US</language>
         <protected>false</protected>

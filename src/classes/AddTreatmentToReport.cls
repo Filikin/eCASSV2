@@ -6,6 +6,7 @@
 
 	EK 22/09/2015 To avoid XSRF issues, the list of treatments to be added is displayed first and then added to the report when a button is clicked
 	EK 29/01/2016 Changing to update the treatments all in one go (needed for end of year)
+	EK 9/11/2016 changing to use Q21a Date this treatment started instead of Q16 Date of assessment as the criteria to select the forms
 */
 public with sharing class AddTreatmentToReport 
 {
@@ -63,15 +64,15 @@ public with sharing class AddTreatmentToReport
         String startReportPeriod = String.valueOf(year) + startMonthDay;
         String endReportPeriod = String.valueOf(year) + endMonthDay;
  
- 		String queryString = 'select id, Name, Contact__c, X16_Date_of_Assessment__c, HRB_Report__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c, Treatment_Type_Check__c from HRB_Form__c where HRB_Report__c != \'' + reportParams.Id + '\' and ';
+ 		String queryString = 'select id, Name, Contact__c, X16_Date_of_Assessment__c, X21a_Date_This_treatment_started__c, HRB_Report__c, Contact_Record_Valid__c, Main_Intervention_Valid__c, Drug_Validation__c, Treatment_Type_Check__c from HRB_Form__c where HRB_Report__c != \'' + reportParams.Id + '\' and ';
  		
  		 if (reportParams.Type_of_report__c == 'Clients who entered during the report period') 
          {
-            queryString += 'X16_Date_of_Assessment__c >= ' + startReportPeriod + ' and X16_Date_of_Assessment__c <= ' + endReportPeriod;
+            queryString += 'X21a_Date_This_treatment_started__c >= ' + startReportPeriod + ' and X21a_Date_This_treatment_started__c <= ' + endReportPeriod;
          }
          else
          {
-            queryString += 'ExitDate__c >= ' + startReportPeriod + ' and ExitDate__c <= ' + endReportPeriod + ' and X16_Date_of_Assessment__c < ' + startReportPeriod;
+            queryString += 'ExitDate__c >= ' + startReportPeriod + ' and ExitDate__c <= ' + endReportPeriod + ' and X21a_Date_This_treatment_started__c < ' + startReportPeriod;
          }
          
          TreatmentsWithClientsList = Database.query(queryString);

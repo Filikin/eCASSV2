@@ -182,7 +182,7 @@ public with sharing class EventTriggerClass implements TriggerDispatcher.ITrigge
         }
         if (newSteps.size() > 0) insert newSteps;
         if (currentSteps.size()> 0) update currentSteps;
-        if (clientsCarePlanObjectives.size()>0) update clientsCarePlanObjectives.values();
+//        if (clientsCarePlanObjectives.size()>0) update clientsCarePlanObjectives.values(); -- EK 27/09/2018 I can't see the point in this line and it is causing an exception if the user only has read access to the objective
     }
     
     public void CopyFieldsFromEventToAttendance (Event oneEvent, Attendance__c oneAttendance)

@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -81,43 +77,46 @@
         <fullName>Alcohol_Route__c</fullName>
         <externalId>false</externalId>
         <label>Alcohol Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Alcohol_Total__c</fullName>
@@ -195,43 +194,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Amphetamines_Route__c</fullName>
         <externalId>false</externalId>
         <label>Amphetamines Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Amphetamines_Total__c</fullName>
@@ -315,43 +317,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Benzodiazepines_Route__c</fullName>
         <externalId>false</externalId>
         <label>Benzodiazepines Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Benzodiazepines_Total__c</fullName>
@@ -430,43 +435,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Cannabis_Route__c</fullName>
         <externalId>false</externalId>
         <label>Cannabis Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Cannabis_Total__c</fullName>
@@ -554,43 +562,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Cocaine_Route__c</fullName>
         <externalId>false</externalId>
         <label>Cocaine Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Cocaine_Total__c</fullName>
@@ -677,43 +688,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Crack_Route__c</fullName>
         <externalId>false</externalId>
         <label>Crack Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Crack_Total__c</fullName>
@@ -992,43 +1006,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Ecstasy_Route__c</fullName>
         <externalId>false</externalId>
         <label>Ecstasy Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Ecstasy_Total__c</fullName>
@@ -1095,19 +1112,22 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Ever_Injected__c</fullName>
         <externalId>false</externalId>
         <label>Ever Injected</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Fraud_forgery_handling_stolen_goods__c</fullName>
@@ -1133,43 +1153,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Head_Shop_Route__c</fullName>
         <externalId>false</externalId>
         <label>Head Shop Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Head_Shop_Total__c</fullName>
@@ -1323,43 +1346,46 @@ Week 1 = 4 weeks ago</inlineHelpText>
         <fullName>Opiates_Route__c</fullName>
         <externalId>false</externalId>
         <label>Opiates Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Opiates_Total__c</fullName>
@@ -1447,43 +1473,46 @@ g/day</inlineHelpText>
         <fullName>Other_sedatives_Route__c</fullName>
         <externalId>false</externalId>
         <label>Other sedatives Route</label>
-        <picklist>
-            <picklistValues>
-                <fullName>1 = inject</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2 = smoke</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3 = eat/drink</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4 = sniff/snort</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5 = sublingual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6 = rectal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7 = topical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9 = not known</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 = inject</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 = smoke</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 = eat/drink</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 = sniff/snort</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 = sublingual</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 = rectal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 = topical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 = not known</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Other_sedatives_Total__c</fullName>
@@ -1555,284 +1584,293 @@ tablets/days</inlineHelpText>
         <externalId>false</externalId>
         <inlineHelpText>Client&apos;s rating of overall quality of life (e.g. able to enjoy life, gets on wekk with family and partner)</inlineHelpText>
         <label>Overall Quality of Life</label>
-        <picklist>
-            <picklistValues>
-                <fullName>0</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>11</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>15</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>16</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>17</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>18</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>19</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>20</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>18</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>19</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Physical_Health_Status__c</fullName>
         <externalId>false</externalId>
         <label>Physical Health Status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>0</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>11</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>15</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>16</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>17</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>18</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>19</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>20</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>18</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>19</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Psychological_health_status__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Client&apos;s rating ofpsychoological health status (anxiety, depression and problem emotions and feelings)</inlineHelpText>
         <label>Psychological health status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>0</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>1</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>7</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>8</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>9</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>10</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>11</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>12</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>13</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>14</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>15</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>16</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>17</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>18</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>19</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>20</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>18</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>19</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Shoplifting_Total__c</fullName>
@@ -1984,39 +2022,42 @@ tablets/days</inlineHelpText>
         <fullName>Treatment_Stage__c</fullName>
         <externalId>false</externalId>
         <label>Treatment Stage</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Start</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Top 2</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Top 3</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Top 4</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Top 5</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Top 6</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Exit</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Start</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top 5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Top 6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Exit</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>TOP</label>
     <listViews>
