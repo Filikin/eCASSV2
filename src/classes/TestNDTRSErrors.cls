@@ -151,29 +151,6 @@ private class TestNDTRSErrors
         }
     }
     
-    static testMethod void TestValidationID_22 ()
-    {
-        try
-        {
-            NDTRS_Form_2016__c oneForm = createForm(system.today()-20, system.today()-19);
-            Contact client = [select X4_Gender__c from Contact where id = :oneForm.Contact__c limit 1];
-            client.X5_Living_with_whom__c = '5. Partner & Child(ren)';
-            client.X6a1_Children_under_5yrs_living_whith__c = 0;
-            client.X6a2_Children_5_17yrs_living_whith_clien__c = 0;
-            client.X6a3_Children_18yrs_or_over_living_whith__c = 0;
-            client.Living_with_service_user_unknown__c = 0;
-            update client;
-            update oneForm;
-            
-            system.assert (false, 'Should not have got here as an exception should have been thrown');
-        }
-        catch (Exception e)
-        {
-            system.debug (e.getMessage());
-            system.assert (e.getMessage().contains(label.NDTRS_Living_with_Children));
-        }
-    }
-    
     static testMethod void TestValidationID_24 ()
     {
         try

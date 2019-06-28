@@ -11,6 +11,8 @@
 			 Also add code to set Attended__c value to true for Drop-in and Open Access attendances
 	
 	EK 19/12/2016 Added exception handling when updating the contacts due to problems with NPSP	
+    MK 02/04/2019 Added code to deal with status on multiple attendances being updated simultaneously 
+                  for one client (updateLastContactDate)
 	Tested in testCreateAttendanceTrigger and testUpdateLastAttendedDate
 	
 	Called from: TriggerDispatcher
@@ -220,6 +222,8 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 			{
 				if (thisAttendance.Attended__c == true)
 				{
+                    System.debug('thisClient: '+thisClient);
+                    System.debug('thisAttendance: '+thisAttendance);
 					if ( (thisClient.Last_face_to_face_contact__c == null) ||
 					     (thisAttendance.Attendance_Date__c > thisClient.Last_face_to_face_contact__c))
 					{
@@ -227,8 +231,11 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 						
 						// Depending on type of attendance record, get URL or something appropriate to put into Last Contact Type
 						// Do this later!!
-						
-						contactsForUpdate.add(thisClient);
+						if (!contactsForUpdate.contains(thisClient))
+                        {
+                            contactsForUpdate.add(thisClient);
+                        }						
+                        System.debug('contactsForUpdate: '+contactsForUpdate);
 					}
 				}	
 				else if (oldMap != null) 
@@ -248,7 +255,10 @@ public with sharing class AttendancesTriggerClass implements TriggerDispatcher.I
 								break;
 							}
 						}								
-						contactsForUpdate.add(thisClient);
+						if (!contactsForUpdate.contains(thisClient))  //02/04/19: added if condition
+                        {
+                            contactsForUpdate.add(thisClient);
+                        }   
 					}
 				}
 			}

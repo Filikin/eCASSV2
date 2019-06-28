@@ -4459,22 +4459,6 @@ if(includes(X34_Client_s_Condition_on_discharge__c, &quot;16. Engaged in other u
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>SHARED__c</fullName>
-        <externalId>false</externalId>
-        <formula>CASE( X30d_Ever_shared_needle_and_syringes__c ,
-&quot;1. Yes&quot;,&quot;1&quot;,
-&quot;2. No&quot;,&quot;2&quot;,
-&quot;88. Not applicable&quot;,&quot;88&quot;,
-&quot;99. Not known&quot;,&quot;99&quot;,
-&quot;&quot;)</formula>
-        <label>SHARED</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>SPECIFYX__c</fullName>
         <externalId>false</externalId>
         <formula>&quot;X13_2_Drug_specify__r.Item_Code__c&quot;</formula>
@@ -6009,6 +5993,7 @@ If not applicable code 88
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>NDTRS_Drugs__c</referenceTo>
+        <relationshipLabel>NDTRS LINK Forms (27 Specify first drug ever used)</relationshipLabel>
         <relationshipName>NDTRS_2016_Forms5</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -6283,7 +6268,7 @@ If not known, code 99.</inlineHelpText>
                     <default>false</default>
                 </value>
                 <value>
-                    <fullName>3. Shared in the last 12 month but not in the last 30 days</fullName>
+                    <fullName>3. Shared in the last 12 months but not in the last 30 days</fullName>
                     <default>false</default>
                 </value>
                 <value>
@@ -6327,7 +6312,7 @@ If not known, code 99.</inlineHelpText>
                     <default>false</default>
                 </value>
                 <value>
-                    <fullName>3. Shared in the last 12 month but not in the last 30 days</fullName>
+                    <fullName>3. Shared in the last 12 months but not in the last 30 days</fullName>
                     <default>false</default>
                 </value>
                 <value>
@@ -8396,10 +8381,11 @@ Hepatitis A and B vaccination</inlineHelpText>
     <listViews>
         <fullName>Treatment_check_for_HRB</fullName>
         <columns>NAME</columns>
-        <columns>Test_Referral_Assessment_details__c</columns>
-        <columns>Date_of_Assessment__c</columns>
-        <columns>X35_Date_of_Final_Discharge_or_transfer__c</columns>
-        <columns>NDTRS_2016_Report__c</columns>
+        <columns>X30d_Ever_shared_needle_and_syringes__c</columns>
+        <columns>X30e_Ever_shared_other_drug_paraphernali__c</columns>
+        <columns>X31a_History_of_Hepatitis_C_screening__c</columns>
+        <columns>X31b_History_of_Hepatitis_B_screening__c</columns>
+        <columns>X31c_History_of_HIV_screening__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>RECORDTYPE</field>
@@ -9161,7 +9147,7 @@ Hepatitis A and B vaccination</inlineHelpText>
                 <default>false</default>
             </values>
             <values>
-                <fullName>3%2E Shared in the last 12 month but not in the last 30 days</fullName>
+                <fullName>3%2E Shared in the last 12 months but not in the last 30 days</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9192,7 +9178,7 @@ Hepatitis A and B vaccination</inlineHelpText>
                 <default>false</default>
             </values>
             <values>
-                <fullName>3%2E Shared in the last 12 month but not in the last 30 days</fullName>
+                <fullName>3%2E Shared in the last 12 months but not in the last 30 days</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10387,7 +10373,7 @@ Hepatitis A and B vaccination</inlineHelpText>
                 <default>false</default>
             </values>
             <values>
-                <fullName>3%2E Shared in the last 12 month but not in the last 30 days</fullName>
+                <fullName>3%2E Shared in the last 12 months but not in the last 30 days</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10418,7 +10404,7 @@ Hepatitis A and B vaccination</inlineHelpText>
                 <default>false</default>
             </values>
             <values>
-                <fullName>3%2E Shared in the last 12 month but not in the last 30 days</fullName>
+                <fullName>3%2E Shared in the last 12 months but not in the last 30 days</fullName>
                 <default>false</default>
             </values>
             <values>

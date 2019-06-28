@@ -93,6 +93,60 @@ private class testUpdateLastAttendedDate {
         
         
     }
+
+ static testMethod void TestContactRecordUpdate2() 
+    {
+   
+        Contact youngPerson = new Contact (LastName = 'Kelly');
+        insert youngPerson;
+        Contact youngPerson2 = new Contact (LastName = 'Smith');
+        insert youngPerson2;
+        
+        Program_Service__c program = new Program_Service__c (Name = 'Music');
+        insert program;
+        
+        Enrolment__c enrole = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
+        insert enrole;
+        
+        Enrolment__c enrole2 = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson.id, Status_on_Programme__c='Active');
+        insert enrole2;
+        
+        
+        Program_Session__c session = new Program_Session__c (Program_Service__c=program.id, Session_Date__c= system.today());
+        insert session;
+        
+        System.debug('1.Session 1 inserted');
+        
+        Program_Session__c session2 = new Program_Session__c (Program_Service__c=program.id, Session_Date__c= system.today()+2);
+        insert session2;
+        
+        System.debug('2.Session 2 inserted');
+        
+        
+        List <Attendance__c> attendances = new List <Attendance__c>();
+        
+       
+		attendances = TickAttendances(session);
+		List<Contact> updatedContactList = [Select LastName, Last_face_to_face_contact__c from Contact];
+        system.assertEquals(system.today(), updatedContactList[0].Last_face_to_face_contact__c);
+        
+        System.debug('4. Session 1 attendance ticked');
+        
+		attendances = TickAttendances(session2);
+        updatedContactList = [Select LastName, Last_face_to_face_contact__c from Contact];
+        system.assertEquals(system.today()+2, updatedContactList[0].Last_face_to_face_contact__c);
+        
+        /*
+        
+        // test the create sessions on New Enrolment trigger where the service already has sessions
+        Enrolment__c enrole3 = new Enrolment__c (Name='Test', Program_Service__c=program.id, Young_Person__c=youngPerson2.id, Status_on_Programme__c='Active');
+        insert enrole3;
+        
+        */
+        
+                
+        
+    }
     
     static List<Attendance__c> TickAttendances(Program_Session__c session)
     {
@@ -221,4 +275,33 @@ private class testUpdateLastAttendedDate {
         system.assertEquals(system.today(), updatedContactList[0].Last_face_to_face_contact__c);
             
     }
+    
+    static testmethod void testStatusUpdateOnMultipleAttendances()
+    {
+        Id clientRecordTypeID = [SELECT ID FROM RecordType WHERE SobjectType='Contact' and DeveloperName='Client' limit 1].id;
+        Contact youngPerson = new Contact (LastName = 'Kelly', RecordTypeID=clientRecordTypeID);
+        insert youngPerson;
+        
+        id oneToOneRecordTypeId = [Select Id from RecordType where SObjectType='Attendance__c' and DeveloperName = 'One_to_One_Attendance' limit 1].Id;
+		List <Attendance__c>attList = new List<Attendance__c>();
+		for (Integer i=0; i<3; i++)
+        {
+         	attList.add(new Attendance__c(Name = 'att'+i, Young_Person__c=youngPerson.Id,
+                                          RecordTypeId = oneToOneRecordTypeId, Status__c = 'Booked',
+                                          Attended__c = false,
+                                          Date_and_time_of_attendance__c = DateTime.now().addDays(i)));
+        }
+        insert attList;
+        
+        for (integer i=0; i<3; i++)
+        {
+			attlist[i].Attended__c = True;
+        }
+        update attlist;
+		youngperson = [Select Id, Last_face_to_face_contact__c from Contact where Id = :youngperson.Id];
+        System.assertEquals(System.today() + 2, youngPerson.Last_face_to_face_contact__c);
+        
+    }
+
+    
 }

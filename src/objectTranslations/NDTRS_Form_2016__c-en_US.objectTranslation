@@ -978,10 +978,6 @@
         <name>SAOR__c</name>
     </fields>
     <fields>
-        <label><!-- SHARED --></label>
-        <name>SHARED__c</name>
-    </fields>
-    <fields>
         <label><!-- SPECIFYX --></label>
         <name>SPECIFYX__c</name>
     </fields>
@@ -1962,8 +1958,8 @@ If not known, code 99. --></help>
             <translation><!-- 2. Never shared --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>3. Shared in the last 12 month but not in the last 30 days</masterLabel>
-            <translation><!-- 3. Shared in the last 12 month but not in the last 30 days --></translation>
+            <masterLabel>3. Shared in the last 12 months but not in the last 30 days</masterLabel>
+            <translation><!-- 3. Shared in the last 12 months but not in the last 30 days --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>4. Shared but not in the last 12 months</masterLabel>
@@ -1995,8 +1991,8 @@ If not known, code 99. --></help>
             <translation><!-- 2. Never shared --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>3. Shared in the last 12 month but not in the last 30 days</masterLabel>
-            <translation><!-- 3. Shared in the last 12 month but not in the last 30 days --></translation>
+            <masterLabel>3. Shared in the last 12 months but not in the last 30 days</masterLabel>
+            <translation><!-- 3. Shared in the last 12 months but not in the last 30 days --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>4. Shared but not in the last 12 months</masterLabel>

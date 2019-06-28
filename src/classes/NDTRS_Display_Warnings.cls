@@ -413,7 +413,7 @@
     
     public void ValidationID_30 ()
     {
-        if (!currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('5.') && (currentForm.Contact__r.X9b_Age_left_primary_school__c < 6 || currentForm.Contact__r.X9b_Age_left_primary_school__c > 21) && currentForm.Contact__r.X9b_Age_left_primary_school__c <> 88)
+        if (!currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('5.') && (currentForm.Contact__r.X9b_Age_left_primary_school__c < 6 || currentForm.Contact__r.X9b_Age_left_primary_school__c > 21) && currentForm.Contact__r.X9b_Age_left_primary_school__c != 88 && currentForm.Contact__r.X9b_Age_left_primary_school__c != 1 && currentForm.Contact__r.X9b_Age_left_primary_school__c != 99 )
         {
             warnings.add (new TreatmentMessage (currentForm.Contact__r.id, label.NDTRS_Rule_30));
         }
@@ -445,8 +445,8 @@
     
     public void ValidationID_34 ()
     {
-        if (currentForm.Contact__r.X9b_Age_left_primary_school__c > 16 && currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('0.')
-        || currentForm.Contact__r.X9b_Age_left_primary_school__c > 16 && currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('1.'))
+        if (currentForm.Contact__r.X9b_Age_left_primary_school__c != 88 && currentForm.Contact__r.X9b_Age_left_primary_school__c != 99 && currentForm.Contact__r.X9b_Age_left_primary_school__c > 16 && currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('0.') 
+        || currentForm.Contact__r.X9b_Age_left_primary_school__c != 88 && currentForm.Contact__r.X9b_Age_left_primary_school__c != 99 && currentForm.Contact__r.X9b_Age_left_primary_school__c > 16 && currentForm.Contact__r.X9a_Education_highest_level__c.startsWith('1.'))
         {
             warnings.add (new TreatmentMessage (currentForm.Contact__r.id, label.NDTRS_Rule_34));
         }
@@ -3190,9 +3190,9 @@
     {
         if(currentForm.X21a_Main_drug__c == null && currentForm.X22a_Drug_2__c == null && currentForm.X23a_Drug_3__c == null && currentForm.X24a_Drug_4__c == null && currentForm.X25a_Drug_5__c == null && 
             currentForm.X34_Client_s_Condition_on_discharge__c == null) return;
-        if((currentForm.X21a_Main_drug__c != null && currentForm.X21a_Main_drug__r.Item_Code__c == 700 || currentForm.X22a_Drug_2__c != null && currentForm.X22a_Drug_2__r.Item_Code__c == 700 ||
-            currentForm.X23a_Drug_3__c != null && currentForm.X23a_Drug_3__r.Item_Code__c == 700 || currentForm.X24a_Drug_4__c != null && currentForm.X24a_Drug_4__r.Item_Code__c == 700 ||
-            currentForm.X25a_Drug_5__c != null && currentForm.X24a_Drug_4__r.Item_Code__c == 700) &&
+        if((currentForm.X21a_Main_drug__c != null && currentForm.X21a_Main_drug__r.Item_Code__c == 995 || currentForm.X22a_Drug_2__c != null && currentForm.X22a_Drug_2__r.Item_Code__c == 99501 ||
+            currentForm.X23a_Drug_3__c != null && currentForm.X23a_Drug_3__r.Item_Code__c == 99502 || currentForm.X24a_Drug_4__c != null && currentForm.X24a_Drug_4__r.Item_Code__c == 99503 ||
+            currentForm.X25a_Drug_5__c != null && currentForm.X24a_Drug_4__r.Item_Code__c == 996) &&
             (currentForm.X34_Client_s_Condition_on_discharge__c != null && (currentForm.X34_Client_s_Condition_on_discharge__c.contains('1. Drug free') || currentForm.X34_Client_s_Condition_on_discharge__c.contains('2. Drug use unchanged') ||
             currentForm.X34_Client_s_Condition_on_discharge__c.contains('3. Drug use increased') || currentForm.X34_Client_s_Condition_on_discharge__c.contains('4. Drug use reduced'))))
         {

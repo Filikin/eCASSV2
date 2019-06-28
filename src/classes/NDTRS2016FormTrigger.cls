@@ -194,7 +194,7 @@ public with sharing class NDTRS2016FormTrigger implements TriggerDispatcher.ITri
                 ValidationID_7_and_8Q15_and_Q32(oneForm);
                 ValidationID_14_and_15 (oneForm, client);
                 ValidationID_21 (oneForm, client);
-                ValidationID_22 (oneForm, client);
+/*              ValidationID_22 (oneForm, client); */
                 ValidationID_24 (oneForm, client);
                 ValidationID_28 (oneForm, client);
                 ValidationID_29 (oneForm, client);
@@ -404,16 +404,6 @@ public with sharing class NDTRS2016FormTrigger implements TriggerDispatcher.ITri
             !currentClient.X5_Living_with_whom__c.startsWith('7.') && currentClient.X7_Living_Where__c.startsWith('5.') )
         {
             currentForm.addError (label.NDTRS_Homesless_prison_and_Living_with_Whom);
-        }
-    }
-    
-    public void ValidationID_22 (NDTRS_Form_2016__c currentForm, Contact currentClient)
-    {
-        if (currentClient.X5_Living_with_whom__c != null && (currentClient.X5_Living_with_whom__c.startsWith('5.') || currentClient.X5_Living_with_whom__c.startsWith('6.')) && 
-        (currentClient.X6a1_Children_under_5yrs_living_whith__c == 0 && currentClient.X6a2_Children_5_17yrs_living_whith_clien__c == 0 && currentClient.X6a3_Children_18yrs_or_over_living_whith__c == 0 &&
-        currentClient.Living_with_service_user_unknown__c == 0))
-        {
-            currentForm.addError (label.NDTRS_Living_with_Children);
         }
     }
     

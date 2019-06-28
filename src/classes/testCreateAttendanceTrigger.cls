@@ -232,5 +232,7 @@ private class testCreateAttendanceTrigger
         system.assertEquals (e1.Programme__c, atts[0].Programme__c); 
         system.assertEquals (e1.Activity_Type__c, atts[0].Activity_Type__c);
     }
+    
+            
    
 }
